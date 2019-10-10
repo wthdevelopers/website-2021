@@ -1,4 +1,4 @@
-# wth2019
+# What The Hack 2019
 
 ## Project setup
 ```
@@ -27,4 +27,4 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# website2019
+#WTH2019
