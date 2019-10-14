@@ -1,31 +1,48 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Hero/>
   </div>
 </template>
 
+<script>
+// @ is an alias to /src
+import Hero from "@/components/Hero.vue";
+
+export default {
+  name: "app",
+  components: {
+    Hero
+  }
+};
+</script>
+
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
+:root {
+  --font-primary: brandon-grotesque;
+  --font-secondary: proxima-soft;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-accent-blue: #2d3887;
+  --color-accent-pink: #a82175;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+body {
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 </style>
