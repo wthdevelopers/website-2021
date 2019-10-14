@@ -5,7 +5,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Hero from "@/components/Hero.vue";
 
 export default {
@@ -21,10 +20,20 @@ export default {
   --font-primary: brandon-grotesque;
   --font-secondary: proxima-soft;
 
-  --color-black: #000000;
+  /* --color-black: #000000;
   --color-white: #ffffff;
   --color-accent-blue: #2d3887;
-  --color-accent-pink: #a82175;
+  --color-accent-pink: #a82175; */
+
+  --color-background: #f3f3fb;
+  --color-text: #2d3887;
+  --color-accent: #a82175;
+}
+
+[theme="dark"] {
+  --color-background: #191f4d;
+  --color-text: #f3f3fb;
+  --color-accent: #a82175;
 }
 
 * {
@@ -35,6 +44,8 @@ export default {
 
 body {
   position: relative;
+  background-color: var(--color-background);
+  transition: background-color 0.6s ease-out;
 }
 
 ul {
