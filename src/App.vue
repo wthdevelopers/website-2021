@@ -3,6 +3,10 @@
     <Hero/>
     <About/>
     <Prizes/>
+    <Schedule/>
+    <Sponsors/>
+    <Faq/>
+    <Footer/>
   </div>
 </template>
 
@@ -10,13 +14,21 @@
 import Hero from "@/components/hero/Hero.vue";
 import About from "@/components/about/About.vue";
 import Prizes from "@/components/prizes/Prizes.vue";
+import Schedule from "@/components/schedule/Schedule.vue";
+import Sponsors from "@/components/sponsors/Sponsors.vue";
+import Faq from "@/components/faq/Faq.vue";
+import Footer from "@/components/footer/Footer.vue";
 
 export default {
   name: "app",
   components: {
     Hero,
     About,
-    Prizes
+    Prizes,
+    Schedule,
+    Sponsors,
+    Faq,
+    Footer
   }
 };
 </script>

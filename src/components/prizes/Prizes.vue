@@ -1,10 +1,11 @@
 <template>
-  <div>
-    <div
-      style="background-color: var(--slope-body-color); height: 350px; transform: translateY(-7px);"
-    ></div>
+  <div id="prizes">
+    <div class="prizes-body">
+      <h3>Prizes</h3>
+      <div class="prizes-content"></div>
+    </div>
     <svg
-      style="transform: translateY(-7px)"
+      style="transform: translateY(-1px);"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 320"
     >
@@ -25,5 +26,33 @@ export default {
 </script>
 
 <style scoped>
+#prizes {
+  /* border: 1px solid purple; */
+}
+
+.prizes-body {
+  background-color: var(--slope-body-color);
+  width: 100%;
+  height: 550px;
+  padding-top: 100px;
+  transform: translateY(-1px);
+}
+
+h3 {
+  font-family: proxima-soft, sans-serif;
+  font-size: 55px;
+  font-weight: 700;
+  padding-left: 150px;
+  color: var(--color-title-text);
+  color: #c02685;
+  margin-bottom: 50px;
+  /* border: 1px solid yellow; */
+}
+
+.prizes-content {
+  height: 300px;
+  margin: 0 150px;
+  border: 1px solid red;
+}
 </style>
 

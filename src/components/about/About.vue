@@ -311,6 +311,7 @@ export default {
 #about {
   position: relative;
   padding-bottom: 300px;
+  /* border: 1px solid green; */
 }
 
 h3 {
@@ -329,7 +330,6 @@ h3 {
   display: flex;
   justify-content: space-between;
   padding: 0 300px;
-  /* margin-bottom: 250px; */
 }
 
 .about-content-main {
