@@ -24,7 +24,8 @@ export default {
 <style scoped>
 #hero {
   position: relative;
-  height: 710px;
+  min-height: 710px;
+  height: 100vh;
   /* border: 5px solid blue; */
 }
 </style>

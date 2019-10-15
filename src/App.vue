@@ -1,16 +1,22 @@
 <template>
   <div id="app">
     <Hero/>
+    <About/>
+    <Prizes/>
   </div>
 </template>
 
 <script>
 import Hero from "@/components/hero/Hero.vue";
+import About from "@/components/about/About.vue";
+import Prizes from "@/components/prizes/Prizes.vue";
 
 export default {
   name: "app",
   components: {
-    Hero
+    Hero,
+    About,
+    Prizes
   }
 };
 </script>
@@ -21,8 +27,11 @@ export default {
   --font-secondary: proxima-soft;
 
   --color-background: #f3f3fb;
-  --color-text: #2d3887;
+  --color-title-text: #2d3887;
+  --color-regular-text: #000000;
   --color-accent: #a82175;
+
+  --slope-body-color: #c1e1d5;
 
   --stars-visibility: hidden;
 
@@ -35,8 +44,11 @@ export default {
 
 [theme="dark"] {
   --color-background: #191f4d;
-  --color-text: #f3f3fb;
+  --color-title-text: #f3f3fb;
+  --color-regular-text: #f3f3fb;
   --color-accent: #a82175;
+
+  --slope-body-color: #3f636d;
 
   --stars-visibility: visible;
 
@@ -66,5 +78,37 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+@keyframes flicker-one {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes flicker-two {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes flicker-three {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.slope {
+  fill: #79c89f;
+  opacity: 0.4;
 }
 </style>

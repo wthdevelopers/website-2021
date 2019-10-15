@@ -41,14 +41,11 @@
       <li class="nav-register-link">
         <a href="#">Register</a>
       </li>
-      <li
-        style="height: 40px; border: 1px solid var(--color-text); transition: border 0.6s ease-out;"
-      ></li>
       <li>
         <svg
           v-if="theme === 'light'"
           width="25px"
-          style="transform: translateY(3.5px); cursor: pointer;"
+          style="transform: translateY(3.5px); cursor: pointer; margin-left: 10px;"
           @click="toggleTheme"
           viewBox="0 0 222.59 218.11"
           xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +99,7 @@
         <svg
           v-else
           width="25px"
-          style="transform: translateY(3.5px); cursor: pointer;"
+          style="transform: translateY(3.5px); cursor: pointer; margin-left: 10px;"
           @click="toggleTheme"
           viewBox="0 0 223.99 225"
           xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +167,7 @@ nav > ul > svg {
 }
 
 nav > ul > svg > g {
-  fill: var(--color-text);
+  fill: var(--color-title-text);
   transition: fill 0.6s ease-out;
 }
 
@@ -182,12 +179,12 @@ nav a {
   font-family: var(--font-primary), sans-serif;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-text);
+  color: var(--color-title-text);
   transition: color 0.6s ease-out;
 }
 
 .nav-register-link {
-  border-bottom: 5px solid var(--color-text);
+  border-bottom: 5px solid var(--color-title-text);
   padding-bottom: 2px;
   transform: translateY(4px);
   transition: border-bottom 0.6s ease-out;

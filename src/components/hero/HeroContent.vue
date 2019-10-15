@@ -59,7 +59,7 @@ export default {
   font-size: 55px;
   font-size: calc(3vw + 12px);
   font-weight: 900;
-  color: var(--color-text);
+  color: var(--color-title-text);
   margin-left: 34.75vw;
   margin-bottom: 8px;
   transition: color 0.6s ease-out;
@@ -70,7 +70,7 @@ export default {
   font-size: 24px;
   font-size: calc(1vw + 10px);
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-title-text);
   margin-left: 35vw;
   transition: color 0.6s ease-out;
 }
