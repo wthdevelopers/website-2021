@@ -414,6 +414,8 @@ h3 {
 }
 
 .about-content-aside {
+  position: relative;
+  z-index: 1;
   width: 32%;
   /* border: 1px solid purple; */
 }
@@ -535,7 +537,6 @@ p + p {
 
 .smoke {
   position: absolute;
-  z-index: -1;
   width: 1px;
   height: 160px;
 }
