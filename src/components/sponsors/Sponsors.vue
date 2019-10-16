@@ -1,8 +1,8 @@
 <template>
-  <div id="sponsors">
-    <div class="sponsors-body">
+  <div id="thankees">
+    <div class="thankees-body">
       <h3>Sponsors</h3>
-      <div class="sponsors-content"></div>
+      <div class="thankees-content"></div>
     </div>
     <svg
       style="transform: translateY(-6px);"
@@ -21,16 +21,16 @@
 
 <script>
 export default {
-  name: "sponsors"
+  name: "thankees"
 };
 </script>
 
 <style scoped>
-#sponsors {
+#thankees {
   /* border: 1px solid purple; */
 }
 
-.sponsors-body {
+.thankees-body {
   background-color: var(--slope-body-color);
   width: 100%;
   height: 800px;
@@ -39,7 +39,7 @@ export default {
 }
 
 h3 {
-  font-family: proxima-soft, sans-serif;
+  font-family: var(--font-secondary), sans-serif;
   font-size: calc(24px + 2vw);
   font-weight: 700;
   padding-left: 150px;
@@ -48,7 +48,7 @@ h3 {
   /* border: 1px solid yellow; */
 }
 
-.sponsors-content {
+.thankees-content {
   height: 500px;
   margin: 0 150px;
   border: 1px solid red;
@@ -59,7 +59,7 @@ h3 {
     padding-left: 100px;
   }
 
-  .sponsors-content {
+  .thankees-content {
     margin: 0 100px;
   }
 }
@@ -86,7 +86,7 @@ h3 {
     font-size: 20px;
   }
 
-  .sponsors-content {
+  .thankees-content {
     margin: 0 30px;
   }
 }

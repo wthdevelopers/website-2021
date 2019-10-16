@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
 h3 {
-  font-family: proxima-soft, sans-serif;
+  font-family: var(--font-secondary), sans-serif;
   font-size: calc(24px + 2vw);
   font-weight: 700;
   padding-left: 150px;

@@ -363,6 +363,7 @@ export default {
 
 <style scoped>
 nav {
+  height: 12.5%;
   padding: 25px 40px;
   /* border: 2px solid red; */
 }

@@ -47,22 +47,25 @@ export default {
 
 <style scoped>
 .hero-content {
-  /* border: 1px solid red; */
   position: relative;
   z-index: 1;
+  height: 87.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid red; */
 }
 
 .hero-content > svg {
   width: 54.5vw;
   width: calc(400px + 28vw);
   margin-left: 12vw;
-  margin-top: 4.5vw;
   margin-bottom: 20px;
   /* border: 1px solid blue; */
 }
 
 .hero-content h1 {
-  font-family: proxima-soft;
+  font-family: var(--font-secondary), sans-serif;
   font-size: calc(3vw + 14px);
   font-weight: 900;
   color: var(--color-title-text);
@@ -79,7 +82,7 @@ export default {
 }
 
 .hero-content h2 {
-  font-family: proxima-soft;
+  font-family: var(--font-secondary), sans-serif;
   font-size: calc(1vw + 10px);
   font-weight: 700;
   color: var(--color-title-text);
@@ -93,7 +96,7 @@ export default {
   margin-left: 20px;
   text-decoration: none;
   font-size: 24px;
-  font-family: proxima-soft, sans-serif;
+  font-family: var(--font-secondary), sans-serif;
   font-weight: 700;
   background-color: var(--color-title-text);
   color: var(--color-cta-text);
@@ -116,10 +119,13 @@ export default {
 }
 
 @media only screen and (max-width: 791px) {
+  .hero-content > * {
+    transform: translateY(-10vh);
+  }
+
   .hero-content > svg {
     width: 80vw;
     margin-left: 8vw;
-    margin-top: 8vw;
   }
 
   .hero-content > h1 {
@@ -139,7 +145,6 @@ export default {
 
 @media only screen and (max-width: 570px) {
   .hero-content > svg {
-    margin-top: 16vw;
   }
 
   .hero-content > h1 {

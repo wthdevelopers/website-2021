@@ -385,7 +385,8 @@ export default {
 <style scoped>
 #schedule {
   position: relative;
-  padding-bottom: 300px;
+  padding-bottom: 100px;
+  /* border: 1px solid green; */
 }
 
 .windmillscape {
@@ -394,7 +395,7 @@ export default {
 }
 
 h3 {
-  font-family: proxima-soft, sans-serif;
+  font-family: var(--font-secondary), sans-serif;
   font-size: calc(24px + 2vw);
   font-weight: 700;
   padding-left: 150px;
@@ -408,7 +409,7 @@ h3 {
   height: 600px;
   margin: 0 150px;
   border: 1px solid red;
-  /* margin-bottom: 100px; */
+  margin-bottom: 200px;
 }
 
 #base {

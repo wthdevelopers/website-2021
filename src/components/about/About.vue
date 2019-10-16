@@ -8,6 +8,7 @@
           <a
             href="https://www.google.com/maps/place/Singapore+University+of+Technology+and+Design/@12.9270548,103.4318175,5z/data=!4m5!3m4!1s0x31da3cd8cd26e9e3:0x7de56b1846994e6c!8m2!3d1.3412873!4d103.9637891"
             target="_blank"
+            rel="noopener noreferrer"
             class="link-highlight"
           >at our campus</a>
           that aims to bring together people of various disciplines and provide
@@ -391,8 +392,7 @@ export default {
 }
 
 h3 {
-  font-family: proxima-soft, sans-serif;
-  /* font-size: 55px; */
+  font-family: var(--font-secondary), sans-serif;
   font-size: calc(24px + 2vw);
   font-weight: 700;
   padding-left: 150px;
@@ -423,8 +423,7 @@ p {
   display: inline-block;
   /* border: 1px solid red; */
   font-size: 24px;
-  font-family: brandon-grotesque;
-  font-weight: 400;
+  font-family: var(--font-primary), sans-serif;
   line-height: 1.6;
   z-index: 1;
   color: var(--color-regular-text);
@@ -443,7 +442,7 @@ p + p {
 }
 
 .aside-refer {
-  font-family: brandon-grotesque, sans-serif;
+  font-family: var(--font-primary), sans-serif;
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
