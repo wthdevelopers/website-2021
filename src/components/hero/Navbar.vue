@@ -31,19 +31,19 @@
         </svg>
       </li>
       <li>
-        <a href="#">About</a>
+        <button @click="buttonOnClickScroll('about')">About</button>
       </li>
       <li>
-        <a href="#">Prizes</a>
+        <button @click="buttonOnClickScroll('prizes')">Prizes</button>
       </li>
       <li>
-        <a href="#">Schedule</a>
+        <button @click="buttonOnClickScroll('schedule')">Schedule</button>
       </li>
       <li>
-        <a href="#">Sponsors</a>
+        <button @click="buttonOnClickScroll('sponsors')">Sponsors</button>
       </li>
       <li>
-        <a href="#">FAQs</a>
+        <button @click="buttonOnClickScroll('faq')">FAQs</button>
       </li>
       <li class="bar-register-link">
         <a href="#">Register</a>
@@ -221,19 +221,19 @@
       </svg>
       <ul>
         <li>
-          <a href="#">About</a>
+          <button @click="buttonOnClickScroll('about')">About</button>
         </li>
         <li>
-          <a href="#">Prizes</a>
+          <button @click="buttonOnClickScroll('prizes')">Prizes</button>
         </li>
         <li>
-          <a href="#">Schedule</a>
+          <button @click="buttonOnClickScroll('schedule')">Schedule</button>
         </li>
         <li>
-          <a href="#">Sponsors</a>
+          <button @click="buttonOnClickScroll('sponsors')">Sponsors</button>
         </li>
         <li>
-          <a href="#">FAQs</a>
+          <button @click="buttonOnClickScroll('faq')">FAQs</button>
         </li>
         <li>
           <a href="#">Register</a>
@@ -325,6 +325,10 @@ export default {
     this.setInitialTheme();
   },
   methods: {
+    buttonOnClickScroll(loc) {
+      var section = document.querySelector(`#${loc}`);
+      section.scrollIntoView({ behavior: "smooth" });
+    },
     toggleTheme() {
       if (this.theme === "dark") {
         document.documentElement.setAttribute("theme", "light");
@@ -363,15 +367,21 @@ nav {
   /* border: 2px solid red; */
 }
 
-nav a {
+nav a,
+nav button {
+  font-size: 16px;
   font-family: var(--font-primary), sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-title-text);
   transition: color 0.6s ease-out;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-nav a:hover {
+nav a:hover,
+nav button:hover {
   color: var(--color-accent);
 }
 
@@ -451,7 +461,8 @@ nav a:hover {
   margin-top: 20px;
 }
 
-#drawer a {
+#drawer a,
+#drawer button {
   font-size: calc(12px + 1.5vw);
 }
 
