@@ -26,12 +26,12 @@ export default {
 <style scoped>
 h3 {
   font-family: proxima-soft, sans-serif;
-  font-size: 55px;
+  font-size: calc(24px + 2vw);
   font-weight: 700;
   padding-left: 150px;
-  color: var(--color-title-text);
-  color: #c02685;
+  color: var(--color-section-title-text);
   margin-bottom: 50px;
+  margin-top: 30px;
   /* border: 1px solid yellow; */
 }
 
@@ -40,6 +40,43 @@ h3 {
   margin: 0 150px;
   border: 1px solid red;
   /* margin-bottom: 100px; */
+}
+
+@media only screen and (max-width: 1000px) {
+  h3 {
+    padding-left: 100px;
+  }
+
+  .prizes-content {
+    margin: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  h3 {
+    padding-left: 100px;
+  }
+
+  .faq-content {
+    margin: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+}
+
+@media only screen and (max-width: 570px) {
+  h3 {
+    padding-left: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .faq-content {
+    margin: 0 30px;
+  }
 }
 </style>
 

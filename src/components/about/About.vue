@@ -4,32 +4,46 @@
     <div class="about-content">
       <div class="about-content-main">
         <p>
-          What The Hack is
-          <a href="#" class="text-highlight">SUTD's</a> annual hackathon
-          that aims to bring together people of multiple disciplines and provide
-          them with the opportunity and resources to jumpstart their ideas.
+          What The Hack is SUTD's annual hackathon held
+          <a
+            href="https://www.google.com/maps/place/Singapore+University+of+Technology+and+Design/@12.9270548,103.4318175,5z/data=!4m5!3m4!1s0x31da3cd8cd26e9e3:0x7de56b1846994e6c!8m2!3d1.3412873!4d103.9637891"
+            target="_blank"
+            class="link-highlight"
+          >at our campus</a>
+          that aims to bring together people of various disciplines and provide
+          them with a platform to find innovative solutions to meaningful real-world problems.
         </p>
         <p>
           This year’s theme is
-          <a href="#" class="text-highlight">Immersive Realities</a>, an umbrella term for
-          AR, VR, and MR#, and even more! While purists may use the term
-          <a
-            href="#"
+          <span class="text-highlight">Urban Cities & Environment</span>, of which there will be four problem domains
+          related to this overarching theme -
+          <span
             class="text-highlight"
-          >Extended Reality</a>, we extend our scope to
-          include realities that aren't strictly defined by these categories, so by
-          no means are you restricted solely to VR and AR hacks! The theme is
-          divided into three categories, each with its own prize!
+          >Built Environment</span>,
+          <span class="text-highlight">Waste Management</span>,
+          <span class="text-highlight">Waste Reduction</span> and
+          <span class="text-highlight">Transportation</span>. Participants will have to tackle an issue
+          from within one of these problem domains using solutions that fall under at
+          least one of these four technological categories -
+          <span
+            class="text-highlight"
+          >Software Platforms</span>,
+          <span class="text-highlight">
+            Internet
+            of Things
+          </span>,
+          <span class="text-highlight">Artificial Intelligence</span> and
+          <span class="text-highlight">Computational Fabrication</span>.
         </p>
       </div>
       <div class="about-content-aside">
         <div class="aside-block">
-          <div class="aside-number">2</div>
-          <div class="aside-refer">Days</div>
+          <div class="aside-number">4</div>
+          <div class="aside-refer">Pax / Group</div>
         </div>
         <div class="aside-block">
-          <div class="aside-number">1 - 4</div>
-          <div class="aside-refer">Pax / Group</div>
+          <div class="aside-number">24</div>
+          <div class="aside-refer">Hours</div>
         </div>
         <div class="aside-block">
           <div class="aside-number">Lots</div>
@@ -39,7 +53,6 @@
     </div>
 
     <svg class="factoryscape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3093.28 1185.49">
-      <title>factoryscape</title>
       <g id="base">
         <path
           d="M-849.09,846.21-746,856.91c103.11,10.3,309.33,32.3,515.55,21.3s412.44-53,618.66-48,412.44,59,618.65,96,412.44,59,618.66,69.3c206.22,10.7,412.44,10.7,515.55,10.7H2244.2v64H-849.09Z"
@@ -65,10 +78,34 @@
           points="2150.41 1127.84 2079.29 1080.51 2077.6 832.23 2150.41 875.09 2150.41 1127.84"
           fill="#d65c85"
         ></polygon>
-        <rect x="2175.42" y="982.46" width="131.24" height="19" rx="6.84" fill="#d65c85"></rect>
-        <rect x="2325.89" y="982.46" width="131.24" height="19" rx="6.84" fill="#d65c85"></rect>
+        <rect
+          class="lights-one"
+          x="2175.42"
+          y="982.46"
+          width="131.24"
+          height="19"
+          rx="6.84"
+          fill="#d65c85"
+        ></rect>
+        <rect
+          class="lights-one"
+          x="2325.89"
+          y="982.46"
+          width="131.24"
+          height="19"
+          rx="6.84"
+          fill="#d65c85"
+        ></rect>
         <rect x="2176.02" y="1015.06" width="131.24" height="19" rx="6.84" fill="#d65c85"></rect>
-        <rect x="2326.49" y="1015.06" width="131.24" height="19" rx="6.84" fill="#d65c85"></rect>
+        <rect
+          class="lights-one"
+          x="2326.49"
+          y="1015.06"
+          width="131.24"
+          height="19"
+          rx="6.84"
+          fill="#d65c85"
+        ></rect>
         <polygon
           points="2629.45 1134.42 2469.02 1134.42 2490.8 747.01 2601.72 747.01 2629.45 1134.42"
           fill="#404fcf"
@@ -298,6 +335,45 @@
         ></path>
       </g>
     </svg>
+
+    <div class="smoke smoke-one">
+      <span class="s0"></span>
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+      <span class="s5"></span>
+      <span class="s6"></span>
+      <span class="s7"></span>
+      <span class="s8"></span>
+      <span class="s9"></span>
+    </div>
+
+    <div class="smoke smoke-two">
+      <span class="s0"></span>
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+      <span class="s5"></span>
+      <span class="s6"></span>
+      <span class="s7"></span>
+      <span class="s8"></span>
+      <span class="s9"></span>
+    </div>
+
+    <div class="smoke smoke-three">
+      <span class="s0"></span>
+      <span class="s1"></span>
+      <span class="s2"></span>
+      <span class="s3"></span>
+      <span class="s4"></span>
+      <span class="s5"></span>
+      <span class="s6"></span>
+      <span class="s7"></span>
+      <span class="s8"></span>
+      <span class="s9"></span>
+    </div>
   </div>
 </template>
 
@@ -310,18 +386,18 @@ export default {
 <style scoped>
 #about {
   position: relative;
-  padding-bottom: 300px;
+  padding-bottom: 180px;
   /* border: 1px solid green; */
 }
 
 h3 {
   font-family: proxima-soft, sans-serif;
-  font-size: 55px;
+  /* font-size: 55px; */
+  font-size: calc(24px + 2vw);
   font-weight: 700;
-  padding-left: 300px;
-  margin: 220px 0 50px 0;
-  color: var(--color-title-text);
-  color: #c02685;
+  padding-left: 150px;
+  margin: 140px 0 20px 0;
+  color: var(--color-section-title-text);
   /* border: 1px solid yellow; */
 }
 
@@ -329,11 +405,11 @@ h3 {
   /* border: 1px solid green; */
   display: flex;
   justify-content: space-between;
-  padding: 0 300px;
+  padding: 0 150px;
 }
 
 .about-content-main {
-  width: 56%;
+  width: 60%;
   /* border: 1px solid yellow; */
 }
 
@@ -360,10 +436,10 @@ p + p {
 
 .aside-number {
   font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 90px;
+  font-size: 80px;
   font-weight: 900;
   text-transform: uppercase;
-  color: #c02685;
+  color: var(--color-accent);
 }
 
 .aside-refer {
@@ -376,15 +452,22 @@ p + p {
 }
 
 .aside-block + .aside-block {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
-.text-highlight {
-  border-bottom: 10px solid #c02685;
+.link-highlight {
+  border-bottom: 10px solid var(--color-accent);
   display: inline-block;
   line-height: 0.4;
   color: inherit;
   text-decoration: none;
+}
+
+.text-highlight {
+  background-color: var(--color-accent);
+  color: inherit;
+  display: inline-block;
+  line-height: 1;
 }
 
 .factoryscape {
@@ -437,6 +520,181 @@ p + p {
 
 #stars-three {
   animation: flicker-three 2s linear infinite alternate;
+}
+
+.lights-one {
+  /* opacity: var(--lights-pink-opacity); */
+  fill: var(--lights-pink-color);
+  transition: fill 0.6s ease-out;
+}
+
+/* Smoke container */
+
+.smoke {
+  position: absolute;
+  z-index: 3;
+  width: 1px;
+  height: 160px;
+}
+
+.smoke-one {
+  right: 6%;
+  bottom: 14vw;
+}
+
+.smoke-two {
+  right: 12%;
+  bottom: 14vw;
+}
+
+.smoke-three {
+  right: 18%;
+  bottom: 14vw;
+}
+
+/* smoke balls */
+
+.smoke span {
+  display: block;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  margin-left: -20px;
+  height: 0px;
+  width: 0px;
+  border: 35px solid #4b4b4b;
+  border-radius: 35px;
+  left: -14px;
+  opacity: 0;
+  transform: scale(0.2);
+}
+
+/* Smoke animation */
+
+@keyframes smokeL {
+  0% {
+    transform: scale(0.2) translate(0, 0);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(0.2) translate(0, -5px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) translate(-20px, -130px);
+  }
+}
+
+@keyframes smokeR {
+  0% {
+    transform: scale(0.2) translate(0, 0);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(0.2) translate(0, -5px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) translate(20px, -130px);
+  }
+}
+
+.smoke .s0 {
+  animation: smokeL 10s 0s infinite;
+}
+.smoke .s1 {
+  animation: smokeR 10s 1s infinite;
+}
+.smoke .s2 {
+  animation: smokeL 10s 2s infinite;
+}
+.smoke .s3 {
+  animation: smokeR 10s 3s infinite;
+}
+.smoke .s4 {
+  animation: smokeL 10s 4s infinite;
+}
+.smoke .s5 {
+  animation: smokeR 10s 5s infinite;
+}
+.smoke .s6 {
+  animation: smokeL 10s 6s infinite;
+}
+.smoke .s7 {
+  animation: smokeR 10s 7s infinite;
+}
+.smoke .s8 {
+  animation: smokeL 10s 8s infinite;
+}
+.smoke .s9 {
+  animation: smokeR 10s 9s infinite;
+}
+
+@media only screen and (max-width: 1000px) {
+  h3 {
+    /* background-color: red; */
+    padding-left: 100px;
+  }
+
+  .about-content {
+    padding: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+  h3 {
+    margin: 18vw 0 20px 0;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-content-main {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-content-aside {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .aside-block + .aside-block {
+    margin-top: 0px;
+    /* margin-left: 20px; */
+  }
+
+  .aside-block {
+    text-align: center;
+  }
+
+  .aside-number {
+    font-size: calc(10px + 10.5vw);
+  }
+
+  .aside-refer {
+    font-size: calc(8px + 1.5vw);
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  #about {
+    padding-bottom: 100px;
+  }
+
+  h3 {
+    padding-left: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .about-content {
+    padding: 0 30px;
+  }
 }
 </style>
 

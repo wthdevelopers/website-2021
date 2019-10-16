@@ -6,13 +6,14 @@
     </div>
     <svg
       style="transform: translateY(-6px);"
+      viewBox="0 0 1440 215.44"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
     >
       <path
+        d="m-92.45-323.12h60c60 0 180 0 300 16s240 48 360 37.3c120-10.3 240-64.3 360-85.3s240-11 300-5.3l60 5.3v-128h-1440z"
         fill="#79c89f"
         fill-opacity="0.4"
-        d="M0,160L60,160C120,160,240,160,360,176C480,192,600,224,720,213.3C840,203,960,149,1080,128C1200,107,1320,117,1380,122.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+        transform="translate(92.45 483.12)"
       ></path>
     </svg>
   </div>
@@ -39,11 +40,10 @@ export default {
 
 h3 {
   font-family: proxima-soft, sans-serif;
-  font-size: 55px;
+  font-size: calc(24px + 2vw);
   font-weight: 700;
   padding-left: 150px;
-  color: var(--color-title-text);
-  color: #c02685;
+  color: var(--color-section-title-text);
   margin-bottom: 50px;
   /* border: 1px solid yellow; */
 }
@@ -52,6 +52,43 @@ h3 {
   height: 500px;
   margin: 0 150px;
   border: 1px solid red;
+}
+
+@media only screen and (max-width: 1000px) {
+  h3 {
+    padding-left: 100px;
+  }
+
+  .sponsors-content {
+    margin: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  h3 {
+    padding-left: 100px;
+  }
+
+  .schedule-content {
+    margin: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+}
+
+@media only screen and (max-width: 570px) {
+  h3 {
+    padding-left: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .sponsors-content {
+    margin: 0 30px;
+  }
 }
 </style>
 

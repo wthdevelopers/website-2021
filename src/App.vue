@@ -6,7 +6,7 @@
     <Schedule/>
     <Sponsors/>
     <Faq/>
-    <Footer/>
+    <Foot/>
   </div>
 </template>
 
@@ -17,7 +17,7 @@ import Prizes from "@/components/prizes/Prizes.vue";
 import Schedule from "@/components/schedule/Schedule.vue";
 import Sponsors from "@/components/sponsors/Sponsors.vue";
 import Faq from "@/components/faq/Faq.vue";
-import Footer from "@/components/footer/Footer.vue";
+import Foot from "@/components/foot/Foot.vue";
 
 export default {
   name: "app",
@@ -28,7 +28,7 @@ export default {
     Schedule,
     Sponsors,
     Faq,
-    Footer
+    Foot
   }
 };
 </script>
@@ -40,8 +40,10 @@ export default {
 
   --color-background: #f3f3fb;
   --color-title-text: #2d3887;
+  --color-cta-text: #f3f3fb;
+  --color-section-title-text: #2d3887;
   --color-regular-text: #000000;
-  --color-accent: #a82175;
+  --color-accent: #e26ab4;
 
   --slope-body-color: #c1e1d5;
 
@@ -57,8 +59,10 @@ export default {
 [theme="dark"] {
   --color-background: #191f4d;
   --color-title-text: #f3f3fb;
+  --color-cta-text: #191f4d;
+  --color-section-title-text: #c02685;
   --color-regular-text: #f3f3fb;
-  --color-accent: #a82175;
+  --color-accent: #c02685;
 
   --slope-body-color: #3f636d;
 
@@ -81,6 +85,7 @@ body {
   position: relative;
   background-color: var(--color-background);
   transition: background-color 0.6s ease-out;
+  overflow-x: hidden;
 }
 
 ul {

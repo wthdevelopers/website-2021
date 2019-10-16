@@ -4,7 +4,6 @@
     <div class="schedule-content"></div>
 
     <svg class="windmillscape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3093.28 807.77">
-      <title>windmillscape</title>
       <g id="base">
         <path
           d="M-4096.08,714.57l128.88-16c128.89-16,386.67-48,644.44-42.7,257.77,5.7,515.55,47.7,773.32,48,257.77-.3,515.55-42.3,773.32-69.3s515.55-37,644.44-42.7l128.88-5.3v224H-4096.08Z"
@@ -347,12 +346,12 @@ export default {
 <style scoped>
 h3 {
   font-family: proxima-soft, sans-serif;
-  font-size: 55px;
+  font-size: calc(24px + 2vw);
   font-weight: 700;
   padding-left: 150px;
-  color: var(--color-title-text);
-  color: #c02685;
+  color: var(--color-section-title-text);
   margin-bottom: 50px;
+  margin-top: 30px;
   /* border: 1px solid yellow; */
 }
 
@@ -413,6 +412,64 @@ h3 {
 #turbine-two,
 #turbine-three {
   opacity: 0.65;
+}
+
+#turbine-one {
+  transform-origin: 405px 385px;
+  animation: turbine-rotate 8s linear infinite;
+}
+
+#turbine-two {
+  transform-origin: 625px 310px;
+  animation: turbine-rotate 10s linear infinite;
+}
+
+#turbine-three {
+  transform-origin: 825px 525px;
+  animation: turbine-rotate 6s linear infinite;
+}
+
+@keyframes turbine-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  h3 {
+    padding-left: 100px;
+  }
+
+  .prizes-content {
+    margin: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  h3 {
+    padding-left: 100px;
+  }
+
+  .schedule-content {
+    margin: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+}
+
+@media only screen and (max-width: 570px) {
+  h3 {
+    padding-left: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .schedule-content {
+    margin: 0 30px;
+  }
 }
 </style>
 

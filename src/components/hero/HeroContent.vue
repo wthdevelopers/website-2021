@@ -29,8 +29,13 @@
       </g>
     </svg>
     <h1>Urban Cities // Environment</h1>
-    <h2>8th - 9th February 2020</h2>
-    <h2>Singapore University of Technology and Design</h2>
+    <div class="hero-content-secondary">
+      <div>
+        <h2>8th - 9th February 2020</h2>
+        <h2>Singapore University of Technology and Design</h2>
+      </div>
+      <a href="#" class="register-button">Register Now</a>
+    </div>
   </div>
 </template>
 
@@ -49,30 +54,121 @@ export default {
 
 .hero-content > svg {
   width: 54.5vw;
-  margin-left: 17vw;
+  width: calc(400px + 28vw);
+  margin-left: 12vw;
   margin-top: 4.5vw;
   margin-bottom: 20px;
+  /* border: 1px solid blue; */
 }
 
-.hero-content > h1 {
+.hero-content h1 {
   font-family: proxima-soft;
-  font-size: 55px;
-  font-size: calc(3vw + 12px);
+  font-size: calc(3vw + 14px);
   font-weight: 900;
   color: var(--color-title-text);
-  margin-left: 34.75vw;
+  margin-left: 30vw;
   margin-bottom: 8px;
   transition: color 0.6s ease-out;
+  /* border: 1px solid green; */
 }
 
-.hero-content > h2 {
+.hero-content-secondary {
+  display: flex;
+  margin-left: 30vw;
+  /* border: 1px solid green; */
+}
+
+.hero-content h2 {
   font-family: proxima-soft;
-  font-size: 24px;
   font-size: calc(1vw + 10px);
   font-weight: 700;
   color: var(--color-title-text);
-  margin-left: 35vw;
   transition: color 0.6s ease-out;
+  /* border: 1px solid green; */
+}
+
+.register-button {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: proxima-soft, sans-serif;
+  font-weight: 700;
+  background-color: var(--color-title-text);
+  color: var(--color-cta-text);
+  padding: 32px 20px;
+  width: 190px;
+  height: 0;
+  transition: background-color 0.6s ease-out, color 0.6s ease-out;
+}
+
+@media only screen and (max-width: 1000px) {
+  .hero-content-secondary {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .register-button {
+    margin-top: 30px;
+    margin-left: 110px;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+  .hero-content > svg {
+    width: 80vw;
+    margin-left: 8vw;
+    margin-top: 8vw;
+  }
+
+  .hero-content > h1 {
+    margin-left: 22vw;
+  }
+
+  .hero-content-secondary {
+    margin-left: 22vw;
+  }
+
+  .register-button {
+    font-size: 22px;
+    padding: 28px 20px;
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .hero-content > svg {
+    margin-top: 16vw;
+  }
+
+  .hero-content > h1 {
+    margin-top: 30px;
+    font-size: calc(3vw + 24px);
+    margin-left: 0;
+    text-align: center;
+    padding: 0 30px;
+    line-height: 1;
+  }
+
+  .hero-content-secondary {
+    margin-top: 30px;
+    margin-left: 0;
+    text-align: center;
+    padding: 0 30px;
+  }
+
+  .hero-content h2 {
+    font-size: 16px;
+  }
+
+  .register-button {
+    font-size: 16px;
+    padding: 22px 20px;
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 </style>
 

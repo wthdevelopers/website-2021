@@ -1,20 +1,20 @@
 <template>
   <div id="hero">
-    <Nav/>
+    <Navbar/>
     <HeroContent/>
     <HeroImage/>
   </div>
 </template>
 
 <script>
-import Nav from "@/components/hero/Nav.vue";
+import Navbar from "@/components/hero/Navbar.vue";
 import HeroContent from "@/components/hero/HeroContent.vue";
 import HeroImage from "@/components/hero/HeroImage.vue";
 
 export default {
   name: "hero",
   components: {
-    Nav,
+    Navbar,
     HeroContent,
     HeroImage
   }
