@@ -396,7 +396,7 @@ h3 {
   font-size: calc(24px + 2vw);
   font-weight: 700;
   padding-left: 150px;
-  margin: 140px 0 20px 0;
+  margin: 24vw 0 20px 0;
   color: var(--color-section-title-text);
   /* border: 1px solid yellow; */
 }
@@ -646,10 +646,6 @@ p + p {
 }
 
 @media only screen and (max-width: 791px) {
-  h3 {
-    margin: 18vw 0 20px 0;
-  }
-
   .about-content {
     flex-direction: column;
   }
