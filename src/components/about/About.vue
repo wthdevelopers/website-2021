@@ -535,7 +535,7 @@ p + p {
 
 .smoke {
   position: absolute;
-  z-index: 3;
+  z-index: -1;
   width: 1px;
   height: 160px;
 }

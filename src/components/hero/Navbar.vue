@@ -468,10 +468,11 @@ nav button:hover {
 }
 
 #drawer-flair {
-  width: 85px;
+  height: 100vh;
   position: absolute;
   top: 0;
-  left: -85px;
+  left: calc(-100vh * 0.11639091);
+  transform: translateX(1px);
 }
 
 #drawer-flair #slope {
