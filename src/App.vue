@@ -40,6 +40,7 @@ export default {
 
   --color-background: #f3f3fb;
   --color-title-text: #2d3887;
+  --color-title-text-hover: #3947ac;
   --color-cta-text: #f3f3fb;
   --color-section-title-text: #2d3887;
   --color-regular-text: #000000;
@@ -59,6 +60,7 @@ export default {
 [theme="dark"] {
   --color-background: #191f4d;
   --color-title-text: #f3f3fb;
+  --color-title-text-hover: #d9d9f2;
   --color-cta-text: #191f4d;
   --color-section-title-text: #c02685;
   --color-regular-text: #f3f3fb;

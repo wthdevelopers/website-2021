@@ -1,9 +1,9 @@
 <template>
   <nav>
-    <ul>
+    <ul id="bar">
       <li>
         <svg
-          class="nav-logo"
+          id="bar-logo"
           viewBox="0 0 551.39 142.09"
           xmlns="http://www.w3.org/2000/svg"
           width="150px"
@@ -45,7 +45,7 @@
       <li>
         <a href="#">FAQs</a>
       </li>
-      <li class="nav-register-link">
+      <li class="bar-register-link">
         <a href="#">Register</a>
       </li>
       <li>
@@ -134,8 +134,8 @@
         </svg>
       </li>
     </ul>
-    <div class="drawer">
-      <svg class="drawer-flair" viewBox="0 0 439.95 3779.93" xmlns="http://www.w3.org/2000/svg">
+    <div id="drawer">
+      <svg id="drawer-flair" viewBox="0 0 439.95 3779.93" xmlns="http://www.w3.org/2000/svg">
         <g transform="translate(-408.32 1529.69)">
           <path
             d="m719.68-416.08c-.29 4.9 0 9.71-1.21 14.68-2.19 9-8.22 12.84-16.41 15-15.21 3.94-29.93 1.54-44.54-3-1.25-.39-2.55-.61-3.82-.91-3.86-2.56-7.92-4.87-11.55-7.73-14.09-11.1-14.7-30.16-1.53-42.36a28.74 28.74 0 0 1 9.09-5.93 15.09 15.09 0 0 0 1.93-2.06c13.06-3.92 26.22-7.07 40-5.92a57.47 57.47 0 0 1 6 .35c16.3 3 21.86 9.69 22.08 26.5v5c-4.55 4.51-10.64 1.77-15.66 3.26 5.06 1.17 11.11-1.71 15.62 3.17z"
@@ -209,8 +209,8 @@
         </g>
       </svg>
       <svg
+        id="cancel"
         @click="closeDrawer"
-        class="cancel"
         viewBox="0 0 375 375"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -346,10 +346,12 @@ export default {
       }
     },
     openDrawer() {
-      document.querySelector(".drawer").style.right = "0";
+      document.querySelector("#drawer").style.opacity = "1";
+      document.querySelector("#drawer").style.right = "0";
     },
     closeDrawer() {
-      document.querySelector(".drawer").style.right = "-80vw";
+      document.querySelector("#drawer").style.opacity = "0";
+      document.querySelector("#drawer").style.right = "-80vw";
     }
   }
 };
@@ -357,31 +359,8 @@ export default {
 
 <style scoped>
 nav {
-  /* border: 2px solid red; */
   padding: 25px 40px;
-}
-
-nav > ul {
-  display: flex;
-  align-items: center;
-}
-
-.nav-logo > g {
-  fill: var(--color-title-text);
-  transition: fill 0.6s ease-out;
-}
-
-nav > ul > li:first-child {
-  margin-right: auto;
-}
-
-nav > ul > svg > g {
-  fill: var(--color-title-text);
-  transition: fill 0.6s ease-out;
-}
-
-nav > ul > li + li {
-  margin-left: 30px;
+  /* border: 2px solid red; */
 }
 
 nav a {
@@ -392,11 +371,37 @@ nav a {
   transition: color 0.6s ease-out;
 }
 
-.nav-register-link {
+nav a:hover {
+  color: var(--color-accent);
+}
+
+#bar {
+  display: flex;
+  align-items: center;
+}
+
+#bar-logo > g {
+  fill: var(--color-title-text);
+  transition: fill 0.6s ease-out;
+}
+
+#bar > li:first-child {
+  margin-right: auto;
+}
+
+#bar > li + li {
+  margin-left: 30px;
+}
+
+.bar-register-link {
   border-bottom: 5px solid var(--color-title-text);
   padding-bottom: 2px;
   transform: translateY(4px);
   transition: border-bottom 0.6s ease-out;
+}
+
+.bar-register-link:hover {
+  border-bottom: 5px solid var(--color-accent);
 }
 
 #hamburger {
@@ -405,7 +410,6 @@ nav a {
 
 #hamburger > svg {
   cursor: pointer;
-  /* transform: translateY(3px); */
   width: 20px;
 }
 
@@ -414,8 +418,8 @@ nav a {
   transition: fill border-bottom 0.6s ease-out;
 }
 
-.drawer {
-  /* display: none; */
+#drawer {
+  opacity: 0;
   position: fixed;
   z-index: 999;
   height: 100vh;
@@ -426,10 +430,11 @@ nav a {
   padding: 80px 50px 80px 30px;
   text-align: center;
   transition: right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53),
+    opacity 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53),
     background-color 0.6s ease-out;
 }
 
-.cancel {
+#cancel {
   width: 20px;
   position: absolute;
   top: 27px;
@@ -437,32 +442,27 @@ nav a {
   cursor: pointer;
 }
 
-.cancel > path {
+#cancel > path {
   fill: var(--color-title-text);
   transition: fill 0.6s ease-out;
 }
 
-.drawer > ul > li + li {
+#drawer > ul > li + li {
   margin-top: 20px;
 }
 
-.drawer a {
-  font-family: var(--font-primary), sans-serif;
+#drawer a {
   font-size: calc(12px + 1.5vw);
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--color-title-text);
-  transition: color 0.6s ease-out;
 }
 
-.drawer-flair {
+#drawer-flair {
   width: 85px;
   position: absolute;
   top: 0;
   left: -85px;
 }
 
-.drawer-flair #slope {
+#drawer-flair #slope {
   fill: var(--slope-body-color);
   transition: fill 0.6s ease-out;
 }
@@ -472,17 +472,17 @@ nav a {
     padding: 25px 30px;
   }
 
-  nav > ul > li + li {
+  #bar > li + li {
     margin-left: 20px;
   }
 
-  .nav-logo {
+  #bar-logo {
     width: calc(32px + 12vw);
   }
 }
 
 @media only screen and (max-width: 791px) {
-  nav > ul > li:not(:first-child) {
+  #bar > li:not(:first-child):not(#hamburger) {
     display: none;
   }
 

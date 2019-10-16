@@ -463,6 +463,10 @@ p + p {
   text-decoration: none;
 }
 
+.link-highlight:hover {
+  background-color: var(--color-accent);
+}
+
 .text-highlight {
   background-color: var(--color-accent);
   color: inherit;
