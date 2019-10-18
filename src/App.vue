@@ -1,37 +1,8 @@
 <template>
   <div id="app">
-    <Hero/>
-    <About/>
-    <Prizes/>
-    <Schedule/>
-    <Sponsors/>
-    <Faq/>
-    <Foot/>
+    <router-view/>
   </div>
 </template>
-
-<script>
-import Hero from "@/components/hero/Hero.vue";
-import About from "@/components/about/About.vue";
-import Prizes from "@/components/prizes/Prizes.vue";
-import Schedule from "@/components/schedule/Schedule.vue";
-import Sponsors from "@/components/sponsors/Sponsors.vue";
-import Faq from "@/components/faq/Faq.vue";
-import Foot from "@/components/foot/Foot.vue";
-
-export default {
-  name: "app",
-  components: {
-    Hero,
-    About,
-    Prizes,
-    Schedule,
-    Sponsors,
-    Faq,
-    Foot
-  }
-};
-</script>
 
 <style>
 :root {

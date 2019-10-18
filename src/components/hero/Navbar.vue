@@ -46,7 +46,7 @@
         <button @click="buttonOnClickScroll('faq')">FAQs</button>
       </li>
       <li class="bar-register-link">
-        <a href="#">Register</a>
+        <router-link to="/registration">Register</router-link>
       </li>
       <li>
         <svg
@@ -236,7 +236,7 @@
           <button @click="buttonOnClickScroll('faq')">FAQs</button>
         </li>
         <li>
-          <a href="#">Register</a>
+          <router-link to="/registration">Register</router-link>
         </li>
         <li>
           <svg

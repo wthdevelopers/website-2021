@@ -34,7 +34,7 @@
         <h2>8th - 9th February 2020</h2>
         <h2>Singapore University of Technology and Design</h2>
       </div>
-      <a href="#" class="register-button">Register Now</a>
+      <router-link to="/registration" class="register-button">Register Now</router-link>
     </div>
   </div>
 </template>
