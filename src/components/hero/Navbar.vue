@@ -40,7 +40,7 @@
         <button @click="buttonOnClickScroll('schedule')">Schedule</button>
       </li>
       <li>
-        <button @click="buttonOnClickScroll('sponsors')">Sponsors</button>
+        <button @click="buttonOnClickScroll('thankees')">Sponsors</button>
       </li>
       <li>
         <button @click="buttonOnClickScroll('faq')">FAQs</button>
@@ -230,7 +230,7 @@
           <button @click="buttonOnClickScroll('schedule')">Schedule</button>
         </li>
         <li>
-          <button @click="buttonOnClickScroll('sponsors')">Sponsors</button>
+          <button @click="buttonOnClickScroll('thankees')">Sponsors</button>
         </li>
         <li>
           <button @click="buttonOnClickScroll('faq')">FAQs</button>
@@ -316,13 +316,8 @@
 <script>
 export default {
   name: "navbar",
-  data() {
-    return {
-      theme: "light"
-    };
-  },
-  mounted: function() {
-    this.setInitialTheme();
+  props: {
+    theme: String
   },
   methods: {
     buttonOnClickScroll(loc) {
@@ -338,15 +333,6 @@ export default {
         document.documentElement.setAttribute("theme", "dark");
         localStorage.setItem("theme", "dark");
         this.theme = "dark";
-      }
-    },
-    setInitialTheme() {
-      if (localStorage.getItem("theme")) {
-        const cachedTheme = localStorage.getItem("theme");
-        document.documentElement.setAttribute("theme", cachedTheme);
-        this.theme = cachedTheme;
-      } else {
-        document.documentElement.setAttribute("theme", this.theme);
       }
     },
     openDrawer() {

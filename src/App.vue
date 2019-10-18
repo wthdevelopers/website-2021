@@ -1,8 +1,34 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view :theme="theme"/>
   </div>
 </template>
+
+<script>
+export default {
+  name: "app",
+  data() {
+    return {
+      theme: "light"
+    };
+  },
+  mounted: function() {
+    this.setInitialTheme();
+  },
+  methods: {
+    setInitialTheme() {
+      if (localStorage.getItem("theme")) {
+        const cachedTheme = localStorage.getItem("theme");
+        document.documentElement.setAttribute("theme", cachedTheme);
+        this.theme = cachedTheme;
+      } else {
+        document.documentElement.setAttribute("theme", this.theme);
+      }
+    }
+  }
+};
+</script>
+
 
 <style>
 :root {
@@ -33,9 +59,11 @@
   --color-title-text: #f3f3fb;
   --color-title-text-hover: #d9d9f2;
   --color-cta-text: #191f4d;
-  --color-section-title-text: #c02685;
+  /* --color-section-title-text: #c02685; */
+  --color-section-title-text: #d93f9e;
   --color-regular-text: #f3f3fb;
-  --color-accent: #c02685;
+  /* --color-accent: #c02685; */
+  --color-accent: #d93f9e;
 
   --slope-body-color: #3f636d;
 
