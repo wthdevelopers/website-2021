@@ -10,6 +10,7 @@
           placeholder="Your beautiful name here :)"
           v-model="originalName.value"
           @blur="validateFilled(originalName)"
+          :style="originalName.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
         >
         <p class="error-info">{{originalName.error}}</p>
       </div>
@@ -27,9 +28,11 @@
           id="original-dob"
           v-model="originalDob.value"
           @blur="() => {
-              validateFilled(originalDob);
-              validateAge(originalDob);
+              if (!validateFilled(originalDob)) {
+                  validateAge(originalDob);
+              }
           }"
+          :style="originalDob.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
         >
         <p class="error-info">{{originalDob.error}}</p>
       </div>
@@ -41,7 +44,12 @@
           id="original-email"
           placeholder="No spam from us, promise!"
           v-model="originalEmail.value"
-          @blur="validateFilled(originalEmail)"
+          @blur="() => {
+              if (!validateFilled(originalEmail)) {
+                  validateEmail(originalEmail);
+              }
+          }"
+          :style="originalEmail.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
         >
         <p class="error-info">{{originalEmail.error}}</p>
       </div>
@@ -54,6 +62,7 @@
           placeholder="Where are you from?"
           v-model="originalOrg.value"
           @blur="validateFilled(originalOrg)"
+          :style="originalOrg.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
         >
         <p class="error-info">{{originalOrg.error}}</p>
       </div>
@@ -75,12 +84,30 @@
           placeholder="Get creative here!"
           v-model="teamName.value"
           @blur="validateFilled(teamName)"
+          :style="teamName.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
         >
         <p class="error-info">{{teamName.error}}</p>
+      </div>
+      <div class="content-block" style="padding-bottom: 30px;">
+        <label for="team-name">Team Members</label>
+        <p class="additional-info">
+          You can participate in this hackathon either solo or in a
+          team of up to 4 members. If you have other team members,
+          please fill in their details here too.
+        </p>
       </div>
       <div class="content-block">
         <label for="feedback">Any other questions/feedback?</label>
         <textarea/>
+      </div>
+      <div class="content-block">
+        <input type="checkbox" name="confirm" id="confirm">
+        <label for="confirm">
+          I confirm that I am above 13 years of age and agree to the
+          <span
+            id="terms-button"
+          >terms and conditions</span> as stipulated by the organisers of What The Hack 2020.
+        </label>
       </div>
     </form>
     <svg viewBox="0 0 1440 240.41" xmlns="http://www.w3.org/2000/svg">
@@ -109,6 +136,14 @@ export default {
     };
   },
   methods: {
+    validateFilled(subj) {
+      let validationConclusion = "";
+      if (!subj.value) {
+        validationConclusion = "This field is required!";
+      }
+      subj.error = validationConclusion;
+      return validationConclusion;
+    },
     validateAge(subj) {
       let dob = subj.value;
       let validationConclusion = "";
@@ -131,10 +166,19 @@ export default {
       }
       subj.error = validationConclusion;
     },
-    validateFilled(subj) {
+    validateEmail(subj) {
+      const email = subj.value;
+      const [emailBeforeAt, emailAfterAt] = email.split("@");
       let validationConclusion = "";
-      if (!subj.value) {
-        validationConclusion = "This field is required!";
+      const emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+      if (email.length > 254) {
+        validationConclusion = "This email address is not valid!";
+      } else if (!emailRegex.test(email)) {
+        validationConclusion = "This email address is not valid!";
+      } else if (emailBeforeAt.length > 64) {
+        validationConclusion = "This email address is not valid!";
+      } else if (emailAfterAt.split(".").some(segment => segment.length > 63)) {
+        validationConclusion = "This email address is not valid!";
       }
       subj.error = validationConclusion;
     }
@@ -183,7 +227,8 @@ label {
   height: 10px;
 }
 
-input {
+input[type="text"],
+input[type="date"] {
   display: block;
   margin-top: 40px;
   background-color: transparent;
@@ -195,6 +240,11 @@ input {
   font-weight: 900;
   color: var(--color-regular-text);
   padding: 0 10px;
+}
+
+.content-block {
+  position: relative;
+  /* border: 1px solid yellow; */
 }
 
 .content-block + .content-block {
@@ -227,6 +277,42 @@ textarea {
   font-weight: 900;
   color: var(--color-regular-text);
   padding: 15px 30px;
+}
+
+input[type="checkbox"] {
+  margin-right: 20px;
+  appearance: none;
+  border: 2px solid var(--color-regular-text);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transform: translateY(1px);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 4.5px;
+  top: 16px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+    4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
+}
+
+#terms-button {
+  border-bottom: 1.5px dashed var(--color-regular-text);
 }
 </style>
 
