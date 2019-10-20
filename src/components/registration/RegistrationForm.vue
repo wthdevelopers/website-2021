@@ -1,114 +1,131 @@
 <template>
   <div id="registration-form">
     <form id="registration-form-content">
-      <div class="content-block">
-        <label for="original-name">*Name</label>
-        <input
-          type="text"
-          name="original-name"
-          id="original-name"
-          placeholder="Your beautiful name here :)"
-          v-model="originalName.value"
-          @blur="validateFilled(originalName)"
-          :style="originalName.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
-        >
-        <p class="error-info">{{originalName.error}}</p>
+      <div @click="goToPage('1')" class="top-button" v-if="page === '2'">Previous Page</div>
+      <p class="welcome" v-if="page === '1'">Hello!</p>
+      <div v-if="page === '1'">
+        <Radio
+          label="*Are you registering as an individual or for a group?"
+          name="format"
+          :model="format"
+          :options="[{id: 'format-individual', value: 'Individual', optionLabel: 'Individual'}, 
+        {id: 'format-group', value: 'Group', optionLabel: 'Group'}]"
+        />
       </div>
-      <div class="content-block">
-        <label for="original-dob">*Date of Birth</label>
-        <p class="additional-info">
-          You have to be at least 13 years of age at the time of event
-          to be eligible to participate. If you are above 13 but below
-          18 years of age, you can take part only if you have parental
-          consent (we will send out the parental consent forms later).
-        </p>
-        <input
-          type="date"
-          name="original-dob"
-          id="original-dob"
-          v-model="originalDob.value"
-          @blur="() => {
-              if (!validateFilled(originalDob)) {
-                  validateAge(originalDob);
-              }
-          }"
-          :style="originalDob.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
-        >
-        <p class="error-info">{{originalDob.error}}</p>
+      <div v-if="page === '2'">
+        <div v-if="format.value === 'Individual'">
+          <Radio
+            label="*Do you want us to help you form a group, or would you prefer going solo?"
+            name="individual-need-group"
+            :model="individualNeedGroup"
+            :options="[{id: 'individual-need-group-true', value: 'True', optionLabel: 'Sure, help me find a group!'}, 
+        {id: 'individual-need-group-false', value: 'False', optionLabel: 'No thanks, I prefer going solo!'}]"
+          />
+          <FormInput
+            type="text"
+            label="*Name"
+            name="individual-name"
+            placeholder="Your beautiful name here :)"
+            :model="individualName"
+            :onBlur="validateFilled"
+          />
+          <FormInput
+            additionalInfo="You need to be at least 13 years of age at the time of event 
+        to be eligible to participate. If you are over 13 but under 18 years of age, 
+        you will be eligible to participate only if you have parental consent (parental 
+        consent forms will be sent out to you later)."
+            type="date"
+            label="*Date of Birth"
+            name="individual-dob"
+            :model="individualDob"
+            :onInput="validateAge"
+            :onBlur="s => {
+            if (!validateFilled(s)) {
+                validateAge(s);
+            }
+        }"
+          />
+          <FormInput
+            type="text"
+            label="*Email Address"
+            name="individual-email"
+            placeholder="No spam from us, promise!"
+            :model="individualEmail"
+            :onInput="validateEmail"
+            :onBlur="s => {
+            if (!validateFilled(s)) {
+                validateEmail(s, 'blur');
+            }
+        }"
+          />
+          <FormInput
+            type="text"
+            label="*School/Company/Organisation"
+            name="individual-org"
+            placeholder="Where are you from?"
+            :model="individualOrg"
+            :onBlur="validateFilled"
+          />
+          <FormInput
+            v-if="individualNeedGroup.value === 'False'"
+            type="text"
+            label="*Team Name"
+            name="team-name"
+            placeholder="Get creative here!"
+            :model="teamName"
+            :onBlur="validateFilled"
+          />
+          <FormInput
+            type="text"
+            label="Dietary Requirements"
+            name="individual-diet"
+            placeholder="Vegan/vegetarian/allergies/etc."
+            :model="individualDiet"
+          />
+          <Radio
+            label="*What is your T-shirt size?"
+            name="individual-shirt"
+            :model="individualShirt"
+            :options="[{id: 'individual-shirt-xs', value: 'XS', optionLabel: 'XS'}, 
+        {id: 'individual-shirt-s', value: 'S', optionLabel: 'S'},
+        {id: 'individual-shirt-m', value: 'M', optionLabel: 'M'},
+        {id: 'individual-shirt-l', value: 'L', optionLabel: 'L'},
+        {id: 'individual-shirt-xl', value: 'XL', optionLabel: 'XL'}]"
+          />
+          <div class="content-block">
+            <label for="feedback">Any other questions/feedback?</label>
+            <textarea/>
+          </div>
+          <Checkbox
+            label="I confirm that I am above 13 years of age and have read and agree to the 
+        <span id='terms-button'>terms and conditions</span> as stipulated 
+        by the organisers of What The Hack 2020."
+            name="confirm"
+            :model="confirm"
+          />
+        </div>
+        <div v-else>
+          <div class="content-block" style="padding-bottom: 30px;">
+            <label for="team-name">Team Members</label>
+            <p class="additional-info">
+              You can participate in this hackathon either solo or in a
+              team of up to 4 members. If you have other team members,
+              please fill in their details here too.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="content-block">
-        <label for="original-email">*Email Address</label>
-        <input
-          type="text"
-          name="original-email"
-          id="original-email"
-          placeholder="No spam from us, promise!"
-          v-model="originalEmail.value"
-          @blur="() => {
-              if (!validateFilled(originalEmail)) {
-                  validateEmail(originalEmail);
-              }
-          }"
-          :style="originalEmail.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
-        >
-        <p class="error-info">{{originalEmail.error}}</p>
-      </div>
-      <div class="content-block">
-        <label for="original-org">*School/Company/Organisation</label>
-        <input
-          type="text"
-          name="original-org"
-          id="original-org"
-          placeholder="Where are you from?"
-          v-model="originalOrg.value"
-          @blur="validateFilled(originalOrg)"
-          :style="originalOrg.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
-        >
-        <p class="error-info">{{originalOrg.error}}</p>
-      </div>
-      <div class="content-block">
-        <label for="original-diet">Dietary Requirements</label>
-        <input
-          type="text"
-          name="original-diet"
-          id="original-diet"
-          placeholder="Vegetarian/vegan/allergies/etc."
-        >
-      </div>
-      <div class="content-block" style="padding-bottom: 30px;">
-        <label for="team-name">*Team Name</label>
-        <input
-          type="text"
-          name="team-name"
-          id="team-name"
-          placeholder="Get creative here!"
-          v-model="teamName.value"
-          @blur="validateFilled(teamName)"
-          :style="teamName.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
-        >
-        <p class="error-info">{{teamName.error}}</p>
-      </div>
-      <div class="content-block" style="padding-bottom: 30px;">
-        <label for="team-name">Team Members</label>
-        <p class="additional-info">
-          You can participate in this hackathon either solo or in a
-          team of up to 4 members. If you have other team members,
-          please fill in their details here too.
-        </p>
-      </div>
-      <div class="content-block">
-        <label for="feedback">Any other questions/feedback?</label>
-        <textarea/>
-      </div>
-      <div class="content-block">
-        <input type="checkbox" name="confirm" id="confirm">
-        <label for="confirm">
-          I confirm that I am above 13 years of age and agree to the
-          <span
-            id="terms-button"
-          >terms and conditions</span> as stipulated by the organisers of What The Hack 2020.
-        </label>
-      </div>
+      <div
+        @click="() => {
+            if (format.value) {
+                goToPage('2');
+            }
+        }"
+        class="bottom-button"
+        v-if="page === '1'"
+        :style="format.value ? '' : 'opacity: 0.4; cursor: not-allowed;'"
+      >Next Page</div>
+      <div class="bottom-button" v-if="page === '2'" :style="checkSubmitConditions()">Submit</div>
     </form>
     <svg viewBox="0 0 1440 240.41" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -120,19 +137,30 @@
 </template>
 
 <script>
+import Radio from "@/components/registration/Radio.vue";
+import FormInput from "@/components/registration/FormInput.vue";
+import Checkbox from "@/components/registration/Checkbox.vue";
+
 export default {
   name: "registration-form",
+  components: {
+    Radio,
+    FormInput,
+    Checkbox
+  },
   data() {
     return {
-      originalName: { value: "", error: "" },
-      originalDob: {
-        value: "",
-        error: ""
-      },
-      originalEmail: { value: "", error: "" },
-      originalOrg: { value: "", error: "" },
-      originalDiet: { value: "" },
-      teamName: { value: "", error: "" }
+      page: "1",
+      format: { value: "" },
+      individualNeedGroup: { value: "", error: "" },
+      individualShirt: { value: "" },
+      individualName: { value: "", error: "" },
+      individualDob: { value: "", error: "", success: false },
+      individualEmail: { value: "", error: "", success: false },
+      individualOrg: { value: "", error: "" },
+      individualDiet: { value: "" },
+      teamName: { value: "", error: "" },
+      confirm: { value: "" }
     };
   },
   methods: {
@@ -144,7 +172,7 @@ export default {
       subj.error = validationConclusion;
       return validationConclusion;
     },
-    validateAge(subj) {
+    validateAge(subj, e) {
       let dob = subj.value;
       let validationConclusion = "";
       const [year, month, day] = dob.split("-").map(str => {
@@ -164,9 +192,16 @@ export default {
           }
         }
       }
-      subj.error = validationConclusion;
+      if (e !== "input") {
+        subj.error = validationConclusion;
+      }
+      if (!validationConclusion) {
+        subj.success = true;
+      } else {
+        subj.success = false;
+      }
     },
-    validateEmail(subj) {
+    validateEmail(subj, e) {
       const email = subj.value;
       const [emailBeforeAt, emailAfterAt] = email.split("@");
       let validationConclusion = "";
@@ -180,18 +215,85 @@ export default {
       } else if (emailAfterAt.split(".").some(segment => segment.length > 63)) {
         validationConclusion = "This email address is not valid!";
       }
-      subj.error = validationConclusion;
+      if (e !== "input") {
+        subj.error = validationConclusion;
+      }
+      if (!validationConclusion) {
+        subj.success = true;
+      } else {
+        subj.success = false;
+      }
+    },
+    checkSubmitConditions() {
+      if (this.individualNeedGroup.value === "True") {
+        return this.individualName.value &&
+          this.individualOrg.value &&
+          this.individualShirt.value &&
+          this.individualDob.success &&
+          this.individualEmail.success &&
+          this.confirm.value
+          ? ""
+          : "opacity: 0.4; cursor: not-allowed;";
+      } else if (this.individualNeedGroup.value === "False") {
+        return this.individualName.value &&
+          this.individualOrg.value &&
+          this.teamName.value &&
+          this.individualShirt.value &&
+          this.individualDob.success &&
+          this.individualEmail.success &&
+          this.confirm.value
+          ? ""
+          : "opacity: 0.4; cursor: not-allowed;";
+      } else {
+        return "opacity: 0.4; cursor: not-allowed;";
+      }
+    },
+    goToPage(d) {
+      this.page = d;
     }
   }
 };
 </script>
 
-<style scoped>
+<style>
 #registration-form-content {
+  position: relative;
   background-color: var(--slope-body-color);
   transition: background-color 0.6s ease-out;
   /* border: 1px solid yellow; */
-  padding: 100px 300px;
+  padding: 150px 350px;
+}
+
+.top-button,
+.bottom-button {
+  cursor: pointer;
+  position: absolute;
+  font-family: var(--font-primary), sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--slope-body-color);
+  padding: 4px 20px;
+  background-color: var(--color-regular-text);
+}
+
+.welcome {
+  position: absolute;
+  left: 350px;
+  top: 0;
+  font-family: var(--font-primary), sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--color-regular-text);
+}
+
+.top-button {
+  left: 350px;
+  top: 0;
+}
+
+.bottom-button {
+  right: 350px;
+  bottom: 0;
 }
 
 svg > path {
@@ -199,12 +301,50 @@ svg > path {
   transition: fill 0.6s ease-out;
 }
 
+/* FORM BLOCKS */
+
+.content-block {
+  position: relative;
+  /* border: 1px solid yellow; */
+}
+
+.content-block + .content-block {
+  margin-top: 100px;
+}
+
+/* INPUTS: TEXTAREA */
+
+textarea {
+  display: block;
+  margin-top: 30px;
+  background-color: transparent;
+  border: 2px solid var(--color-regular-text);
+  width: 700px;
+  height: 350px;
+  font-family: var(--font-secondary), sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--color-regular-text);
+  padding: 10px 20px;
+  resize: vertical;
+}
+
+textarea:focus {
+  border: 2px solid transparent;
+  color: var(--color-accent);
+  outline: 2px solid var(--color-accent);
+}
+
+/* LABELS */
+
 label {
   font-family: var(--font-primary), sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--color-regular-text);
 }
+
+/* OTHERS */
 
 .additional-info {
   font-family: var(--font-primary), sans-serif;
@@ -225,90 +365,6 @@ label {
   margin-top: 20px;
   padding: 0 10px;
   height: 10px;
-}
-
-input[type="text"],
-input[type="date"] {
-  display: block;
-  margin-top: 40px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid var(--color-regular-text);
-  width: 100%;
-  font-family: var(--font-secondary), sans-serif;
-  font-size: 42px;
-  font-weight: 900;
-  color: var(--color-regular-text);
-  padding: 0 10px;
-}
-
-.content-block {
-  position: relative;
-  /* border: 1px solid yellow; */
-}
-
-.content-block + .content-block {
-  margin-top: 100px;
-}
-
-input:focus {
-  border-bottom: 2px solid transparent;
-  color: var(--color-accent);
-  outline: 2px solid var(--color-accent);
-}
-
-input:focus-visible {
-  outline: 2px solid var(--color-accent);
-}
-
-input:invalid {
-  border-bottom: 2px solid var(--color-accent);
-  color: var(--color-accent);
-}
-
-textarea {
-  display: block;
-  margin-top: 30px;
-  background-color: transparent;
-  border: 2px solid var(--color-regular-text);
-  width: auto;
-  font-family: var(--font-secondary), sans-serif;
-  font-size: 42px;
-  font-weight: 900;
-  color: var(--color-regular-text);
-  padding: 15px 30px;
-}
-
-input[type="checkbox"] {
-  margin-right: 20px;
-  appearance: none;
-  border: 2px solid var(--color-regular-text);
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  transform: translateY(1px);
-}
-
-input[type="checkbox"]:checked {
-  background-color: var(--color-accent);
-  border: 2px solid var(--color-accent);
-}
-
-input[type="checkbox"] + label {
-  cursor: pointer;
-}
-
-input[type="checkbox"]:checked + label:after {
-  content: "";
-  position: absolute;
-  left: 4.5px;
-  top: 16px;
-  background: white;
-  width: 2px;
-  height: 2px;
-  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
-    4px -6px 0 white, 4px -8px 0 white;
-  transform: rotate(45deg);
 }
 
 #terms-button {

@@ -60,10 +60,10 @@ export default {
   --color-title-text-hover: #d9d9f2;
   --color-cta-text: #191f4d;
   /* --color-section-title-text: #c02685; */
-  --color-section-title-text: #d93f9e;
+  --color-section-title-text: #dd55a9;
   --color-regular-text: #f3f3fb;
   /* --color-accent: #c02685; */
-  --color-accent: #d93f9e;
+  --color-accent: #dd55a9;
 
   --slope-body-color: #3f636d;
 
