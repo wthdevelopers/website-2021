@@ -32,6 +32,7 @@ export default {
 
 input[type="radio"] {
   cursor: pointer;
+  margin-left: 20px;
   margin-right: 20px;
   appearance: none;
   width: 20px;

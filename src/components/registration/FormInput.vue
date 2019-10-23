@@ -40,7 +40,9 @@ input[type="date"] {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid var(--color-regular-text);
-  width: 100%;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
   font-family: var(--font-secondary), sans-serif;
   font-size: 42px;
   font-weight: 900;
