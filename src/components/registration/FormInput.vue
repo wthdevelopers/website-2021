@@ -3,6 +3,7 @@
     <label :for="name">{{label}}</label>
     <p class="additional-info">{{additionalInfo}}</p>
     <input
+      maxlength="254"
       :type="type"
       :name="name"
       :id="name"

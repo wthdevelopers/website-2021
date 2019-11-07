@@ -1,41 +1,36 @@
 <template>
   <div id="about">
-    <h3>What The Hack?</h3>
+    <SectionHeader>What The Hack?</SectionHeader>
     <div class="about-content">
       <div class="about-content-main">
-        <p>
+        <Para>
           What The Hack is SUTD's annual hackathon held
-          <a
-            href="https://www.google.com/maps/place/Singapore+University+of+Technology+and+Design/@12.9270548,103.4318175,5z/data=!4m5!3m4!1s0x31da3cd8cd26e9e3:0x7de56b1846994e6c!8m2!3d1.3412873!4d103.9637891"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link-highlight"
-          >at our campus</a>
-          that aims to bring together people of various disciplines and provide
-          them with a platform to find innovative solutions to meaningful real-world problems.
-        </p>
-        <p>
+          <ParaAnchor
+            href="https://www.google.com/maps/place/Singapore+University+of+Technology+and+Design/@12.9270548,
+            103.4318175,5z/data=!4m5!3m4!1s0x31da3cd8cd26e9e3:0x7de56b1846994e6c!8m2!3d1.3412873!4d103.9637891"
+          >at our campus</ParaAnchor>
+          {{" "}}that aims to bring together
+          people of various disciplines and provide them with a platform to find innovative
+          solutions to meaningful real-world problems.
+        </Para>
+        <Para>
           This year’s theme is
-          <span class="text-highlight">Urban Cities & Environment</span>, of which there will be four problem domains
+          <span>Urban Cities & Environment</span>, of which there will be four problem domains
           related to this overarching theme -
-          <span
-            class="text-highlight"
-          >Built Environment</span>,
-          <span class="text-highlight">Waste Management</span>,
-          <span class="text-highlight">Waste Reduction</span> and
-          <span class="text-highlight">Transportation</span>. Participants will have to tackle an issue
+          <span>Built Environment</span>,
+          <span>Waste Management</span>,
+          <span>Waste Reduction</span> and
+          <span>Transportation</span>. Participants will have to tackle an issue
           from within one of these problem domains using solutions that fall under at
           least one of these four technological categories -
-          <span
-            class="text-highlight"
-          >Software Platforms</span>,
-          <span class="text-highlight">
+          <span>Software Platforms</span>,
+          <span>
             Internet
             of Things
           </span>,
-          <span class="text-highlight">Artificial Intelligence</span> and
-          <span class="text-highlight">Computational Fabrication</span>.
-        </p>
+          <span>Artificial Intelligence</span> and
+          <span>Computational Fabrication</span>.
+        </Para>
       </div>
       <div class="about-content-aside">
         <div class="aside-block">
@@ -379,8 +374,17 @@
 </template>
 
 <script>
+import Para from "@/components/Para.vue";
+import ParaAnchor from "@/components/ParaAnchor.vue";
+import SectionHeader from "@/components/SectionHeader.vue";
+
 export default {
-  name: "about"
+  name: "about",
+  components: {
+    SectionHeader,
+    Para,
+    ParaAnchor
+  }
 };
 </script>
 
@@ -389,16 +393,6 @@ export default {
   position: relative;
   padding-bottom: 180px;
   /* border: 1px solid green; */
-}
-
-h3 {
-  font-family: var(--font-secondary), sans-serif;
-  font-size: calc(24px + 2vw);
-  font-weight: 700;
-  padding-left: 150px;
-  margin: 24vw 0 20px 0;
-  color: var(--color-section-title-text);
-  /* border: 1px solid yellow; */
 }
 
 .about-content {
@@ -418,17 +412,6 @@ h3 {
   z-index: 1;
   width: 32%;
   /* border: 1px solid purple; */
-}
-
-p {
-  position: relative;
-  display: inline-block;
-  /* border: 1px solid red; */
-  font-size: 24px;
-  font-family: var(--font-primary), sans-serif;
-  line-height: 1.6;
-  z-index: 1;
-  color: var(--color-regular-text);
 }
 
 p + p {
@@ -454,25 +437,6 @@ p + p {
 
 .aside-block + .aside-block {
   margin-top: 20px;
-}
-
-.link-highlight {
-  border-bottom: 10px solid var(--color-accent);
-  display: inline-block;
-  line-height: 0.4;
-  color: inherit;
-  text-decoration: none;
-}
-
-.link-highlight:hover {
-  background-color: var(--color-accent);
-}
-
-.text-highlight {
-  background-color: var(--color-accent);
-  color: inherit;
-  display: inline-block;
-  line-height: 1;
 }
 
 .factoryscape {
@@ -635,11 +599,6 @@ p + p {
 }
 
 @media only screen and (max-width: 1000px) {
-  h3 {
-    /* background-color: red; */
-    padding-left: 100px;
-  }
-
   .about-content {
     padding: 0 100px;
   }
@@ -682,14 +641,6 @@ p + p {
 @media only screen and (max-width: 570px) {
   #about {
     padding-bottom: 100px;
-  }
-
-  h3 {
-    padding-left: 30px;
-  }
-
-  p {
-    font-size: 20px;
   }
 
   .about-content {

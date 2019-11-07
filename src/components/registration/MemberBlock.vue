@@ -27,7 +27,7 @@
       <FormInput
         type="text"
         label="*Name"
-        name="individual-name"
+        :name="`member-${member.id}-name`"
         placeholder="Your beautiful name here :)"
         :model="member.name"
         :onBlur="validateFilled"
@@ -39,7 +39,7 @@
                     consent forms will be sent out to you later)."
         type="date"
         label="*Date of Birth"
-        name="individual-dob"
+        :name="`member-${member.id}-dob`"
         :model="member.dob"
         :onInput="validateAge"
         :onBlur="s => {
@@ -51,7 +51,7 @@
       <FormInput
         type="text"
         label="*Email Address"
-        name="individual-email"
+        :name="`member-${member.id}-email`"
         placeholder="No spam from us, promise!"
         :model="member.email"
         :onInput="validateEmail"
@@ -64,7 +64,7 @@
       <FormInput
         type="text"
         label="*School/Company/Organisation"
-        name="individual-org"
+        :name="`member-${member.id}-org`"
         placeholder="Where are you from?"
         :model="member.org"
         :onBlur="validateFilled"
@@ -72,19 +72,19 @@
       <FormInput
         type="text"
         label="Dietary Requirements"
-        name="individual-diet"
+        :name="`member-${member.id}-diet`"
         placeholder="Vegan/vegetarian/allergies/etc."
         :model="member.diet"
       />
       <Radio
         label="*What is your T-shirt size?"
-        name="individual-shirt"
+        :name="`member-${member.id}-shirt`"
         :model="member.shirt"
-        :options="[{id: 'individual-shirt-xs', value: 'XS', optionLabel: 'XS'}, 
-                {id: 'individual-shirt-s', value: 'S', optionLabel: 'S'},
-                {id: 'individual-shirt-m', value: 'M', optionLabel: 'M'},
-                {id: 'individual-shirt-l', value: 'L', optionLabel: 'L'},
-                {id: 'individual-shirt-xl', value: 'XL', optionLabel: 'XL'}]"
+        :options="[{id: `member-${member.id}-shirt-xs`, value: 'XS', optionLabel: 'XS'}, 
+                {id: `member-${member.id}-shirt-s`, value: 'S', optionLabel: 'S'},
+                {id: `member-${member.id}-shirt-m`, value: 'M', optionLabel: 'M'},
+                {id: `member-${member.id}-shirt-l`, value: 'L', optionLabel: 'L'},
+                {id: `member-${member.id}-shirt-xl`, value: 'XL', optionLabel: 'XL'}]"
       />
     </div>
   </div>

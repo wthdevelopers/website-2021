@@ -1,7 +1,12 @@
 <template>
   <div id="registration-form">
     <form id="registration-form-content">
-      <div @click="goToPage('1')" class="top-button" v-if="page === '2'">Previous Page</div>
+      <button
+        type="button"
+        @click="goToPage('1')"
+        class="top-button"
+        v-if="page === '2'"
+      >Previous Page</button>
       <p class="welcome" v-if="page === '1'">Hello!</p>
       <div v-if="page === '1'">
         <Radio
@@ -94,7 +99,7 @@
           />
           <div class="content-block">
             <label for="feedback">Any other questions/feedback?</label>
-            <textarea/>
+            <textarea maxlength="2540"/>
           </div>
           <Checkbox
             label="I confirm that I am above 13 years of age and have read and agree to the 
@@ -132,221 +137,20 @@
               :validateEmail="validateEmail"
             />
 
-            <!-- <div
-              v-for="(member, idx) in membersMemory"
-              :key="member.id"
-              class="member-block"
-              :id="`member-block-${member.id}`"
-            >
-              <div class="member-block-title" :id="`member-block-title-${member.id}`">
-                <h2>{{`Member #${idx + 1}`}}</h2>
-                <svg
-                  enable-background="new 0 0 47.971 47.971"
-                  viewBox="0 0 47.971 47.971"
-                  xmlns="http://www.w3.org/2000/svg"
-                  @click="removeMember(member.id)"
-                >
-                  <path
-                    d="m28.228 23.986 18.864-18.864c1.172-1.171 1.172-3.071 0-4.242-1.172-1.172-3.07-1.172-4.242 0l-18.864 18.864-18.865-18.864c-1.172-1.172-3.07-1.172-4.242 0-1.172 1.171-1.172 3.071 0 4.242l18.865 18.864-18.865 18.864c-1.172 1.171-1.172 3.071 0 4.242.586.585 1.354.878 2.121.878s1.535-.293 2.121-.879l18.865-18.864 18.864 18.864c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879c1.172-1.171 1.172-3.071 0-4.242z"
-                  ></path>
-                </svg>
-                <svg
-                  viewBox="0 0 451.85 257.57"
-                  xmlns="http://www.w3.org/2000/svg"
-                  @click="openAccordion(member.id)"
-                >
-                  <path
-                    d="m225.92 354.71a31.59 31.59 0 0 1 -22.37-9.27l-194.28-194.28a31.64 31.64 0 0 1 44.73-44.75l171.9 171.91 171.93-171.91a31.64 31.64 0 0 1 44.74 44.75l-194.28 194.29a31.56 31.56 0 0 1 -22.37 9.26z"
-                    transform="translate(0 -97.14)"
-                  ></path>
-                </svg>
-              </div>
-              <div
-                class="member-block-content"
-                :id="`member-block-content-${member.id}`"
-              >{{member.message}}</div>
-            </div>-->
-
-            <!-- <div class="member-block" id="member-block-one" v-if="numMembers >= 1">
-              <div class="member-block-title" id="member-block-title-one">
-                <h2>Member #1</h2>
-                <svg
-                  enable-background="new 0 0 47.971 47.971"
-                  viewBox="0 0 47.971 47.971"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="m28.228 23.986 18.864-18.864c1.172-1.171 1.172-3.071 0-4.242-1.172-1.172-3.07-1.172-4.242 0l-18.864 18.864-18.865-18.864c-1.172-1.172-3.07-1.172-4.242 0-1.172 1.171-1.172 3.071 0 4.242l18.865 18.864-18.865 18.864c-1.172 1.171-1.172 3.071 0 4.242.586.585 1.354.878 2.121.878s1.535-.293 2.121-.879l18.865-18.864 18.864 18.864c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879c1.172-1.171 1.172-3.071 0-4.242z"
-                  ></path>
-                </svg>
-                <svg
-                  viewBox="0 0 451.85 257.57"
-                  xmlns="http://www.w3.org/2000/svg"
-                  @click="openAccordion('one')"
-                >
-                  <path
-                    d="m225.92 354.71a31.59 31.59 0 0 1 -22.37-9.27l-194.28-194.28a31.64 31.64 0 0 1 44.73-44.75l171.9 171.91 171.93-171.91a31.64 31.64 0 0 1 44.74 44.75l-194.28 194.29a31.56 31.56 0 0 1 -22.37 9.26z"
-                    transform="translate(0 -97.14)"
-                  ></path>
-                </svg>
-              </div>
-              <div class="member-block-content" id="member-block-content-one">
-                <FormInput
-                  type="text"
-                  label="*Name"
-                  name="individual-name"
-                  placeholder="Your beautiful name here :)"
-                  :model="individualName"
-                  :onBlur="validateFilled"
-                />
-                <FormInput
-                  additionalInfo="You need to be at least 13 years of age at the time of event 
-                    to be eligible to participate. If you are over 13 but under 18 years of age, 
-                    you will be eligible to participate only if you have parental consent (parental 
-                    consent forms will be sent out to you later)."
-                  type="date"
-                  label="*Date of Birth"
-                  name="individual-dob"
-                  :model="individualDob"
-                  :onInput="validateAge"
-                  :onBlur="s => {
-                    if (!validateFilled(s)) {
-                        validateAge(s);
-                    }
-                }"
-                />
-                <FormInput
-                  type="text"
-                  label="*Email Address"
-                  name="individual-email"
-                  placeholder="No spam from us, promise!"
-                  :model="individualEmail"
-                  :onInput="validateEmail"
-                  :onBlur="s => {
-                    if (!validateFilled(s)) {
-                        validateEmail(s, 'blur');
-                    }
-                }"
-                />
-                <FormInput
-                  type="text"
-                  label="*School/Company/Organisation"
-                  name="individual-org"
-                  placeholder="Where are you from?"
-                  :model="individualOrg"
-                  :onBlur="validateFilled"
-                />
-                <FormInput
-                  type="text"
-                  label="Dietary Requirements"
-                  name="individual-diet"
-                  placeholder="Vegan/vegetarian/allergies/etc."
-                  :model="individualDiet"
-                />
-                <Radio
-                  label="*What is your T-shirt size?"
-                  name="individual-shirt"
-                  :model="individualShirt"
-                  :options="[{id: 'individual-shirt-xs', value: 'XS', optionLabel: 'XS'}, 
-                {id: 'individual-shirt-s', value: 'S', optionLabel: 'S'},
-                {id: 'individual-shirt-m', value: 'M', optionLabel: 'M'},
-                {id: 'individual-shirt-l', value: 'L', optionLabel: 'L'},
-                {id: 'individual-shirt-xl', value: 'XL', optionLabel: 'XL'}]"
-                />
-              </div>
-            </div>
-
-            <div class="member-block" id="member-block-two" v-if="numMembers >= 2">
-              <div class="member-block-title" id="member-block-title-two">
-                <h2>Member #2</h2>
-                <svg
-                  enable-background="new 0 0 47.971 47.971"
-                  viewBox="0 0 47.971 47.971"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="m28.228 23.986 18.864-18.864c1.172-1.171 1.172-3.071 0-4.242-1.172-1.172-3.07-1.172-4.242 0l-18.864 18.864-18.865-18.864c-1.172-1.172-3.07-1.172-4.242 0-1.172 1.171-1.172 3.071 0 4.242l18.865 18.864-18.865 18.864c-1.172 1.171-1.172 3.071 0 4.242.586.585 1.354.878 2.121.878s1.535-.293 2.121-.879l18.865-18.864 18.864 18.864c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879c1.172-1.171 1.172-3.071 0-4.242z"
-                  ></path>
-                </svg>
-                <svg
-                  viewBox="0 0 451.85 257.57"
-                  xmlns="http://www.w3.org/2000/svg"
-                  @click="openAccordion('two')"
-                >
-                  <path
-                    d="m225.92 354.71a31.59 31.59 0 0 1 -22.37-9.27l-194.28-194.28a31.64 31.64 0 0 1 44.73-44.75l171.9 171.91 171.93-171.91a31.64 31.64 0 0 1 44.74 44.75l-194.28 194.29a31.56 31.56 0 0 1 -22.37 9.26z"
-                    transform="translate(0 -97.14)"
-                  ></path>
-                </svg>
-              </div>
-              <div class="member-block-content" id="member-block-content-two">HI</div>
-            </div>
-
-            <div class="member-block" id="member-block-three" v-if="numMembers >= 3">
-              <div class="member-block-title" id="member-block-title-three">
-                <h2>Member #3</h2>
-                <svg
-                  enable-background="new 0 0 47.971 47.971"
-                  viewBox="0 0 47.971 47.971"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="m28.228 23.986 18.864-18.864c1.172-1.171 1.172-3.071 0-4.242-1.172-1.172-3.07-1.172-4.242 0l-18.864 18.864-18.865-18.864c-1.172-1.172-3.07-1.172-4.242 0-1.172 1.171-1.172 3.071 0 4.242l18.865 18.864-18.865 18.864c-1.172 1.171-1.172 3.071 0 4.242.586.585 1.354.878 2.121.878s1.535-.293 2.121-.879l18.865-18.864 18.864 18.864c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879c1.172-1.171 1.172-3.071 0-4.242z"
-                  ></path>
-                </svg>
-                <svg
-                  viewBox="0 0 451.85 257.57"
-                  xmlns="http://www.w3.org/2000/svg"
-                  @click="openAccordion('three')"
-                >
-                  <path
-                    d="m225.92 354.71a31.59 31.59 0 0 1 -22.37-9.27l-194.28-194.28a31.64 31.64 0 0 1 44.73-44.75l171.9 171.91 171.93-171.91a31.64 31.64 0 0 1 44.74 44.75l-194.28 194.29a31.56 31.56 0 0 1 -22.37 9.26z"
-                    transform="translate(0 -97.14)"
-                  ></path>
-                </svg>
-              </div>
-              <div class="member-block-content" id="member-block-content-three">HI</div>
-            </div>
-
-            <div class="member-block" id="member-block-four" v-if="numMembers >= 4">
-              <div class="member-block-title" id="member-block-title-four">
-                <h2>Member #4</h2>
-                <svg
-                  enable-background="new 0 0 47.971 47.971"
-                  viewBox="0 0 47.971 47.971"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="m28.228 23.986 18.864-18.864c1.172-1.171 1.172-3.071 0-4.242-1.172-1.172-3.07-1.172-4.242 0l-18.864 18.864-18.865-18.864c-1.172-1.172-3.07-1.172-4.242 0-1.172 1.171-1.172 3.071 0 4.242l18.865 18.864-18.865 18.864c-1.172 1.171-1.172 3.071 0 4.242.586.585 1.354.878 2.121.878s1.535-.293 2.121-.879l18.865-18.864 18.864 18.864c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879c1.172-1.171 1.172-3.071 0-4.242z"
-                  ></path>
-                </svg>
-                <svg
-                  viewBox="0 0 451.85 257.57"
-                  xmlns="http://www.w3.org/2000/svg"
-                  @click="openAccordion('four')"
-                >
-                  <path
-                    d="m225.92 354.71a31.59 31.59 0 0 1 -22.37-9.27l-194.28-194.28a31.64 31.64 0 0 1 44.73-44.75l171.9 171.91 171.93-171.91a31.64 31.64 0 0 1 44.74 44.75l-194.28 194.29a31.56 31.56 0 0 1 -22.37 9.26z"
-                    transform="translate(0 -97.14)"
-                  ></path>
-                </svg>
-              </div>
-              <div class="member-block-content" id="member-block-content-four">HI</div>
-            </div>-->
-
-            <div
+            <button
+              type="button"
               id="add-member-button"
-              :style="membersMemory.length >= 4 ? 'opacity: 0.4; cursor: not-allowed;' : ''"
+              :disabled="membersMemory.length >= 4 ? '' : null"
               @click="addMembers()"
             >
               <span
                 style="display: inline-block; font-size: 50px; transform: translateY(3px); margin-right: 5px;"
               >+</span> Add Team Member
-            </div>
+            </button>
           </div>
           <div class="content-block">
             <label for="feedback">Any other questions/feedback?</label>
-            <textarea/>
+            <textarea maxlength="2540"/>
           </div>
           <Checkbox
             label="I confirm that I am above 13 years of age and have read and agree to the 
@@ -357,7 +161,8 @@
           />
         </div>
       </div>
-      <div
+      <button
+        type="button"
         @click="() => {
             if (format.value) {
                 goToPage('2');
@@ -365,9 +170,14 @@
         }"
         class="bottom-button"
         v-if="page === '1'"
-        :style="format.value ? '' : 'opacity: 0.4; cursor: not-allowed;'"
-      >Next Page</div>
-      <div class="bottom-button" v-if="page === '2'" :style="checkSubmitConditions()">Submit</div>
+        :disabled="format.value ? null : ''"
+      >Next Page</button>
+      <button
+        type="submit"
+        class="bottom-button"
+        v-if="page === '2'"
+        :disabled="checkSubmitConditions()"
+      >Submit</button>
     </form>
     <svg
       viewBox="0 0 1440 240.41"
@@ -399,8 +209,8 @@ export default {
   },
   data() {
     return {
-      page: "2",
-      format: { value: "Group" },
+      page: "1",
+      format: { value: "" },
       individualNeedGroup: { value: "", error: "" },
       individualName: { value: "", error: "" },
       individualDob: { value: "", error: "", success: false },
@@ -517,27 +327,53 @@ export default {
       }
     },
     checkSubmitConditions() {
-      if (this.individualNeedGroup.value === "True") {
-        return this.individualName.value &&
-          this.individualOrg.value &&
-          this.individualShirt.value &&
-          this.individualDob.success &&
-          this.individualEmail.success &&
-          this.confirm.value
-          ? ""
-          : "opacity: 0.4; cursor: not-allowed;";
-      } else if (this.individualNeedGroup.value === "False") {
-        return this.individualName.value &&
-          this.individualOrg.value &&
+      if (this.format.value === "Individual") {
+        if (this.individualNeedGroup.value === "True") {
+          return this.individualName.value &&
+            this.individualOrg.value &&
+            this.individualShirt.value &&
+            this.individualDob.success &&
+            this.individualEmail.success &&
+            this.confirm.value
+            ? null
+            : "";
+        } else if (this.individualNeedGroup.value === "False") {
+          return this.individualName.value &&
+            this.individualOrg.value &&
+            this.teamName.value &&
+            this.individualShirt.value &&
+            this.individualDob.success &&
+            this.individualEmail.success &&
+            this.confirm.value
+            ? null
+            : "";
+        } else {
+          return "";
+        }
+      } else if (this.format.value === "Group") {
+        if (
           this.teamName.value &&
-          this.individualShirt.value &&
-          this.individualDob.success &&
-          this.individualEmail.success &&
-          this.confirm.value
-          ? ""
-          : "opacity: 0.4; cursor: not-allowed;";
+          this.confirm.value &&
+          this.membersMemory.length >= 2
+        ) {
+          return this.membersMemory
+            .map(member => {
+              return (
+                member.name.value &&
+                member.org.value &&
+                member.shirt.value &&
+                member.dob.success &&
+                member.email.success
+              );
+            })
+            .every(bool => bool)
+            ? null
+            : "";
+        } else {
+          return "";
+        }
       } else {
-        return "opacity: 0.4; cursor: not-allowed;";
+        return "";
       }
     },
     goToPage(d) {
@@ -588,12 +424,31 @@ export default {
           break;
         }
       }
-      console.log(this.membersMemory);
     },
     removeMember(id) {
       for (let i = 0; i < this.members.length; i++) {
         if (this.members[i].id === id) {
           this.members[i].taken = !this.members[i].taken;
+
+          this.members[i].name.value = "";
+          this.members[i].name.error = "";
+
+          this.members[i].dob.value = "";
+          this.members[i].dob.error = "";
+          this.members[i].dob.success = false;
+
+          this.members[i].email.value = "";
+          this.members[i].email.error = "";
+          this.members[i].email.success = false;
+
+          this.members[i].org.value = "";
+          this.members[i].org.error = "";
+
+          this.members[i].shirt.value = "";
+          this.members[i].shirt.error = "";
+
+          this.members[i].diet.value = "";
+          this.members[i].diet.error = "";
           break;
         }
       }
@@ -601,8 +456,6 @@ export default {
       this.membersMemory = this.membersMemory.filter(
         member => member.id !== id
       );
-      console.log(id);
-      console.log(this.membersMemory);
     }
   }
 };
@@ -627,6 +480,13 @@ export default {
   color: var(--slope-body-color);
   padding: 4px 20px;
   background-color: var(--color-regular-text);
+  border: none;
+}
+
+.top-button:disabled,
+.bottom-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .welcome {
@@ -732,8 +592,13 @@ label {
   font-size: 42px;
   font-weight: 900;
   color: var(--color-regular-text);
-  /* color: #a0b1b9; */
-  /* border: 1px solid gold; */
+  background-color: var(--slope-body-color);
+  border: none;
+}
+
+#add-member-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 /* #add-member-button:hover {

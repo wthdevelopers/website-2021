@@ -19,11 +19,11 @@ export default {
     setInitialTheme() {
       if (localStorage.getItem("theme")) {
         const cachedTheme = localStorage.getItem("theme");
-        document.documentElement.setAttribute("theme", cachedTheme);
         this.theme = cachedTheme;
-      } else {
-        document.documentElement.setAttribute("theme", this.theme);
+      } else if (matchMedia("(prefers-color-scheme: dark)").matches) {
+        this.theme = "dark";
       }
+      document.documentElement.setAttribute("theme", this.theme);
     }
   }
 };
