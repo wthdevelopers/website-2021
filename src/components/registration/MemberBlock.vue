@@ -6,7 +6,7 @@
         enable-background="new 0 0 47.971 47.971"
         viewBox="0 0 47.971 47.971"
         xmlns="http://www.w3.org/2000/svg"
-        @click="removeMember(member.id)"
+        @click="commenceRemovalSeq()"
       >
         <path
           d="m28.228 23.986 18.864-18.864c1.172-1.171 1.172-3.071 0-4.242-1.172-1.172-3.07-1.172-4.242 0l-18.864 18.864-18.865-18.864c-1.172-1.172-3.07-1.172-4.242 0-1.172 1.171-1.172 3.071 0 4.242l18.865 18.864-18.865 18.864c-1.172 1.171-1.172 3.071 0 4.242.586.585 1.354.878 2.121.878s1.535-.293 2.121-.879l18.865-18.864 18.864 18.864c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879c1.172-1.171 1.172-3.071 0-4.242z"
@@ -105,6 +105,7 @@ export default {
     idx: Number,
     openAccordion: Function,
     removeMember: Function,
+    commenceRemovalSeq: Function,
     validateFilled: Function,
     validateAge: Function,
     validateEmail: Function

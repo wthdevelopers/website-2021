@@ -1,6 +1,6 @@
 <template>
   <div id="registration-form">
-    <form id="registration-form-content">
+    <form id="registration-form-content" method="post" @submit="informIsSubmittingForm()">
       <button
         type="button"
         @click="goToPage('1')"
@@ -13,6 +13,7 @@
           label="*Are you registering as an individual or for a group?"
           name="format"
           :model="format"
+          :onChange="informFormTouched"
           :options="[{id: 'format-individual', value: 'Individual', optionLabel: 'Individual'}, 
         {id: 'format-group', value: 'Group', optionLabel: 'Group'}]"
         />
@@ -75,9 +76,9 @@
             v-if="individualNeedGroup.value === 'False'"
             type="text"
             label="*Team Name"
-            name="team-name"
+            name="individual-team-name"
             placeholder="Get creative here!"
-            :model="teamName"
+            :model="individualTeamName"
             :onBlur="validateFilled"
           />
           <FormInput
@@ -101,21 +102,28 @@
             <label for="feedback">Any other questions/feedback?</label>
             <textarea maxlength="2540"/>
           </div>
-          <Checkbox
-            label="I confirm that I am above 13 years of age and have read and agree to the 
-        <span id='terms-button'>terms and conditions</span> as stipulated 
-        by the organisers of What The Hack 2020."
-            name="confirm"
-            :model="confirm"
-          />
+          <Checkbox name="individual-confirm" :model="individualConfirm">
+            I confirm that I am above 13 years of age and have read and agree to the
+            <button
+              type="button"
+              class="clause-buttons"
+              @click="openModal('form-tnc-modal')"
+            >terms and conditions</button> and
+            <button
+              type="button"
+              class="clause-buttons"
+              @click="openModal('form-rules-modal')"
+            >participants' rules</button> as stipulated
+            by the organisers of What The Hack 2020.
+          </Checkbox>
         </div>
         <div v-else>
           <FormInput
             type="text"
             label="*Team Name"
-            name="team-name"
+            name="group-team-name"
             placeholder="Get creative here!"
-            :model="teamName"
+            :model="groupTeamName"
             :onBlur="validateFilled"
           />
           <div class="content-block" style="padding-bottom: 30px;">
@@ -132,6 +140,11 @@
               :idx="idx"
               :openAccordion="openAccordion"
               :removeMember="removeMember"
+              :commenceRemovalSeq="() => {
+                removeCandidateID = member.id;
+                removeCandidatePos = idx + 1;
+                openModal('form-member-remove-confirmation-modal');
+              }"
               :validateFilled="validateFilled"
               :validateAge="validateAge"
               :validateEmail="validateEmail"
@@ -152,13 +165,20 @@
             <label for="feedback">Any other questions/feedback?</label>
             <textarea maxlength="2540"/>
           </div>
-          <Checkbox
-            label="I confirm that I am above 13 years of age and have read and agree to the 
-            <span id='terms-button'>terms and conditions</span> as stipulated 
-            by the organisers of What The Hack 2020."
-            name="confirm"
-            :model="confirm"
-          />
+          <Checkbox name="group-confirm" :model="groupConfirm">
+            I confirm that I am above 13 years of age and have read and agree to the
+            <button
+              type="button"
+              class="clause-buttons"
+              @click="openModal('form-tnc-modal')"
+            >terms and conditions</button> and
+            <button
+              type="button"
+              class="clause-buttons"
+              @click="openModal('form-rules-modal')"
+            >participants' rules</button> as stipulated
+            by the organisers of What The Hack 2020.
+          </Checkbox>
         </div>
       </div>
       <button
@@ -189,6 +209,13 @@
         fill="#79c89f"
       ></path>
     </svg>
+    <TNCModal id="form-tnc-modal"/>
+    <RulesModal id="form-rules-modal"/>
+    <ConfirmationModal
+      id="form-member-remove-confirmation-modal"
+      :positiveFunc="removeMember"
+      :positiveFuncArgs="[removeCandidateID]"
+    >Are you sure you want to remove Member #{{removeCandidatePos}}?</ConfirmationModal>
   </div>
 </template>
 
@@ -197,6 +224,9 @@ import Radio from "@/components/registration/Radio.vue";
 import FormInput from "@/components/registration/FormInput.vue";
 import Checkbox from "@/components/registration/Checkbox.vue";
 import MemberBlock from "@/components/registration/MemberBlock.vue";
+import TNCModal from "@/components/TNCModal.vue";
+import RulesModal from "@/components/RulesModal.vue";
+import ConfirmationModal from "@/components/ConfirmationModal.vue";
 import { setTimeout } from "timers";
 
 export default {
@@ -205,11 +235,16 @@ export default {
     Radio,
     FormInput,
     Checkbox,
-    MemberBlock
+    MemberBlock,
+    TNCModal,
+    RulesModal,
+    ConfirmationModal
   },
   data() {
     return {
       page: "1",
+      removeCandidateID: "",
+      removeCandidatePos: null,
       format: { value: "" },
       individualNeedGroup: { value: "", error: "" },
       individualName: { value: "", error: "" },
@@ -218,8 +253,10 @@ export default {
       individualOrg: { value: "", error: "" },
       individualShirt: { value: "" },
       individualDiet: { value: "" },
-      teamName: { value: "", error: "" },
-      confirm: { value: "" },
+      individualTeamName: { value: "", error: "" },
+      groupTeamName: { value: "", error: "" },
+      individualConfirm: { value: "" },
+      groupConfirm: { value: "" },
       members: [
         {
           id: "one",
@@ -266,6 +303,12 @@ export default {
     };
   },
   methods: {
+    informFormTouched() {
+      window.formTouched = true;
+    },
+    informIsSubmittingForm() {
+      window.isSubmittingForm = true;
+    },
     validateFilled(subj) {
       let validationConclusion = "";
       if (!subj.value) {
@@ -334,17 +377,17 @@ export default {
             this.individualShirt.value &&
             this.individualDob.success &&
             this.individualEmail.success &&
-            this.confirm.value
+            this.individualConfirm.value
             ? null
             : "";
         } else if (this.individualNeedGroup.value === "False") {
           return this.individualName.value &&
             this.individualOrg.value &&
-            this.teamName.value &&
+            this.individualTeamName.value &&
             this.individualShirt.value &&
             this.individualDob.success &&
             this.individualEmail.success &&
-            this.confirm.value
+            this.individualConfirm.value
             ? null
             : "";
         } else {
@@ -352,8 +395,8 @@ export default {
         }
       } else if (this.format.value === "Group") {
         if (
-          this.teamName.value &&
-          this.confirm.value &&
+          this.groupTeamName.value &&
+          this.groupConfirm.value &&
           this.membersMemory.length >= 2
         ) {
           return this.membersMemory
@@ -456,6 +499,9 @@ export default {
       this.membersMemory = this.membersMemory.filter(
         member => member.id !== id
       );
+    },
+    openModal(id) {
+      document.getElementById(id).style.display = "flex";
     }
   }
 };
@@ -580,8 +626,15 @@ label {
   height: 10px;
 }
 
-#terms-button {
+.clause-buttons {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
   border-bottom: 1.5px dashed var(--color-regular-text);
+  cursor: pointer;
 }
 
 #add-member-button {

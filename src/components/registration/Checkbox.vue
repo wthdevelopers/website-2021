@@ -1,7 +1,9 @@
 <template>
   <div class="checkbox content-block">
     <input type="checkbox" :name="name" :id="name" :value="name" v-model="model.value">
-    <label :for="name" v-html="label"></label>
+    <label :for="name">
+      <slot></slot>
+    </label>
   </div>
 </template>
 
@@ -9,7 +11,6 @@
 export default {
   name: "checkbox",
   props: {
-    label: String,
     name: String,
     model: Object
   }

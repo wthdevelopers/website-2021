@@ -12,10 +12,28 @@ export default {
       theme: "light"
     };
   },
+  created: function() {
+    this.initFormGlobalVars();
+    this.initLeaveFormWarning();
+  },
   mounted: function() {
     this.setInitialTheme();
   },
   methods: {
+    initFormGlobalVars() {
+      window.formTouched = false;
+      window.isSubmittingForm = false;
+    },
+    initLeaveFormWarning() {
+      window.addEventListener("beforeunload", function(e) {
+        if (window.formTouched && !window.isSubmittingForm) {
+          var nonNull = "nonNull";
+
+          (e || window.event).returnValue = nonNull; //Gecko + IE
+          return nonNull; //Gecko + Webkit, Safari, Chrome etc.
+        }
+      });
+    },
     setInitialTheme() {
       if (localStorage.getItem("theme")) {
         const cachedTheme = localStorage.getItem("theme");

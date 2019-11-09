@@ -2,7 +2,14 @@
   <div class="radio content-block">
     <label>{{label}}</label>
     <div class="radio-block" v-for="option in options" :key="option.id">
-      <input type="radio" :name="name" :id="option.id" :value="option.value" v-model="model.value">
+      <input
+        type="radio"
+        :name="name"
+        :id="option.id"
+        :value="option.value"
+        v-model="model.value"
+        @change="onChange ? onChange() : null"
+      >
       <label class="option-label" :for="option.id">{{option.optionLabel}}</label>
     </div>
     <p class="error-info"></p>
@@ -16,7 +23,8 @@ export default {
     label: String,
     name: String,
     model: Object,
-    options: Array
+    options: Array,
+    onChange: Function
   }
 };
 </script>
