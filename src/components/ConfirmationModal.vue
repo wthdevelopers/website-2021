@@ -16,6 +16,8 @@
 import Modal from "@/components/Modal.vue";
 import Para from "@/components/Para.vue";
 
+import closeModalMixin from "@/mixins/closeModalMixin";
+
 export default {
   name: "confirmation-modal",
   components: {
@@ -27,10 +29,8 @@ export default {
     positiveFunc: Function,
     positiveFuncArgs: Array
   },
+  mixins: [closeModalMixin],
   methods: {
-    closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    },
     positiveAction() {
       if (this.positiveFuncArgs) {
         this.positiveFunc(...this.positiveFuncArgs);

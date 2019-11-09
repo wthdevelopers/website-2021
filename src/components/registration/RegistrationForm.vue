@@ -227,6 +227,12 @@ import MemberBlock from "@/components/registration/MemberBlock.vue";
 import TNCModal from "@/components/TNCModal.vue";
 import RulesModal from "@/components/RulesModal.vue";
 import ConfirmationModal from "@/components/ConfirmationModal.vue";
+
+import validateFilledMixin from "@/mixins/validateFilledMixin";
+import validateAgeMixin from "@/mixins/validateAgeMixin";
+import validateEmailMixin from "@/mixins/validateEmailMixin";
+import openModalMixin from "@/mixins/openModalMixin";
+
 import { setTimeout } from "timers";
 
 export default {
@@ -302,72 +308,18 @@ export default {
       membersMemory: []
     };
   },
+  mixins: [
+    validateFilledMixin,
+    validateAgeMixin,
+    validateEmailMixin,
+    openModalMixin
+  ],
   methods: {
     informFormTouched() {
       window.formTouched = true;
     },
     informIsSubmittingForm() {
       window.isSubmittingForm = true;
-    },
-    validateFilled(subj) {
-      let validationConclusion = "";
-      if (!subj.value) {
-        validationConclusion = "This field is required!";
-      }
-      subj.error = validationConclusion;
-      return validationConclusion;
-    },
-    validateAge(subj, e) {
-      let dob = subj.value;
-      let validationConclusion = "";
-      const [year, month, day] = dob.split("-").map(str => {
-        return parseInt(str, 10);
-      });
-      if (2020 - year < 13) {
-        validationConclusion =
-          "Sorry, but you need to be at least 13 years of age at the time of event to be eligible to participate. Maybe another time!";
-      } else if (2020 - year === 13) {
-        if (month > 2) {
-          validationConclusion =
-            "Sorry, but you need to be at least 13 years of age at the time of event to be eligible to participate. Maybe another time!";
-        } else if (month === 2) {
-          if (day > 8) {
-            validationConclusion =
-              "Sorry, but you need to be at least 13 years of age at the time of event to be eligible to participate. Maybe another time!";
-          }
-        }
-      }
-      if (e !== "input") {
-        subj.error = validationConclusion;
-      }
-      if (!validationConclusion) {
-        subj.success = true;
-      } else {
-        subj.success = false;
-      }
-    },
-    validateEmail(subj, e) {
-      const email = subj.value;
-      const [emailBeforeAt, emailAfterAt] = email.split("@");
-      let validationConclusion = "";
-      const emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
-      if (email.length > 254) {
-        validationConclusion = "This email address is not valid!";
-      } else if (!emailRegex.test(email)) {
-        validationConclusion = "This email address is not valid!";
-      } else if (emailBeforeAt.length > 64) {
-        validationConclusion = "This email address is not valid!";
-      } else if (emailAfterAt.split(".").some(segment => segment.length > 63)) {
-        validationConclusion = "This email address is not valid!";
-      }
-      if (e !== "input") {
-        subj.error = validationConclusion;
-      }
-      if (!validationConclusion) {
-        subj.success = true;
-      } else {
-        subj.success = false;
-      }
     },
     checkSubmitConditions() {
       if (this.format.value === "Individual") {
@@ -499,9 +451,6 @@ export default {
       this.membersMemory = this.membersMemory.filter(
         member => member.id !== id
       );
-    },
-    openModal(id) {
-      document.getElementById(id).style.display = "flex";
     }
   }
 };

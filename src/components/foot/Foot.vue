@@ -75,17 +75,15 @@
 import TNCModal from "@/components/TNCModal.vue";
 import RulesModal from "@/components/RulesModal.vue";
 
+import openModalMixin from "@/mixins/openModalMixin";
+
 export default {
   name: "foot",
   components: {
     TNCModal,
     RulesModal
   },
-  methods: {
-    openModal(id) {
-      document.getElementById(id).style.display = "flex";
-    }
-  }
+  mixins: [openModalMixin]
 };
 </script>
 

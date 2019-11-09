@@ -63,6 +63,8 @@
 import Modal from "@/components/Modal.vue";
 import Para from "@/components/Para.vue";
 
+import closeModalMixin from "@/mixins/closeModalMixin";
+
 export default {
   name: "rules-modal",
   components: {
@@ -72,11 +74,7 @@ export default {
   props: {
     id: String
   },
-  methods: {
-    closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
-  }
+  mixins: [closeModalMixin]
 };
 </script>
 
