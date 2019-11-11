@@ -47,7 +47,7 @@
             :onInput="validateAge"
             :onBlur="s => {
             if (!validateFilled(s)) {
-                validateAge(s);
+                validateAge(s, 'blur');
             }
         }"
           />
@@ -219,7 +219,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
+
 import Radio from "@/components/registration/Radio.vue";
 import FormInput from "@/components/registration/FormInput.vue";
 import Checkbox from "@/components/registration/Checkbox.vue";
@@ -233,9 +235,9 @@ import validateAgeMixin from "@/mixins/validateAgeMixin";
 import validateEmailMixin from "@/mixins/validateEmailMixin";
 import openModalMixin from "@/mixins/openModalMixin";
 
-import { setTimeout } from "timers";
+import { FormField, AgeFormField, EmailFormField, Member } from "@/interfaces";
 
-export default {
+export default Vue.extend({
   name: "registration-form",
   components: {
     Radio,
@@ -251,18 +253,22 @@ export default {
       page: "1",
       removeCandidateID: "",
       removeCandidatePos: null,
-      format: { value: "" },
-      individualNeedGroup: { value: "", error: "" },
-      individualName: { value: "", error: "" },
-      individualDob: { value: "", error: "", success: false },
-      individualEmail: { value: "", error: "", success: false },
-      individualOrg: { value: "", error: "" },
-      individualShirt: { value: "" },
-      individualDiet: { value: "" },
-      individualTeamName: { value: "", error: "" },
-      groupTeamName: { value: "", error: "" },
-      individualConfirm: { value: "" },
-      groupConfirm: { value: "" },
+      format: { value: "" } as FormField,
+      individualNeedGroup: { value: "", error: "" } as FormField,
+      individualName: { value: "", error: "" } as FormField,
+      individualDob: { value: "", error: "", success: false } as AgeFormField,
+      individualEmail: {
+        value: "",
+        error: "",
+        success: false
+      } as EmailFormField,
+      individualOrg: { value: "", error: "" } as FormField,
+      individualShirt: { value: "" } as FormField,
+      individualDiet: { value: "" } as FormField,
+      individualTeamName: { value: "", error: "" } as FormField,
+      groupTeamName: { value: "", error: "" } as FormField,
+      individualConfirm: { value: "" } as FormField,
+      groupConfirm: { value: "" } as FormField,
       members: [
         {
           id: "one",
@@ -304,8 +310,8 @@ export default {
           shirt: { value: "" },
           diet: { value: "" }
         }
-      ],
-      membersMemory: []
+      ] as Array<Member>,
+      membersMemory: [] as Array<Member>
     };
   },
   mixins: [
@@ -315,13 +321,13 @@ export default {
     openModalMixin
   ],
   methods: {
-    informFormTouched() {
+    informFormTouched(): void {
       window.formTouched = true;
     },
-    informIsSubmittingForm() {
+    informIsSubmittingForm(): void {
       window.isSubmittingForm = true;
     },
-    checkSubmitConditions() {
+    checkSubmitConditions(): null | "" {
       if (this.format.value === "Individual") {
         if (this.individualNeedGroup.value === "True") {
           return this.individualName.value &&
@@ -371,47 +377,50 @@ export default {
         return "";
       }
     },
-    goToPage(d) {
+    goToPage(d: string): void {
       this.page = d;
     },
-    openAccordion(a) {
+    openAccordion(a: string): void {
+      let memberBlock = <HTMLElement>(
+        document.querySelector(`#member-block-${a}`)
+      );
+
+      let memberBlockContent = <HTMLElement>(
+        document.querySelector(`#member-block-content-${a}`)
+      );
+      let memberBlockTitle = <HTMLElement>(
+        document.querySelector(`#member-block-title-${a}`)
+      );
+      let memberBlockTitleH2 = <HTMLElement>memberBlockTitle.children[0];
+      let memberBlockTitleCancel = <SVGElement>memberBlockTitle.children[1];
+      let memberBlockTitleArrow = <SVGElement>memberBlockTitle.children[2];
+      let memberBlockTitleCancelPath = <SVGElement>(
+        memberBlockTitleCancel.firstChild
+      );
+      let memberBlockTitleArrowPath = <SVGElement>(
+        memberBlockTitleArrow.firstChild
+      );
+
       if (
-        document.querySelector(`#member-block-content-${a}`).style.maxHeight ===
-          "0px" ||
-        !document.querySelector(`#member-block-content-${a}`).style.maxHeight
+        memberBlockContent.style.maxHeight === "0px" ||
+        !memberBlockContent.style.maxHeight
       ) {
-        document.querySelector(`#member-block-content-${a}`).style.maxHeight =
-          "2000px";
-        document.querySelector(`#member-block-${a}`).style.border =
-          "2px solid var(--color-accent)";
-        document.querySelector(
-          `#member-block-title-${a}`
-        ).children[0].style.color = "var(--color-accent)";
-        document.querySelector(
-          `#member-block-title-${a}`
-        ).children[1].firstChild.style.fill = "var(--color-accent)";
-        document.querySelector(
-          `#member-block-title-${a}`
-        ).children[2].firstChild.style.fill = "var(--color-accent)";
+        memberBlockContent.style.maxHeight = "2000px";
+        memberBlock.style.border = "2px solid var(--color-accent)";
+        memberBlockTitleH2.style.color = "var(--color-accent)";
+        memberBlockTitleCancelPath.style.fill = "var(--color-accent)";
+        memberBlockTitleArrowPath.style.fill = "var(--color-accent)";
       } else {
-        document.querySelector(`#member-block-content-${a}`).style.maxHeight =
-          "0px";
+        memberBlockContent.style.maxHeight = "0px";
         setTimeout(() => {
-          document.querySelector(`#member-block-${a}`).style.border =
-            "2px solid var(--color-regular-text)";
-          document.querySelector(
-            `#member-block-title-${a}`
-          ).children[0].style.color = "var(--color-regular-text)";
-          document.querySelector(
-            `#member-block-title-${a}`
-          ).children[1].firstChild.style.fill = "var(--color-regular-text)";
-          document.querySelector(
-            `#member-block-title-${a}`
-          ).children[2].firstChild.style.fill = "var(--color-regular-text)";
+          memberBlock.style.border = "2px solid var(--color-regular-text)";
+          memberBlockTitleH2.style.color = "var(--color-regular-text)";
+          memberBlockTitleCancelPath.style.fill = "var(--color-regular-text)";
+          memberBlockTitleArrowPath.style.fill = "var(--color-regular-text)";
         }, 600);
       }
     },
-    addMembers() {
+    addMembers(): void {
       for (let i = 0; i < this.members.length; i++) {
         if (!this.members[i].taken) {
           this.members[i].taken = !this.members[i].taken;
@@ -420,7 +429,7 @@ export default {
         }
       }
     },
-    removeMember(id) {
+    removeMember(id: string): void {
       for (let i = 0; i < this.members.length; i++) {
         if (this.members[i].id === id) {
           this.members[i].taken = !this.members[i].taken;
@@ -453,7 +462,7 @@ export default {
       );
     }
   }
-};
+});
 </script>
 
 <style>

@@ -1,6 +1,6 @@
 <template>
   <div id="homepage">
-    <Hero :theme="theme"/>
+    <Hero/>
     <About/>
     <Prizes/>
     <Schedule/>
@@ -32,9 +32,6 @@ export default {
     Faq,
     Contact,
     Foot
-  },
-  props: {
-    theme: String
   }
 };
 </script>

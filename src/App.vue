@@ -1,30 +1,34 @@
 <template>
   <div id="app">
-    <router-view :theme="theme"/>
+    <router-view/>
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from "vue";
+
+declare global {
+  interface Window {
+    formTouched: boolean;
+    isSubmittingForm: boolean;
+  }
+}
+
+export default Vue.extend({
   name: "app",
-  data() {
-    return {
-      theme: "light"
-    };
-  },
-  created: function() {
+  created: function(): void {
     this.initFormGlobalVars();
     this.initLeaveFormWarning();
   },
-  mounted: function() {
+  mounted: function(): void {
     this.setInitialTheme();
   },
   methods: {
-    initFormGlobalVars() {
+    initFormGlobalVars(): void {
       window.formTouched = false;
       window.isSubmittingForm = false;
     },
-    initLeaveFormWarning() {
+    initLeaveFormWarning(): void {
       window.addEventListener("beforeunload", function(e) {
         if (window.formTouched && !window.isSubmittingForm) {
           var nonNull = "nonNull";
@@ -34,19 +38,19 @@ export default {
         }
       });
     },
-    setInitialTheme() {
-      if (localStorage.getItem("theme")) {
-        const cachedTheme = localStorage.getItem("theme");
-        this.theme = cachedTheme;
+    setInitialTheme(): void {
+      let setTheme = "light";
+      let cachedTheme = localStorage.getItem("theme");
+      if (cachedTheme) {
+        setTheme = cachedTheme;
       } else if (matchMedia("(prefers-color-scheme: dark)").matches) {
-        this.theme = "dark";
+        setTheme = "dark";
       }
-      document.documentElement.setAttribute("theme", this.theme);
+      document.documentElement.setAttribute("theme", setTheme);
     }
   }
-};
+});
 </script>
-
 
 <style>
 :root {

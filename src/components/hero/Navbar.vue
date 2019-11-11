@@ -313,19 +313,30 @@
   </nav>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
   name: "navbar",
-  props: {
-    theme: String
+  data() {
+    return {
+      theme: "light"
+    }
+  },
+  mounted: function(): void {
+    Vue.nextTick(() => {
+      let setTheme = document.documentElement.getAttribute("theme");
+      if (setTheme) {
+        this.theme = setTheme;
+      }
+    });
   },
   methods: {
-    buttonOnClickScroll(loc) {
+    buttonOnClickScroll(loc: string): void {
       var section = document.querySelector(`#${loc}`);
-      section.scrollIntoView({ behavior: "smooth" });
+      section?.scrollIntoView({ behavior: "smooth" });
     },
-    toggleTheme() {
-      if (this.theme === "dark") {
+    toggleTheme(): void {
+      if (document.documentElement.getAttribute("theme") === "dark") {
         document.documentElement.setAttribute("theme", "light");
         localStorage.setItem("theme", "light");
         this.theme = "light";
@@ -335,16 +346,18 @@ export default {
         this.theme = "dark";
       }
     },
-    openDrawer() {
-      document.querySelector("#drawer").style.opacity = "1";
-      document.querySelector("#drawer").style.right = "0";
+    openDrawer(): void {
+      let drawer = <HTMLElement>document.querySelector("#drawer");
+      drawer.style.opacity = "1";
+      drawer.style.right = "0";
     },
-    closeDrawer() {
-      document.querySelector("#drawer").style.opacity = "0";
-      document.querySelector("#drawer").style.right = "-80vw";
+    closeDrawer(): void {
+      let drawer = <HTMLElement>document.querySelector("#drawer");
+      drawer.style.opacity = "0";
+      drawer.style.right = "-80vw";
     }
   }
-};
+});
 </script>
 
 <style scoped>

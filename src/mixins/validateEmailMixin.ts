@@ -1,6 +1,8 @@
+import { EmailFormField } from "@/interfaces";
+
 export default {
   methods: {
-    validateEmail(subj, e) {
+    validateEmail(subj: EmailFormField, e: "input" | "blur"): void {
       const email = subj.value;
       const [emailBeforeAt, emailAfterAt] = email.split("@");
       let validationConclusion = "";

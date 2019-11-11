@@ -44,7 +44,7 @@
         :onInput="validateAge"
         :onBlur="s => {
                     if (!validateFilled(s)) {
-                        validateAge(s);
+                        validateAge(s, 'blur');
                     }
                 }"
       />

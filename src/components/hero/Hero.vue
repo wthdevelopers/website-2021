@@ -1,6 +1,6 @@
 <template>
   <div id="hero">
-    <Navbar :theme="theme"/>
+    <Navbar/>
     <HeroContent/>
     <HeroImage/>
   </div>
@@ -17,9 +17,6 @@ export default {
     Navbar,
     HeroContent,
     HeroImage
-  },
-  props: {
-    theme: String
   }
 };
 </script>

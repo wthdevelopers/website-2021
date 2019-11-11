@@ -1,6 +1,8 @@
+import { AgeFormField } from "@/interfaces";
+
 export default {
   methods: {
-    validateAge(subj, e) {
+    validateAge(subj: AgeFormField, e: "input" | "blur"): void {
       let dob = subj.value;
       let validationConclusion = "";
       const [year, month, day] = dob.split("-").map(str => {
