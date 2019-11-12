@@ -73,7 +73,7 @@
         type="text"
         label="Dietary Requirements"
         :name="`member-${member.id}-diet`"
-        placeholder="Vegan/vegetarian/allergies/etc."
+        placeholder="Halal/vegan/allergies/etc."
         :model="member.diet"
       />
       <Radio
@@ -134,7 +134,7 @@ export default {
 .member-block-title > h2 {
   font-family: var(--font-primary), sans-serif;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--color-regular-text);
   margin-right: auto;
 }

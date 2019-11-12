@@ -47,12 +47,36 @@ input[type="radio"] {
   height: 20px;
   background-color: var(--color-regular-text);
   border: 6px solid var(--color-regular-text);
+  background-color: var(--slope-body-color);
+  border: 2px solid var(--color-regular-text);
   border-radius: 50px;
-  transform: translateY(1.5px);
+  /* transform: translateY(-1px); */
 }
 
 input[type="radio"]:checked {
   border: 6px solid var(--color-accent);
+}
+
+@media only screen and (max-width: 1000px) {
+  input[type="radio"] {
+    width: 18px;
+    height: 18px;
+  }
+
+  input[type="radio"]:checked {
+    border: 5px solid var(--color-accent);
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  input[type="radio"] {
+    width: 14px;
+    height: 14px;
+  }
+
+  input[type="radio"]:checked {
+    border: 4px solid var(--color-accent);
+  }
 }
 </style>
 

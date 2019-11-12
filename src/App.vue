@@ -57,15 +57,16 @@ export default Vue.extend({
   --font-primary: brandon-grotesque;
   --font-secondary: proxima-soft;
 
-  --color-background: #f3f3fb;
+  --color-background: #e9f7fb;
   --color-title-text: #2d3887;
   --color-title-text-hover: #3947ac;
   --color-cta-text: #f3f3fb;
-  --color-section-title-text: #2d3887;
-  --color-regular-text: #000000;
-  --color-accent: #e26ab4;
+  --color-section-title-text: #e67fbe;
+  --color-regular-text: #3947ac;
+  --color-accent: #e67fbe;
+  --color-gray: #788ebf;
 
-  --slope-body-color: #c1e1d5;
+  --slope-body-color: #bbe4d5;
 
   --stars-visibility: hidden;
 
@@ -81,11 +82,10 @@ export default Vue.extend({
   --color-title-text: #f3f3fb;
   --color-title-text-hover: #d9d9f2;
   --color-cta-text: #191f4d;
-  /* --color-section-title-text: #c02685; */
   --color-section-title-text: #dd55a9;
   --color-regular-text: #f3f3fb;
-  /* --color-accent: #c02685; */
   --color-accent: #dd55a9;
+  --color-gray: #d3dbde;
 
   --slope-body-color: #3f636d;
 

@@ -43,19 +43,19 @@
           <li>
             <router-link to="/registration">Register</router-link>
           </li>
-          <li>|</li>
+          <li class="li-dividers">|</li>
           <li>
             <a href="https://www.sutd.edu.sg/" target="_blank" rel="noopener noreferrer">SUTD</a>
           </li>
-          <li>|</li>
+          <li class="li-dividers">|</li>
           <li>
             <button type="button" @click="openModal('footer-tnc-modal')">Terms & Conditions</button>
           </li>
-          <li>|</li>
+          <li class="li-dividers">|</li>
           <li>
             <button type="button" @click="openModal('footer-rules-modal')">Participants' Rules</button>
           </li>
-          <li>|</li>
+          <li class="li-dividers">|</li>
           <li>
             <a
               href="https://github.com/wthdevelopers/website-2020"
@@ -89,10 +89,13 @@ export default {
 
 <style scoped>
 #foot {
-  height: 250px;
+  /* height: 30vh; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding-top: 15vh;
+  padding-bottom: 20px;
+  /* border: 1px solid red; */
 }
 
 #bar-logo > g {
@@ -115,16 +118,19 @@ export default {
 }
 
 #footer-bottom {
-  padding: 10px 100px 40px 100px;
+  padding: 10px 100px;
   font-size: 14px;
   color: #8c8c8c;
 }
 
 ul {
-  width: 33%;
   list-style: none;
   display: flex;
   justify-content: space-between;
+}
+
+li + li {
+  margin-left: 0.5vw;
 }
 
 button {
@@ -134,6 +140,66 @@ button {
   font-family: inherit;
   color: inherit;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  #footer-top {
+    padding-left: 40px;
+    padding-right: 40px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  #footer-bottom {
+    padding-left: 40px;
+    padding-right: 40px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  #footer-top > * + * {
+    margin-top: 10px;
+  }
+
+  #footer-bottom > * + * {
+    margin-top: 5px;
+  }
+
+  #bar-logo {
+    width: calc(32px + 12vw);
+  }
+
+  li + li {
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  #footer-top {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #footer-bottom {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #footer-bottom > * + * {
+    margin-top: 10px;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  .li-dividers {
+    display: none;
+  }
+
+  li + li {
+    margin-left: 0;
+  }
 }
 </style>
 

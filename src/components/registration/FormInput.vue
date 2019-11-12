@@ -45,7 +45,7 @@ input[type="date"] {
   margin-left: auto;
   margin-right: auto;
   font-family: var(--font-secondary), sans-serif;
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 900;
   color: var(--color-regular-text);
   padding: 0 10px;
@@ -64,6 +64,20 @@ input:focus-visible {
 input:invalid {
   border-bottom: 2px solid var(--color-accent);
   color: var(--color-accent);
+}
+
+@media only screen and (max-width: 1000px) {
+  input[type="text"],
+  input[type="date"] {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  input[type="text"],
+  input[type="date"] {
+    font-size: 24px;
+  }
 }
 </style>
 

@@ -22,6 +22,7 @@ export default {
 .contact-content {
   height: 200px;
   background-color: var(--slope-body-color);
+  transition: background-color 0.6s ease-out;
 }
 </style>
 

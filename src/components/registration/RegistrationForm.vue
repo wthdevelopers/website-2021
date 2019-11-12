@@ -31,7 +31,7 @@
             type="text"
             label="*Name"
             name="individual-name"
-            placeholder="Your beautiful name here :)"
+            placeholder="Your beautiful name :)"
             :model="individualName"
             :onBlur="validateFilled"
           />
@@ -55,7 +55,7 @@
             type="text"
             label="*Email Address"
             name="individual-email"
-            placeholder="No spam from us, promise!"
+            placeholder="No spam, promise!"
             :model="individualEmail"
             :onInput="validateEmail"
             :onBlur="s => {
@@ -85,7 +85,7 @@
             type="text"
             label="Dietary Requirements"
             name="individual-diet"
-            placeholder="Vegan/vegetarian/allergies/etc."
+            placeholder="Halal/vegan/allergies/etc."
             :model="individualDiet"
           />
           <Radio
@@ -471,7 +471,7 @@ export default Vue.extend({
   position: relative;
   background-color: var(--slope-body-color);
   transition: background-color 0.6s ease-out;
-  padding: 150px 350px;
+  padding: 150px 24vw;
 }
 
 .top-button,
@@ -483,7 +483,7 @@ export default Vue.extend({
   font-weight: 700;
   color: var(--slope-body-color);
   padding: 4px 20px;
-  background-color: var(--color-regular-text);
+  background-color: var(--color-title-text);
   border: none;
 }
 
@@ -495,21 +495,21 @@ export default Vue.extend({
 
 .welcome {
   position: absolute;
-  left: 350px;
+  left: 24vw;
   top: 0;
   font-family: var(--font-primary), sans-serif;
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 700;
   color: var(--color-regular-text);
 }
 
 .top-button {
-  left: 350px;
+  left: 24vw;
   top: 0;
 }
 
 .bottom-button {
-  right: 350px;
+  right: 24vw;
   bottom: 0;
 }
 
@@ -522,7 +522,7 @@ svg > path {
 
 .content-block {
   position: relative;
-  /* border: 1px solid yellow; */
+  /* border: 1px solid red; */
 }
 
 .content-block + .content-block {
@@ -536,10 +536,10 @@ textarea {
   margin-top: 30px;
   background-color: transparent;
   border: 2px solid var(--color-regular-text);
-  width: 700px;
+  width: 100%;
   height: 350px;
   font-family: var(--font-secondary), sans-serif;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 900;
   color: var(--color-regular-text);
   padding: 10px 20px;
@@ -556,8 +556,8 @@ textarea:focus {
 
 label {
   font-family: var(--font-primary), sans-serif;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 34px;
+  font-weight: 400;
   color: var(--color-regular-text);
 }
 
@@ -568,7 +568,7 @@ label {
   font-size: 20px;
   font-weight: 400;
   /* color: var(--color-regular-text); */
-  color: #d3dbde;
+  color: var(--color-gray);
   margin-top: 20px;
   padding: 0 10px;
 }
@@ -612,8 +612,71 @@ label {
   cursor: not-allowed;
 }
 
-/* #add-member-button:hover {
-  color: lightgray;
-} */
+@media only screen and (max-width: 1000px) {
+  #registration-form-content {
+    padding: 150px 16vw;
+  }
+
+  label {
+    font-size: 28px;
+  }
+
+  .welcome {
+    font-size: 40px;
+    left: 16vw;
+  }
+
+  #add-member-button {
+    font-size: 40px;
+  }
+
+  .top-button {
+    left: 16vw;
+  }
+
+  .bottom-button {
+    right: 16vw;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  #registration-form-content {
+    padding: 100px 30px;
+  }
+
+  .content-block + .content-block {
+    margin-top: 50px;
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  .welcome {
+    font-size: 24px;
+    left: 30px;
+  }
+
+  .top-button,
+  .bottom-button {
+    font-size: 20px;
+  }
+
+  .top-button {
+    left: 30px;
+  }
+
+  .bottom-button {
+    right: 30px;
+  }
+
+  #add-member-button {
+    font-size: 24px;
+  }
+
+  .additional-info {
+    font-size: 16px;
+  }
+}
 </style>
 
