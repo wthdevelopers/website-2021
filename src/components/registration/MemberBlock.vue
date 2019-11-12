@@ -169,6 +169,25 @@ export default {
 .member-block-content > div:last-child {
   margin-bottom: 50px;
 }
+
+@media only screen and (max-width: 570px) {
+  .member-block {
+    padding: 5px 15px;
+  }
+
+  .member-block-title > h2 {
+    font-size: 20px;
+  }
+
+  .member-block-title svg:nth-child(2) {
+    width: 13px;
+  }
+
+  .member-block-title svg:nth-child(3) {
+    width: 20px;
+    margin-left: 20px;
+  }
+}
 </style>
 
 

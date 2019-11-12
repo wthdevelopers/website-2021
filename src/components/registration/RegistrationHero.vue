@@ -31,6 +31,76 @@
             </g>
           </svg>
         </li>
+        <li>
+          <svg
+            v-if="theme === 'light'"
+            width="25px"
+            style="transform: translateY(-3.5px); cursor: pointer;"
+            @click="toggleTheme"
+            viewBox="0 0 222.59 218.11"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g transform="translate(-195.2 -286.74)">
+              <path
+                d="m376.78 472.87c.41 10.77.42 10.74-9.93 8.59-5.68-1.17-11.41-2.15-17.08-3.39-2.91-.63-4.47.29-5.81 3-3.94 7.94-8.21 15.73-12.45 23.78-7.29-5.36-14.5-10.5-21.51-15.91-2.48-1.91-4.22-2.22-6.83-.12-6 4.83-12.41 9.16-18.43 14-2.76 2.2-3.79 1.52-5.19-1.34-3.27-6.72-7.07-13.18-10.28-19.92-1.48-3.11-3.19-4.13-6.54-3.4-7.13 1.57-14.39 2.58-21.46 4.36-4.19 1.06-5.52-.06-5.13-4.14.17-1.81.07-3.65.08-5.47.76-3.9.15-7.83.35-11.74 0-2.44-.06-4.9.05-7.31-.41 1.05.41 2.44-.7 3.38 0-4.17-2.25-5.7-6.2-6.53-6.95-1.45-13.69-3.83-20.62-5.39-3.31-.75-3.58-1.89-2.28-4.7 3.33-7.2 6.33-14.56 9.67-21.76 1.17-2.5.85-3.59-1.37-5.62-6.63-6.05-14.48-10.81-19.92-18.16 6.67-5.85 13.16-11.92 20.11-17.42 2.32-1.84 2.29-3 1.27-5.25-3.16-6.93-6-14-9.36-20.85-1.95-4-1-5.35 3.15-6.24 6.66-1.42 13.13-3.76 19.81-5.07 4-.77 5.49-2.78 5.74-6.41 1.17.93.14 2.57.75 3.42-.23-2.3 0-4.78-.1-7.25-.2-4 .41-7.92-.35-11.84 0-1-.13-2-.11-3 .12-8.09.1-7.95 8.08-6.08 6.43 1.5 13 2.58 19.45 3.91 2.44.51 4-.19 5.14-2.53 3.63-7.26 7.56-14.38 11.15-21.67 1.24-2.51 2.29-2.58 4.26-.87 6.4 5.55 13.33 10.38 20.2 15.32 1.94 1.4 2.61.92 3.91 0 6.7-5 13.47-9.92 20.08-15 2.37-1.84 3.48-2 4.91 1.09 2.86 6.13 6.25 12 9.4 18s6.16 6.91 12.65 4.95c6.15-1.85 12.57-2.8 18.88-4.1 1.59-.33 2.56.27 2.54 2.07v8c-.76 3.9-.15 7.83-.35 11.74v7c.36-.9-.46-2.29.65-3.23-.3 6 4.55 6.16 8.37 7.22 6.51 1.82 13.08 3.38 19.64 5 3.11.79 1.61 2.83 1 4.28-2.62 6.26-5.4 12.45-8.13 18.65s-3.25 6.85 1.7 10.84c6.15 5 11.75 10.56 18.13 15.23-5.42 7.39-13.3 12.13-20 18.19-2.31 2.09-2.42 3.21-1.28 5.65 3.22 6.91 6.11 14 9.32 20.89 1.56 3.36 1 4.94-2.85 5.79-6.63 1.47-13.07 3.75-19.71 5.11-3.95.81-6.25 2.35-6.23 6.53-1.17-.93-.14-2.57-.75-3.42.23 2.3.05 4.78.1 7.25.26 4.02-.37 8.02.41 11.89z"
+                fill="#f4c425"
+              ></path>
+              <path d="m236.22 318.13c1.74 3.87.42 7.95.82 11.91-.32.47-.64.45-1 0z" fill="#f3c001"></path>
+              <path
+                d="m376 330c.41-4-.92-8 .82-11.91q.06 6 .14 11.91c-.36.51-.68.49-.96 0z"
+                fill="#f3c001"
+              ></path>
+              <path
+                d="m236.08 330h1v8h-.71c-.13-1.39-.27-2.79-.41-4.18.04-1.27.04-2.52.12-3.82z"
+                fill="#f4c214"
+              ></path>
+              <path
+                d="m376 330h1c.05 1.26.11 2.51.16 3.76-.14 1.39-.28 2.79-.41 4.18h-.75z"
+                fill="#f4c214"
+              ></path>
+              <path
+                d="m237 461c-.41 4 .92 8-.82 11.91q-.06-6-.14-11.91c.36-.49.68-.51.96 0z"
+                fill="#f3c001"
+              ></path>
+              <path
+                d="m376.78 472.87c-1.78-3.87-.42-7.95-.78-11.87.32-.45.64-.47 1 0q-.15 5.92-.22 11.87z"
+                fill="#f3c001"
+              ></path>
+              <path
+                d="m237 461h-1c-.05-1.26-.11-2.51-.16-3.76.14-1.39.28-2.79.41-4.18h.75z"
+                fill="#f4c214"
+              ></path>
+              <path
+                d="m376.92 461h-1v-8h.71c.13 1.39.27 2.79.41 4.18-.04 1.27-.04 2.52-.12 3.82z"
+                fill="#f4c214"
+              ></path>
+              <path
+                d="m232.09 387a75.38 75.38 0 0 1 64.91-65.91 76 76 0 0 0 18.94 0 75.38 75.38 0 0 1 64.97 65.91 60.84 60.84 0 0 0 0 16.94 75.11 75.11 0 0 1 -65.91 65.97 60.84 60.84 0 0 0 -16.94 0 75.1 75.1 0 0 1 -65.97-65.91 60.84 60.84 0 0 0 0-17z"
+                fill="#f7a705"
+              ></path>
+              <g fill="#f7a500">
+                <path d="m316 321.09a39.15 39.15 0 0 1 -18.94 0z"></path>
+                <path d="m232.09 387a31.24 31.24 0 0 1 0 16.94z"></path>
+                <path d="m380.91 404a31.24 31.24 0 0 1 0-16.94z"></path>
+                <path d="m298 469.91a31.24 31.24 0 0 1 16.94 0z"></path>
+              </g>
+            </g>
+          </svg>
+          <svg
+            v-else
+            class="moon"
+            width="25px"
+            style="transform: translateY(-3.5px); cursor: pointer;"
+            @click="toggleTheme"
+            viewBox="0 0 223.99 225"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m106 0h13l19.6 2.67a9.73 9.73 0 0 1 -4.24 2.55c-39.09 14.31-62.72 54.67-55 93.86 12.47 62.94 86 90.76 137.25 51.92 2.36-1.78 4.89-3.34 7.34-5v1c-.93 1.87-2 3.7-2.78 5.63-13.6 33.75-38.06 55.91-72.49 66.88-8.92 2.85-18.47 3.71-27.73 5.49h-12.95a22.42 22.42 0 0 0 -3.33-.8c-47.58-4.11-86.17-35-100-80.4-2.16-7.08-3.14-14.52-4.67-21.8v-19c.39-2.44.7-4.89 1.17-7.32 8.61-44.68 34.38-74.68 77.25-89.59 8.82-3.09 18.36-4.09 27.58-6.09z"
+              transform="translate(-.01)"
+            ></path>
+          </svg>
+        </li>
       </ul>
     </nav>
     <div id="registration-hero-content">
@@ -74,22 +144,40 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "registration-hero"
-};
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
+  name: "registration-hero",
+  data() {
+    return {
+      theme: "light"
+    };
+  },
+  mounted: function(): void {
+    Vue.nextTick(() => {
+      let setTheme = document.documentElement.getAttribute("theme");
+      if (setTheme) {
+        this.theme = setTheme;
+      }
+    });
+  },
+  methods: {
+    toggleTheme(): void {
+      if (document.documentElement.getAttribute("theme") === "dark") {
+        document.documentElement.setAttribute("theme", "light");
+        localStorage.setItem("theme", "light");
+        this.theme = "light";
+      } else {
+        document.documentElement.setAttribute("theme", "dark");
+        localStorage.setItem("theme", "dark");
+        this.theme = "dark";
+      }
+    }
+  }
+});
 </script>
 
 <style scoped>
-#registration-hero {
-  /* border: 1px solid red; */
-}
-
-#registration-hero-content {
-  /* height: 200px; */
-  /* border: 1px solid green; */
-}
-
 nav {
   height: 12.5%;
   padding: 25px 40px;
@@ -98,6 +186,7 @@ nav {
 
 nav > ul {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -108,6 +197,10 @@ nav > ul {
 #bar-logo > g {
   fill: var(--color-title-text);
   transition: fill 0.6s ease-out;
+}
+
+.moon > path {
+  fill: #f3f3fb;
 }
 
 #registration-hero > svg {
@@ -122,21 +215,18 @@ nav > ul {
 
 #registration-hero-content > svg {
   display: block;
-  /* margin: 0 auto; */
   margin-top: 30px;
-  margin-left: 22vw;
-  /* margin-bottom: 20px; */
-  width: 50vw;
+  margin-left: 20vw;
+  width: 55vw;
   /* border: 1px solid yellow; */
 }
 
 h1 {
+  display: inline-block;
   font-family: var(--font-secondary), sans-serif;
-  /* font-size: calc(3vw + 14px); */
   font-size: calc(1.5vw + 16px);
   font-weight: 900;
   color: var(--color-title-text);
-  /* margin-left: 38vw; */
   margin-left: 30vw;
   margin-top: 30px;
   transition: color 0.6s ease-out;
@@ -151,9 +241,19 @@ h1 {
   #bar-logo {
     width: calc(32px + 12vw);
   }
+
+  h1 {
+    margin-bottom: 30px;
+    font-size: calc(1vw + 16px);
+    width: 60vw;
+  }
 }
 
-@media only screen and (max-width: 791px) {
+@media only screen and (max-width: 570px) {
+  h1 {
+    margin-top: 10px;
+    font-size: calc(0.5vw + 16px);
+  }
 }
 </style>
 

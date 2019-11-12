@@ -69,6 +69,10 @@ input[type="radio"]:checked {
 }
 
 @media only screen and (max-width: 570px) {
+  .radio-block {
+    margin-top: 10px;
+  }
+
   input[type="radio"] {
     width: 14px;
     height: 14px;

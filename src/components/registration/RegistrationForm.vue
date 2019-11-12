@@ -483,7 +483,7 @@ export default Vue.extend({
   font-weight: 700;
   color: var(--slope-body-color);
   padding: 4px 20px;
-  background-color: var(--color-title-text);
+  background-color: var(--color-regular-text);
   border: none;
 }
 

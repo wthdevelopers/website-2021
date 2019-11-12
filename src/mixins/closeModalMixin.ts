@@ -3,6 +3,7 @@ export default {
     closeModal(id: string): void {
       let modal = <HTMLElement>document.getElementById(id);
       modal.style.display = "none";
+      document.body.style.overflow = "visible";
     }
   }
 };

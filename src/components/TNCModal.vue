@@ -1,5 +1,5 @@
 <template>
-  <Modal :id="id" :dims="['60vw', '50vh']">
+  <Modal :id="id" type="clausal">
     <svg
       class="cancel"
       @click="closeModal(id)"
@@ -238,7 +238,7 @@ export default {
   width: 20px;
   position: absolute;
   top: 0px;
-  right: 50px;
+  right: 4vw;
   cursor: pointer;
 }
 
@@ -262,6 +262,16 @@ h4 {
   color: var(--color-regular-text);
   margin-bottom: 30px;
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 570px) {
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
 }
 </style>
 

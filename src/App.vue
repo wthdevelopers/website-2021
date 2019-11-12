@@ -59,10 +59,11 @@ export default Vue.extend({
 
   --color-background: #e9f7fb;
   --color-title-text: #2d3887;
+  --color-title-text: #5360c6;
   --color-title-text-hover: #3947ac;
   --color-cta-text: #f3f3fb;
   --color-section-title-text: #e67fbe;
-  --color-regular-text: #3947ac;
+  --color-regular-text: #5360c6;
   --color-accent: #e67fbe;
   --color-gray: #788ebf;
 

@@ -19,6 +19,10 @@ export default {
 </script>
 
 <style scoped>
+#contact {
+  transform: translateY(-1px);
+}
+
 .contact-content {
   height: 200px;
   background-color: var(--slope-body-color);

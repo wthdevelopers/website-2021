@@ -1,5 +1,5 @@
 <template>
-  <Modal :id="id" :dims="['42vw', '35vh']">
+  <Modal :id="id" type="confirmation">
     <div class="modal-content">
       <h3>
         <slot></slot>
@@ -70,6 +70,16 @@ ul {
 
 li {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 570px) {
+  h3 {
+    font-size: 20px;
+  }
+
+  ul {
+    font-size: 24px;
+  }
 }
 </style>
 
