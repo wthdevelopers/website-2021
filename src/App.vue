@@ -149,7 +149,7 @@ a {
 }
 
 .slope {
-  fill: #79c89f;
-  opacity: 0.4;
+  fill: var(--slope-body-color);
+  transition: fill 0.6s ease-out;
 }
 </style>

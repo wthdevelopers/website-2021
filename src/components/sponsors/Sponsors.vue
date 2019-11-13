@@ -10,9 +10,8 @@
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        class="slope"
         d="m-92.45-323.12h60c60 0 180 0 300 16s240 48 360 37.3c120-10.3 240-64.3 360-85.3s240-11 300-5.3l60 5.3v-128h-1440z"
-        fill="#79c89f"
-        fill-opacity="0.4"
         transform="translate(92.45 483.12)"
       ></path>
     </svg>
