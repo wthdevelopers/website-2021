@@ -1,15 +1,22 @@
 <template>
-  <div class="checkbox content-block">
+  <FormBlock>
     <input type="checkbox" :name="name" :id="name" :value="name" v-model="model.value">
-    <label :for="name">
+    <FormLabel :forValue="name">
       <slot></slot>
-    </label>
-  </div>
+    </FormLabel>
+  </FormBlock>
 </template>
 
 <script>
+import FormBlock from "@/components/registration/FormBlock.vue";
+import FormLabel from "@/components/registration/FormLabel.vue";
+
 export default {
   name: "checkbox",
+  components: {
+    FormBlock,
+    FormLabel
+  },
   props: {
     name: String,
     model: Object

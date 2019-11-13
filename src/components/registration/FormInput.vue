@@ -1,7 +1,7 @@
 <template>
-  <div class="form-input content-block">
-    <label :for="name">{{label}}</label>
-    <p class="additional-info">{{additionalInfo}}</p>
+  <FormBlock>
+    <FormLabel :forValue="name">{{label}}</FormLabel>
+    <FormLabelSub>{{additionalInfo}}</FormLabelSub>
     <input
       maxlength="254"
       :type="type"
@@ -13,11 +13,16 @@
       @blur="onBlur ? onBlur(model) : null"
       :style="model.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
     >
-    <p class="error-info">{{model.error}}</p>
-  </div>
+    <FormError>{{model.error}}</FormError>
+  </FormBlock>
 </template>
 
 <script>
+import FormBlock from "@/components/registration/FormBlock.vue";
+import FormLabel from "@/components/registration/FormLabel.vue";
+import FormLabelSub from "@/components/registration/FormLabelSub.vue";
+import FormError from "@/components/registration/FormError.vue";
+
 export default {
   name: "form-input",
   props: {
@@ -29,6 +34,12 @@ export default {
     model: Object,
     onInput: Function,
     onBlur: Function
+  },
+  components: {
+    FormBlock,
+    FormLabel,
+    FormLabelSub,
+    FormError
   }
 };
 </script>

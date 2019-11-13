@@ -98,10 +98,11 @@
         {id: 'individual-shirt-l', value: 'L', optionLabel: 'L'},
         {id: 'individual-shirt-xl', value: 'XL', optionLabel: 'XL'}]"
           />
-          <div class="content-block">
-            <label for="feedback">Any other questions/feedback?</label>
-            <textarea maxlength="2540"/>
-          </div>
+          <Textbox
+            label="Any other questions/feedback?"
+            name="individual-others"
+            :model="individualOthers"
+          />
           <Checkbox name="individual-confirm" :model="individualConfirm">
             I confirm that I am above 13 years of age and have read and agree to the
             <button
@@ -126,12 +127,12 @@
             :model="groupTeamName"
             :onBlur="validateFilled"
           />
-          <div class="content-block" style="padding-bottom: 30px;">
-            <label for="team-name">Team Members</label>
-            <p class="additional-info">
+          <FormBlock style="padding-bottom: 30px;">
+            <FormLabel :forValue="team-members">Team Members</FormLabel>
+            <FormLabelSub>
               Each team can have up to 4 members. Please add members to the
               team (including yourself of course) and fill in all their necessary details.
-            </p>
+            </FormLabelSub>
 
             <MemberBlock
               v-for="(member, idx) in membersMemory"
@@ -160,11 +161,8 @@
                 style="display: inline-block; font-size: 50px; transform: translateY(3px); margin-right: 5px;"
               >+</span> Add Team Member
             </button>
-          </div>
-          <div class="content-block">
-            <label for="feedback">Any other questions/feedback?</label>
-            <textarea maxlength="2540"/>
-          </div>
+          </FormBlock>
+          <Textbox label="Any other questions/feedback?" name="group-others" :model="groupOthers"/>
           <Checkbox name="group-confirm" :model="groupConfirm">
             I confirm that I am above 13 years of age and have read and agree to the
             <button
@@ -225,6 +223,10 @@ import Vue from "vue";
 import Radio from "@/components/registration/Radio.vue";
 import FormInput from "@/components/registration/FormInput.vue";
 import Checkbox from "@/components/registration/Checkbox.vue";
+import Textbox from "@/components/registration/Textbox.vue";
+import FormBlock from "@/components/registration/FormBlock.vue";
+import FormLabel from "@/components/registration/FormLabel.vue";
+import FormLabelSub from "@/components/registration/FormLabelSub.vue";
 import MemberBlock from "@/components/registration/MemberBlock.vue";
 import TNCModal from "@/components/TNCModal.vue";
 import RulesModal from "@/components/RulesModal.vue";
@@ -243,6 +245,10 @@ export default Vue.extend({
     Radio,
     FormInput,
     Checkbox,
+    Textbox,
+    FormBlock,
+    FormLabel,
+    FormLabelSub,
     MemberBlock,
     TNCModal,
     RulesModal,
@@ -267,6 +273,8 @@ export default Vue.extend({
       individualDiet: { value: "" } as FormField,
       individualTeamName: { value: "", error: "" } as FormField,
       groupTeamName: { value: "", error: "" } as FormField,
+      individualOthers: { value: "" } as FormField,
+      groupOthers: { value: "" } as FormField,
       individualConfirm: { value: "" } as FormField,
       groupConfirm: { value: "" } as FormField,
       members: [
@@ -518,72 +526,6 @@ svg > path {
   /* transition: fill 0.6s ease-out; */
 }
 
-/* FORM BLOCKS */
-
-.content-block {
-  position: relative;
-  /* border: 1px solid red; */
-}
-
-.content-block + .content-block {
-  margin-top: 100px;
-}
-
-/* INPUTS: TEXTAREA */
-
-textarea {
-  display: block;
-  margin-top: 30px;
-  background-color: transparent;
-  border: 2px solid var(--color-regular-text);
-  width: 100%;
-  height: 350px;
-  font-family: var(--font-secondary), sans-serif;
-  font-size: 34px;
-  font-weight: 900;
-  color: var(--color-regular-text);
-  padding: 10px 20px;
-  resize: vertical;
-}
-
-textarea:focus {
-  border: 2px solid transparent;
-  color: var(--color-accent);
-  outline: 2px solid var(--color-accent);
-}
-
-/* LABELS */
-
-label {
-  font-family: var(--font-primary), sans-serif;
-  font-size: 34px;
-  font-weight: 400;
-  color: var(--color-regular-text);
-}
-
-/* OTHERS */
-
-.additional-info {
-  font-family: var(--font-primary), sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  /* color: var(--color-regular-text); */
-  color: var(--color-gray);
-  margin-top: 20px;
-  padding: 0 10px;
-}
-
-.error-info {
-  font-family: var(--font-primary), sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  /* color: var(--color-regular-text); */
-  color: #cc6675;
-  margin-top: 20px;
-  padding: 0 10px;
-  height: 10px;
-}
-
 .clause-buttons {
   font-family: inherit;
   font-size: inherit;
@@ -617,10 +559,6 @@ label {
     padding: 150px 16vw;
   }
 
-  label {
-    font-size: 28px;
-  }
-
   .welcome {
     font-size: 40px;
     left: 16vw;
@@ -644,14 +582,6 @@ label {
     padding: 100px 30px;
   }
 
-  .content-block + .content-block {
-    margin-top: 50px;
-  }
-
-  label {
-    font-size: 20px;
-  }
-
   .welcome {
     font-size: 24px;
     left: 30px;
@@ -672,10 +602,6 @@ label {
 
   #add-member-button {
     font-size: 24px;
-  }
-
-  .additional-info {
-    font-size: 16px;
   }
 }
 </style>

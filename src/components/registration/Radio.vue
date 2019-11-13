@@ -1,6 +1,6 @@
 <template>
-  <div class="radio content-block">
-    <label>{{label}}</label>
+  <FormBlock>
+    <FormLabel>{{label}}</FormLabel>
     <div class="radio-block" v-for="option in options" :key="option.id">
       <input
         type="radio"
@@ -10,15 +10,24 @@
         v-model="model.value"
         @change="onChange ? onChange() : null"
       >
-      <label class="option-label" :for="option.id">{{option.optionLabel}}</label>
+      <FormLabel class="option-label" :forValue="option.id">{{option.optionLabel}}</FormLabel>
     </div>
-    <p class="error-info"></p>
-  </div>
+    <FormError>{{model.error}}</FormError>
+  </FormBlock>
 </template>
 
 <script>
+import FormBlock from "@/components/registration/FormBlock.vue";
+import FormLabel from "@/components/registration/FormLabel.vue";
+import FormError from "@/components/registration/FormError.vue";
+
 export default {
   name: "radio",
+  components: {
+    FormBlock,
+    FormLabel,
+    FormError
+  },
   props: {
     label: String,
     name: String,
