@@ -20,6 +20,20 @@ export default {
   },
   props: {
     theme: String
+  },
+  beforeRouteLeave(to, from, next) {
+    if (window.formTouched) {
+      const answer = window.confirm(
+        "Changes made to the form are not saved - are you sure you want to leave this page?"
+      );
+      if (answer) {
+        next();
+      } else {
+        next(false);
+      }
+    } else {
+      next();
+    }
   }
 };
 </script>

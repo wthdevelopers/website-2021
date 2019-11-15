@@ -2,7 +2,7 @@ import { EmailFormField } from "@/interfaces";
 
 export default {
   methods: {
-    validateEmail(subj: EmailFormField, e: "input" | "blur"): void {
+    validateEmail(subj: EmailFormField): string {
       const email = subj.value;
       const [emailBeforeAt, emailAfterAt] = email.split("@");
       let validationConclusion = "";
@@ -16,14 +16,15 @@ export default {
       } else if (emailAfterAt.split(".").some(segment => segment.length > 63)) {
         validationConclusion = "This email address is not valid!";
       }
-      if (e !== "input") {
-        subj.error = validationConclusion;
-      }
+
       if (!validationConclusion) {
         subj.success = true;
       } else {
         subj.success = false;
       }
+
+      subj.error = validationConclusion;
+      return validationConclusion;
     }
   }
 };

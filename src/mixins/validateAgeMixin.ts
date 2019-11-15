@@ -2,7 +2,7 @@ import { AgeFormField } from "@/interfaces";
 
 export default {
   methods: {
-    validateAge(subj: AgeFormField, e: "input" | "blur"): void {
+    validateAge(subj: AgeFormField): string {
       let dob = subj.value;
       let validationConclusion = "";
       const [year, month, day] = dob.split("-").map(str => {
@@ -10,26 +10,27 @@ export default {
       });
       if (2020 - year < 13) {
         validationConclusion =
-          "Sorry, but you need to be at least 13 years of age at the time of event to be eligible to participate. Maybe another time!";
+          "Sorry, but you do not meet the age requirements. Maybe another time!";
       } else if (2020 - year === 13) {
         if (month > 2) {
           validationConclusion =
-            "Sorry, but you need to be at least 13 years of age at the time of event to be eligible to participate. Maybe another time!";
+            "Sorry, but you do not meet the age requirements. Maybe another time!";
         } else if (month === 2) {
           if (day > 8) {
             validationConclusion =
-              "Sorry, but you need to be at least 13 years of age at the time of event to be eligible to participate. Maybe another time!";
+              "Sorry, but you do not meet the age requirements. Maybe another time!";
           }
         }
       }
-      if (e !== "input") {
-        subj.error = validationConclusion;
-      }
+
       if (!validationConclusion) {
         subj.success = true;
       } else {
         subj.success = false;
       }
+
+      subj.error = validationConclusion;
+      return validationConclusion;
     }
   }
 };

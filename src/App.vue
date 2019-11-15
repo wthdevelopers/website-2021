@@ -86,7 +86,7 @@ export default Vue.extend({
   --color-section-title-text: #dd55a9;
   --color-regular-text: #f3f3fb;
   --color-accent: #dd55a9;
-  --color-gray: #d3dbde;
+  --color-gray: #b6c3c8;
 
   --slope-body-color: #3f636d;
 

@@ -9,7 +9,6 @@
       :id="name"
       :placeholder="placeholder"
       v-model="model.value"
-      @input="onInput ? onInput(model, 'input') : null"
       @blur="onBlur ? onBlur(model) : null"
       :style="model.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
     >
@@ -32,7 +31,6 @@ export default {
     name: String,
     placeholder: String,
     model: Object,
-    onInput: Function,
     onBlur: Function
   },
   components: {
@@ -56,19 +54,19 @@ input[type="date"] {
   margin-left: auto;
   margin-right: auto;
   font-family: var(--font-secondary), sans-serif;
-  font-size: 46px;
+  font-size: 40px;
   font-weight: 900;
   color: var(--color-regular-text);
   padding: 0 10px;
 }
 
+input::placeholder {
+  color: var(--color-gray);
+}
+
 input:focus {
   border-bottom: 2px solid transparent;
   color: var(--color-accent);
-  outline: 2px solid var(--color-accent);
-}
-
-input:focus-visible {
   outline: 2px solid var(--color-accent);
 }
 
@@ -80,7 +78,7 @@ input:invalid {
 @media only screen and (max-width: 1000px) {
   input[type="text"],
   input[type="date"] {
-    font-size: 40px;
+    font-size: 34px;
   }
 }
 

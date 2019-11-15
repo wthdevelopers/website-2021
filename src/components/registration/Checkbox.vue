@@ -1,25 +1,36 @@
 <template>
   <FormBlock>
-    <input type="checkbox" :name="name" :id="name" :value="name" v-model="model.value">
+    <input
+      type="checkbox"
+      :name="name"
+      :id="name"
+      :value="name"
+      v-model="model.value"
+      @change="onChange ? onChange.func(...onChange.args) : null"
+    >
     <FormLabel :forValue="name">
       <slot></slot>
     </FormLabel>
+    <FormError>{{model.error}}</FormError>
   </FormBlock>
 </template>
 
 <script>
 import FormBlock from "@/components/registration/FormBlock.vue";
 import FormLabel from "@/components/registration/FormLabel.vue";
+import FormError from "@/components/registration/FormError.vue";
 
 export default {
   name: "checkbox",
   components: {
     FormBlock,
-    FormLabel
+    FormLabel,
+    FormError
   },
   props: {
     name: String,
-    model: Object
+    model: Object,
+    onChange: Object
   }
 };
 </script>

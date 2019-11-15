@@ -28,7 +28,7 @@
         type="text"
         label="*Name"
         :name="`member-${member.id}-name`"
-        placeholder="Your beautiful name here :)"
+        placeholder="Your cool name :)"
         :model="member.name"
         :onBlur="validateFilled"
       />
@@ -41,7 +41,6 @@
         label="*Date of Birth"
         :name="`member-${member.id}-dob`"
         :model="member.dob"
-        :onInput="validateAge"
         :onBlur="s => {
                     if (!validateFilled(s)) {
                         validateAge(s, 'blur');
@@ -52,12 +51,11 @@
         type="text"
         label="*Email Address"
         :name="`member-${member.id}-email`"
-        placeholder="No spam from us, promise!"
+        placeholder="No spam, promise!"
         :model="member.email"
-        :onInput="validateEmail"
         :onBlur="s => {
                     if (!validateFilled(s)) {
-                        validateEmail(s, 'blur');
+                        validateEmail(s);
                     }
                 }"
       />
@@ -73,13 +71,14 @@
         type="text"
         label="Dietary Requirements"
         :name="`member-${member.id}-diet`"
-        placeholder="Halal/vegan/allergies/etc."
+        placeholder="Halal/allergies/etc."
         :model="member.diet"
       />
       <Radio
         label="*What is your T-shirt size?"
         :name="`member-${member.id}-shirt`"
         :model="member.shirt"
+        :onChange="{func: validateFilled, args: [member.shirt]}"
         :options="[{id: `member-${member.id}-shirt-xs`, value: 'XS', optionLabel: 'XS'}, 
                 {id: `member-${member.id}-shirt-s`, value: 'S', optionLabel: 'S'},
                 {id: `member-${member.id}-shirt-m`, value: 'M', optionLabel: 'M'},

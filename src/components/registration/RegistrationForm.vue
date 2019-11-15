@@ -1,6 +1,14 @@
 <template>
-  <div id="registration-form">
-    <form id="registration-form-content" method="post" @submit="informIsSubmittingForm()">
+  <div>
+    <form
+      id="registration-form"
+      name="registration-form"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="registration-form">
+      <input type="hidden" name="bot-field">
       <button
         type="button"
         @click="goToPage('1')"
@@ -13,7 +21,7 @@
           label="*Are you registering as an individual or for a group?"
           name="format"
           :model="format"
-          :onChange="informFormTouched"
+          :onChange="{func: informFormTouched, args: []}"
           :options="[{id: 'format-individual', value: 'Individual', optionLabel: 'Individual'}, 
         {id: 'format-group', value: 'Group', optionLabel: 'Group'}]"
         />
@@ -24,6 +32,7 @@
             label="*Do you want us to help you form a group, or would you prefer going solo?"
             name="individual-need-group"
             :model="individualNeedGroup"
+            :onChange="{func: validateFilled, args: [individualNeedGroup]}"
             :options="[{id: 'individual-need-group-true', value: 'True', optionLabel: 'Sure, help me find a group!'}, 
         {id: 'individual-need-group-false', value: 'False', optionLabel: 'No thanks, I prefer going solo!'}]"
           />
@@ -31,7 +40,7 @@
             type="text"
             label="*Name"
             name="individual-name"
-            placeholder="Your beautiful name :)"
+            placeholder="Your cool name :)"
             :model="individualName"
             :onBlur="validateFilled"
           />
@@ -44,7 +53,6 @@
             label="*Date of Birth"
             name="individual-dob"
             :model="individualDob"
-            :onInput="validateAge"
             :onBlur="s => {
             if (!validateFilled(s)) {
                 validateAge(s, 'blur');
@@ -57,10 +65,9 @@
             name="individual-email"
             placeholder="No spam, promise!"
             :model="individualEmail"
-            :onInput="validateEmail"
             :onBlur="s => {
             if (!validateFilled(s)) {
-                validateEmail(s, 'blur');
+                validateEmail(s);
             }
         }"
           />
@@ -73,25 +80,17 @@
             :onBlur="validateFilled"
           />
           <FormInput
-            v-if="individualNeedGroup.value === 'False'"
-            type="text"
-            label="*Team Name"
-            name="individual-team-name"
-            placeholder="Get creative here!"
-            :model="individualTeamName"
-            :onBlur="validateFilled"
-          />
-          <FormInput
             type="text"
             label="Dietary Requirements"
             name="individual-diet"
-            placeholder="Halal/vegan/allergies/etc."
+            placeholder="Halal/allergies/etc."
             :model="individualDiet"
           />
           <Radio
             label="*What is your T-shirt size?"
             name="individual-shirt"
             :model="individualShirt"
+            :onChange="{func: validateFilled, args: [individualShirt]}"
             :options="[{id: 'individual-shirt-xs', value: 'XS', optionLabel: 'XS'}, 
         {id: 'individual-shirt-s', value: 'S', optionLabel: 'S'},
         {id: 'individual-shirt-m', value: 'M', optionLabel: 'M'},
@@ -103,7 +102,11 @@
             name="individual-others"
             :model="individualOthers"
           />
-          <Checkbox name="individual-confirm" :model="individualConfirm">
+          <Checkbox
+            name="individual-confirm"
+            :model="individualConfirm"
+            :onChange="{func: validateFilled, args: [individualConfirm]}"
+          >
             I confirm that I am above 13 years of age and have read and agree to the
             <button
               type="button"
@@ -163,7 +166,11 @@
             </button>
           </FormBlock>
           <Textbox label="Any other questions/feedback?" name="group-others" :model="groupOthers"/>
-          <Checkbox name="group-confirm" :model="groupConfirm">
+          <Checkbox
+            name="group-confirm"
+            :model="groupConfirm"
+            :onChange="{func: validateFilled, args: [groupConfirm]}"
+          >
             I confirm that I am above 13 years of age and have read and agree to the
             <button
               type="button"
@@ -179,6 +186,7 @@
           </Checkbox>
         </div>
       </div>
+      <FormError v-if="page === '2'" class="submission-error">{{submissionErrorMsg}}</FormError>
       <button
         type="button"
         @click="() => {
@@ -191,11 +199,12 @@
         :disabled="format.value ? null : ''"
       >Next Page</button>
       <button
-        type="submit"
+        type="button"
         class="bottom-button"
         v-if="page === '2'"
-        :disabled="checkSubmitConditions()"
+        @click="openModal('form-submission-confirmation-modal');"
       >Submit</button>
+      <button type="submit" hidden/>
     </form>
     <svg
       viewBox="0 0 1440 240.41"
@@ -215,12 +224,19 @@
       :positiveFunc="removeMember"
       :positiveFuncArgs="[removeCandidateID]"
     >Are you sure you want to remove Member #{{removeCandidatePos}}?</ConfirmationModal>
+    <ConfirmationModal
+      id="form-submission-confirmation-modal"
+      :positiveFunc="() => {
+        if (!validateAll()) {
+          informIsSubmittingForm();
+          submitForm('registration-form');
+        }
+      }"
+    >Are you sure you want to submit the form?</ConfirmationModal>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-
+<script>
 import Radio from "@/components/registration/Radio.vue";
 import FormInput from "@/components/registration/FormInput.vue";
 import Checkbox from "@/components/registration/Checkbox.vue";
@@ -228,6 +244,9 @@ import Textbox from "@/components/registration/Textbox.vue";
 import FormBlock from "@/components/registration/FormBlock.vue";
 import FormLabel from "@/components/registration/FormLabel.vue";
 import FormLabelSub from "@/components/registration/FormLabelSub.vue";
+
+import FormError from "@/components/registration/FormError.vue";
+
 import MemberBlock from "@/components/registration/MemberBlock.vue";
 import TNCModal from "@/components/TNCModal.vue";
 import RulesModal from "@/components/RulesModal.vue";
@@ -238,9 +257,7 @@ import validateAgeMixin from "@/mixins/validateAgeMixin";
 import validateEmailMixin from "@/mixins/validateEmailMixin";
 import openModalMixin from "@/mixins/openModalMixin";
 
-import { FormField, AgeFormField, EmailFormField, Member } from "@/interfaces";
-
-export default Vue.extend({
+export default {
   name: "registration-form",
   components: {
     Radio,
@@ -250,6 +267,7 @@ export default Vue.extend({
     FormBlock,
     FormLabel,
     FormLabelSub,
+    FormError,
     MemberBlock,
     TNCModal,
     RulesModal,
@@ -260,24 +278,24 @@ export default Vue.extend({
       page: "1",
       removeCandidateID: "",
       removeCandidatePos: null,
-      format: { value: "" } as FormField,
-      individualNeedGroup: { value: "", error: "" } as FormField,
-      individualName: { value: "", error: "" } as FormField,
-      individualDob: { value: "", error: "", success: false } as AgeFormField,
+      format: { value: "" },
+      individualNeedGroup: { value: "", error: "" },
+      individualName: { value: "", error: "" },
+      individualDob: { value: "", error: "", success: false },
       individualEmail: {
         value: "",
         error: "",
         success: false
-      } as EmailFormField,
-      individualOrg: { value: "", error: "" } as FormField,
-      individualShirt: { value: "" } as FormField,
-      individualDiet: { value: "" } as FormField,
-      individualTeamName: { value: "", error: "" } as FormField,
-      groupTeamName: { value: "", error: "" } as FormField,
-      individualOthers: { value: "" } as FormField,
-      groupOthers: { value: "" } as FormField,
-      individualConfirm: { value: "" } as FormField,
-      groupConfirm: { value: "" } as FormField,
+      },
+      individualOrg: { value: "", error: "" },
+      individualShirt: { value: "", error: "" },
+      individualDiet: { value: "" },
+      individualTeamName: { value: "", error: "" },
+      groupTeamName: { value: "", error: "" },
+      individualOthers: { value: "" },
+      groupOthers: { value: "" },
+      individualConfirm: { value: "", error: "" },
+      groupConfirm: { value: "", error: "" },
       members: [
         {
           id: "one",
@@ -286,7 +304,7 @@ export default Vue.extend({
           dob: { value: "", error: "", success: false },
           email: { value: "", error: "", success: false },
           org: { value: "", error: "" },
-          shirt: { value: "" },
+          shirt: { value: "", error: "" },
           diet: { value: "" }
         },
         {
@@ -296,7 +314,7 @@ export default Vue.extend({
           dob: { value: "", error: "", success: false },
           email: { value: "", error: "", success: false },
           org: { value: "", error: "" },
-          shirt: { value: "" },
+          shirt: { value: "", error: "" },
           diet: { value: "" }
         },
         {
@@ -306,7 +324,7 @@ export default Vue.extend({
           dob: { value: "", error: "", success: false },
           email: { value: "", error: "", success: false },
           org: { value: "", error: "" },
-          shirt: { value: "" },
+          shirt: { value: "", error: "" },
           diet: { value: "" }
         },
         {
@@ -316,11 +334,12 @@ export default Vue.extend({
           dob: { value: "", error: "", success: false },
           email: { value: "", error: "", success: false },
           org: { value: "", error: "" },
-          shirt: { value: "" },
+          shirt: { value: "", error: "" },
           diet: { value: "" }
         }
-      ] as Array<Member>,
-      membersMemory: [] as Array<Member>
+      ],
+      membersMemory: [],
+      submissionErrorMsg: ""
     };
   },
   mixins: [
@@ -330,13 +349,72 @@ export default Vue.extend({
     openModalMixin
   ],
   methods: {
-    informFormTouched(): void {
+    informFormTouched() {
       window.formTouched = true;
     },
-    informIsSubmittingForm(): void {
+    informIsSubmittingForm() {
       window.isSubmittingForm = true;
     },
-    checkSubmitConditions(): null | "" {
+    validateAll() {
+      let testString = "";
+      let validationConclusion = "";
+      if (this.format.value === "Individual") {
+        testString = this.validateFilled(this.individualNeedGroup);
+        testString = this.validateFilled(this.individualName);
+        testString = this.validateFilled(this.individualOrg);
+        testString = this.validateFilled(this.individualShirt);
+        testString = this.validateFilled(this.individualConfirm);
+
+        if (!this.validateFilled(this.individualDob)) {
+          testString = this.validateAge(this.individualDob);
+        } else {
+          testString = "invalid";
+        }
+        if (!this.validateFilled(this.individualEmail)) {
+          testString = this.validateEmail(this.individualEmail);
+        } else {
+          testString = "invalid";
+        }
+
+        if (testString) {
+          validationConclusion =
+            "There are some incomplete fields or invalid responses.";
+        }
+      } else if (this.format.value === "Group") {
+        if (this.membersMemory.length >= 2) {
+          testString = this.validateFilled(this.groupTeamName);
+          testString = this.validateFilled(this.groupConfirm);
+
+          this.membersMemory.forEach(member => {
+            testString = this.validateFilled(member.name);
+            testString = this.validateFilled(member.org);
+            testString = this.validateFilled(member.shirt);
+
+            if (!this.validateFilled(member.dob)) {
+              testString = this.validateAge(member.dob);
+            } else {
+              testString = "invalid";
+            }
+            if (!this.validateFilled(member.email)) {
+              testString = this.validateEmail(member.email);
+            } else {
+              testString = "invalid";
+            }
+          });
+
+          if (testString) {
+            validationConclusion =
+              "There are some incomplete fields or invalid responses.";
+          }
+        } else {
+          validationConclusion =
+            "If you are signing up as a team, you need at least two members (Duhhh!).";
+        }
+      }
+      this.submissionErrorMsg = validationConclusion;
+      return validationConclusion;
+    },
+    checkSubmitConditions() {
       if (this.format.value === "Individual") {
         if (this.individualNeedGroup.value === "True") {
           return this.individualName.value &&
@@ -386,35 +464,27 @@ export default Vue.extend({
         return "";
       }
     },
-    goToPage(d: string): void {
+    goToPage(d) {
       this.page = d;
     },
-    openAccordion(a: string): void {
-      let memberBlock = <HTMLElement>(
-        document.querySelector(`#member-block-${a}`)
-      );
+    openAccordion(a) {
+      let memberBlock = document.querySelector(`#member-block-${a}`);
 
-      let memberBlockContent = <HTMLElement>(
-        document.querySelector(`#member-block-content-${a}`)
+      let memberBlockContent = document.querySelector(
+        `#member-block-content-${a}`
       );
-      let memberBlockTitle = <HTMLElement>(
-        document.querySelector(`#member-block-title-${a}`)
-      );
-      let memberBlockTitleH2 = <HTMLElement>memberBlockTitle.children[0];
-      let memberBlockTitleCancel = <SVGElement>memberBlockTitle.children[1];
-      let memberBlockTitleArrow = <SVGElement>memberBlockTitle.children[2];
-      let memberBlockTitleCancelPath = <SVGElement>(
-        memberBlockTitleCancel.firstChild
-      );
-      let memberBlockTitleArrowPath = <SVGElement>(
-        memberBlockTitleArrow.firstChild
-      );
+      let memberBlockTitle = document.querySelector(`#member-block-title-${a}`);
+      let memberBlockTitleH2 = memberBlockTitle.children[0];
+      let memberBlockTitleCancel = memberBlockTitle.children[1];
+      let memberBlockTitleArrow = memberBlockTitle.children[2];
+      let memberBlockTitleCancelPath = memberBlockTitleCancel.firstChild;
+      let memberBlockTitleArrowPath = memberBlockTitleArrow.firstChild;
 
       if (
         memberBlockContent.style.maxHeight === "0px" ||
         !memberBlockContent.style.maxHeight
       ) {
-        memberBlockContent.style.maxHeight = "2000px";
+        memberBlockContent.style.maxHeight = "2600px";
         memberBlock.style.border = "2px solid var(--color-accent)";
         memberBlockTitleH2.style.color = "var(--color-accent)";
         memberBlockTitleCancelPath.style.fill = "var(--color-accent)";
@@ -429,7 +499,7 @@ export default Vue.extend({
         }, 600);
       }
     },
-    addMembers(): void {
+    addMembers() {
       for (let i = 0; i < this.members.length; i++) {
         if (!this.members[i].taken) {
           this.members[i].taken = !this.members[i].taken;
@@ -438,7 +508,7 @@ export default Vue.extend({
         }
       }
     },
-    removeMember(id: string): void {
+    removeMember(id) {
       for (let i = 0; i < this.members.length; i++) {
         if (this.members[i].id === id) {
           this.members[i].taken = !this.members[i].taken;
@@ -469,18 +539,23 @@ export default Vue.extend({
       this.membersMemory = this.membersMemory.filter(
         member => member.id !== id
       );
+    },
+    submitForm(id) {
+      let form = document.getElementById(id);
+      form.submit();
     }
   }
-});
+};
 </script>
 
+
 <style>
-#registration-form-content {
+#registration-form {
   transform: translateY(-26px);
   position: relative;
   background-color: var(--slope-body-color);
   transition: background-color 0.6s ease-out;
-  padding: 150px 24vw;
+  padding: 150px 24vw 200px 24vw;
 }
 
 .top-button,
@@ -519,7 +594,7 @@ export default Vue.extend({
 
 .bottom-button {
   right: 24vw;
-  bottom: 0;
+  bottom: 70px;
 }
 
 svg > path {
@@ -543,7 +618,7 @@ svg > path {
   cursor: pointer;
   margin-top: 50px;
   font-family: var(--font-secondary), sans-serif;
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 900;
   color: var(--color-regular-text);
   background-color: var(--slope-body-color);
@@ -555,9 +630,15 @@ svg > path {
   cursor: not-allowed;
 }
 
+.submission-error {
+  position: absolute;
+  right: 24vw;
+  bottom: 40px;
+}
+
 @media only screen and (max-width: 1000px) {
-  #registration-form-content {
-    padding: 150px 16vw;
+  #registration-form {
+    padding: 150px 16vw 200px 16vw;
   }
 
   .welcome {
@@ -566,7 +647,7 @@ svg > path {
   }
 
   #add-member-button {
-    font-size: 40px;
+    font-size: 34px;
   }
 
   .top-button {
@@ -576,11 +657,15 @@ svg > path {
   .bottom-button {
     right: 16vw;
   }
+
+  .submission-error {
+    right: 16vw;
+  }
 }
 
 @media only screen and (max-width: 570px) {
-  #registration-form-content {
-    padding: 100px 30px;
+  #registration-form {
+    padding: 100px 30px 200px 30px;
   }
 
   .welcome {
@@ -599,6 +684,10 @@ svg > path {
 
   .bottom-button {
     right: 30px;
+  }
+
+  .submission-error {
+    left: 30px;
   }
 
   #add-member-button {

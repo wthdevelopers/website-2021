@@ -8,7 +8,7 @@
         :id="option.id"
         :value="option.value"
         v-model="model.value"
-        @change="onChange ? onChange() : null"
+        @change="onChange ? onChange.func(...onChange.args) : null"
       >
       <FormLabel class="option-label" :forValue="option.id">{{option.optionLabel}}</FormLabel>
     </div>
@@ -33,7 +33,7 @@ export default {
     name: String,
     model: Object,
     options: Array,
-    onChange: Function
+    onChange: Object
   }
 };
 </script>

@@ -20,4 +20,10 @@ p {
   padding: 0 10px;
   height: 10px;
 }
+
+@media only screen and (max-width: 570px) {
+  p {
+    font-size: 16px;
+  }
+}
 </style>
