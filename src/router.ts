@@ -16,6 +16,14 @@ export default new Router({
       name: "registration",
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/Registration.vue")
-    }
+    },
+    {
+      path: "/registration-end/:outcome",
+      name: "registration-end",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/RegistrationEnd.vue"),
+      props: true
+    },
+    { path: "*", redirect: "/" }
   ]
 });

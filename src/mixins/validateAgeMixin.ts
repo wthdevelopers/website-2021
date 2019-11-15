@@ -2,7 +2,7 @@ import { AgeFormField } from "@/interfaces";
 
 export default {
   methods: {
-    validateAge(subj: AgeFormField): string {
+    validateAge(subj: AgeFormField): number {
       let dob = subj.value;
       let validationConclusion = "";
       const [year, month, day] = dob.split("-").map(str => {
@@ -30,7 +30,7 @@ export default {
       }
 
       subj.error = validationConclusion;
-      return validationConclusion;
+      return validationConclusion ? 1 : 0;
     }
   }
 };

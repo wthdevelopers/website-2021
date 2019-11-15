@@ -211,7 +211,7 @@
         type="button"
         class="bottom-button"
         v-if="page === '2'"
-        @click="openModal('form-submission-confirmation-modal');"
+        @click="openModal('form-submission-confirmation-modal')"
       >Submit</button>
       <FormError v-if="page === '2'" class="submission-error">{{submissionErrorMsg}}</FormError>
       <button type="submit" hidden/>
@@ -238,7 +238,6 @@
       id="form-submission-confirmation-modal"
       :positiveFunc="() => {
         if (!validateAll()) {
-          informIsSubmittingForm();
           submitForm(`registration-form-${format.value ? (format.value === 'Individual' ? 'individual' : 'group') : null}`);
         }
       }"
@@ -370,53 +369,53 @@ export default {
       window.isSubmittingForm = true;
     },
     validateAll() {
-      let testString = "";
+      let testNum = 0;
       let validationConclusion = "";
       if (this.format.value === "Individual") {
-        testString = this.validateFilled(this.individualNeedGroup);
-        testString = this.validateFilled(this.individualName);
-        testString = this.validateFilled(this.individualOrg);
-        testString = this.validateFilled(this.individualShirt);
-        testString = this.validateFilled(this.individualConfirm);
+        testNum += this.validateFilled(this.individualNeedGroup);
+        testNum += this.validateFilled(this.individualName);
+        testNum += this.validateFilled(this.individualOrg);
+        testNum += this.validateFilled(this.individualShirt);
+        testNum += this.validateFilled(this.individualConfirm);
 
         if (!this.validateFilled(this.individualDob)) {
-          testString = this.validateAge(this.individualDob);
+          testNum += this.validateAge(this.individualDob);
         } else {
-          testString = "invalid";
+          testNum++;
         }
         if (!this.validateFilled(this.individualEmail)) {
-          testString = this.validateEmail(this.individualEmail);
+          testNum += this.validateEmail(this.individualEmail);
         } else {
-          testString = "invalid";
+          testNum++;
         }
 
-        if (testString) {
+        if (testNum) {
           validationConclusion =
             "There are some incomplete fields or invalid responses.";
         }
       } else if (this.format.value === "Group") {
         if (this.membersMemory.length >= 2) {
-          testString = this.validateFilled(this.groupTeamName);
-          testString = this.validateFilled(this.groupConfirm);
+          testNum += this.validateFilled(this.groupTeamName);
+          testNum += this.validateFilled(this.groupConfirm);
 
           this.membersMemory.forEach(member => {
-            testString = this.validateFilled(member.name);
-            testString = this.validateFilled(member.org);
-            testString = this.validateFilled(member.shirt);
+            testNum += this.validateFilled(member.name);
+            testNum += this.validateFilled(member.org);
+            testNum += this.validateFilled(member.shirt);
 
             if (!this.validateFilled(member.dob)) {
-              testString = this.validateAge(member.dob);
+              testNum += this.validateAge(member.dob);
             } else {
-              testString = "invalid";
+              testNum++;
             }
             if (!this.validateFilled(member.email)) {
-              testString = this.validateEmail(member.email);
+              testNum += this.validateEmail(member.email);
             } else {
-              testString = "invalid";
+              testNum++;
             }
           });
 
-          if (testString) {
+          if (testNum) {
             validationConclusion =
               "There are some incomplete fields or invalid responses.";
           }
@@ -503,14 +502,53 @@ export default {
     },
     submitForm(id) {
       let form = document.getElementById(id);
-      form.submit();
+      this.informIsSubmittingForm();
+      fetch(form.action, {
+        method: "POST",
+        body: new URLSearchParams(new FormData(form))
+      })
+        .then(() => {
+          let registeredFormat = this.format.value;
+          let registeredName =
+            this.format.value === "Individual"
+              ? this.individualName.value
+              : this.groupTeamName.value;
+          let registeredEmails = [];
+          if (this.format.value === "Individual") {
+            registeredEmails.push(this.individualEmail.value);
+          } else {
+            this.membersMemory.forEach(member => {
+              registeredEmails.push(member.email.value);
+            });
+          }
+          window.registeredInfo = {
+            format: registeredFormat,
+            name: registeredName,
+            emails: registeredEmails
+          };
+
+          this.$router.push({
+            name: "registration-end",
+            params: {
+              outcome: "success"
+            }
+          });
+        })
+        .catch(() => {
+          this.$router.push({
+            name: "registration-end",
+            params: {
+              outcome: "failure"
+            }
+          });
+        });
     }
   }
 };
 </script>
 
 
-<style>
+<style scoped>
 .registration-form-body {
   transform: translateY(-26px);
   position: relative;

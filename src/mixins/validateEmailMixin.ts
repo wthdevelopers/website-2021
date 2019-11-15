@@ -2,7 +2,7 @@ import { EmailFormField } from "@/interfaces";
 
 export default {
   methods: {
-    validateEmail(subj: EmailFormField): string {
+    validateEmail(subj: EmailFormField): number {
       const email = subj.value;
       const [emailBeforeAt, emailAfterAt] = email.split("@");
       let validationConclusion = "";
@@ -24,7 +24,7 @@ export default {
       }
 
       subj.error = validationConclusion;
-      return validationConclusion;
+      return validationConclusion ? 1 : 0;
     }
   }
 };

@@ -54,8 +54,6 @@ input[type="radio"] {
   appearance: none;
   width: 20px;
   height: 20px;
-  background-color: var(--color-regular-text);
-  border: 6px solid var(--color-regular-text);
   background-color: var(--slope-body-color);
   border: 2px solid var(--color-regular-text);
   border-radius: 50px;
@@ -63,7 +61,8 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-  border: 6px solid var(--color-accent);
+  background-color: var(--color-regular-text);
+  border: 5px solid var(--color-accent);
 }
 
 @media only screen and (max-width: 1000px) {

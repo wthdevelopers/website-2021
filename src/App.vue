@@ -11,6 +11,11 @@ declare global {
   interface Window {
     formTouched: boolean;
     isSubmittingForm: boolean;
+    registeredInfo: {
+      format: String;
+      name: String;
+      emails: Array<String>;
+    };
   }
 }
 
