@@ -1,7 +1,7 @@
 <template>
   <div id="registration">
     <RegistrationHero/>
-    <RegistrationForm/>
+    <RegistrationForm :page="page" @page-change-event="goToPage"/>
     <Foot/>
   </div>
 </template>
@@ -13,26 +13,38 @@ import Foot from "@/components/foot/Foot.vue";
 
 export default {
   name: "registration",
+  data() {
+    return {
+      page: "1"
+    };
+  },
   components: {
     RegistrationHero,
     RegistrationForm,
     Foot
   },
-  props: {
-    theme: String
-  },
   beforeRouteLeave(to, from, next) {
-    if (window.formTouched) {
-      const answer = window.confirm(
-        "Changes made to the form are not saved - are you sure you want to leave this page?"
-      );
-      if (answer) {
-        next();
-      } else {
-        next(false);
-      }
+    if (this.page === "2") {
+      this.goToPage("1");
+      next(false);
     } else {
-      next();
+      if (window.formTouched) {
+        const answer = window.confirm(
+          "Changes made to the form are not saved - are you sure you want to leave this page?"
+        );
+        if (answer) {
+          next();
+        } else {
+          next(false);
+        }
+      } else {
+        next();
+      }
+    }
+  },
+  methods: {
+    goToPage(d) {
+      this.page = d;
     }
   }
 };

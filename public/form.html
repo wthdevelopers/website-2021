@@ -1,4 +1,9 @@
-<form name="registration-form" netlify netlify-honeypot="bot-field" hidden>
+<form
+  name="registration-form-individual"
+  netlify
+  netlify-honeypot="bot-field"
+  hidden
+>
   <input type="radio" name="individual-need-group" />
   <input type="text" name="individual-name" />
   <input type="date" name="individual-dob" />
@@ -8,7 +13,44 @@
   <input type="radio" name="individual-shirt" />
   <textarea name="individual-others"></textarea>
   <input type="checkbox" name="individual-confirm" />
+</form>
 
-  <input type="radio" name="group-team-name" />
+<form
+  name="registration-form-group"
+  netlify
+  netlify-honeypot="bot-field"
+  hidden
+>
+  <input type="text" name="group-team-name" />
+
+  <input type="text" name="member-one-name" />
+  <input type="date" name="member-one-dob" />
+  <input type="text" name="member-one-email" />
+  <input type="text" name="member-one-org" />
+  <input type="text" name="member-one-diet" />
+  <input type="radio" name="member-one-shirt" />
+
+  <input type="text" name="member-two-name" />
+  <input type="date" name="member-two-dob" />
+  <input type="text" name="member-two-email" />
+  <input type="text" name="member-two-org" />
+  <input type="text" name="member-two-diet" />
+  <input type="radio" name="member-two-shirt" />
+
+  <input type="text" name="member-three-name" />
+  <input type="date" name="member-three-dob" />
+  <input type="text" name="member-three-email" />
+  <input type="text" name="member-three-org" />
+  <input type="text" name="member-three-diet" />
+  <input type="radio" name="member-three-shirt" />
+
+  <input type="text" name="member-four-name" />
+  <input type="date" name="member-four-dob" />
+  <input type="text" name="member-four-email" />
+  <input type="text" name="member-four-org" />
+  <input type="text" name="member-four-diet" />
+  <input type="radio" name="member-four-shirt" />
+
+  <textarea name="group-others"></textarea>
   <input type="checkbox" name="group-confirm" />
 </form>

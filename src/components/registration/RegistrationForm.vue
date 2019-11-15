@@ -1,22 +1,14 @@
 <template>
-  <div>
-    <form
-      id="registration-form"
-      name="registration-form"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-    >
-      <input type="hidden" name="form-name" value="registration-form">
-      <input type="hidden" name="bot-field">
+  <div id="registration-form">
+    <div class="registration-form-body">
       <button
         type="button"
-        @click="goToPage('1')"
+        @click="$emit('page-change-event', '1')"
         class="top-button"
         v-if="page === '2'"
       >Previous Page</button>
       <p class="welcome" v-if="page === '1'">Hello!</p>
-      <div v-if="page === '1'">
+      <RegistrationContentBlock v-if="page === '1'">
         <Radio
           label="*Are you registering as an individual or for a group?"
           name="format"
@@ -25,9 +17,17 @@
           :options="[{id: 'format-individual', value: 'Individual', optionLabel: 'Individual'}, 
         {id: 'format-group', value: 'Group', optionLabel: 'Group'}]"
         />
-      </div>
-      <div v-if="page === '2'">
-        <div v-if="format.value === 'Individual'">
+      </RegistrationContentBlock>
+      <RegistrationContentBlock v-if="page === '2' && format.value === 'Individual'">
+        <form
+          id="registration-form-individual"
+          name="registration-form-individual"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="registration-form-individual">
+          <input type="hidden" name="bot-field">
           <Radio
             label="*Do you want us to help you form a group, or would you prefer going solo?"
             name="individual-need-group"
@@ -120,8 +120,18 @@
             >participants' rules</button> as stipulated
             by the organisers of What The Hack 2020.
           </Checkbox>
-        </div>
-        <div v-else>
+        </form>
+      </RegistrationContentBlock>
+      <RegistrationContentBlock v-if="page === '2' && format.value === 'Group'">
+        <form
+          id="registration-form-group"
+          name="registration-form-group"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="registration-form-group">
+          <input type="hidden" name="bot-field">
           <FormInput
             type="text"
             label="*Team Name"
@@ -184,14 +194,13 @@
             >participants' rules</button> as stipulated
             by the organisers of What The Hack 2020.
           </Checkbox>
-        </div>
-      </div>
-      <FormError v-if="page === '2'" class="submission-error">{{submissionErrorMsg}}</FormError>
+        </form>
+      </RegistrationContentBlock>
       <button
         type="button"
         @click="() => {
             if (format.value) {
-                goToPage('2');
+                $emit('page-change-event', '2');
             }
         }"
         class="bottom-button"
@@ -204,8 +213,9 @@
         v-if="page === '2'"
         @click="openModal('form-submission-confirmation-modal');"
       >Submit</button>
+      <FormError v-if="page === '2'" class="submission-error">{{submissionErrorMsg}}</FormError>
       <button type="submit" hidden/>
-    </form>
+    </div>
     <svg
       viewBox="0 0 1440 240.41"
       xmlns="http://www.w3.org/2000/svg"
@@ -229,7 +239,7 @@
       :positiveFunc="() => {
         if (!validateAll()) {
           informIsSubmittingForm();
-          submitForm('registration-form');
+          submitForm(`registration-form-${format.value ? (format.value === 'Individual' ? 'individual' : 'group') : null}`);
         }
       }"
     >Are you sure you want to submit the form?</ConfirmationModal>
@@ -237,6 +247,7 @@
 </template>
 
 <script>
+import RegistrationContentBlock from "@/components/registration/RegistrationContentBlock.vue";
 import Radio from "@/components/registration/Radio.vue";
 import FormInput from "@/components/registration/FormInput.vue";
 import Checkbox from "@/components/registration/Checkbox.vue";
@@ -260,6 +271,7 @@ import openModalMixin from "@/mixins/openModalMixin";
 export default {
   name: "registration-form",
   components: {
+    RegistrationContentBlock,
     Radio,
     FormInput,
     Checkbox,
@@ -273,9 +285,11 @@ export default {
     RulesModal,
     ConfirmationModal
   },
+  props: {
+    page: String
+  },
   data() {
     return {
-      page: "1",
       removeCandidateID: "",
       removeCandidatePos: null,
       format: { value: "" },
@@ -414,59 +428,6 @@ export default {
       this.submissionErrorMsg = validationConclusion;
       return validationConclusion;
     },
-    checkSubmitConditions() {
-      if (this.format.value === "Individual") {
-        if (this.individualNeedGroup.value === "True") {
-          return this.individualName.value &&
-            this.individualOrg.value &&
-            this.individualShirt.value &&
-            this.individualDob.success &&
-            this.individualEmail.success &&
-            this.individualConfirm.value
-            ? null
-            : "";
-        } else if (this.individualNeedGroup.value === "False") {
-          return this.individualName.value &&
-            this.individualOrg.value &&
-            this.individualTeamName.value &&
-            this.individualShirt.value &&
-            this.individualDob.success &&
-            this.individualEmail.success &&
-            this.individualConfirm.value
-            ? null
-            : "";
-        } else {
-          return "";
-        }
-      } else if (this.format.value === "Group") {
-        if (
-          this.groupTeamName.value &&
-          this.groupConfirm.value &&
-          this.membersMemory.length >= 2
-        ) {
-          return this.membersMemory
-            .map(member => {
-              return (
-                member.name.value &&
-                member.org.value &&
-                member.shirt.value &&
-                member.dob.success &&
-                member.email.success
-              );
-            })
-            .every(bool => bool)
-            ? null
-            : "";
-        } else {
-          return "";
-        }
-      } else {
-        return "";
-      }
-    },
-    goToPage(d) {
-      this.page = d;
-    },
     openAccordion(a) {
       let memberBlock = document.querySelector(`#member-block-${a}`);
 
@@ -550,12 +511,10 @@ export default {
 
 
 <style>
-#registration-form {
+.registration-form-body {
   transform: translateY(-26px);
   position: relative;
-  background-color: var(--slope-body-color);
-  transition: background-color 0.6s ease-out;
-  padding: 150px 24vw 200px 24vw;
+  /* border: 1px solid red; */
 }
 
 .top-button,
@@ -569,6 +528,7 @@ export default {
   padding: 4px 20px;
   background-color: var(--color-regular-text);
   border: none;
+  z-index: 1;
 }
 
 .top-button:disabled,
@@ -585,6 +545,7 @@ export default {
   font-size: 46px;
   font-weight: 700;
   color: var(--color-regular-text);
+  z-index: 1;
 }
 
 .top-button {
@@ -637,10 +598,6 @@ svg > path {
 }
 
 @media only screen and (max-width: 1000px) {
-  #registration-form {
-    padding: 150px 16vw 200px 16vw;
-  }
-
   .welcome {
     font-size: 40px;
     left: 16vw;
@@ -664,10 +621,6 @@ svg > path {
 }
 
 @media only screen and (max-width: 570px) {
-  #registration-form {
-    padding: 100px 30px 200px 30px;
-  }
-
   .welcome {
     font-size: 24px;
     left: 30px;
