@@ -1,24 +1,33 @@
 <template>
   <FormBlock>
     <FormLabel :forValue="name">{{label}}</FormLabel>
-    <textarea v-model="model.value" maxlength="2540"/>
+    <textarea
+      v-model="model.value"
+      maxlength="2540"
+      @blur="onBlur ? onBlur(model) : null"
+      :style="model.error ? 'border: 2px solid transparent; outline: 2px solid #cc6675;' : null"
+    />
+    <FormError>{{model.error}}</FormError>
   </FormBlock>
 </template>
 
 <script>
 import FormBlock from "@/components/registration/FormBlock.vue";
 import FormLabel from "@/components/registration/FormLabel.vue";
+import FormError from "@/components/registration/FormError.vue";
 
 export default {
   name: "textbox",
   components: {
     FormBlock,
-    FormLabel
+    FormLabel,
+    FormError
   },
   props: {
     label: String,
     name: String,
-    model: Object
+    model: Object,
+    onBlur: Function
   }
 };
 </script>
@@ -43,6 +52,18 @@ textarea:focus {
   border: 2px solid transparent;
   color: var(--color-accent);
   outline: 2px solid var(--color-accent);
+}
+
+@media only screen and (max-width: 1000px) {
+  textarea {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  textarea {
+    font-size: 20px;
+  }
 }
 </style>
 

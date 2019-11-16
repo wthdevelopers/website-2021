@@ -333,8 +333,8 @@ nav > ul {
 }
 
 #registration-hero > svg {
-  margin-top: -40px;
-  transform: translateY(-20px);
+  margin-top: -140px;
+  /* transform: translateY(-20px); */
   z-index: -1;
 }
 
@@ -345,7 +345,7 @@ nav > ul {
 
 #registration-hero-content > svg {
   display: block;
-  margin-top: 2vw;
+  /* margin-top: 2vw; */
   margin-left: 20vw;
   width: 55vw;
   /* border: 1px solid yellow; */

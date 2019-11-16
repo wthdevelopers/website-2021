@@ -36,7 +36,7 @@
           submitting it again.
         </FormLabelSub>
       </RegistrationContentBlock>
-      <router-link to="/" class="bottom-button">Back To Homepage</router-link>
+      <FormButton linkAction="router" to="/" class="bottom-button">Back To Homepage</FormButton>
     </div>
     <svg
       viewBox="0 0 1440 240.41"
@@ -55,6 +55,7 @@
 <script>
 import RegistrationContentBlock from "@/components/registration/RegistrationContentBlock.vue";
 import FormLabelSub from "@/components/registration/FormLabelSub.vue";
+import FormButton from "@/components/registration/FormButton.vue";
 
 export default {
   name: "registration-end-message",
@@ -67,7 +68,8 @@ export default {
   },
   components: {
     RegistrationContentBlock,
-    FormLabelSub
+    FormLabelSub,
+    FormButton
   },
   props: {
     outcome: String
@@ -109,15 +111,7 @@ export default {
 }
 
 .bottom-button {
-  cursor: pointer;
   position: absolute;
-  font-family: var(--font-primary), sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--slope-body-color);
-  padding: 4px 20px;
-  background-color: var(--color-regular-text);
-  border: none;
   z-index: 1;
   right: 24vw;
   bottom: 70px;

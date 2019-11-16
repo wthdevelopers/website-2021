@@ -1,12 +1,12 @@
 <template>
   <div id="registration-form">
     <div class="registration-form-body">
-      <button
-        type="button"
-        @click="$emit('page-change-event', '1')"
+      <FormButton
+        linkAction="non-router"
+        :onClick="{func: communicatePageChangeToParent, args: ['1']}"
         class="top-button"
         v-if="page === '2'"
-      >Previous Page</button>
+      >Previous Page</FormButton>
       <p class="welcome" v-if="page === '1'">Hello!</p>
       <RegistrationContentBlock v-if="page === '1'">
         <Radio
@@ -196,23 +196,19 @@
           </Checkbox>
         </form>
       </RegistrationContentBlock>
-      <button
-        type="button"
-        @click="() => {
-            if (format.value) {
-                $emit('page-change-event', '2');
-            }
-        }"
+      <FormButton
+        linkAction="non-router"
+        :onClick="{func: communicatePageChangeToParent, args: ['2']}"
         class="bottom-button"
         v-if="page === '1'"
         :disabled="format.value ? null : ''"
-      >Next Page</button>
-      <button
-        type="button"
+      >Next Page</FormButton>
+      <FormButton
+        linkAction="non-router"
+        :onClick="{func: openModal, args: ['form-submission-confirmation-modal']}"
         class="bottom-button"
         v-if="page === '2'"
-        @click="openModal('form-submission-confirmation-modal')"
-      >Submit</button>
+      >Next Page</FormButton>
       <FormError v-if="page === '2'" class="submission-error">{{submissionErrorMsg}}</FormError>
       <button type="submit" hidden/>
     </div>
@@ -248,6 +244,7 @@
 <script>
 import RegistrationContentBlock from "@/components/registration/RegistrationContentBlock.vue";
 import Radio from "@/components/registration/Radio.vue";
+import FormButton from "@/components/registration/FormButton.vue";
 import FormInput from "@/components/registration/FormInput.vue";
 import Checkbox from "@/components/registration/Checkbox.vue";
 import Textbox from "@/components/registration/Textbox.vue";
@@ -272,6 +269,7 @@ export default {
   components: {
     RegistrationContentBlock,
     Radio,
+    FormButton,
     FormInput,
     Checkbox,
     Textbox,
@@ -362,6 +360,9 @@ export default {
     openModalMixin
   ],
   methods: {
+    communicatePageChangeToParent(page) {
+      this.$emit("page-change-event", page);
+    },
     informFormTouched() {
       window.formTouched = true;
     },
@@ -557,22 +558,8 @@ export default {
 
 .top-button,
 .bottom-button {
-  cursor: pointer;
   position: absolute;
-  font-family: var(--font-primary), sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--slope-body-color);
-  padding: 4px 20px;
-  background-color: var(--color-regular-text);
-  border: none;
   z-index: 1;
-}
-
-.top-button:disabled,
-.bottom-button:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
 }
 
 .welcome {
