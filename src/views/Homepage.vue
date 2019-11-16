@@ -1,0 +1,37 @@
+<template>
+  <div id="homepage">
+    <Hero/>
+    <About/>
+    <Prizes/>
+    <Schedule/>
+    <Sponsors/>
+    <Faq/>
+    <Contact/>
+    <Foot/>
+  </div>
+</template>
+
+<script>
+import Hero from "@/sections/homepage/hero/Hero.vue";
+import About from "@/sections/homepage/about/About.vue";
+import Prizes from "@/sections/homepage/prizes/Prizes.vue";
+import Schedule from "@/sections/homepage/schedule/Schedule.vue";
+import Sponsors from "@/sections/homepage/sponsors/Sponsors.vue";
+import Faq from "@/sections/homepage/faq/Faq.vue";
+import Contact from "@/sections/homepage/contact/Contact.vue";
+import Foot from "@/sections/homepage/foot/Foot.vue";
+
+export default {
+  name: "homepage",
+  components: {
+    Hero,
+    About,
+    Prizes,
+    Schedule,
+    Sponsors,
+    Faq,
+    Contact,
+    Foot
+  }
+};
+</script>

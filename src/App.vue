@@ -1,36 +1,60 @@
 <template>
   <div id="app">
-    <Hero/>
-    <About/>
-    <Prizes/>
-    <Schedule/>
-    <Sponsors/>
-    <Faq/>
-    <Foot/>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import Hero from "@/components/hero/Hero.vue";
-import About from "@/components/about/About.vue";
-import Prizes from "@/components/prizes/Prizes.vue";
-import Schedule from "@/components/schedule/Schedule.vue";
-import Sponsors from "@/components/sponsors/Sponsors.vue";
-import Faq from "@/components/faq/Faq.vue";
-import Foot from "@/components/foot/Foot.vue";
+<script lang="ts">
+import Vue from "vue";
 
-export default {
-  name: "app",
-  components: {
-    Hero,
-    About,
-    Prizes,
-    Schedule,
-    Sponsors,
-    Faq,
-    Foot
+declare global {
+  interface Window {
+    formTouched: boolean;
+    isSubmittingForm: boolean;
+    registeredInfo: {
+      format: String;
+      name: String;
+      emails: Array<String>;
+    };
   }
-};
+}
+
+export default Vue.extend({
+  name: "app",
+  created: function(): void {
+    this.initFormGlobalVars();
+    this.initLeaveFormWarning();
+  },
+  mounted: function(): void {
+    this.setInitialTheme();
+  },
+  methods: {
+    initFormGlobalVars(): void {
+      window.formTouched = false;
+      window.isSubmittingForm = false;
+    },
+    initLeaveFormWarning(): void {
+      window.addEventListener("beforeunload", function(e) {
+        if (window.formTouched && !window.isSubmittingForm) {
+          var nonNull = "nonNull";
+
+          (e || window.event).returnValue = nonNull; //Gecko + IE
+          return nonNull; //Gecko + Webkit, Safari, Chrome etc.
+        }
+      });
+    },
+    setInitialTheme(): void {
+      let setTheme = "light";
+      let cachedTheme = localStorage.getItem("theme");
+      if (cachedTheme) {
+        setTheme = cachedTheme;
+      } else if (matchMedia("(prefers-color-scheme: dark)").matches) {
+        setTheme = "dark";
+      }
+      document.documentElement.setAttribute("theme", setTheme);
+    }
+  }
+});
 </script>
 
 <style>
@@ -38,15 +62,17 @@ export default {
   --font-primary: brandon-grotesque;
   --font-secondary: proxima-soft;
 
-  --color-background: #f3f3fb;
+  --color-background: #e9f7fb;
   --color-title-text: #2d3887;
+  --color-title-text: #5360c6;
   --color-title-text-hover: #3947ac;
   --color-cta-text: #f3f3fb;
-  --color-section-title-text: #2d3887;
-  --color-regular-text: #000000;
-  --color-accent: #e26ab4;
+  --color-section-title-text: #e67fbe;
+  --color-regular-text: #5360c6;
+  --color-accent: #e67fbe;
+  --color-gray: #788ebf;
 
-  --slope-body-color: #c1e1d5;
+  --slope-body-color: #bbe4d5;
 
   --stars-visibility: hidden;
 
@@ -62,9 +88,10 @@ export default {
   --color-title-text: #f3f3fb;
   --color-title-text-hover: #d9d9f2;
   --color-cta-text: #191f4d;
-  --color-section-title-text: #c02685;
+  --color-section-title-text: #dd55a9;
   --color-regular-text: #f3f3fb;
-  --color-accent: #c02685;
+  --color-accent: #dd55a9;
+  --color-gray: #b6c3c8;
 
   --slope-body-color: #3f636d;
 
@@ -87,7 +114,7 @@ body {
   position: relative;
   background-color: var(--color-background);
   transition: background-color 0.6s ease-out;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 ul {
@@ -127,7 +154,7 @@ a {
 }
 
 .slope {
-  fill: #79c89f;
-  opacity: 0.4;
+  fill: var(--slope-body-color);
+  transition: fill 0.6s ease-out;
 }
 </style>
