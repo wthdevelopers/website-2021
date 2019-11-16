@@ -2,6 +2,9 @@
   <FormBlock>
     <FormLabel :forValue="name">{{label}}</FormLabel>
     <textarea
+      :name="name"
+      :id="name"
+      :placeholder="placeholder"
       v-model="model.value"
       maxlength="2540"
       @blur="onBlur ? onBlur(model) : null"
@@ -12,9 +15,9 @@
 </template>
 
 <script>
-import FormBlock from "@/components/registration/FormBlock.vue";
-import FormLabel from "@/components/registration/FormLabel.vue";
-import FormError from "@/components/registration/FormError.vue";
+import FormBlock from "@/components/FormBlock.vue";
+import FormLabel from "@/components/FormLabel.vue";
+import FormError from "@/components/FormError.vue";
 
 export default {
   name: "textbox",
@@ -27,7 +30,8 @@ export default {
     label: String,
     name: String,
     model: Object,
-    onBlur: Function
+    onBlur: Function,
+    placeholder: String
   }
 };
 </script>
@@ -46,6 +50,10 @@ textarea {
   color: var(--color-regular-text);
   padding: 10px 20px;
   resize: vertical;
+}
+
+textarea::placeholder {
+  color: var(--color-gray);
 }
 
 textarea:focus {

@@ -53,9 +53,9 @@
 </template>
 
 <script>
-import RegistrationContentBlock from "@/components/registration/RegistrationContentBlock.vue";
-import FormLabelSub from "@/components/registration/FormLabelSub.vue";
-import FormButton from "@/components/registration/FormButton.vue";
+import RegistrationContentBlock from "@/components/RegistrationContentBlock.vue";
+import FormLabelSub from "@/components/FormLabelSub.vue";
+import FormButton from "@/components/FormButton.vue";
 
 export default {
   name: "registration-end-message",

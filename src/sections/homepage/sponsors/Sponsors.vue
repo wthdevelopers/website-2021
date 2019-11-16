@@ -1,7 +1,7 @@
 <template>
   <div id="thankees">
     <div class="thankees-body">
-      <h3>Sponsors</h3>
+      <SectionHeader>Sponsors</SectionHeader>
       <div class="thankees-content"></div>
     </div>
     <svg
@@ -19,16 +19,17 @@
 </template>
 
 <script>
+import SectionHeader from "@/components/SectionHeader.vue";
+
 export default {
-  name: "thankees"
+  name: "thankees",
+  components: {
+    SectionHeader
+  }
 };
 </script>
 
 <style scoped>
-#thankees {
-  /* border: 1px solid purple; */
-}
-
 .thankees-body {
   background-color: var(--slope-body-color);
   width: 100%;
@@ -38,16 +39,6 @@ export default {
   transition: background-color 0.6s ease-out;
 }
 
-h3 {
-  font-family: var(--font-secondary), sans-serif;
-  font-size: calc(24px + 2vw);
-  font-weight: 700;
-  padding-left: 150px;
-  color: var(--color-section-title-text);
-  margin-bottom: 50px;
-  /* border: 1px solid yellow; */
-}
-
 .thankees-content {
   height: 500px;
   margin: 0 150px;
@@ -55,37 +46,18 @@ h3 {
 }
 
 @media only screen and (max-width: 1000px) {
-  h3 {
-    padding-left: 100px;
-  }
-
   .thankees-content {
     margin: 0 100px;
   }
 }
 
 @media only screen and (max-width: 1000px) {
-  h3 {
-    padding-left: 100px;
-  }
-
   .schedule-content {
     margin: 0 100px;
   }
 }
 
-@media only screen and (max-width: 791px) {
-}
-
 @media only screen and (max-width: 570px) {
-  h3 {
-    padding-left: 30px;
-  }
-
-  p {
-    font-size: 20px;
-  }
-
   .thankees-content {
     margin: 0 30px;
   }

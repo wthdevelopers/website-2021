@@ -1,7 +1,7 @@
 <template>
   <div id="contact">
     <div class="contact-body">
-      <h3>Contact Us</h3>
+      <SectionHeader>Contact Us</SectionHeader>
       <form
         class="contact-content"
         id="contact-form"
@@ -16,7 +16,7 @@
           type="text"
           label="*Name"
           name="contactee-name"
-          placeholder="Your beautiful name :)"
+          placeholder="Your cool name :)"
           :model="contacteeName"
           :onBlur="validateFilled"
         />
@@ -37,6 +37,7 @@
           name="contactee-message"
           :model="contacteeMessage"
           :onBlur="validateFilled"
+          placeholder="Anything is fine! Your questions, feedback, suggestions, etc."
         />
       </form>
       <div class="submission-container">
@@ -73,10 +74,11 @@
 </template>
 
 <script>
-import FormInput from "@/components/registration/FormInput.vue";
-import Textbox from "@/components/registration/Textbox.vue";
-import FormButton from "@/components/registration/FormButton.vue";
-import FormError from "@/components/registration/FormError.vue";
+import SectionHeader from "@/components/SectionHeader.vue";
+import FormInput from "@/components/FormInput.vue";
+import Textbox from "@/components/Textbox.vue";
+import FormButton from "@/components/FormButton.vue";
+import FormError from "@/components/FormError.vue";
 import ConfirmationModal from "@/components/ConfirmationModal.vue";
 
 import validateFilledMixin from "@/mixins/validateFilledMixin";
@@ -86,6 +88,7 @@ import openModalMixin from "@/mixins/openModalMixin";
 export default {
   name: "contact",
   components: {
+    SectionHeader,
     FormInput,
     Textbox,
     FormButton,

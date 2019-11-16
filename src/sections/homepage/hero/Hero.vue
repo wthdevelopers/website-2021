@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Navbar from "@/components/hero/Navbar.vue";
-import HeroContent from "@/components/hero/HeroContent.vue";
-import HeroImage from "@/components/hero/HeroImage.vue";
+import Navbar from "@/sections/homepage/hero/Navbar.vue";
+import HeroContent from "@/sections/homepage/hero/HeroContent.vue";
+import HeroImage from "@/sections/homepage/hero/HeroImage.vue";
 
 export default {
   name: "hero",

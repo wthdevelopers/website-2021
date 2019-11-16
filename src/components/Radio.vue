@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import FormBlock from "@/components/registration/FormBlock.vue";
-import FormLabel from "@/components/registration/FormLabel.vue";
-import FormError from "@/components/registration/FormError.vue";
+import FormBlock from "@/components/FormBlock.vue";
+import FormLabel from "@/components/FormLabel.vue";
+import FormError from "@/components/FormError.vue";
 
 export default {
   name: "radio",

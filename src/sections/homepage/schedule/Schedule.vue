@@ -1,6 +1,6 @@
 <template>
   <div id="schedule">
-    <h3>Schedule</h3>
+    <SectionHeader>Schedule</SectionHeader>
     <div class="schedule-content"></div>
 
     <svg class="windmillscape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3093.28 1269.45">
@@ -377,8 +377,13 @@
 </template>
 
 <script>
+import SectionHeader from "@/components/SectionHeader.vue";
+
 export default {
-  name: "schedule"
+  name: "schedule",
+  components: {
+    SectionHeader
+  }
 };
 </script>
 
@@ -392,17 +397,6 @@ export default {
 .windmillscape {
   position: absolute;
   bottom: 0;
-}
-
-h3 {
-  font-family: var(--font-secondary), sans-serif;
-  font-size: calc(24px + 2vw);
-  font-weight: 700;
-  padding-left: 150px;
-  color: var(--color-section-title-text);
-  margin-bottom: 50px;
-  margin-top: 30px;
-  /* border: 1px solid yellow; */
 }
 
 .schedule-content {
@@ -504,37 +498,18 @@ h3 {
 }
 
 @media only screen and (max-width: 1000px) {
-  h3 {
-    padding-left: 100px;
-  }
-
   .prizes-content {
     margin: 0 100px;
   }
 }
 
 @media only screen and (max-width: 1000px) {
-  h3 {
-    padding-left: 100px;
-  }
-
   .schedule-content {
     margin: 0 100px;
   }
 }
 
-@media only screen and (max-width: 791px) {
-}
-
 @media only screen and (max-width: 570px) {
-  h3 {
-    padding-left: 30px;
-  }
-
-  p {
-    font-size: 20px;
-  }
-
   .schedule-content {
     margin: 0 30px;
   }

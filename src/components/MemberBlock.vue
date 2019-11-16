@@ -90,8 +90,8 @@
 </template>
 
 <script>
-import Radio from "@/components/registration/Radio.vue";
-import FormInput from "@/components/registration/FormInput.vue";
+import Radio from "@/components/Radio.vue";
+import FormInput from "@/components/FormInput.vue";
 
 export default {
   name: "member-block",
@@ -128,6 +128,7 @@ export default {
 
 .member-block-title {
   display: flex;
+  align-items: center;
 }
 
 .member-block-title > h2 {
@@ -141,12 +142,14 @@ export default {
 .member-block-title svg:nth-child(2) {
   width: 17.5px;
   cursor: pointer;
+  height: 17.5px;
 }
 
 .member-block-title svg:nth-child(3) {
   width: 25px;
   cursor: pointer;
   margin-left: 30px;
+  height: calc((17.5px / 1.753) + 5px);
 }
 
 .member-block-title svg > path {
@@ -180,11 +183,13 @@ export default {
 
   .member-block-title svg:nth-child(2) {
     width: 13px;
+    height: 13px;
   }
 
   .member-block-title svg:nth-child(3) {
     width: 20px;
     margin-left: 20px;
+    height: calc((20px / 1.753) - 1px);
   }
 }
 </style>

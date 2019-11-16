@@ -1,7 +1,7 @@
 <template>
   <div id="prizes">
     <div class="prizes-body">
-      <h3>Prizes</h3>
+      <SectionHeader>Prizes</SectionHeader>
       <div class="prizes-content"></div>
     </div>
     <svg
@@ -18,16 +18,17 @@
 </template>
 
 <script>
+import SectionHeader from "@/components/SectionHeader.vue";
+
 export default {
-  name: "prizes"
+  name: "prizes",
+  components: {
+    SectionHeader
+  }
 };
 </script>
 
 <style scoped>
-#prizes {
-  /* border: 1px solid purple; */
-}
-
 .prizes-body {
   background-color: var(--slope-body-color);
   width: 100%;
@@ -37,16 +38,6 @@ export default {
   transition: background-color 0.6s ease-out;
 }
 
-h3 {
-  font-family: var(--font-secondary), sans-serif;
-  font-size: calc(24px + 2vw);
-  font-weight: 700;
-  padding-left: 150px;
-  color: var(--color-section-title-text);
-  margin-bottom: 50px;
-  /* border: 1px solid yellow; */
-}
-
 .prizes-content {
   height: 300px;
   margin: 0 150px;
@@ -54,27 +45,12 @@ h3 {
 }
 
 @media only screen and (max-width: 1000px) {
-  h3 {
-    padding-left: 100px;
-  }
-
   .prizes-content {
     margin: 0 100px;
   }
 }
 
-@media only screen and (max-width: 791px) {
-}
-
 @media only screen and (max-width: 570px) {
-  h3 {
-    padding-left: 30px;
-  }
-
-  p {
-    font-size: 20px;
-  }
-
   .prizes-content {
     margin: 0 30px;
   }

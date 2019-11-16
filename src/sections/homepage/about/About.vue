@@ -1,6 +1,6 @@
 <template>
   <div id="about">
-    <SectionHeader>What The Hack?</SectionHeader>
+    <SectionHeader style="margin: 24vw 0 20px 0;">What The Hack?</SectionHeader>
     <div class="about-content">
       <div class="about-content-main">
         <Para>

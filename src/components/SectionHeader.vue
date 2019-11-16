@@ -16,7 +16,7 @@ h3 {
   font-size: calc(24px + 2vw);
   font-weight: 700;
   padding-left: 150px;
-  margin: 24vw 0 20px 0;
+  /* margin: 24vw 0 20px 0; */
   color: var(--color-section-title-text);
   /* border: 1px solid yellow; */
 }

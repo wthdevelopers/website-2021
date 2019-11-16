@@ -28,7 +28,7 @@
         ></path>
       </g>
     </svg>
-    <h1>Urban Cities // Environment</h1>
+    <h1>What The Hack: Environment</h1>
     <div class="hero-content-secondary">
       <div>
         <h2>8th - 9th February 2020</h2>

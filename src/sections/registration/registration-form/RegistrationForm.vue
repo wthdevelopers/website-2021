@@ -52,6 +52,7 @@
             type="date"
             label="*Date of Birth"
             name="individual-dob"
+            placeholder="When is your birthday?"
             :model="individualDob"
             :onBlur="s => {
             if (!validateFilled(s)) {
@@ -242,19 +243,19 @@
 </template>
 
 <script>
-import RegistrationContentBlock from "@/components/registration/RegistrationContentBlock.vue";
-import Radio from "@/components/registration/Radio.vue";
-import FormButton from "@/components/registration/FormButton.vue";
-import FormInput from "@/components/registration/FormInput.vue";
-import Checkbox from "@/components/registration/Checkbox.vue";
-import Textbox from "@/components/registration/Textbox.vue";
-import FormBlock from "@/components/registration/FormBlock.vue";
-import FormLabel from "@/components/registration/FormLabel.vue";
-import FormLabelSub from "@/components/registration/FormLabelSub.vue";
+import RegistrationContentBlock from "@/components/RegistrationContentBlock.vue";
+import Radio from "@/components/Radio.vue";
+import FormButton from "@/components/FormButton.vue";
+import FormInput from "@/components/FormInput.vue";
+import Checkbox from "@/components/Checkbox.vue";
+import Textbox from "@/components/Textbox.vue";
+import FormBlock from "@/components/FormBlock.vue";
+import FormLabel from "@/components/FormLabel.vue";
+import FormLabelSub from "@/components/FormLabelSub.vue";
 
-import FormError from "@/components/registration/FormError.vue";
+import FormError from "@/components/FormError.vue";
 
-import MemberBlock from "@/components/registration/MemberBlock.vue";
+import MemberBlock from "@/components/MemberBlock.vue";
 import TNCModal from "@/components/TNCModal.vue";
 import RulesModal from "@/components/RulesModal.vue";
 import ConfirmationModal from "@/components/ConfirmationModal.vue";

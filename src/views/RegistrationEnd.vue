@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import RegistrationHero from "@/components/registration/RegistrationHero.vue";
-import RegistrationEndMessage from "@/components/registration/RegistrationEndMessage.vue";
-import Foot from "@/components/foot/Foot.vue";
+import RegistrationHero from "@/sections/registration/registration-hero/RegistrationHero.vue";
+import RegistrationEndMessage from "@/sections/registration/registration-end/RegistrationEndMessage.vue";
+import Foot from "@/sections/homepage/foot/Foot.vue";
 
 export default {
   name: "registration-end",

@@ -1,8 +1,7 @@
 <template>
   <div id="faq">
-    <h3>FAQs</h3>
+    <SectionHeader>FAQs</SectionHeader>
     <div class="faq-content"></div>
-
     <svg
       style="transform: translateY(5.5px);"
       xmlns="http://www.w3.org/2000/svg"
@@ -17,23 +16,17 @@
 </template>
 
 <script>
+import SectionHeader from "@/components/SectionHeader.vue";
+
 export default {
-  name: "faq"
+  name: "faq",
+  components: {
+    SectionHeader
+  }
 };
 </script>
 
 <style scoped>
-h3 {
-  font-family: var(--font-secondary), sans-serif;
-  font-size: calc(24px + 2vw);
-  font-weight: 700;
-  padding-left: 150px;
-  color: var(--color-section-title-text);
-  margin-bottom: 50px;
-  margin-top: 30px;
-  /* border: 1px solid yellow; */
-}
-
 .faq-content {
   height: 600px;
   margin: 0 150px;
@@ -42,37 +35,12 @@ h3 {
 }
 
 @media only screen and (max-width: 1000px) {
-  h3 {
-    padding-left: 100px;
-  }
-
-  .prizes-content {
-    margin: 0 100px;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  h3 {
-    padding-left: 100px;
-  }
-
   .faq-content {
     margin: 0 100px;
   }
 }
 
-@media only screen and (max-width: 791px) {
-}
-
 @media only screen and (max-width: 570px) {
-  h3 {
-    padding-left: 30px;
-  }
-
-  p {
-    font-size: 20px;
-  }
-
   .faq-content {
     margin: 0 30px;
   }
