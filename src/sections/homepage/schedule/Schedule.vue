@@ -4,9 +4,7 @@
     <div class="schedule-content">
       <ul class="timetable">
         <li>
-          <Para>
-            <span>Day One</span>
-          </Para>
+          <SubHeader>Day One (Saturday)</SubHeader>
         </li>
         <li v-for="(item, idx) in dayOneSchedule" :key="idx">
           <Para>{{item.name}}</Para>
@@ -15,9 +13,7 @@
       </ul>
       <ul class="timetable">
         <li>
-          <Para>
-            <span>Day Two</span>
-          </Para>
+          <SubHeader>Day Two (Sunday)</SubHeader>
         </li>
         <li v-for="(item, idx) in dayTwoSchedule" :key="idx">
           <Para>{{item.name}}</Para>
@@ -401,12 +397,14 @@
 
 <script>
 import SectionHeader from "@/components/SectionHeader.vue";
+import SubHeader from "@/components/SubHeader.vue";
 import Para from "@/components/Para.vue";
 
 export default {
   name: "schedule",
   components: {
     SectionHeader,
+    SubHeader,
     Para
   },
   data() {
@@ -421,8 +419,8 @@ export default {
           time: "10:00 AM"
         },
         {
-          name: "Start Hacking",
-          time: "11:30 AM"
+          name: "Start Hacking!",
+          time: "11:00 AM"
         },
         {
           name: "Lunch",
@@ -459,7 +457,7 @@ export default {
           time: "1:00 PM"
         },
         {
-          name: "Awards",
+          name: "Awards Ceremony",
           time: "3:00 PM"
         }
       ]

@@ -2,7 +2,12 @@
   <div id="prizes">
     <div class="prizes-body">
       <SectionHeader>Prizes</SectionHeader>
-      <div class="prizes-content"></div>
+      <div class="prizes-content">
+        <div class="category" v-for="category in categories" :key="category.name">
+          <SubHeader style="align-self: center;">{{category.name}}</SubHeader>
+          <Para style="margin-top: 30px;">{{category.award}}</Para>
+        </div>
+      </div>
     </div>
     <svg
       style="transform: translateY(-1px);"
@@ -19,11 +24,41 @@
 
 <script>
 import SectionHeader from "@/components/SectionHeader.vue";
+import SubHeader from "@/components/SubHeader.vue";
+import Para from "@/components/Para.vue";
 
 export default {
   name: "prizes",
   components: {
-    SectionHeader
+    SectionHeader,
+    SubHeader,
+    Para
+  },
+  data() {
+    return {
+      categories: [
+        {
+          name: "Best Overall Hack",
+          award: "$1000 Cash"
+        },
+        {
+          name: "Best Built Environment Hack",
+          award: "$500 Cash"
+        },
+        {
+          name: "Best Waste Management Hack",
+          award: "$500 Cash"
+        },
+        {
+          name: "Best Waste Reduction Hack",
+          award: "$500 Cash"
+        },
+        {
+          name: "Best Transportation Hack",
+          award: "$500 Cash"
+        }
+      ]
+    };
   }
 };
 </script>
@@ -32,16 +67,38 @@ export default {
 .prizes-body {
   background-color: var(--slope-body-color);
   width: 100%;
-  height: 550px;
   padding-top: 50px;
   transform: translateY(-1px);
   transition: background-color 0.6s ease-out;
 }
 
 .prizes-content {
-  height: 300px;
   margin: 0 150px;
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+  /* border: 1px solid red; */
+}
+
+.category h3 {
+  font-size: 32px;
+  font-family: var(--font-secondary), sans-serif;
+  color: var(--color-regular-text);
+
+  align-self: center;
+  /* border: 1px solid blue; */
+
+  border-bottom: 10px solid var(--color-accent);
+  line-height: 0.4;
+  text-decoration: none;
 }
 
 @media (--desktop-narrow) {
@@ -53,6 +110,10 @@ export default {
 @media (--mobile-narrow) {
   .prizes-content {
     margin: 0 30px;
+  }
+
+  .category h3 {
+    font-size: 24px;
   }
 }
 </style>

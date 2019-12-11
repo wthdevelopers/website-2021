@@ -4,11 +4,7 @@
     <div class="about-content">
       <div class="about-content-main">
         <Para>
-          What The Hack is SUTD's annual hackathon held
-          <ParaAnchor
-            href="https://www.google.com/maps/place/Singapore+University+of+Technology+and+Design/@12.9270548,
-            103.4318175,5z/data=!4m5!3m4!1s0x31da3cd8cd26e9e3:0x7de56b1846994e6c!8m2!3d1.3412873!4d103.9637891"
-          >at our campus</ParaAnchor>
+          What The Hack is SUTD's annual hackathon held at our campus
           {{" "}}that aims to bring together
           people of various disciplines and provide them with a platform to find innovative
           solutions to meaningful real-world problems.
