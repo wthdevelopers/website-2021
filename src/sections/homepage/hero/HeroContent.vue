@@ -82,9 +82,9 @@ export default {
 }
 
 .hero-content h2 {
-  font-family: var(--font-secondary), sans-serif;
+  font-family: var(--font-primary), sans-serif;
   font-size: calc(1vw + 10px);
-  font-weight: 700;
+  font-weight: 400;
   color: var(--color-title-text);
   transition: color 0.6s ease-out;
   /* border: 1px solid green; */
@@ -101,7 +101,7 @@ export default {
   background-color: var(--color-title-text);
   color: var(--color-cta-text);
   padding: 32px 20px;
-  width: 190px;
+  width: 205px;
   height: 0;
   transition: background-color 0.6s ease-out, color 0.6s ease-out;
 }
@@ -139,7 +139,7 @@ export default {
   .register-button {
     font-size: 22px;
     padding: 28px 20px;
-    width: 175px;
+    width: 185px;
   }
 }
 
@@ -170,7 +170,7 @@ export default {
   .register-button {
     font-size: 16px;
     padding: 22px 20px;
-    width: 140px;
+    width: 145px;
     margin-left: auto;
     margin-right: auto;
   }

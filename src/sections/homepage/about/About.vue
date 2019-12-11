@@ -415,7 +415,7 @@ p + p {
 }
 
 .aside-number {
-  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: var(--font-secondary), sans-serif;
   font-size: 80px;
   font-weight: 900;
   text-transform: uppercase;
@@ -425,9 +425,8 @@ p + p {
 .aside-refer {
   font-family: var(--font-primary), sans-serif;
   font-size: 24px;
-  font-weight: 700;
   text-transform: uppercase;
-  margin-top: -10px;
+  margin-top: -15px;
   color: var(--color-regular-text);
 }
 

@@ -314,10 +314,6 @@ import FormLabelSub from "@/components/FormLabelSub.vue";
 import FormError from "@/components/FormError.vue";
 import Accordion from "@/components/Accordion.vue";
 
-import TNCModal from "@/components/TNCModal.vue";
-import RulesModal from "@/components/RulesModal.vue";
-import ConfirmationModal from "@/components/ConfirmationModal.vue";
-
 import validateFilledMixin from "@/mixins/validateFilledMixin";
 import validateAgeMixin from "@/mixins/validateAgeMixin";
 import validateEmailMixin from "@/mixins/validateEmailMixin";
@@ -337,9 +333,12 @@ export default {
     FormLabelSub,
     FormError,
     Accordion,
-    TNCModal,
-    RulesModal,
-    ConfirmationModal
+    TNCModal: () =>
+      import(/* webpackPrefetch: true */ "@/components/TNCModal.vue"),
+    RulesModal: () =>
+      import(/* webpackPrefetch: true */ "@/components/RulesModal.vue"),
+    ConfirmationModal: () =>
+      import(/* webpackPrefetch: true */ "@/components/ConfirmationModal.vue")
   },
   props: {
     page: String

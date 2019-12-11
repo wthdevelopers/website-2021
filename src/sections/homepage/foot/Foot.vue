@@ -72,16 +72,15 @@
 </template>
 
 <script>
-import TNCModal from "@/components/TNCModal.vue";
-import RulesModal from "@/components/RulesModal.vue";
-
 import openModalMixin from "@/mixins/openModalMixin";
 
 export default {
   name: "foot",
   components: {
-    TNCModal,
-    RulesModal
+    TNCModal: () =>
+      import(/* webpackPrefetch: true */ "@/components/TNCModal.vue"),
+    RulesModal: () =>
+      import(/* webpackPrefetch: true */ "@/components/RulesModal.vue")
   },
   mixins: [openModalMixin]
 };

@@ -58,9 +58,27 @@ export default Vue.extend({
 </script>
 
 <style>
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Nunito Regular"), local("Nunito-Regular"),
+    url("../public/fonts/nunito-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  font-style: normal;
+  font-weight: 400;
+  src: local("brandon Grotesque"), local("Brandon-Grotesque"),
+    url("../public/fonts/brandon-400.woff2") format("woff2");
+}
+
 :root {
-  --font-primary: brandon-grotesque;
-  --font-secondary: proxima-soft;
+  /* --font-primary: brandon-grotesque; */
+  /* --font-secondary: proxima-soft; */
+  --font-primary: "Brandon Grotesque";
+  --font-secondary: "Nunito";
 
   --color-background: #e9f7fb;
   --color-title-text: #2d3887;
