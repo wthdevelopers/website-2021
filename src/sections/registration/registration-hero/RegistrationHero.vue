@@ -345,13 +345,13 @@ nav > ul {
 
 #registration-hero-content > svg {
   display: block;
-  /* margin-top: 2vw; */
   margin-left: 20vw;
   width: 55vw;
   /* border: 1px solid yellow; */
 }
 
 h1 {
+  position: relative;
   display: inline-block;
   font-family: var(--font-secondary), sans-serif;
   font-size: calc(1.5vw + 16px);
@@ -360,6 +360,7 @@ h1 {
   margin-left: 30vw;
   margin-top: 30px;
   transition: color 0.6s ease-out;
+  z-index: 99;
   /* border: 1px solid green; */
 }
 

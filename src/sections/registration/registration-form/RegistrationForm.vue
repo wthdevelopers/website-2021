@@ -148,22 +148,81 @@
               team (including yourself of course) and fill in all their necessary details.
             </FormLabelSub>
 
-            <MemberBlock
+            <Accordion
               v-for="(member, idx) in membersMemory"
               :key="member.id"
-              :member="member"
-              :idx="idx"
-              :openAccordion="openAccordion"
-              :removeMember="removeMember"
-              :commenceRemovalSeq="() => {
+              :accordionID="member.id"
+              maxHeight="2600"
+              :removeFunc="() => {
                 removeCandidateID = member.id;
                 removeCandidatePos = idx + 1;
                 openModal('form-member-remove-confirmation-modal');
               }"
-              :validateFilled="validateFilled"
-              :validateAge="validateAge"
-              :validateEmail="validateEmail"
-            />
+            >
+              <template v-slot:title>{{`Member #${idx + 1}`}}</template>
+              <FormInput
+                style="margin-top: 30px;"
+                type="text"
+                label="*Name"
+                :name="`member-${member.id}-name`"
+                placeholder="Your cool name :)"
+                :model="member.name"
+                :onBlur="validateFilled"
+              />
+              <FormInput
+                additionalInfo="You need to be at least 13 years of age at the time of event 
+                    to be eligible to participate. If you are over 13 but under 18 years of age, 
+                    you will be eligible to participate only if you have parental consent (parental 
+                    consent forms will be sent out to you later)."
+                type="date"
+                label="*Date of Birth"
+                :name="`member-${member.id}-dob`"
+                :model="member.dob"
+                :onBlur="s => {
+                    if (!validateFilled(s)) {
+                        validateAge(s, 'blur');
+                    }
+                }"
+              />
+              <FormInput
+                type="text"
+                label="*Email Address"
+                :name="`member-${member.id}-email`"
+                placeholder="No spam, promise!"
+                :model="member.email"
+                :onBlur="s => {
+                    if (!validateFilled(s)) {
+                        validateEmail(s);
+                    }
+                }"
+              />
+              <FormInput
+                type="text"
+                label="*School/Company/Organisation"
+                :name="`member-${member.id}-org`"
+                placeholder="Where are you from?"
+                :model="member.org"
+                :onBlur="validateFilled"
+              />
+              <FormInput
+                type="text"
+                label="Dietary Requirements"
+                :name="`member-${member.id}-diet`"
+                placeholder="Halal/allergies/etc."
+                :model="member.diet"
+              />
+              <Radio
+                label="*What is your T-shirt size?"
+                :name="`member-${member.id}-shirt`"
+                :model="member.shirt"
+                :onChange="{func: validateFilled, args: [member.shirt]}"
+                :options="[{id: `member-${member.id}-shirt-xs`, value: 'XS', optionLabel: 'XS'}, 
+                {id: `member-${member.id}-shirt-s`, value: 'S', optionLabel: 'S'},
+                {id: `member-${member.id}-shirt-m`, value: 'M', optionLabel: 'M'},
+                {id: `member-${member.id}-shirt-l`, value: 'L', optionLabel: 'L'},
+                {id: `member-${member.id}-shirt-xl`, value: 'XL', optionLabel: 'XL'}]"
+              />
+            </Accordion>
 
             <button
               type="button"
@@ -209,7 +268,7 @@
         :onClick="{func: openModal, args: ['form-submission-confirmation-modal']}"
         class="bottom-button"
         v-if="page === '2'"
-      >Next Page</FormButton>
+      >Submit</FormButton>
       <FormError v-if="page === '2'" class="submission-error">{{submissionErrorMsg}}</FormError>
       <button type="submit" hidden/>
     </div>
@@ -252,8 +311,8 @@ import Textbox from "@/components/Textbox.vue";
 import FormBlock from "@/components/FormBlock.vue";
 import FormLabel from "@/components/FormLabel.vue";
 import FormLabelSub from "@/components/FormLabelSub.vue";
-
 import FormError from "@/components/FormError.vue";
+import Accordion from "@/components/Accordion.vue";
 
 import MemberBlock from "@/components/MemberBlock.vue";
 import TNCModal from "@/components/TNCModal.vue";
@@ -278,6 +337,7 @@ export default {
     FormLabel,
     FormLabelSub,
     FormError,
+    Accordion,
     MemberBlock,
     TNCModal,
     RulesModal,
@@ -429,38 +489,6 @@ export default {
       this.submissionErrorMsg = validationConclusion;
       return validationConclusion;
     },
-    openAccordion(a) {
-      let memberBlock = document.querySelector(`#member-block-${a}`);
-
-      let memberBlockContent = document.querySelector(
-        `#member-block-content-${a}`
-      );
-      let memberBlockTitle = document.querySelector(`#member-block-title-${a}`);
-      let memberBlockTitleH2 = memberBlockTitle.children[0];
-      let memberBlockTitleCancel = memberBlockTitle.children[1];
-      let memberBlockTitleArrow = memberBlockTitle.children[2];
-      let memberBlockTitleCancelPath = memberBlockTitleCancel.firstChild;
-      let memberBlockTitleArrowPath = memberBlockTitleArrow.firstChild;
-
-      if (
-        memberBlockContent.style.maxHeight === "0px" ||
-        !memberBlockContent.style.maxHeight
-      ) {
-        memberBlockContent.style.maxHeight = "2600px";
-        memberBlock.style.border = "2px solid var(--color-accent)";
-        memberBlockTitleH2.style.color = "var(--color-accent)";
-        memberBlockTitleCancelPath.style.fill = "var(--color-accent)";
-        memberBlockTitleArrowPath.style.fill = "var(--color-accent)";
-      } else {
-        memberBlockContent.style.maxHeight = "0px";
-        setTimeout(() => {
-          memberBlock.style.border = "2px solid var(--color-regular-text)";
-          memberBlockTitleH2.style.color = "var(--color-regular-text)";
-          memberBlockTitleCancelPath.style.fill = "var(--color-regular-text)";
-          memberBlockTitleArrowPath.style.fill = "var(--color-regular-text)";
-        }, 600);
-      }
-    },
     addMembers() {
       for (let i = 0; i < this.members.length; i++) {
         if (!this.members[i].taken) {
@@ -566,7 +594,7 @@ export default {
 .welcome {
   position: absolute;
   left: 24vw;
-  top: 0;
+  top: 50px;
   font-family: var(--font-primary), sans-serif;
   font-size: 46px;
   font-weight: 700;
@@ -576,7 +604,7 @@ export default {
 
 .top-button {
   left: 24vw;
-  top: 0;
+  top: 50px;
 }
 
 .bottom-button {

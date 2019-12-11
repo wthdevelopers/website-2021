@@ -27,7 +27,7 @@ export default {
 
 @media only screen and (max-width: 570px) {
   .registration-content-block {
-    padding: 100px 30px 200px 30px;
+    padding: 150px 30px 200px 30px;
   }
 }
 </style>
