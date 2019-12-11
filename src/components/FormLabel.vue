@@ -21,13 +21,13 @@ label {
   color: var(--color-regular-text);
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   label {
     font-size: 28px;
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   label {
     font-size: 20px;
   }

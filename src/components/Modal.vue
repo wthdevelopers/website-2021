@@ -186,7 +186,7 @@ export default {
   width: 42vw;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   .modal {
     padding: 20px 6vw;
   }
@@ -202,7 +202,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   .modal-clausal {
     padding: 50px 8vw;
     height: 70vh;

@@ -110,6 +110,10 @@ export default Vue.extend({
   --displayed-during-dark: inline;
 }
 
+@custom-media --mobile-narrow (max-width: 570px);
+@custom-media --mobile-wide (max-width: 847px);
+@custom-media --desktop-narrow (max-width: 1000px);
+
 * {
   margin: 0;
   padding: 0;

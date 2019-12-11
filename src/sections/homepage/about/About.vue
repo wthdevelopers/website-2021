@@ -598,13 +598,13 @@ p + p {
   animation: smokeR 10s 9s infinite;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   .about-content {
     padding: 0 100px;
   }
 }
 
-@media only screen and (max-width: 791px) {
+@media (--mobile-wide) {
   .about-content {
     flex-direction: column;
   }
@@ -638,7 +638,7 @@ p + p {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   #about {
     padding-bottom: 100px;
   }

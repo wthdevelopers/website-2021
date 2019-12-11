@@ -25,6 +25,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
+    "postcss-custom-media": "^7.0.8",
     "prettier": "^1.18.2",
     "typescript": "^3.7.2",
     "vue-template-compiler": "^2.6.10"

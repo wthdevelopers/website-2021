@@ -40,7 +40,7 @@ export default {
   cursor: not-allowed;
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   .form-button {
     font-size: 20px;
   }

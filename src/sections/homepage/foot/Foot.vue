@@ -142,7 +142,7 @@ button {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   #footer-top {
     padding-left: 40px;
     padding-right: 40px;
@@ -174,7 +174,7 @@ button {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   #footer-top {
     padding-left: 30px;
     padding-right: 30px;

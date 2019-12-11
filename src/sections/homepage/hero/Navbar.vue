@@ -483,7 +483,7 @@ nav button:hover {
   transition: fill 0.6s ease-out;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   nav {
     padding: 25px 30px;
   }
@@ -497,7 +497,7 @@ nav button:hover {
   }
 }
 
-@media only screen and (max-width: 791px) {
+@media (--mobile-wide) {
   #bar > li:not(:first-child):not(#hamburger) {
     display: none;
   }

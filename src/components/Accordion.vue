@@ -140,7 +140,7 @@ export default {
   transition: max-height 0.6s ease-out;
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   .accordion {
     padding: 5px 15px;
   }

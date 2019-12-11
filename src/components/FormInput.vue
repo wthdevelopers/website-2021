@@ -78,7 +78,7 @@ input:invalid {
   color: var(--color-accent);
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   input[type="text"],
   input[type="date"] {
     font-size: 34px;
@@ -86,7 +86,7 @@ input:invalid {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   input[type="text"],
   input[type="date"] {
     font-size: 24px;

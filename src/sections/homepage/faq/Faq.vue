@@ -103,13 +103,13 @@ export default {
   margin: 0 150px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   .faq-content {
     margin: 0 100px;
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   .faq-content {
     margin: 0 30px;
   }

@@ -649,7 +649,7 @@ svg > path {
   bottom: 40px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   .welcome {
     font-size: 40px;
     left: 16vw;
@@ -672,7 +672,7 @@ svg > path {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   .welcome {
     font-size: 24px;
     left: 30px;

@@ -44,13 +44,13 @@ export default {
   border: 1px solid red;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   .prizes-content {
     margin: 0 100px;
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   .prizes-content {
     margin: 0 30px;
   }

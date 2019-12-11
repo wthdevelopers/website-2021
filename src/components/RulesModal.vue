@@ -109,7 +109,7 @@ h4 {
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   h3 {
     font-size: 20px;
   }

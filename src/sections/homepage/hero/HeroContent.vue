@@ -106,7 +106,7 @@ export default {
   transition: background-color 0.6s ease-out, color 0.6s ease-out;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   .hero-content-secondary {
     display: flex;
     flex-direction: column;
@@ -118,7 +118,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 791px) {
+@media (--mobile-wide) {
   .hero-content > * {
     transform: translateY(-10vh);
   }
@@ -143,7 +143,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   .hero-content > svg {
   }
 

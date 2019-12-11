@@ -1,7 +1,30 @@
 <template>
   <div id="schedule">
     <SectionHeader>Schedule</SectionHeader>
-    <div class="schedule-content"></div>
+    <div class="schedule-content">
+      <ul class="timetable">
+        <li>
+          <Para>
+            <span>Day One</span>
+          </Para>
+        </li>
+        <li v-for="(item, idx) in dayOneSchedule" :key="idx">
+          <Para>{{item.name}}</Para>
+          <Para>{{item.time}}</Para>
+        </li>
+      </ul>
+      <ul class="timetable">
+        <li>
+          <Para>
+            <span>Day Two</span>
+          </Para>
+        </li>
+        <li v-for="(item, idx) in dayTwoSchedule" :key="idx">
+          <Para>{{item.name}}</Para>
+          <Para>{{item.time}}</Para>
+        </li>
+      </ul>
+    </div>
 
     <svg class="windmillscape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3093.28 1269.45">
       <g id="base">
@@ -378,11 +401,69 @@
 
 <script>
 import SectionHeader from "@/components/SectionHeader.vue";
+import Para from "@/components/Para.vue";
 
 export default {
   name: "schedule",
   components: {
-    SectionHeader
+    SectionHeader,
+    Para
+  },
+  data() {
+    return {
+      dayOneSchedule: [
+        {
+          name: "Registration",
+          time: "9:00 AM"
+        },
+        {
+          name: "Briefing",
+          time: "10:00 AM"
+        },
+        {
+          name: "Start Hacking",
+          time: "11:30 AM"
+        },
+        {
+          name: "Lunch",
+          time: "1:00 PM"
+        },
+        {
+          name: "Dinner",
+          time: "6:00 PM"
+        }
+      ],
+      dayTwoSchedule: [
+        {
+          name: "Submission Opens",
+          time: "12:00 AM"
+        },
+        {
+          name: "Breakfast",
+          time: "9:00 AM"
+        },
+        {
+          name: "Hacking Ends",
+          time: "11:00 AM"
+        },
+        {
+          name: "Exhibition Setup",
+          time: "11:30 AM"
+        },
+        {
+          name: "Lunch",
+          time: "12:00 PM"
+        },
+        {
+          name: "Exhibition/Judging",
+          time: "1:00 PM"
+        },
+        {
+          name: "Awards",
+          time: "3:00 PM"
+        }
+      ]
+    };
   }
 };
 </script>
@@ -400,10 +481,26 @@ export default {
 }
 
 .schedule-content {
-  height: 600px;
   margin: 0 150px;
-  border: 1px solid red;
   margin-bottom: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timetable {
+  margin-top: 50px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.timetable > li:first-child {
+  margin-bottom: 30px;
+}
+
+.timetable > li {
+  display: flex;
+  justify-content: space-between;
 }
 
 #base {
@@ -497,19 +594,23 @@ export default {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .prizes-content {
-    margin: 0 100px;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   .schedule-content {
     margin: 0 100px;
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-wide) {
+  .schedule-content {
+    flex-direction: column;
+  }
+
+  .timetable {
+    width: 100%;
+  }
+}
+
+@media (--mobile-narrow) {
   .schedule-content {
     margin: 0 30px;
   }

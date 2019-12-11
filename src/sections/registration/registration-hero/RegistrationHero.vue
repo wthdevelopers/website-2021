@@ -364,7 +364,7 @@ h1 {
   /* border: 1px solid green; */
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   nav {
     padding: 25px 30px;
   }
@@ -380,7 +380,7 @@ h1 {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   h1 {
     margin-top: 10px;
     font-size: calc(0.5vw + 16px);

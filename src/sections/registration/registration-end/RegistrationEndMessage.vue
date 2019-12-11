@@ -117,7 +117,7 @@ export default {
   bottom: 70px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   .big-text {
     width: 64vw;
     font-size: 40px;
@@ -133,7 +133,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   .big-text {
     width: 76vw;
     font-size: 24px;

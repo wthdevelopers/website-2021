@@ -145,19 +145,13 @@ export default {
   width: 300px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   .thankees-content {
     margin: 0 100px;
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .schedule-content {
-    margin: 0 100px;
-  }
-}
-
-@media only screen and (max-width: 791px) {
+@media (--mobile-wide) {
   .tier ul {
     flex-direction: column;
   }
@@ -167,7 +161,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   .thankees-content {
     margin: 0 30px;
   }

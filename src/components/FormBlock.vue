@@ -20,7 +20,7 @@ div + div {
   margin-top: 100px;
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   div + div {
     margin-top: 50px;
   }

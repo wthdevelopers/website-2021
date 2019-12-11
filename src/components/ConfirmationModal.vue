@@ -72,7 +72,7 @@ li {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   h3 {
     font-size: 20px;
   }

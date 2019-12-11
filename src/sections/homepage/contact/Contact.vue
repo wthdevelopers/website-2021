@@ -186,7 +186,7 @@ h3 {
   /* border: 1px solid blue; */
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   h3 {
     padding-left: 100px;
   }
@@ -200,17 +200,7 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  h3 {
-    padding-left: 100px;
-  }
-
-  .schedule-content {
-    margin: 0 100px;
-  }
-}
-
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   h3 {
     padding-left: 30px;
   }
