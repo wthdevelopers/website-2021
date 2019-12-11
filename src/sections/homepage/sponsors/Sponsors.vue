@@ -2,7 +2,27 @@
   <div id="thankees">
     <div class="thankees-body">
       <SectionHeader>Sponsors</SectionHeader>
-      <div class="thankees-content"></div>
+      <ul class="thankees-content">
+        <li class="tier" v-for="tier in tiers" :key="tier.name">
+          <h3>{{tier.name}}</h3>
+          <ul class="tier-sponsors">
+            <li v-for="sponsor in tier.sponsors" :key="sponsor.name">
+              <a :href="sponsor.url" target="_blank" rel="noopener noreferrer">
+                <img
+                  style="display: var(--displayed-during-light);"
+                  :src="require(`../../../../public/assets/${sponsor.photoNormal}.webp`)"
+                  :alt="`${sponsor.name} company logo`"
+                >
+                <img
+                  style="display: var(--displayed-during-dark)"
+                  :src="require(`../../../../public/assets/${sponsor.photoWhite}.webp`)"
+                  :alt="`${sponsor.name} company logo`"
+                >
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <svg
       style="transform: translateY(-6px);"
@@ -25,6 +45,51 @@ export default {
   name: "thankees",
   components: {
     SectionHeader
+  },
+  data() {
+    return {
+      tiers: [
+        {
+          name: "Platinum",
+          sponsors: [
+            {
+              name: "GovTech",
+              url: "https://www.tech.gov.sg/",
+              photoNormal: "govtech",
+              photoWhite: "govtech-white"
+            }
+          ]
+        },
+        {
+          name: "Gold",
+          sponsors: [
+            {
+              name: "Indeed",
+              url: "https://www.indeed.com.sg/",
+              photoNormal: "indeed",
+              photoWhite: "indeed-white"
+            }
+          ]
+        },
+        {
+          name: "Bronze",
+          sponsors: [
+            {
+              name: "Google",
+              url: "https://careers.google.com/locations/sing/",
+              photoNormal: "google",
+              photoWhite: "google-white"
+            },
+            {
+              name: "Keysight",
+              url: "https://www.keysight.com/sg/en/home.html",
+              photoNormal: "keysight",
+              photoWhite: "keysight-white"
+            }
+          ]
+        }
+      ]
+    };
   }
 };
 </script>
@@ -33,16 +98,51 @@ export default {
 .thankees-body {
   background-color: var(--slope-body-color);
   width: 100%;
-  height: 800px;
   padding-top: 100px;
   transform: translateY(-6px);
   transition: background-color 0.6s ease-out;
 }
 
 .thankees-content {
-  height: 500px;
   margin: 0 150px;
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+
+.tier {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.tier + .tier {
+  margin-top: 150px;
+}
+
+.tier h3 {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: var(--font-secondary), sans-serif;
+  color: var(--color-regular-text);
+}
+
+.tier ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.tier li {
+  margin-top: 30px;
+}
+
+.tier li + li {
+  margin-left: 30px;
+}
+
+.tier img {
+  width: 300px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -57,9 +157,27 @@ export default {
   }
 }
 
+@media only screen and (max-width: 791px) {
+  .tier ul {
+    flex-direction: column;
+  }
+
+  .tier li + li {
+    margin-left: 0;
+  }
+}
+
 @media only screen and (max-width: 570px) {
   .thankees-content {
     margin: 0 30px;
+  }
+
+  .tier + .tier {
+    margin-top: 100px;
+  }
+
+  .tier img {
+    width: 200px;
   }
 }
 </style>

@@ -314,7 +314,6 @@ import FormLabelSub from "@/components/FormLabelSub.vue";
 import FormError from "@/components/FormError.vue";
 import Accordion from "@/components/Accordion.vue";
 
-import MemberBlock from "@/components/MemberBlock.vue";
 import TNCModal from "@/components/TNCModal.vue";
 import RulesModal from "@/components/RulesModal.vue";
 import ConfirmationModal from "@/components/ConfirmationModal.vue";
@@ -338,7 +337,6 @@ export default {
     FormLabelSub,
     FormError,
     Accordion,
-    MemberBlock,
     TNCModal,
     RulesModal,
     ConfirmationModal

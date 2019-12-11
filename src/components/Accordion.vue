@@ -43,7 +43,7 @@ export default {
     accordionID: String || Number,
     removeFunc: Function,
     removeFuncArgs: Array,
-    maxHeight: Number
+    maxHeight: String
   },
   methods: {
     openAccordion(a) {

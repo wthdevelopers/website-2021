@@ -81,6 +81,9 @@ export default Vue.extend({
 
   --lights-pink-opacity: 0.2;
   --lights-pink-color: #d65c85;
+
+  --displayed-during-light: inline;
+  --displayed-during-dark: none;
 }
 
 [theme="dark"] {
@@ -102,6 +105,9 @@ export default Vue.extend({
 
   --lights-pink-opacity: 0.4;
   --lights-pink-color: #f9f458;
+
+  --displayed-during-light: none;
+  --displayed-during-dark: inline;
 }
 
 * {
