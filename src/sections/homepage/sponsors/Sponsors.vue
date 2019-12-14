@@ -10,12 +10,12 @@
               <a :href="sponsor.url" target="_blank" rel="noopener noreferrer">
                 <img
                   style="display: var(--displayed-during-light);"
-                  :src="require(`../../../../public/assets/${sponsor.photoNormal}.webp`)"
+                  :src="require(`../../../../public/images/${sponsor.photoNormal}.webp`)"
                   :alt="`${sponsor.name} company logo`"
                 >
                 <img
                   style="display: var(--displayed-during-dark)"
-                  :src="require(`../../../../public/assets/${sponsor.photoWhite}.webp`)"
+                  :src="require(`../../../../public/images/${sponsor.photoWhite}.webp`)"
                   :alt="`${sponsor.name} company logo`"
                 >
               </a>
@@ -24,15 +24,10 @@
         </li>
       </ul>
     </div>
-    <svg
-      style="transform: translateY(-6px);"
-      viewBox="0 0 1440 215.44"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 215.4">
       <path
         class="slope"
-        d="m-92.45-323.12h60c60 0 180 0 300 16s240 48 360 37.3c120-10.3 240-64.3 360-85.3s240-11 300-5.3l60 5.3v-128h-1440z"
-        transform="translate(92.45 483.12)"
+        d="M0 160h60c60 0 180 0 300 16s240 48 360 37c120-10 240-64 360-85s240-11 300-5l60 5V0H0z"
       ></path>
     </svg>
   </div>

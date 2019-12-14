@@ -272,15 +272,10 @@
       <FormError v-if="page === '2'" class="submission-error">{{submissionErrorMsg}}</FormError>
       <button type="submit" hidden/>
     </div>
-    <svg
-      viewBox="0 0 1440 240.41"
-      xmlns="http://www.w3.org/2000/svg"
-      style="transform: translateY(-26px);"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240.4">
       <path
-        d="m0 128 48 26.7c48 26.3 144 80.3 240 85.3s192-37 288-42.7c96-5.3 192 26.7 288 16 96-10.3 192-64.3 288-80 96-16.3 192 5.7 240 16l48 10.7v-160h-1440z"
         class="slope"
-        fill="#3f626d"
+        d="M0 128l48 27c48 26 144 80 240 85s192-37 288-43c96-5 192 27 288 16 96-10 192-64 288-80s192 6 240 16l48 11V0H0z"
       ></path>
     </svg>
     <TNCModal id="form-tnc-modal"/>

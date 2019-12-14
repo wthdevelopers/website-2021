@@ -138,6 +138,10 @@ export default Vue.extend({
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden !important;
+}
+
 body {
   position: relative;
   background-color: var(--color-background);
