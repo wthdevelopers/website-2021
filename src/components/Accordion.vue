@@ -8,25 +8,24 @@
         class="accordion-cancel"
         :id="`accordion-cancel-${accordionID}`"
         v-if="removeFunc"
-        enable-background="new 0 0 47.971 47.971"
-        viewBox="0 0 47.971 47.971"
-        xmlns="http://www.w3.org/2000/svg"
         @click="removeAction"
+        viewBox="0 0 47.97 47.97"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="m28.228 23.986 18.864-18.864c1.172-1.171 1.172-3.071 0-4.242-1.172-1.172-3.07-1.172-4.242 0l-18.864 18.864-18.865-18.864c-1.172-1.172-3.07-1.172-4.242 0-1.172 1.171-1.172 3.071 0 4.242l18.865 18.864-18.865 18.864c-1.172 1.171-1.172 3.071 0 4.242.586.585 1.354.878 2.121.878s1.535-.293 2.121-.879l18.865-18.864 18.864 18.864c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879c1.172-1.171 1.172-3.071 0-4.242z"
+          d="m28.23 24 18.86-18.88a3 3 0 0 0 -4.24-4.24l-18.85 18.86-18.88-18.86a3 3 0 0 0 -4.24 4.24l18.86 18.88-18.86 18.85a3 3 0 0 0 2.12 5.15 3 3 0 0 0 2.12-.88l18.88-18.89 18.85 18.86a3 3 0 0 0 4.24-4.24z"
         ></path>
       </svg>
       <svg
         class="accordion-arrow"
         :id="`accordion-arrow-${accordionID}`"
-        preserveAspectRatio="none"
-        viewBox="0 0 50 28.52"
-        xmlns="http://www.w3.org/2000/svg"
         @click="openAccordion(accordionID)"
+        viewBox="0 0 50.07 28.56"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="m25 28.52a3.5 3.5 0 0 1 -2.48-1l-21.52-21.52a3.5 3.5 0 0 1 5-5l19 19 19-19a3.51 3.51 0 0 1 5 5l-21.53 21.49a3.5 3.5 0 0 1 -2.48 1z"
+          d="m25 28.52a3.48 3.48 0 0 1 -2.48-1l-21.52-21.52a3.54 3.54 0 0 1 5-5l19 19 19-19a3.54 3.54 0 0 1 5 5l-21.53 21.49a3.48 3.48 0 0 1 -2.48 1z"
+          transform="translate(.04 .04)"
         ></path>
       </svg>
     </div>
@@ -40,7 +39,7 @@
 export default {
   name: "accordion",
   props: {
-    accordionID: String || Number,
+    accordionID: String,
     removeFunc: Function,
     removeFuncArgs: Array,
     maxHeight: String
@@ -145,7 +144,7 @@ export default {
     padding: 5px 15px;
   }
 
-  .accordion-title > h2 {
+  .accordion-title {
     font-size: 20px;
   }
 

@@ -10,12 +10,12 @@
               <a :href="sponsor.url" target="_blank" rel="noopener noreferrer">
                 <img
                   style="display: var(--displayed-during-light);"
-                  :src="require(`../../../../public/images/${sponsor.photoNormal}.webp`)"
+                  :src="require(`../../../../public/images/${sponsor.photoNormal}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 >
                 <img
                   style="display: var(--displayed-during-dark)"
-                  :src="require(`../../../../public/images/${sponsor.photoWhite}.webp`)"
+                  :src="require(`../../../../public/images/${sponsor.photoWhite}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 >
               </a>
@@ -24,7 +24,11 @@
         </li>
       </ul>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 215.4">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 215.4"
+      style="transform: translateY(-7px);"
+    >
       <path
         class="slope"
         d="M0 160h60c60 0 180 0 300 16s240 48 360 37c120-10 240-64 360-85s240-11 300-5l60 5V0H0z"
@@ -93,7 +97,7 @@ export default {
 .thankees-body {
   background-color: var(--slope-body-color);
   width: 100%;
-  padding-top: 100px;
+  padding: 100px 0;
   transform: translateY(-6px);
   transition: background-color 0.6s ease-out;
 }

@@ -52,10 +52,14 @@
         <button type="submit" hidden/>
       </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg
+      viewBox="0 0 1440 320"
+      xmlns="http://www.w3.org/2000/svg"
+      style="transform: translateY(-7px);"
+    >
       <path
         class="slope"
-        d="M0 128l48 16c48 16 144 48 240 75 96 26 192 48 288 48s192-22 288-22 192 22 288 38 192 26 240 32l48 5V0H0z"
+        d="m0 128 48 16c48 16 144 48 240 75 96 26 192 48 288 48s192-22 288-22 192 22 288 38 192 26 240 32l48 5v-320h-1440z"
       ></path>
     </svg>
     <ConfirmationModal

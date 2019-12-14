@@ -272,7 +272,11 @@
       <FormError v-if="page === '2'" class="submission-error">{{submissionErrorMsg}}</FormError>
       <button type="submit" hidden/>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240.4">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 240.4"
+      style="transform: translateY(-27px);"
+    >
       <path
         class="slope"
         d="M0 128l48 27c48 26 144 80 240 85s192-37 288-43c96-5 192 27 288 16 96-10 192-64 288-80s192 6 240 16l48 11V0H0z"

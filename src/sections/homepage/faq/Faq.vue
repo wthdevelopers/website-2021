@@ -2,7 +2,12 @@
   <div id="faq">
     <SectionHeader>FAQs</SectionHeader>
     <div class="faq-content">
-      <Accordion v-for="(item, idx) in faqArr" :key="idx" :accordionID="idx" maxHeight="600">
+      <Accordion
+        v-for="(item, idx) in faqArr"
+        :key="idx"
+        :accordionID="idx.toString()"
+        maxHeight="600"
+      >
         <template v-slot:title>{{item.title}}</template>
         <Para style="margin: 30px 0 20px 0;">{{item.content}}</Para>
       </Accordion>

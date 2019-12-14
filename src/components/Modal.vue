@@ -1,6 +1,5 @@
 <template>
-  <div :id="id" class="modal-context">
-    <!-- <div class="modal-background" @click="closeModal(id)"></div> -->
+  <vue100vh :id="id" class="modal-context">
     <svg :class="`modal-slope-${type}`" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 231.4">
       <path
         class="slope"
@@ -68,24 +67,33 @@
       ></path>
       <path fill="#8290dc" d="M339 50l1-14v-3l1-2 1 2v7l1 10a21 21 0 000 6l-1 13-1 2-1-2-1-14z"></path>
     </svg>
-    <div :class="`modal modal-${type}`">
+    <div :class="`modal modal-${type}`" style="transform: translateY(-1px);">
       <div class="modal-content">
         <slot></slot>
       </div>
     </div>
-    <svg :class="`modal-slope-${type}`" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 203.7">
+    <svg
+      :class="`modal-slope-${type}`"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 203.7"
+      style="transform: translateY(-1px);"
+    >
       <path
         class="slope"
         d="M0 64l48 27c48 26 144 80 240 69s192-85 288-75c96 11 192 107 288 118 96 10 192-64 288-107s192-53 240-59l48-5V0H0z"
       ></path>
     </svg>
-  </div>
+  </vue100vh>
 </template>
 
 <script>
+import vue100vh from "vue-100vh";
+
 export default {
   name: "modal",
-  components: {},
+  components: {
+    vue100vh
+  },
   props: {
     id: String,
     type: String
@@ -103,19 +111,9 @@ export default {
   left: 0;
   top: 0;
   width: 100vw;
-  height: 100vh;
   z-index: 9999;
   background-color: hsla(0, 0%, 0%, 0.5);
 }
-
-/* .modal-background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: hsla(0, 0%, 0%, 0.5);
-} */
 
 .modal {
   background-color: var(--slope-body-color);
