@@ -121,6 +121,16 @@
             >participants' rules</button> as stipulated
             by the organisers of What The Hack 2020.
           </Checkbox>
+          <Checkbox
+            name="individual-pdpa-confirm"
+            :model="individualPDPAConfirm"
+            :onChange="{func: validateFilled, args: [individualPDPAConfirm]}"
+          >
+            By submitting my details here, I agree that What The Hack 2020 may
+            collect, use and disclose the information above, within the organising committee,
+            for planning purposes. My personal data will not be retained and will be disposed
+            appropriately upon the completion of this event.
+          </Checkbox>
         </form>
       </RegistrationContentBlock>
       <RegistrationContentBlock v-if="page === '2' && format.value === 'Group'">
@@ -254,6 +264,16 @@
             >participants' rules</button> as stipulated
             by the organisers of What The Hack 2020.
           </Checkbox>
+          <Checkbox
+            name="group-pdpa-confirm"
+            :model="groupPDPAConfirm"
+            :onChange="{func: validateFilled, args: [groupPDPAConfirm]}"
+          >
+            By submitting my details here, I agree that What The Hack 2020 may
+            collect, use and disclose the information above, within the organising committee,
+            for planning purposes. My personal data will not be retained and will be disposed
+            appropriately upon the completion of this event.
+          </Checkbox>
         </form>
       </RegistrationContentBlock>
       <FormButton
@@ -364,6 +384,8 @@ export default {
       groupOthers: { value: "" },
       individualConfirm: { value: "", error: "" },
       groupConfirm: { value: "", error: "" },
+      individualPDPAConfirm: { value: "", error: "" },
+      groupPDPAConfirm: { value: "", error: "" },
       members: [
         {
           id: "one",
@@ -435,6 +457,7 @@ export default {
         testNum += this.validateFilled(this.individualOrg);
         testNum += this.validateFilled(this.individualShirt);
         testNum += this.validateFilled(this.individualConfirm);
+        testNum += this.validateFilled(this.individualPDPAConfirm);
 
         if (!this.validateFilled(this.individualDob)) {
           testNum += this.validateAge(this.individualDob);
@@ -455,6 +478,7 @@ export default {
         if (this.membersMemory.length >= 2) {
           testNum += this.validateFilled(this.groupTeamName);
           testNum += this.validateFilled(this.groupConfirm);
+          testNum += this.validateFilled(this.groupPDPAConfirm);
 
           this.membersMemory.forEach(member => {
             testNum += this.validateFilled(member.name);

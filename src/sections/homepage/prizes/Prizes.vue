@@ -4,7 +4,7 @@
       <SectionHeader>Prizes</SectionHeader>
       <div class="prizes-content">
         <div class="category" v-for="category in categories" :key="category.name">
-          <SubHeader style="align-self: center;">{{category.name}}</SubHeader>
+          <SubHeader style="align-self: center;" class="prizes-subheader">{{category.name}}</SubHeader>
           <Para style="margin-top: 30px;">{{category.award}}</Para>
         </div>
       </div>
@@ -107,13 +107,21 @@ export default {
   }
 }
 
+@media (max-width: 668px) {
+  .prizes-subheader {
+    font-size: 24px;
+  }
+}
+
 @media (--mobile-narrow) {
   .prizes-content {
     margin: 0 30px;
   }
+}
 
-  .category h3 {
-    font-size: 24px;
+@media (max-width: 410px) {
+  .prizes-subheader {
+    font-size: 17.5px;
   }
 }
 </style>

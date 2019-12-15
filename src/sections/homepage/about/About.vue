@@ -45,7 +45,7 @@
     </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" id="factoryscape" viewBox="0 0 3093.3 1185.5">
-      <g id="factoryscape-base">
+      <g class="base">
         <path
           fill="#79c89f"
           d="M0 961l103 11c103 10 309 32 516 21s412-53 618-48 413 59 619 96 412 59 619 70c206 10 412 10 515 10h103v64H0z"
@@ -187,6 +187,7 @@
         ></path>
       </g>
       <path
+        class="cloud"
         id="factoryscape-cloud-one"
         fill="#fff"
         d="M649 766l7 4c7 3 9 8 8 14 0 2-3 4-5 4H367c-7 0-12-1-15-7-13-21 0-42 27-47 12-2 12-2 13-12s2-21 11-29c14-11 30-11 46-5 4 1 8 4 10-2 6-19 24-27 42-34 21-9 60 1 74 23a128 128 0 0110 18c2 6 6 7 12 5 12-2 23 2 26 10 1 1 2 4 1 5-3 6-1 7 6 8 26 2 37 27 22 40-2 1-2 3-3 5z"
@@ -194,23 +195,24 @@
         style="isolation:isolate"
       ></path>
       <path
+        class="cloud"
         id="factoryscape-cloud-two"
         fill="#fff"
         d="M1780 912h-106c-8 0-8 2-7-6 0-5 3-7 8-8s6-1 7-6c1-6 0-11 3-16 4-7 9-11 17-11 4-1 7 0 11 1 6 1 6 1 6-4 0-9 5-18 12-25s15-13 26-15c12-2 23 1 32 7 10 8 16 17 20 28 2 5 2 5 7 2 8-4 16-4 24-3 15 3 24 11 29 23a21 21 0 012 5c0 2 1 3 4 3a47 47 0 018 2c8 1 11 6 12 12v9c1 2 0 2-2 2l-6 1h-107z"
         opacity=".8"
         style="isolation:isolate"
       ></path>
-      <g id="factoryscape-stars-one" fill="#f9f458">
+      <g class="stars-one" fill="#f9f458">
         <path
           d="M485 147v-1a36 36 0 0011-6 20 20 0 006-8 58 58 0 003-10l1-7v2a116 116 0 004 15l1 3a11 11 0 003 4 53 53 0 008 5l4 2 1 1-3 1a40 40 0 00-10 6 16 16 0 00-3 4 23 23 0 00-2 5 94 94 0 00-3 11v4h-1a140 140 0 00-3-15l-2-5a13 13 0 00-4-5 35 35 0 00-8-5l-3-1zM2730 178a36 36 0 0011-6 20 20 0 006-9 58 58 0 003-9l1-7v2a116 116 0 004 15l1 2a11 11 0 004 4 53 53 0 008 6l4 2-3 2a39 39 0 00-9 6 16 16 0 00-3 3 23 23 0 00-3 5 96 96 0 00-2 11l-1 5v-1a143 143 0 00-4-14l-2-5a13 13 0 00-4-6 35 35 0 00-8-5l-3-1z"
         ></path>
       </g>
-      <g id="factoryscape-stars-two" fill="#f9f458">
+      <g class="stars-two" fill="#f9f458">
         <path
           d="M1709 694h1a36 36 0 0010-6 20 20 0 006-9 58 58 0 003-10l1-6v-1l1 3a116 116 0 004 14l1 3a11 11 0 003 4 53 53 0 008 5l4 3-3 1a39 39 0 00-9 6 16 16 0 00-3 4 24 24 0 00-2 5 96 96 0 00-3 11l-1 4v1-1a143 143 0 00-4-15l-1-5a13 13 0 00-4-5 35 35 0 00-9-5l-3-1zM2507 31a36 36 0 0011-6 20 20 0 006-8 58 58 0 003-10l1-7 1 2a115 115 0 004 15l1 2a11 11 0 003 5 53 53 0 008 5l4 2-3 2a40 40 0 00-9 6 16 16 0 00-3 3 24 24 0 00-2 6 94 94 0 00-3 11l-1 4v-1a143 143 0 00-4-14l-1-5a13 13 0 00-4-6 35 35 0 00-9-4l-3-2z"
         ></path>
       </g>
-      <g id="factoryscape-stars-three" fill="#f9f458">
+      <g class="stars-three" fill="#f9f458">
         <path
           d="M170 535h1a36 36 0 0011-6 20 20 0 006-9 58 58 0 002-10l1-6 1 2a115 115 0 004 15l1 2a11 11 0 003 4 53 53 0 008 6l4 2-3 1a40 40 0 00-9 6 16 16 0 00-3 4 24 24 0 00-2 5 94 94 0 00-3 11l-1 5v-1a143 143 0 00-3-14l-2-6a13 13 0 00-4-5 35 35 0 00-8-5l-3-1h-1zM2323 529l1-1a36 36 0 0011-6 20 20 0 006-8 58 58 0 002-10l1-6v-1l1 2a115 115 0 004 15l1 3a11 11 0 003 4 53 53 0 008 5l4 2v1l-3 1a39 39 0 00-9 6 16 16 0 00-3 4 24 24 0 00-2 5 94 94 0 00-3 11l-1 4a143 143 0 00-3-15l-2-5a13 13 0 00-4-5 36 36 0 00-8-5l-3-1h-1z"
         ></path>
@@ -277,11 +279,9 @@ export default {
 #about {
   position: relative;
   padding-bottom: 180px;
-  /* border: 1px solid green; */
 }
 
 .about-content {
-  /* border: 1px solid green; */
   display: flex;
   justify-content: space-between;
   padding: 0 150px;
@@ -289,14 +289,12 @@ export default {
 
 .about-content-main {
   width: 60%;
-  /* border: 1px solid yellow; */
 }
 
 .about-content-aside {
   position: relative;
   z-index: 1;
   width: 32%;
-  /* border: 1px solid purple; */
 }
 
 p + p {
@@ -328,15 +326,6 @@ p + p {
   bottom: 0;
 }
 
-#factoryscape-base {
-  opacity: 0.4;
-}
-
-#factoryscape-cloud-one,
-#factoryscape-cloud-two {
-  opacity: 0.6;
-}
-
 #factoryscape-cloud-one {
   animation: cloud-animation-one 6s linear infinite alternate;
 }
@@ -355,24 +344,6 @@ p + p {
   100% {
     transform: translateX(24vw);
   }
-}
-
-#factoryscape-stars-one,
-#factoryscape-stars-two,
-#factoryscape-stars-three {
-  visibility: var(--stars-visibility);
-}
-
-#factoryscape-stars-one {
-  animation: flicker-one 2s linear infinite alternate;
-}
-
-#factoryscape-stars-two {
-  animation: flicker-two 2s linear infinite alternate;
-}
-
-#factoryscape-stars-three {
-  animation: flicker-three 2s linear infinite alternate;
 }
 
 /* Smoke container */

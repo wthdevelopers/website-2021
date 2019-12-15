@@ -23,7 +23,7 @@
     </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" id="windmillscape" viewBox="0 0 3093.3 1269.5">
-      <g id="windmillscape-base">
+      <g class="base">
         <path
           fill="#79c89f"
           d="M0 1173l129-16c129-16 387-48 644-42 258 5 516 47 774 48 257-1 515-43 773-70s516-37 644-42l129-6v224H0zM156 1127l-20-1c-12-3-17-12-20-23-5-20-2-40 4-60l1-5 11-16c15-19 41-20 57-2a39 39 0 018 12 21 21 0 003 3c5 18 10 35 8 54a79 79 0 010 8c-4 22-14 30-36 30h-7c-6-6-3-14-5-21-1 7 3 15-4 21z"
@@ -216,11 +216,12 @@
         <path fill="#d65c85" d="M393 820l-2 46-267-30 1-16h268z"></path>
         <circle cx="404.1" cy="843.9" r="25.3" fill="#ebadc2"></circle>
       </g>
-      <g id="windmillscape-lights-one" fill="#2132c7">
+      <g class="lights-blue" fill="#2132c7">
         <rect width="16.6" height="13.2" x="1152.9" y="1097.1" rx="2.5"></rect>
         <rect width="16.6" height="13.2" x="1196.7" y="1097.1" rx="2.5"></rect>
       </g>
       <path
+        class="cloud"
         id="windmillscape-cloud-one"
         fill="#fff"
         d="M268 1042H155c-7 0-11-2-11-8l-2-10c-1-18 10-26 30-21l3 1c9 2 10 1 11-8 1-18 6-35 20-49 23-23 66-18 81 10 5 10 5 10 18 7a49 49 0 0120 0c13 3 17 13 19 23a37 37 0 011 6c0 8 3 14 13 17 12 2 17 11 18 21 0 9-3 12-12 12h-96z"
@@ -228,6 +229,7 @@
         style="isolation:isolate"
       ></path>
       <path
+        class="cloud"
         id="windmillscape-cloud-two"
         fill="#fff"
         d="M2060 1079h-153c-12 0-11 1-10-9 0-7 4-11 12-12s9-2 10-9c1-8 0-16 4-23 5-9 13-15 25-16 4-1 10 1 15 2 8 2 8 2 8-5 0-14 8-26 17-37s23-18 39-20c16-3 32 0 45 10 14 10 23 24 29 39 3 7 3 7 11 3 10-6 22-6 33-4 22 4 35 16 42 33l2 7c1 3 2 4 6 5a68 68 0 0112 1c11 3 16 10 17 19l1 13c0 2-1 3-4 3h-161z"
@@ -235,23 +237,24 @@
         style="isolation:isolate"
       ></path>
       <path
+        class="cloud"
         id="windmillscape-cloud-three"
         fill="#fff"
         d="M2819 877l10-7c29-20 75-6 85 27l2 5c1 8 4 12 13 14 8 1 12 7 11 15-1 6 2 9 7 12 9 6 11 16 5 25a8 8 0 01-5 2 51 51 0 01-9 1h-313c-14 0-15-1-14-15 2-15 4-30 16-42 5-7 12-11 22-10 7 1 9-3 10-9 3-15 6-30 11-45 16-43 56-53 99-33 23 11 34 30 44 51l3 6a30 30 0 003 3z"
         opacity=".8"
         style="isolation:isolate"
       ></path>
-      <g id="windmillscape-stars-one" fill="#f9f458">
+      <g class="stars-one" fill="#f9f458">
         <path
           d="M2731 242a36 36 0 0011-6 20 20 0 006-9 57 57 0 003-10l1-6v2a116 116 0 004 14l1 3a11 11 0 003 4 53 53 0 008 6l4 2h1l-3 1a40 40 0 00-10 6 17 17 0 00-3 4 24 24 0 00-2 5 96 96 0 00-3 11v5a4 4 0 00-1-1 137 137 0 00-3-14l-2-6a13 13 0 00-4-5 36 36 0 00-8-5l-3-1zM273 31a36 36 0 0011-6 20 20 0 006-9 60 60 0 003-9l1-7v2a116 116 0 004 15l1 2a11 11 0 004 5 51 51 0 008 5l4 2-3 2a39 39 0 00-9 6 16 16 0 00-4 3 23 23 0 00-2 5 96 96 0 00-2 11l-1 5v-1a145 145 0 00-4-14l-2-5a13 13 0 00-4-6 36 36 0 00-8-4l-3-2z"
         ></path>
       </g>
-      <g id="windmillscape-stars-two" fill="#f9f458">
+      <g class="stars-two" fill="#f9f458">
         <path
           d="M2058 124a36 36 0 0011-6 20 20 0 006-9 59 59 0 003-9l1-7 1 2a113 113 0 004 15l1 2a11 11 0 003 4 51 51 0 008 6l4 2-3 2a39 39 0 00-9 6 16 16 0 00-3 3 23 23 0 00-2 5 92 92 0 00-3 11l-1 5a4 4 0 000-1 143 143 0 00-4-14l-1-6a13 13 0 00-5-5 36 36 0 00-8-5l-3-1zM640 251a36 36 0 0011-6 20 20 0 006-9 59 59 0 003-9l1-7 1 2a113 113 0 003 15l1 2a11 11 0 004 5 53 53 0 008 5l4 2-3 2a40 40 0 00-9 6 16 16 0 00-3 3 23 23 0 00-2 5 92 92 0 00-3 11l-1 5a4 4 0 000-1 143 143 0 00-4-14l-2-5a13 13 0 00-4-6 36 36 0 00-8-4l-3-2z"
         ></path>
       </g>
-      <g id="windmillscape-stars-three" fill="#f9f458">
+      <g class="stars-three" fill="#f9f458">
         <path
           d="M2564 399a36 36 0 0011-6 20 20 0 006-9 59 59 0 003-9l1-7v2a113 113 0 004 15l1 2a11 11 0 004 5 51 51 0 008 5l4 2-3 2a39 39 0 00-9 6 16 16 0 00-3 3 23 23 0 00-3 5 92 92 0 00-2 11l-1 5a4 4 0 000-1 143 143 0 00-4-14l-2-5a13 13 0 00-4-6 36 36 0 00-8-4l-3-2zM1057 666h1a36 36 0 0011-6 20 20 0 006-9 59 59 0 002-10l1-6 1 2a113 113 0 004 15l1 2a11 11 0 003 4 51 51 0 008 6l4 2-3 1a39 39 0 00-9 6 16 16 0 00-3 4 23 23 0 00-2 5 92 92 0 00-3 11l-1 5a4 4 0 000-1 143 143 0 00-3-14l-2-6a13 13 0 00-4-5 36 36 0 00-8-5l-3-1h-1z"
         ></path>
@@ -366,16 +369,6 @@ export default {
   justify-content: space-between;
 }
 
-#windmillscape-base {
-  opacity: 0.4;
-}
-
-#windmillscape-cloud-one,
-#windmillscape-cloud-two,
-#windmillscape-cloud-three {
-  opacity: 0.6;
-}
-
 #windmillscape-cloud-one {
   animation: cloud-animation-one 8s linear infinite alternate;
 }
@@ -404,30 +397,6 @@ export default {
   100% {
     transform: translateX(-12vw);
   }
-}
-
-#windmillscape-lights-one > rect {
-  opacity: var(--lights-blue-opacity);
-  fill: var(--lights-blue-color);
-  transition: fill 0.6s ease-out;
-}
-
-#windmillscape-stars-one,
-#windmillscape-stars-two,
-#windmillscape-stars-three {
-  visibility: var(--stars-visibility);
-}
-
-#windmillscape-stars-one {
-  animation: flicker-one 2s linear infinite alternate;
-}
-
-#windmillscape-stars-two {
-  animation: flicker-two 2s linear infinite alternate;
-}
-
-#windmillscape-stars-three {
-  animation: flicker-three 2s linear infinite alternate;
 }
 
 #windmillscape-turbine-one,

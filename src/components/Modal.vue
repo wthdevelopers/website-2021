@@ -76,7 +76,7 @@
       :class="`modal-slope-${type}`"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 203.7"
-      style="transform: translateY(-1px);"
+      style="transform: translateY(-2px);"
     >
       <path
         class="slope"
@@ -119,13 +119,12 @@ export default {
   background-color: var(--slope-body-color);
   padding: 0 6vw;
   position: relative;
-  /* z-index: 9999; */
 }
 
 .modal-content {
   height: 100%;
   overflow-y: scroll;
-  /* overscroll-behavior-y: contain; */
+  overscroll-behavior-y: contain;
 }
 
 .modal-clausal {

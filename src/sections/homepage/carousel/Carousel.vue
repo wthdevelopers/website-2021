@@ -92,7 +92,8 @@ export default {
   },
   data() {
     return {
-      slide: 1
+      slide: 1,
+      carouselIntervalID: null
     };
   },
   methods: {
@@ -126,6 +127,7 @@ export default {
       }, 500);
     },
     slideTo(idx) {
+      clearInterval(this.carouselIntervalID);
       document.querySelector(".carousel-content").style.transition =
         "transform 0.5s";
       document.querySelector(
@@ -141,15 +143,18 @@ export default {
       setTimeout(() => {
         document.querySelector(".carousel-content").style.transition = "none";
       }, 500);
+      this.carouselIntervalID = setInterval(() => {
+        this.slideLeft();
+      }, 5000);
     }
   },
   mounted() {
-    let carouselLoop = setInterval(() => {
+    this.carouselIntervalID = setInterval(() => {
       this.slideLeft();
     }, 5000);
 
     window.addEventListener("resize", () => {
-      clearInterval(carouselLoop);
+      clearInterval(this.carouselIntervalID);
       document.querySelector(".carousel-content").style.transform =
         "translate3d(0,0,0)";
       document.querySelector(
@@ -158,7 +163,7 @@ export default {
       document.querySelector(".carousel-dot-1").style.backgroundColor =
         "var(--color-regular-text)";
       this.slide = 1;
-      carouselLoop = setInterval(() => {
+      this.carouselIntervalID = setInterval(() => {
         this.slideLeft();
       }, 5000);
     });
@@ -229,8 +234,8 @@ span {
 }
 
 .carousel-dots > li {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50px;
   border: 1px solid var(--color-regular-text);
   cursor: pointer;

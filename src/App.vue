@@ -158,6 +158,44 @@ a {
   color: inherit;
 }
 
+.base {
+  opacity: 0.4;
+}
+
+.cloud {
+  opacity: 0.6;
+}
+
+.lights-blue > * {
+  opacity: var(--lights-blue-opacity);
+  fill: var(--lights-blue-color);
+  transition: fill 0.6s ease-out;
+}
+
+.lights-pink > * {
+  opacity: var(--lights-pink-opacity);
+  fill: var(--lights-pink-color);
+  transition: fill 0.6s ease-out;
+}
+
+.stars-one,
+.stars-two,
+.stars-three {
+  visibility: var(--stars-visibility);
+}
+
+.stars-one {
+  animation: flicker-one 2s linear infinite alternate;
+}
+
+.stars-two {
+  animation: flicker-two 2s linear infinite alternate;
+}
+
+.stars-three {
+  animation: flicker-three 2s linear infinite alternate;
+}
+
 @keyframes flicker-one {
   0% {
     opacity: 1;
