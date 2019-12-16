@@ -1,5 +1,5 @@
 <template>
-  <div id="thankees">
+  <section id="thankees" title="Sponsors">
     <div class="thankees-body">
       <SectionHeader>Sponsors</SectionHeader>
       <ul class="thankees-content">
@@ -34,7 +34,7 @@
         d="M0 160h60c60 0 180 0 300 16s240 48 360 37c120-10 240-64 360-85s240-11 300-5l60 5V0H0z"
       ></path>
     </svg>
-  </div>
+  </section>
 </template>
 
 <script>

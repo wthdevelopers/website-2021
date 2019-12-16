@@ -110,14 +110,16 @@
           >
             I confirm that I am above 13 years of age and have read and agree to the
             <button
+              id="form-tnc-modal-button-indiv"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-tnc-modal')"
+              @click="openModal('form-tnc-modal', 'form-tnc-modal-button-indiv')"
             >terms and conditions</button> and
             <button
+              id="form-rules-modal-button-indiv"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-rules-modal')"
+              @click="openModal('form-rules-modal', 'form-rules-modal-button-indiv')"
             >participants' rules</button> as stipulated
             by the organisers of What The Hack 2020.
           </Checkbox>
@@ -161,12 +163,14 @@
             <Accordion
               v-for="(member, idx) in membersMemory"
               :key="member.id"
-              :accordionID="member.id"
+              accordionName="members-accordion"
+              :accordionIdx="idx"
+              :accordionMaxIdx="membersMemory.length - 1"
               maxHeight="2600"
               :removeFunc="() => {
                 removeCandidateID = member.id;
                 removeCandidatePos = idx + 1;
-                openModal('form-member-remove-confirmation-modal');
+                openModal('form-member-remove-confirmation-modal', `members-accordion-trigger-${idx}`);
               }"
             >
               <template v-slot:title>{{`Member #${idx + 1}`}}</template>
@@ -238,7 +242,7 @@
               type="button"
               id="add-member-button"
               :disabled="membersMemory.length >= 4 ? '' : null"
-              @click="addMembers()"
+              @click="addMembers"
             >
               <span
                 style="display: inline-block; font-size: 50px; transform: translateY(3px); margin-right: 5px;"
@@ -253,14 +257,16 @@
           >
             I confirm that I am above 13 years of age and have read and agree to the
             <button
+              id="form-tnc-modal-button-grp"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-tnc-modal')"
+              @click="openModal('form-tnc-modal', 'form-tnc-modal-button-grp')"
             >terms and conditions</button> and
             <button
+              id="form-rules-modal-button-grp"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-rules-modal')"
+              @click="openModal('form-rules-modal', 'form-rules-modal-button-grp')"
             >participants' rules</button> as stipulated
             by the organisers of What The Hack 2020.
           </Checkbox>
@@ -284,8 +290,9 @@
         :disabled="format.value ? null : ''"
       >Next Page</FormButton>
       <FormButton
+        id="form-submission-confirmation-modal-button"
         linkAction="non-router"
-        :onClick="{func: openModal, args: ['form-submission-confirmation-modal']}"
+        :onClick="{func: openModal, args: ['form-submission-confirmation-modal', 'form-submission-confirmation-modal-button']}"
         class="bottom-button"
         v-if="page === '2'"
       >Submit</FormButton>
@@ -517,6 +524,9 @@ export default {
           break;
         }
       }
+      setTimeout(() => {
+        document.querySelector("#members-accordion-trigger-0").focus();
+      }, 100);
     },
     removeMember(id) {
       for (let i = 0; i < this.members.length; i++) {
@@ -549,6 +559,10 @@ export default {
       this.membersMemory = this.membersMemory.filter(
         member => member.id !== id
       );
+
+      setTimeout(() => {
+        document.querySelector("#members-accordion-trigger-0").focus();
+      }, 100);
     },
     submitForm(id) {
       let form = document.getElementById(id);

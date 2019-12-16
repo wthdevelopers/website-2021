@@ -44,11 +44,19 @@
           </li>
           <li class="li-dividers">|</li>
           <li>
-            <button type="button" @click="openModal('footer-tnc-modal')">Terms & Conditions</button>
+            <button
+              id="footer-tnc-modal-button"
+              type="button"
+              @click="openModal('footer-tnc-modal', 'footer-tnc-modal-button')"
+            >Terms & Conditions</button>
           </li>
           <li class="li-dividers">|</li>
           <li>
-            <button type="button" @click="openModal('footer-rules-modal')">Participants' Rules</button>
+            <button
+              id="footer-rules-modal-button"
+              type="button"
+              @click="openModal('footer-rules-modal', 'footer-rules-modal-button')"
+            >Participants' Rules</button>
           </li>
           <li class="li-dividers">|</li>
           <li>
@@ -83,13 +91,11 @@ export default {
 
 <style scoped>
 #foot {
-  /* height: 30vh; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-top: 15vh;
   padding-bottom: 20px;
-  /* border: 1px solid red; */
 }
 
 #foot-logo {

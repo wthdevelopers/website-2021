@@ -1,5 +1,5 @@
 <template>
-  <div id="schedule">
+  <section id="schedule" title="Schedule">
     <SectionHeader>Schedule</SectionHeader>
     <div class="schedule-content">
       <ul class="timetable">
@@ -21,7 +21,6 @@
         </li>
       </ul>
     </div>
-
     <svg xmlns="http://www.w3.org/2000/svg" id="windmillscape" viewBox="0 0 3093.3 1269.5">
       <g class="base">
         <path
@@ -260,7 +259,7 @@
         ></path>
       </g>
     </svg>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -338,7 +337,6 @@ export default {
 #schedule {
   position: relative;
   padding-bottom: 100px;
-  /* border: 1px solid green; */
 }
 
 #windmillscape {
@@ -347,7 +345,7 @@ export default {
 }
 
 .schedule-content {
-  margin: 0 150px;
+  padding: 0 150px;
   margin-bottom: 200px;
   display: flex;
   justify-content: space-between;
@@ -428,7 +426,7 @@ export default {
 
 @media (--desktop-narrow) {
   .schedule-content {
-    margin: 0 100px;
+    padding: 0 100px;
   }
 }
 
@@ -444,7 +442,7 @@ export default {
 
 @media (--mobile-narrow) {
   .schedule-content {
-    margin: 0 30px;
+    padding: 0 30px;
   }
 }
 </style>

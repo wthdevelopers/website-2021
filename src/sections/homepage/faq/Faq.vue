@@ -1,11 +1,13 @@
 <template>
-  <div id="faq">
+  <section id="faq" title="FAQs">
     <SectionHeader>FAQs</SectionHeader>
     <div class="faq-content">
       <Accordion
         v-for="(item, idx) in faqArr"
         :key="idx"
-        :accordionID="idx.toString()"
+        :accordionName="'faq-accordion'"
+        :accordionIdx="idx"
+        :accordionMaxIdx="faqArr.length - 1"
         maxHeight="600"
       >
         <template v-slot:title>{{item.title}}</template>
@@ -244,7 +246,7 @@
         ></path>
       </g>
     </svg>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -332,12 +334,13 @@ export default {
 }
 
 .faq-content {
-  margin: 0 150px;
+  padding: 0 150px;
 }
 
 #solarscape {
   position: absolute;
   bottom: 0;
+  z-index: -1;
 }
 
 #solarscape-panel-dividers,
@@ -406,7 +409,7 @@ export default {
 
 @media (--desktop-narrow) {
   .faq-content {
-    margin: 0 100px;
+    padding: 0 100px;
   }
 }
 
@@ -416,7 +419,7 @@ export default {
   }
 
   .faq-content {
-    margin: 0 30px;
+    padding: 0 30px;
   }
 }
 </style>

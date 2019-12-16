@@ -1,6 +1,10 @@
 <template>
-  <vue100vh :id="id" class="modal-context">
-    <svg :class="`modal-slope-${type}`" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 231.4">
+  <div :id="id" :class="`modal modal-${type}`" role="dialog" aria-modal="true">
+    <svg
+      :class="`modal-slope-top modal-slope-${type}`"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 231.4"
+    >
       <path
         class="slope"
         d="M0 135l48-21c48-22 144-64 240-75s192 11 288 48 192 91 288 80 192-85 288-90c96-6 192 58 240 90l48 32v32H0z"
@@ -67,33 +71,25 @@
       ></path>
       <path fill="#8290dc" d="M339 50l1-14v-3l1-2 1 2v7l1 10a21 21 0 000 6l-1 13-1 2-1-2-1-14z"></path>
     </svg>
-    <div :class="`modal modal-${type}`" style="transform: translateY(-1px);">
-      <div class="modal-content">
-        <slot></slot>
-      </div>
+    <div class="modal-content">
+      <slot></slot>
     </div>
     <svg
-      :class="`modal-slope-${type}`"
+      :class="`modal-slope-bottom modal-slope-${type}`"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 203.7"
-      style="transform: translateY(-2px);"
     >
       <path
         class="slope"
         d="M0 64l48 27c48 26 144 80 240 69s192-85 288-75c96 11 192 107 288 118 96 10 192-64 288-107s192-53 240-59l48-5V0H0z"
       ></path>
     </svg>
-  </vue100vh>
+  </div>
 </template>
 
 <script>
-import vue100vh from "vue-100vh";
-
 export default {
   name: "modal",
-  components: {
-    vue100vh
-  },
   props: {
     id: String,
     type: String
@@ -102,23 +98,15 @@ export default {
 </script>
 
 <style scoped>
-.modal-context {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  z-index: 9999;
-  background-color: hsla(0, 0%, 0%, 0.5);
-}
-
 .modal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--slope-body-color);
   padding: 0 6vw;
-  position: relative;
+  z-index: 999;
 }
 
 .modal-content {
@@ -130,6 +118,20 @@ export default {
 .modal-clausal {
   width: 60vw;
   height: 50vh;
+}
+
+.modal-slope-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(calc(-100% + 1px));
+}
+
+.modal-slope-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(calc(100% - 1px));
 }
 
 .modal-slope-clausal {

@@ -1,12 +1,14 @@
 <template>
-  <div id="prizes">
+  <section id="prizes" title="Prizes">
     <div class="prizes-body">
       <SectionHeader>Prizes</SectionHeader>
       <div class="prizes-content">
-        <div class="category" v-for="category in categories" :key="category.name">
-          <SubHeader style="align-self: center;" class="prizes-subheader">{{category.name}}</SubHeader>
-          <Para style="margin-top: 30px;">{{category.award}}</Para>
-        </div>
+        <ul>
+          <li class="category" v-for="category in categories" :key="category.name">
+            <SubHeader style="align-self: center;" class="prizes-subheader">{{category.name}}</SubHeader>
+            <Para style="margin-top: 30px;">{{category.award}}</Para>
+          </li>
+        </ul>
       </div>
     </div>
     <svg
@@ -19,7 +21,7 @@
         d="M0 128l48 16c48 16 144 48 240 75 96 26 192 48 288 48s192-22 288-22 192 22 288 38 192 26 240 32l48 5V0H0z"
       ></path>
     </svg>
-  </div>
+  </section>
 </template>
 
 <script>

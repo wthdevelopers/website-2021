@@ -1,5 +1,5 @@
 <template>
-  <div id="contact">
+  <section id="contact" title="Contact Us">
     <div class="contact-body">
       <SectionHeader>Contact Us</SectionHeader>
       <form
@@ -42,8 +42,9 @@
       </form>
       <div class="submission-container">
         <FormButton
+          id="contact-submission-confirmation-modal-button"
           linkAction="non-router"
-          :onClick="{func: openModal, args: ['contact-submission-confirmation-modal']}"
+          :onClick="{func: openModal, args: ['contact-submission-confirmation-modal', 'contact-submission-confirmation-modal-button']}"
         >Submit</FormButton>
         <FormError
           class="submission-error"
@@ -70,7 +71,7 @@
         }
       }"
     >Are you sure you want to submit the form?</ConfirmationModal>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -160,7 +161,6 @@ export default {
   padding: 60px 0;
   transform: translateY(-6px);
   transition: background-color 0.6s ease-out;
-  /* border: 1px solid red; */
 }
 
 h3 {
@@ -170,12 +170,10 @@ h3 {
   padding-left: 150px;
   color: var(--color-section-title-text);
   margin-bottom: 50px;
-  /* border: 1px solid yellow; */
 }
 
 .contact-content {
   margin: 0 150px;
-  /* border: 1px solid blue; */
 }
 
 .submission-container {
@@ -183,7 +181,6 @@ h3 {
   flex-direction: column;
   align-items: flex-end;
   margin: 100px 150px 0 150px;
-  /* border: 1px solid blue; */
 }
 
 @media (--desktop-narrow) {

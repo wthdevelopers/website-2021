@@ -11,6 +11,7 @@ declare global {
   interface Window {
     formTouched: boolean;
     isSubmittingForm: boolean;
+    lastFocusedEl: string;
     registeredInfo: {
       format: String;
       name: String;
@@ -155,7 +156,36 @@ ul {
 
 a {
   text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   color: inherit;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+*:focus {
+  outline: 5px solid var(--color-accent);
 }
 
 .base {

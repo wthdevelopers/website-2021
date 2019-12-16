@@ -1,6 +1,6 @@
 <template>
-  <div id="about">
-    <SectionHeader style="margin: 8vw 0 20px 0;">What The Hack?</SectionHeader>
+  <section id="about" title="About What The Hack 2020">
+    <SectionHeader>What The Hack?</SectionHeader>
     <div class="about-content">
       <div class="about-content-main">
         <Para>
@@ -257,7 +257,7 @@
       <span class="s8"></span>
       <span class="s9"></span>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -278,13 +278,14 @@ export default {
 <style scoped>
 #about {
   position: relative;
-  padding-bottom: 180px;
+  padding: 8vw 0 180px 0;
 }
 
 .about-content {
   display: flex;
   justify-content: space-between;
   padding: 0 150px;
+  margin-top: 30px;
 }
 
 .about-content-main {

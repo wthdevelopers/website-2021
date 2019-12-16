@@ -4,10 +4,20 @@
       <h3>
         <slot></slot>
       </h3>
-      <ul>
-        <li @click="positiveAction()">Yes</li>
-        <li @click="closeModal(id)">No</li>
-      </ul>
+      <div class="controls">
+        <button
+          :id="`${id}-first-focus`"
+          @click="positiveAction"
+          @keydown.tab.shift.prevent="focusHandler(`${id}-last-focus`)"
+          @keyup.esc="closeModal(id)"
+        >Yes</button>
+        <button
+          :id="`${id}-last-focus`"
+          @click="closeModal(id)"
+          @keydown.tab.exact.prevent="focusHandler(`${id}-first-focus`)"
+          @keyup.esc="closeModal(id)"
+        >No</button>
+      </div>
     </div>
   </Modal>
 </template>
@@ -17,6 +27,7 @@ import Modal from "@/components/Modal.vue";
 import Para from "@/components/Para.vue";
 
 import closeModalMixin from "@/mixins/closeModalMixin";
+import focusHandler from "@/mixins/focusHandler";
 
 export default {
   name: "confirmation-modal",
@@ -29,7 +40,7 @@ export default {
     positiveFunc: Function,
     positiveFuncArgs: Array
   },
-  mixins: [closeModalMixin],
+  mixins: [closeModalMixin, focusHandler],
   methods: {
     positiveAction() {
       if (this.positiveFuncArgs) {
@@ -60,7 +71,7 @@ h3 {
   text-align: center;
 }
 
-ul {
+.controls {
   display: flex;
   justify-content: space-evenly;
   font-family: var(--font-secondary), sans-serif;
@@ -69,16 +80,12 @@ ul {
   color: var(--color-regular-text);
 }
 
-li {
-  cursor: pointer;
-}
-
 @media (--mobile-narrow) {
   h3 {
     font-size: 20px;
   }
 
-  ul {
+  .controls {
     font-size: 24px;
   }
 }

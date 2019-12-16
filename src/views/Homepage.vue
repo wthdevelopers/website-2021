@@ -9,6 +9,7 @@
     <Faq/>
     <Contact/>
     <Foot/>
+    <Backdrop/>
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import Sponsors from "@/sections/homepage/sponsors/Sponsors.vue";
 import Faq from "@/sections/homepage/faq/Faq.vue";
 import Contact from "@/sections/homepage/contact/Contact.vue";
 import Foot from "@/sections/homepage/foot/Foot.vue";
+import Backdrop from "@/components/Backdrop.vue";
 
 export default {
   name: "homepage",
@@ -34,7 +36,8 @@ export default {
     Sponsors,
     Faq,
     Contact,
-    Foot
+    Foot,
+    Backdrop
   }
 };
 </script>
