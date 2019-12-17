@@ -336,7 +336,8 @@ export default {
 <style scoped>
 #schedule {
   position: relative;
-  padding-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 200px;
 }
 
 #windmillscape {
@@ -346,7 +347,6 @@ export default {
 
 .schedule-content {
   padding: 0 150px;
-  margin-bottom: 200px;
   display: flex;
   justify-content: space-between;
 }
@@ -441,6 +441,10 @@ export default {
 }
 
 @media (--mobile-narrow) {
+  #schedule {
+    padding-bottom: 100px;
+  }
+
   .schedule-content {
     padding: 0 30px;
   }

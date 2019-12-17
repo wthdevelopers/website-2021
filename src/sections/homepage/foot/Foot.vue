@@ -38,11 +38,11 @@
           <li>
             <router-link to="/registration">Register</router-link>
           </li>
-          <li class="li-dividers">|</li>
+          <li class="li-dividers" aria-hidden="true">|</li>
           <li>
             <a href="https://www.sutd.edu.sg/" target="_blank" rel="noopener noreferrer">SUTD</a>
           </li>
-          <li class="li-dividers">|</li>
+          <li class="li-dividers" aria-hidden="true">|</li>
           <li>
             <button
               id="footer-tnc-modal-button"
@@ -50,7 +50,7 @@
               @click="openModal('footer-tnc-modal', 'footer-tnc-modal-button')"
             >Terms & Conditions</button>
           </li>
-          <li class="li-dividers">|</li>
+          <li class="li-dividers" aria-hidden="true">|</li>
           <li>
             <button
               id="footer-rules-modal-button"
@@ -58,7 +58,7 @@
               @click="openModal('footer-rules-modal', 'footer-rules-modal-button')"
             >Participants' Rules</button>
           </li>
-          <li class="li-dividers">|</li>
+          <li class="li-dividers" aria-hidden="true">|</li>
           <li>
             <a
               href="https://github.com/wthdevelopers/website-2020"
@@ -135,15 +135,6 @@ ul {
 
 li + li {
   margin-left: 0.5vw;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  font-size: inherit;
-  font-family: inherit;
-  color: inherit;
-  cursor: pointer;
 }
 
 @media (--desktop-narrow) {

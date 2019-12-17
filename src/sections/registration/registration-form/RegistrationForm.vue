@@ -113,13 +113,13 @@
               id="form-tnc-modal-button-indiv"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-tnc-modal', 'form-tnc-modal-button-indiv')"
+              @click.stop="openModal('form-tnc-modal', 'form-tnc-modal-button-indiv')"
             >terms and conditions</button> and
             <button
               id="form-rules-modal-button-indiv"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-rules-modal', 'form-rules-modal-button-indiv')"
+              @click.stop="openModal('form-rules-modal', 'form-rules-modal-button-indiv')"
             >participants' rules</button> as stipulated
             by the organisers of What The Hack 2020.
           </Checkbox>
@@ -260,13 +260,13 @@
               id="form-tnc-modal-button-grp"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-tnc-modal', 'form-tnc-modal-button-grp')"
+              @click.stop="openModal('form-tnc-modal', 'form-tnc-modal-button-grp')"
             >terms and conditions</button> and
             <button
               id="form-rules-modal-button-grp"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-rules-modal', 'form-rules-modal-button-grp')"
+              @click.stop="openModal('form-rules-modal', 'form-rules-modal-button-grp')"
             >participants' rules</button> as stipulated
             by the organisers of What The Hack 2020.
           </Checkbox>

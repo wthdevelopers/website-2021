@@ -330,6 +330,7 @@ export default {
 <style scoped>
 #faq {
   position: relative;
+  padding-top: 30px;
   padding-bottom: 200px;
 }
 

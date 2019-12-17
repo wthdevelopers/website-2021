@@ -1,7 +1,6 @@
 <template>
   <section
     id="carousel"
-    aria-roledescription="carousel"
     aria-label="Highlighted projects and teams from previous iterations"
     style="transform: translateY(-2px);"
   >
@@ -14,7 +13,6 @@
           :id="`carousel-textgroup-${idx + 1}`"
           :aria-hidden="idx === 0 ? 'false' : 'true'"
           role="group"
-          aria-roledescription="slide"
           :aria-label="`${idx + 1} of 5`"
         >
           <div class="carousel-maintext">{{item.desc}}</div>
@@ -30,7 +28,6 @@
           v-for="idx in 5"
           :key="idx"
           :id="`carousel-dot-${idx}`"
-          aria-controls="carousel-content"
           @click="slideTo(idx)"
           @focus="pauseSlide"
           @blur="resumeSlide"

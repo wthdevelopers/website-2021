@@ -278,7 +278,8 @@ export default {
 <style scoped>
 #about {
   position: relative;
-  padding: 8vw 0 180px 0;
+  padding-top: 30px;
+  padding-bottom: 180px;
 }
 
 .about-content {
