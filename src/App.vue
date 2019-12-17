@@ -11,6 +11,7 @@ declare global {
   interface Window {
     formTouched: boolean;
     isSubmittingForm: boolean;
+    lastFocusedEl: string;
     registeredInfo: {
       format: String;
       name: String;
@@ -58,9 +59,27 @@ export default Vue.extend({
 </script>
 
 <style>
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Nunito Regular"), local("Nunito-Regular"),
+    url("../public/fonts/nunito-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  font-style: normal;
+  font-weight: 400;
+  src: local("brandon Grotesque"), local("Brandon-Grotesque"),
+    url("../public/fonts/brandon-400.woff2") format("woff2");
+}
+
 :root {
-  --font-primary: brandon-grotesque;
-  --font-secondary: proxima-soft;
+  /* --font-primary: brandon-grotesque; */
+  /* --font-secondary: proxima-soft; */
+  --font-primary: "Brandon Grotesque";
+  --font-secondary: "Nunito";
 
   --color-background: #e9f7fb;
   --color-title-text: #2d3887;
@@ -81,6 +100,9 @@ export default Vue.extend({
 
   --lights-pink-opacity: 0.2;
   --lights-pink-color: #d65c85;
+
+  --displayed-during-light: inline;
+  --displayed-during-dark: none;
 }
 
 [theme="dark"] {
@@ -102,12 +124,23 @@ export default Vue.extend({
 
   --lights-pink-opacity: 0.4;
   --lights-pink-color: #f9f458;
+
+  --displayed-during-light: none;
+  --displayed-during-dark: inline;
 }
+
+@custom-media --mobile-narrow (max-width: 570px);
+@custom-media --mobile-wide (max-width: 847px);
+@custom-media --desktop-narrow (max-width: 1000px);
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden !important;
 }
 
 body {
@@ -123,7 +156,74 @@ ul {
 
 a {
   text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   color: inherit;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+*:focus {
+  outline: 5px solid var(--color-accent);
+}
+
+.base {
+  opacity: 0.4;
+}
+
+.cloud {
+  opacity: 0.6;
+}
+
+.lights-blue > * {
+  opacity: var(--lights-blue-opacity);
+  fill: var(--lights-blue-color);
+  transition: fill 0.6s ease-out;
+}
+
+.lights-pink > * {
+  opacity: var(--lights-pink-opacity);
+  fill: var(--lights-pink-color);
+  transition: fill 0.6s ease-out;
+}
+
+.stars-one,
+.stars-two,
+.stars-three {
+  visibility: var(--stars-visibility);
+}
+
+.stars-one {
+  animation: flicker-one 2s linear infinite alternate;
+}
+
+.stars-two {
+  animation: flicker-two 2s linear infinite alternate;
+}
+
+.stars-three {
+  animation: flicker-three 2s linear infinite alternate;
 }
 
 @keyframes flicker-one {

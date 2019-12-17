@@ -21,13 +21,13 @@ h3 {
   /* border: 1px solid yellow; */
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   h3 {
     padding-left: 100px;
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   h3 {
     padding-left: 30px;
   }

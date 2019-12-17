@@ -65,7 +65,7 @@ input[type="radio"]:checked {
   border: 5px solid var(--color-accent);
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   input[type="radio"] {
     width: 18px;
     height: 18px;
@@ -76,7 +76,7 @@ input[type="radio"]:checked {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   .radio-block {
     margin-top: 10px;
   }

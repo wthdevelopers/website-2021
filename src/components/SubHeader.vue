@@ -1,37 +1,29 @@
 <template>
-  <p>
+  <h4>
     <slot></slot>
-  </p>
+  </h4>
 </template>
 
 <script>
 export default {
-  name: "para"
+  name: "sub-header"
 };
 </script>
 
 <style scoped>
-p {
-  position: relative;
-  display: inline-block;
-  font-size: 24px;
-  font-family: var(--font-primary), sans-serif;
-  line-height: 1.6;
-  z-index: 1;
+h4 {
+  font-size: 32px;
+  font-family: var(--font-secondary), sans-serif;
   color: var(--color-regular-text);
-}
 
-span {
   border-bottom: 10px solid var(--color-accent);
   display: inline-block;
   line-height: 0.4;
-  color: inherit;
-  text-decoration: none;
 }
 
 @media (--mobile-narrow) {
-  p {
-    font-size: 20px;
+  h4 {
+    font-size: 24px;
   }
 }
 </style>

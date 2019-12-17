@@ -1,17 +1,5 @@
 <template>
-  <Modal :id="id" type="clausal">
-    <svg
-      class="cancel"
-      @click="closeModal(id)"
-      viewBox="0 0 375 375"
-      width="300pt"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="m187.5 679.86223a185.00057 185.00057 0 0 0 -184.9999998 185 185.00057 185.00057 0 0 0 184.9999998 184.99997 185.00057 185.00057 0 0 0 185-184.99997 185.00057 185.00057 0 0 0 -185-185zm-85.90632 78.87528a20.232308 20.232308 0 0 1 14.5181 6.13144l71.38822 71.38824 71.38825-71.38824a20.232308 20.232308 0 0 1 13.90867-6.12106 20.232308 20.232308 0 0 1 14.70258 34.73023l-71.3903 71.38825 71.3903 71.39029a20.232308 20.232308 0 1 1 -28.61125 28.60921l-71.38825-71.38824-71.38822 71.38824a20.232308 20.232308 0 1 1 -28.611275-28.60921l71.390325-71.39029-71.390325-71.38825a20.232308 20.232308 0 0 1 14.093175-34.74061z"
-        transform="translate(0 -677.36222)"
-      ></path>
-    </svg>
+  <ContentModal :id="id">
     <h3>Terms & Conditions</h3>
     <h4>1. Definitions</h4>
     <Para>
@@ -211,42 +199,26 @@
       <br>
       <br>
     </Para>
-  </Modal>
+  </ContentModal>
 </template>
 
 <script>
-import Modal from "@/components/Modal.vue";
+import ContentModal from "@/components/ContentModal.vue";
 import Para from "@/components/Para.vue";
-
-import closeModalMixin from "@/mixins/closeModalMixin";
 
 export default {
   name: "tnc-modal",
   components: {
-    Modal,
+    ContentModal,
     Para
   },
   props: {
     id: String
-  },
-  mixins: [closeModalMixin]
+  }
 };
 </script>
 
 <style scoped>
-.cancel {
-  width: 20px;
-  position: absolute;
-  top: 0px;
-  right: 4vw;
-  cursor: pointer;
-}
-
-.cancel > path {
-  fill: var(--color-title-text);
-  transition: fill 0.6s ease-out;
-}
-
 h3 {
   font-size: 24px;
   font-family: var(--font-primary), sans-serif;
@@ -264,7 +236,7 @@ h4 {
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   h3 {
     font-size: 20px;
   }

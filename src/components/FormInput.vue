@@ -60,7 +60,7 @@ input[type="date"] {
   font-weight: 900;
   color: var(--color-regular-text);
   padding: 0 10px;
-  height: 65px;
+  height: 5vw;
 }
 
 input::placeholder {
@@ -78,17 +78,19 @@ input:invalid {
   color: var(--color-accent);
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   input[type="text"],
   input[type="date"] {
     font-size: 34px;
+    height: 7vw;
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   input[type="text"],
   input[type="date"] {
     font-size: 24px;
+    height: 9vw;
   }
 }
 </style>

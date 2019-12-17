@@ -1,5 +1,5 @@
 <template>
-  <div id="contact">
+  <section id="contact" title="Contact Us">
     <div class="contact-body">
       <SectionHeader>Contact Us</SectionHeader>
       <form
@@ -42,8 +42,9 @@
       </form>
       <div class="submission-container">
         <FormButton
+          id="contact-submission-confirmation-modal-button"
           linkAction="non-router"
-          :onClick="{func: openModal, args: ['contact-submission-confirmation-modal']}"
+          :onClick="{func: openModal, args: ['contact-submission-confirmation-modal', 'contact-submission-confirmation-modal-button']}"
         >Submit</FormButton>
         <FormError
           class="submission-error"
@@ -53,13 +54,13 @@
       </div>
     </div>
     <svg
-      style="transform: translateY(-6px);"
-      xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 320"
+      xmlns="http://www.w3.org/2000/svg"
+      style="transform: translateY(-7px);"
     >
       <path
         class="slope"
-        d="M0,128L48,144C96,160,192,192,288,218.7C384,245,480,267,576,266.7C672,267,768,245,864,245.3C960,245,1056,267,1152,282.7C1248,299,1344,309,1392,314.7L1440,320L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        d="m0 128 48 16c48 16 144 48 240 75 96 26 192 48 288 48s192-22 288-22 192 22 288 38 192 26 240 32l48 5v-320h-1440z"
       ></path>
     </svg>
     <ConfirmationModal
@@ -70,7 +71,7 @@
         }
       }"
     >Are you sure you want to submit the form?</ConfirmationModal>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -160,7 +161,6 @@ export default {
   padding: 60px 0;
   transform: translateY(-6px);
   transition: background-color 0.6s ease-out;
-  /* border: 1px solid red; */
 }
 
 h3 {
@@ -170,12 +170,10 @@ h3 {
   padding-left: 150px;
   color: var(--color-section-title-text);
   margin-bottom: 50px;
-  /* border: 1px solid yellow; */
 }
 
 .contact-content {
   margin: 0 150px;
-  /* border: 1px solid blue; */
 }
 
 .submission-container {
@@ -183,10 +181,9 @@ h3 {
   flex-direction: column;
   align-items: flex-end;
   margin: 100px 150px 0 150px;
-  /* border: 1px solid blue; */
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   h3 {
     padding-left: 100px;
   }
@@ -200,17 +197,7 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  h3 {
-    padding-left: 100px;
-  }
-
-  .schedule-content {
-    margin: 0 100px;
-  }
-}
-
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   h3 {
     padding-left: 30px;
   }

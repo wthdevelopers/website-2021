@@ -20,7 +20,7 @@ p {
   padding: 0 10px;
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   p {
     font-size: 16px;
   }

@@ -62,13 +62,13 @@ textarea:focus {
   outline: 2px solid var(--color-accent);
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   textarea {
     font-size: 28px;
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   textarea {
     font-size: 20px;
   }

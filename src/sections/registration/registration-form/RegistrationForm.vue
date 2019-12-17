@@ -110,16 +110,28 @@
           >
             I confirm that I am above 13 years of age and have read and agree to the
             <button
+              id="form-tnc-modal-button-indiv"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-tnc-modal')"
+              @click.stop="openModal('form-tnc-modal', 'form-tnc-modal-button-indiv')"
             >terms and conditions</button> and
             <button
+              id="form-rules-modal-button-indiv"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-rules-modal')"
+              @click.stop="openModal('form-rules-modal', 'form-rules-modal-button-indiv')"
             >participants' rules</button> as stipulated
             by the organisers of What The Hack 2020.
+          </Checkbox>
+          <Checkbox
+            name="individual-pdpa-confirm"
+            :model="individualPDPAConfirm"
+            :onChange="{func: validateFilled, args: [individualPDPAConfirm]}"
+          >
+            By submitting my details here, I agree that What The Hack 2020 may
+            collect, use and disclose the information above, within the organising committee,
+            for planning purposes. My personal data will not be retained and will be disposed
+            appropriately upon the completion of this event.
           </Checkbox>
         </form>
       </RegistrationContentBlock>
@@ -148,28 +160,89 @@
               team (including yourself of course) and fill in all their necessary details.
             </FormLabelSub>
 
-            <MemberBlock
+            <Accordion
               v-for="(member, idx) in membersMemory"
               :key="member.id"
-              :member="member"
-              :idx="idx"
-              :openAccordion="openAccordion"
-              :removeMember="removeMember"
-              :commenceRemovalSeq="() => {
+              accordionName="members-accordion"
+              :accordionIdx="idx"
+              :accordionMaxIdx="membersMemory.length - 1"
+              maxHeight="2600"
+              :removeFunc="() => {
                 removeCandidateID = member.id;
                 removeCandidatePos = idx + 1;
-                openModal('form-member-remove-confirmation-modal');
+                openModal('form-member-remove-confirmation-modal', `members-accordion-trigger-${idx}`);
               }"
-              :validateFilled="validateFilled"
-              :validateAge="validateAge"
-              :validateEmail="validateEmail"
-            />
+            >
+              <template v-slot:title>{{`Member #${idx + 1}`}}</template>
+              <FormInput
+                style="margin-top: 30px;"
+                type="text"
+                label="*Name"
+                :name="`member-${member.id}-name`"
+                placeholder="Your cool name :)"
+                :model="member.name"
+                :onBlur="validateFilled"
+              />
+              <FormInput
+                additionalInfo="You need to be at least 13 years of age at the time of event 
+                    to be eligible to participate. If you are over 13 but under 18 years of age, 
+                    you will be eligible to participate only if you have parental consent (parental 
+                    consent forms will be sent out to you later)."
+                type="date"
+                label="*Date of Birth"
+                :name="`member-${member.id}-dob`"
+                :model="member.dob"
+                :onBlur="s => {
+                    if (!validateFilled(s)) {
+                        validateAge(s, 'blur');
+                    }
+                }"
+              />
+              <FormInput
+                type="text"
+                label="*Email Address"
+                :name="`member-${member.id}-email`"
+                placeholder="No spam, promise!"
+                :model="member.email"
+                :onBlur="s => {
+                    if (!validateFilled(s)) {
+                        validateEmail(s);
+                    }
+                }"
+              />
+              <FormInput
+                type="text"
+                label="*School/Company/Organisation"
+                :name="`member-${member.id}-org`"
+                placeholder="Where are you from?"
+                :model="member.org"
+                :onBlur="validateFilled"
+              />
+              <FormInput
+                type="text"
+                label="Dietary Requirements"
+                :name="`member-${member.id}-diet`"
+                placeholder="Halal/allergies/etc."
+                :model="member.diet"
+              />
+              <Radio
+                label="*What is your T-shirt size?"
+                :name="`member-${member.id}-shirt`"
+                :model="member.shirt"
+                :onChange="{func: validateFilled, args: [member.shirt]}"
+                :options="[{id: `member-${member.id}-shirt-xs`, value: 'XS', optionLabel: 'XS'}, 
+                {id: `member-${member.id}-shirt-s`, value: 'S', optionLabel: 'S'},
+                {id: `member-${member.id}-shirt-m`, value: 'M', optionLabel: 'M'},
+                {id: `member-${member.id}-shirt-l`, value: 'L', optionLabel: 'L'},
+                {id: `member-${member.id}-shirt-xl`, value: 'XL', optionLabel: 'XL'}]"
+              />
+            </Accordion>
 
             <button
               type="button"
               id="add-member-button"
               :disabled="membersMemory.length >= 4 ? '' : null"
-              @click="addMembers()"
+              @click="addMembers"
             >
               <span
                 style="display: inline-block; font-size: 50px; transform: translateY(3px); margin-right: 5px;"
@@ -184,16 +257,28 @@
           >
             I confirm that I am above 13 years of age and have read and agree to the
             <button
+              id="form-tnc-modal-button-grp"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-tnc-modal')"
+              @click.stop="openModal('form-tnc-modal', 'form-tnc-modal-button-grp')"
             >terms and conditions</button> and
             <button
+              id="form-rules-modal-button-grp"
               type="button"
               class="clause-buttons"
-              @click="openModal('form-rules-modal')"
+              @click.stop="openModal('form-rules-modal', 'form-rules-modal-button-grp')"
             >participants' rules</button> as stipulated
             by the organisers of What The Hack 2020.
+          </Checkbox>
+          <Checkbox
+            name="group-pdpa-confirm"
+            :model="groupPDPAConfirm"
+            :onChange="{func: validateFilled, args: [groupPDPAConfirm]}"
+          >
+            By submitting my details here, I agree that What The Hack 2020 may
+            collect, use and disclose the information above, within the organising committee,
+            for planning purposes. My personal data will not be retained and will be disposed
+            appropriately upon the completion of this event.
           </Checkbox>
         </form>
       </RegistrationContentBlock>
@@ -205,23 +290,23 @@
         :disabled="format.value ? null : ''"
       >Next Page</FormButton>
       <FormButton
+        id="form-submission-confirmation-modal-button"
         linkAction="non-router"
-        :onClick="{func: openModal, args: ['form-submission-confirmation-modal']}"
+        :onClick="{func: openModal, args: ['form-submission-confirmation-modal', 'form-submission-confirmation-modal-button']}"
         class="bottom-button"
         v-if="page === '2'"
-      >Next Page</FormButton>
+      >Submit</FormButton>
       <FormError v-if="page === '2'" class="submission-error">{{submissionErrorMsg}}</FormError>
       <button type="submit" hidden/>
     </div>
     <svg
-      viewBox="0 0 1440 240.41"
       xmlns="http://www.w3.org/2000/svg"
-      style="transform: translateY(-26px);"
+      viewBox="0 0 1440 240.4"
+      style="transform: translateY(-27px);"
     >
       <path
-        d="m0 128 48 26.7c48 26.3 144 80.3 240 85.3s192-37 288-42.7c96-5.3 192 26.7 288 16 96-10.3 192-64.3 288-80 96-16.3 192 5.7 240 16l48 10.7v-160h-1440z"
         class="slope"
-        fill="#3f626d"
+        d="M0 128l48 27c48 26 144 80 240 85s192-37 288-43c96-5 192 27 288 16 96-10 192-64 288-80s192 6 240 16l48 11V0H0z"
       ></path>
     </svg>
     <TNCModal id="form-tnc-modal"/>
@@ -252,13 +337,8 @@ import Textbox from "@/components/Textbox.vue";
 import FormBlock from "@/components/FormBlock.vue";
 import FormLabel from "@/components/FormLabel.vue";
 import FormLabelSub from "@/components/FormLabelSub.vue";
-
 import FormError from "@/components/FormError.vue";
-
-import MemberBlock from "@/components/MemberBlock.vue";
-import TNCModal from "@/components/TNCModal.vue";
-import RulesModal from "@/components/RulesModal.vue";
-import ConfirmationModal from "@/components/ConfirmationModal.vue";
+import Accordion from "@/components/Accordion.vue";
 
 import validateFilledMixin from "@/mixins/validateFilledMixin";
 import validateAgeMixin from "@/mixins/validateAgeMixin";
@@ -278,10 +358,13 @@ export default {
     FormLabel,
     FormLabelSub,
     FormError,
-    MemberBlock,
-    TNCModal,
-    RulesModal,
-    ConfirmationModal
+    Accordion,
+    TNCModal: () =>
+      import(/* webpackPrefetch: true */ "@/components/TNCModal.vue"),
+    RulesModal: () =>
+      import(/* webpackPrefetch: true */ "@/components/RulesModal.vue"),
+    ConfirmationModal: () =>
+      import(/* webpackPrefetch: true */ "@/components/ConfirmationModal.vue")
   },
   props: {
     page: String
@@ -308,6 +391,8 @@ export default {
       groupOthers: { value: "" },
       individualConfirm: { value: "", error: "" },
       groupConfirm: { value: "", error: "" },
+      individualPDPAConfirm: { value: "", error: "" },
+      groupPDPAConfirm: { value: "", error: "" },
       members: [
         {
           id: "one",
@@ -379,6 +464,7 @@ export default {
         testNum += this.validateFilled(this.individualOrg);
         testNum += this.validateFilled(this.individualShirt);
         testNum += this.validateFilled(this.individualConfirm);
+        testNum += this.validateFilled(this.individualPDPAConfirm);
 
         if (!this.validateFilled(this.individualDob)) {
           testNum += this.validateAge(this.individualDob);
@@ -399,6 +485,7 @@ export default {
         if (this.membersMemory.length >= 2) {
           testNum += this.validateFilled(this.groupTeamName);
           testNum += this.validateFilled(this.groupConfirm);
+          testNum += this.validateFilled(this.groupPDPAConfirm);
 
           this.membersMemory.forEach(member => {
             testNum += this.validateFilled(member.name);
@@ -429,38 +516,6 @@ export default {
       this.submissionErrorMsg = validationConclusion;
       return validationConclusion;
     },
-    openAccordion(a) {
-      let memberBlock = document.querySelector(`#member-block-${a}`);
-
-      let memberBlockContent = document.querySelector(
-        `#member-block-content-${a}`
-      );
-      let memberBlockTitle = document.querySelector(`#member-block-title-${a}`);
-      let memberBlockTitleH2 = memberBlockTitle.children[0];
-      let memberBlockTitleCancel = memberBlockTitle.children[1];
-      let memberBlockTitleArrow = memberBlockTitle.children[2];
-      let memberBlockTitleCancelPath = memberBlockTitleCancel.firstChild;
-      let memberBlockTitleArrowPath = memberBlockTitleArrow.firstChild;
-
-      if (
-        memberBlockContent.style.maxHeight === "0px" ||
-        !memberBlockContent.style.maxHeight
-      ) {
-        memberBlockContent.style.maxHeight = "2600px";
-        memberBlock.style.border = "2px solid var(--color-accent)";
-        memberBlockTitleH2.style.color = "var(--color-accent)";
-        memberBlockTitleCancelPath.style.fill = "var(--color-accent)";
-        memberBlockTitleArrowPath.style.fill = "var(--color-accent)";
-      } else {
-        memberBlockContent.style.maxHeight = "0px";
-        setTimeout(() => {
-          memberBlock.style.border = "2px solid var(--color-regular-text)";
-          memberBlockTitleH2.style.color = "var(--color-regular-text)";
-          memberBlockTitleCancelPath.style.fill = "var(--color-regular-text)";
-          memberBlockTitleArrowPath.style.fill = "var(--color-regular-text)";
-        }, 600);
-      }
-    },
     addMembers() {
       for (let i = 0; i < this.members.length; i++) {
         if (!this.members[i].taken) {
@@ -469,6 +524,9 @@ export default {
           break;
         }
       }
+      setTimeout(() => {
+        document.querySelector("#members-accordion-trigger-0").focus();
+      }, 100);
     },
     removeMember(id) {
       for (let i = 0; i < this.members.length; i++) {
@@ -501,6 +559,10 @@ export default {
       this.membersMemory = this.membersMemory.filter(
         member => member.id !== id
       );
+
+      setTimeout(() => {
+        document.querySelector("#members-accordion-trigger-0").focus();
+      }, 100);
     },
     submitForm(id) {
       let form = document.getElementById(id);
@@ -566,7 +628,7 @@ export default {
 .welcome {
   position: absolute;
   left: 24vw;
-  top: 0;
+  top: 50px;
   font-family: var(--font-primary), sans-serif;
   font-size: 46px;
   font-weight: 700;
@@ -576,7 +638,7 @@ export default {
 
 .top-button {
   left: 24vw;
-  top: 0;
+  top: 50px;
 }
 
 .bottom-button {
@@ -623,7 +685,7 @@ svg > path {
   bottom: 40px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (--desktop-narrow) {
   .welcome {
     font-size: 40px;
     left: 16vw;
@@ -646,7 +708,7 @@ svg > path {
   }
 }
 
-@media only screen and (max-width: 570px) {
+@media (--mobile-narrow) {
   .welcome {
     font-size: 24px;
     left: 30px;
