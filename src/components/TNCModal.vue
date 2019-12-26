@@ -21,15 +21,16 @@
       and Transportation, set out in Clause 4.b. Below.
       <br>
       <br>
-      <b>“Technology Categories”</b> refers to the types of technologies, Platforms and Applications, Internet of Things,
-      Data Science / Artificial Intelligence, and Mechanical Design / Digital Fabrication / Robotics, set out in Clause 4.b. Below.
+      <b>“Technology Categories”</b> refers to the types of technologies set out in Clause 4.b. Below.
       <br>
       <br>
     </Para>
 
     <h4>2. Introduction</h4>
     <Para>
-      a. “What The Hack @ SUTD”, is a 24-hour hackathon organised and sponsored by SUTD and co-sponsored by TBC. The Competition aims to bring together people of multiple disciplines to challenge them to solve imminent problems of the future via interdisciplinary collaborations.
+      a. “What The Hack @ SUTD”, is a 24-hour hackathon organised and sponsored by SUTD and co-sponsored by
+      Indeed and Government Technology Agency (GovTech). The Competition aims to bring together people of multiple
+      disciplines to challenge them to solve imminent problems of the future via interdisciplinary collaborations.
       <br>
       <br>b. The Competition will be held at SUTD from 8th February 2020 to 9th February 2020 (24 hours).
       <br>
@@ -38,47 +39,67 @@
 
     <h4>3. Eligibility and Teams</h4>
     <Para>
-      a. This Competition is open to Participants at or over the age of 13 (as of 8th February 2020) of all nationalities.
+      a. This Competition is open to Participants of all nationalities who are at least 13 years old (as of 8th February 2020).
       <br>
       <br>b. The Participants may compete as individuals or in teams of between 2 to 4 members.
       <br>
-      <br>c. Participants who are below 18 years old as at the date of the Competition must have proper parental/guardian’s consent to participate in the Competition. The parental/guardian consent form is provided along with the online registration form. Participants under 18 years of age will be automatically disqualified from this Competition if proper consent has not been obtained.
+      <br>c. Participants who are below 18 years old as at the date of the Competition must have proper parental/guardian’s
+      consent to participate in the Competition. The parental/guardian consent form is provided along with the online
+      registration form. Participants under 18 years of age will be automatically disqualified from the Competition if
+      proper consent has not been obtained and submitted before the start of the Competition.
       <br>
       <br>
     </Para>
 
     <h4>4. Submissions and Demonstration</h4>
     <Para>
-      a. Submission refers to the product or service created by participants that is presented to the judges.
+      a. Submission refers to the prototype of the product or service created by participants and any related materials
+      that is presented to the judges.
       <br>
-      <br>b. The Participants, whether individually or as a team, will be required to work on building solutions to problems broadly categorised according to the themes of Built Environment, Waste Reduction, Waste Management, and Transportation. The Participants are to create solutions for their submission for the Competition using at least one of the technologies in the technology categories, broadly categorised as Platforms and Applications, Internet of Things, Data Science / Artificial Intelligence, and Mechanical Design / Digital Fabrication / Robotics which are to be submitted for judging by a panel of judges.
+      <br>b. The Participants, whether individually or as a team, will be required to work on building solutions to problems
+      broadly categorised according to the themes of Built Environment, Waste Reduction, Waste Management, and Transportation.
+      The Participants are to create solutions for their submission for the Competition using at least one of the technologies
+      in the following broad technology categories: Platforms and Applications, Internet of Things,
+      Data Science / Artificial Intelligence, and Mechanical Design / Digital Fabrication / Robotics which are to be submitted
+      for judging by a panel of judges.
       <br>
-      <br>c. The Participants may only begin working (coding, building, analysing) on their Submissions at the official commencement time fixed by the Organiser and must complete building their prototype and any related materials for submission (hereafter referred to as “Submission”) by the end of the 24 hours after the official commencement time.
+      <br>c. The Participants may only begin working (coding, building, analysing) on their Submissions at the official
+      commencement time fixed by the Organiser and must complete their Submission by the end of the 24 hours after the
+      official commencement time.
       <br>
       <br>d. Each Submission must:
       <br>
       <br>i. be submitted to the platform that the Organiser has provided to count as a valid submission;
       <br>
-      <br>ii. adhere to these Terms and Conditions and any rules and regulations of the Competition set out at the beginning of the Hackathon;
+      <br>ii. adhere to these Terms and Conditions and any rules and regulations of the Competition set out at the beginning
+      of the Hackathon;
       <br>
       <br>iii. not breach the terms and conditions of any embedded software or services used in the Submission;
       <br>
       <br>iv. not contain any malicious code or backdoors;
       <br>
-      <br>v. not contain, depict or refer to any crude, vulgar, obscene, sexually explicit, disparaging, discriminatory, offensive, illegal or otherwise unsuitable or inappropriate language, activity or other content (as determined by the Organiser at its sole discretion);
+      <br>v. not contain, depict or refer to any crude, vulgar, obscene, sexually explicit, disparaging, discriminatory,
+      offensive, illegal or otherwise unsuitable or inappropriate language, activity or other content (as determined by the
+      Organiser at its sole discretion);
       <br>
-      <br>vi. not contain, depict or refer to any content which disparages or puts the Organiser, Sponsors, the Competition or any other person or entity in a negative light (as determined by the Organiser’s in its sole discretion); and
+      <br>vi. not contain, depict or refer to any content which disparages or puts the Organiser, Sponsors, the Competition
+      or any other person or entity in a negative light (as determined by the Organiser’s in its sole discretion); and
       <br>
-      <br>vii. not contain any content that violates any law or any third party’s rights, including but not limited to any intellectual property rights, privacy, personal data protection and intellectual property rights.
+      <br>vii. not contain any content that violates any law or any third party’s rights, including but not limited to any
+      intellectual property rights, privacy, personal data protection and intellectual property rights.
       <br>
       <br>
     </Para>
 
     <h4>5. Judging</h4>
     <Para>
-      a. At the end of the 24-hour hacking period, the Participants will be given at least 30 minutes, (any request for additional time may be granted at the sole discretion of the Organiser) to set up their presentation booths. Each Participant or team with a Submission will be given up to two (2) minutes to present his/her/their Submission to a panel of judges. The order of the Participants’ or teams’ presentations will be determined by the Organiser.
+      a. At the end of the 24-hour hacking period, the Participants will be given at least 30 minutes, (any request for
+      additional time may be granted at the sole discretion of the Organiser) to set up their presentation booths. Each
+      Participant or team with a Submission will be given up to two (2) minutes to present his/her/their Submission to a
+      panel of judges. The order of the Participants’ or teams’ presentations will be determined by the Organiser.
       <br>
-      <br>b. Participants are to explain and/or demonstrate how well their Submissions fulfil the following equally weighted judging criteria:
+      <br>b. Participants are to explain and/or demonstrate how well their Submissions fulfil the following equally weighted
+      judging criteria:
       <br>
       <br>i. Creativity – How unique or interesting the idea is;
       <br>
@@ -88,38 +109,46 @@
       <br>
       <br>iv. Environmental Impact - How the idea impacts the environment.
       <br>
-      <br>c. The judging panel for each Prize Category are to be confirmed.
-      <br>
-      <br>d. The winner of each Problem Theme will be awarded Best [Category].
+      <br>c. The judging panel for each Prize Category will be announced at the start of the competition.
       <br>
       <br>
     </Para>
 
     <h4>6. Disqualification</h4>
     <Para>
-      a. A Participant or Team’s Submission may be disqualified if the Organiser, in its sole discretion, reasonably finds or believes that the Submission:
+      a. A Participant or Team’s Submission may be disqualified if the Organiser, in its sole discretion, reasonably finds
+      or believes that the Submission:
       <br>
       <br>i. contains any element that is malicious, corrupt, damaged, incomplete, inappropriate or offensive;
       <br>
-      <br>ii. violates the terms of use of any social media, website, mobile application or any other platform used in the Submission;
+      <br>ii. violates the terms of use of any social media, website, mobile application or any other platform used in the
+      Submission;
       <br>
       <br>iii. infringes any third party’s intellectual property rights;
       <br>
       <br>iv. breaches or violates any applicable law; or
       <br>
-      <br>v. breaches or violates any of these Terms and Conditions or any rules or regulations set out by the Organiser of the Competition.
+      <br>v. breaches or violates any of these Terms and Conditions or any rules or regulations set out by the Organiser of
+      the Competition.
       <br>
-      <br>b. Participants are to explain and/or demonstrate how well their Submissions fulfil the following equally weighted judging criteria:
+      <br>b. Participants are to explain and/or demonstrate how well their Submissions fulfil the following equally weighted
+      judging criteria:
       <br>
       <br>i. verbal abuse of another participant or the Organiser’s representatives, agents or employees;
       <br>
-      <br>ii. deliberate and/or inappropriate physical contact, or harm or injury to another Participant or the Organiser’s or the corporate Sponsors’ representatives agents or employees;
+      <br>ii. deliberate and/or inappropriate physical contact, or harm or injury to another Participant or the Organiser’s
+      or the corporate Sponsors’ representatives agents or employees;
       <br>
-      <br>iii. any breach of the safety rules or directives issued by the Organiser and/or its employees in relation to SUTD’s Fabrication Laboratory or other premises or facilities; or
+      <br>iii. any breach of the safety rules or directives issued by the Organiser and/or its employees in relation to SUTD’s
+      Fabrication Laboratory or other premises or facilities; or
       <br>
-      <br>iv. any or any attempt to compromise the integrity or the legitimate operation of the Competition, including, without limitation, by cheating, hacking, creating a malicious bot or any other automated program, or by committing fraud in any way.
+      <br>iv. any or any attempt to compromise the integrity or the legitimate operation of the Competition, including, without
+      limitation, by cheating, hacking, creating a malicious bot or any other automated program, or by committing fraud in any way.
       <br>
-      <br>c. If, during the Competition, any of the Organiser’s representatives, agents or employees reasonably believes that a Participant’s health is in danger, the Participant may be required to discontinue his/her participation in the Competition and asked to seek immediate medical assistance. The Participant’s teammates, if any, may continue participating in the Competition if they so choose.
+      <br>c. If, during the Competition, any of the Organiser’s representatives, agents or employees reasonably believes that a
+      Participant’s health is in danger, the Participant may be required to discontinue his/her participation in the Competition
+      and asked to seek immediate medical assistance. The Participant’s teammates, if any, may continue participating in the
+      Competition if they so choose.
       <br>
       <br>d. All disqualification decisions are final and not subject to appeal.
       <br>
@@ -128,35 +157,54 @@
 
     <h4>7. Prizes</h4>
     <Para>
-      a. The winner of each Problem Theme will be awarded Best [Category].
+      a. The winner of each Problem Theme will be awarded a Best in Category prize.
       <br>
-      <br>b. The Organiser and Sponsors reserve the right to withhold the Prize from a Participant or team even after he/she/it has been announced as a winner or to require a Participant or team to return the Prize after it has been awarded if the Participant or team is found to have breached any of these Terms and Conditions in the course of the Competition.
+      <br>b. The Organiser and Sponsors reserve the right to withhold the Prize from a Participant or team even after he/she/it
+      has been announced as a winner or to require a Participant or team to return the Prize after it has been awarded if the
+      Participant or team is found to have breached any of these Terms and Conditions in the course of the Competition.
       <br>
-      <br>c. Participants acknowledge that the prizes and judging procedures stated in these Terms and Conditions or on the Competition website or in any announcements or notifications to the Participants are subject to change at the Organiser’s sole discretion.
+      <br>c. Participants acknowledge that the prizes and judging procedures stated in these Terms and Conditions or on the
+      Competition website or in any announcements or notifications to the Participants are subject to change at the Organiser’s
+      sole discretion.
       <br>
-      <br>d. Prizes must be collected in person by the winning Participant or team or a member of the winning Team. All taxes and other expenses, costs or fees associated with the acceptance and/or use of any Prize are the sole responsibility of the winning Participant or team members. If a Prize is unclaimed within 10 business days after notification, the Organiser may at its sole discretion forfeit the Prize and choose an alternate winner to be selected from the remaining eligible Submissions at its discretion.
+      <br>d. Prizes must be collected in person by the winning Participant or team or a member of the winning Team. All taxes
+      and other expenses, costs or fees associated with the acceptance and/or use of any Prize are the sole responsibility of
+      the winning Participant or team members. If a Prize is unclaimed within 10 business days after notification, the Organiser
+      may at its sole discretion forfeit the Prize and choose an alternate winner to be selected from the remaining eligible
+      Submissions at its discretion.
       <br>
       <br>
     </Para>
 
     <h4>8. Other Terms and Conditions</h4>
     <Para>
-      a. By participating in the Competition, every Participant is deemed to have accepted and agreed to abide by these Terms and Conditions.
+      a. By entering and participating in the Competition, every Participant is deemed to have accepted and agreed to abide
+      by these Terms and Conditions.
       <br>
-      <br>b. The Organiser reserves the right in its sole discretion to cancel, suspend or postpone the Competition due to events beyond its reasonable control which does not allow for the commencement or continuation of the Competition.
+      <br>b. The Organiser reserves the right in its sole discretion to cancel, suspend or postpone the Competition due to
+      events beyond its reasonable control which does not allow for the commencement or continuation of the Competition.
       <br>
       <br>c. The Organiser reserves the right to amend these Terms and Conditions at any time without prior notice.
       <br>
-      <br>d. The Organiser reserves the right to reject any of the Participants’ submissions for the Competition or to disallow any Participant’s or Team’s continued participation in the Competition or to withdraw any prize awarded if the Participant and/or Team is/are found to have breached any of these Terms and Conditions or any rules or regulations set out by the Organiser for the Competition.
+      <br>d. The Organiser reserves the right to reject any of the Participants’ submissions for the Competition or to disallow
+      any Participant’s or Team’s continued participation in the Competition if the Participant and/or Team is/are found to have
+      breached any of these Terms and Conditions or any rules or regulations set out by the Organiser for the Competition.
       <br>
-      <br>e. In the event of any inconsistency between these Terms and Conditions and any brochure, website, marketing or promotional material relating to the Competition or any rules or regulations set out by the Organiser, these Terms and Conditions, and all its subsequent variations, shall prevail.
+      <br>e. In the event of any inconsistency between these Terms and Conditions and any brochure, website, marketing or
+      promotional material relating to the Competition or any rules or regulations set out by the Organiser, these Terms and
+      Conditions, and all its subsequent variations, shall prevail.
       <br>
       <br>
     </Para>
 
     <h4>9. Intellectual Property</h4>
     <Para>
-      a. Participants represent and warrant that the Submission is their original work/creation and does not infringe the intellectual property rights belonging to any third party. The Participant agrees to indemnify the Organiser and each of the corporate Sponsors against any claim, damages, debt, expense, liability, loss, suit, action, demand, cause of action, proceeding or judgment of any kind which are made or brought against or suffered or incurred by each of them and arise directly and/or indirectly out of or in connection with any infringement of intellectual property rights by virtue of the work submitted by the Participant for the Competition.
+      a. Participants represent and warrant that their Submission(s) is/are their original work/creation and does/do not
+      infringe the intellectual property rights belonging to any third party. The Participant agrees to indemnify the Organiser
+      and each of the corporate Sponsors against any claim, damages, debt, expense, liability, loss, suit, action, demand, cause
+      of action, proceeding or judgment of any kind which are made or brought against or suffered or incurred by each of them
+      and arise directly and/or indirectly out of or in connection with any infringement of intellectual property rights by
+      virtue of the work submitted by the Participant for the Competition.
       <br>
       <br>b. Participants own all rights to the Intellectual Property produced by them or their team during the Competition. Participants may use any freely available data, API or Technology (which may include but is not limited to content, code, algorithm, design, art, music, graphics or material otherwise protected by any intellectual property rights) to build their prototype or material for their Submission. Participants may use any tools they own as well, physical or otherwise. This means any Technology that a Participant or a member of the team owns, acquired the rights to or owns license to may be used.
       <br>

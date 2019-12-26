@@ -7,7 +7,6 @@
     <Schedule/>
     <Sponsors/>
     <Faq/>
-    <Location/>
     <Contact/>
     <Foot/>
     <Backdrop/>
@@ -25,7 +24,6 @@ import Faq from "@/sections/homepage/faq/Faq.vue";
 import Contact from "@/sections/homepage/contact/Contact.vue";
 import Foot from "@/sections/homepage/foot/Foot.vue";
 import Backdrop from "@/components/Backdrop.vue";
-import Location from "@/sections/homepage/location/Location.vue";
 
 export default {
   name: "homepage",
@@ -37,7 +35,6 @@ export default {
     Schedule,
     Sponsors,
     Faq,
-    Location,
     Contact,
     Foot,
     Backdrop

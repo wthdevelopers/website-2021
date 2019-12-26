@@ -52,6 +52,12 @@ export default {
           name: "Platinum",
           sponsors: [
             {
+              name: "Indeed",
+              url: "https://www.indeed.com.sg/",
+              photoNormal: "indeed",
+              photoWhite: "indeed-white"
+            },
+            {
               name: "GovTech",
               url: "https://www.tech.gov.sg/",
               photoNormal: "govtech",
@@ -60,25 +66,19 @@ export default {
           ]
         },
         {
-          name: "Gold",
-          sponsors: [
-            {
-              name: "Indeed",
-              url: "https://www.indeed.com.sg/",
-              photoNormal: "indeed",
-              photoWhite: "indeed-white"
-            }
-          ]
-        },
-        {
-          name: "Bronze",
+          name: "Swag Sponsors",
           sponsors: [
             {
               name: "Google",
               url: "https://careers.google.com/locations/sing/",
               photoNormal: "google",
               photoWhite: "google-white"
-            },
+            }
+          ]
+        },
+        {
+          name: "Equipment Sponsors",
+          sponsors: [
             {
               name: "Keysight",
               url: "https://www.keysight.com/sg/en/home.html",
@@ -130,9 +130,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-
-.tier li {
+  align-items: center;
   margin-top: 30px;
 }
 
@@ -157,6 +155,7 @@ export default {
 
   .tier li + li {
     margin-left: 0;
+    margin-top: 100px;
   }
 }
 
@@ -167,6 +166,10 @@ export default {
 
   .tier + .tier {
     margin-top: 100px;
+  }
+
+  .tier li + li {
+    margin-top: 50px;
   }
 
   .tier img {
