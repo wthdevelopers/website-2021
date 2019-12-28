@@ -41,23 +41,23 @@ export default {
       categories: [
         {
           name: "Best Overall Hack",
-          award: "$1000 Cash"
+          award: "Coming Soon"
         },
         {
           name: "Best Built Environment Hack",
-          award: "$500 Cash"
+          award: "Coming Soon"
         },
         {
           name: "Best Waste Management Hack",
-          award: "$500 Cash"
+          award: "Coming Soon"
         },
         {
           name: "Best Waste Reduction Hack",
-          award: "$500 Cash"
+          award: "Coming Soon"
         },
         {
           name: "Best Transportation Hack",
-          award: "$500 Cash"
+          award: "Coming Soon"
         }
       ]
     };

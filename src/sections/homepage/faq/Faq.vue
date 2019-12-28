@@ -313,8 +313,7 @@ export default {
         {
           title: "What should I bring to the event?",
           type: "text",
-          content: `Please bring your computers. We are in the process of securing
-          graphics-ready workstations for development and they should be available at the event!
+          content: `Please bring your computers.
           Should you expect to use additional prototyping materials, such as Arduinos, electronics
           and fabrication materials, do bring your own, or let us know before the event and we
           might be able to help.`,

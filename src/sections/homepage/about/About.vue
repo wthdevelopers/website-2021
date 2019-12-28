@@ -11,7 +11,7 @@
         </Para>
         <Para>
           This year’s theme is
-          <span>Urban Cities & Environment</span>, of which there will be four problem domains
+          <span>Environment</span>, of which there will be four problem domains
           related to this overarching theme -
           <span>Built Environment</span>,
           <span>Waste Management</span>,

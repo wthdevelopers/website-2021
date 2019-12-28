@@ -294,8 +294,16 @@ export default {
           time: "1:00 PM"
         },
         {
+          name: "Workshops",
+          time: "TBC"
+        },
+        {
           name: "Dinner",
           time: "6:00 PM"
+        },
+        {
+          name: "Workshops",
+          time: "TBC"
         }
       ],
       dayTwoSchedule: [
