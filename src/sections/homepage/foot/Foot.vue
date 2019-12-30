@@ -36,7 +36,7 @@
         <div>Copyright © 2020 What The Hack. All rights reserved.</div>
         <ul>
           <li>
-            <router-link to="/registration">Register</router-link>
+            <a href="https://bit.ly/2tjIhvF">Register</a>
           </li>
           <li class="li-dividers" aria-hidden="true">|</li>
           <li>

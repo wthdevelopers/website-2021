@@ -43,7 +43,7 @@
         <button @click="buttonOnClickScroll('faq')">FAQs</button>
       </li>
       <li class="bar-register-link">
-        <router-link to="/registration">Register</router-link>
+        <a href="https://bit.ly/2tjIhvF">Register</a>
       </li>
       <li>
         <button @click="toggleTheme">
@@ -314,7 +314,7 @@
           <button @click="buttonOnClickScroll('faq')">FAQs</button>
         </li>
         <li>
-          <router-link to="/registration">Register</router-link>
+          <a href="https://bit.ly/2tjIhvF">Register</a>
         </li>
       </ul>
       <button
