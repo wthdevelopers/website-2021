@@ -28,12 +28,10 @@
 
 <script>
 import Para from "@/components/Para";
-import SubHeader from "@/components/SubHeader";
 
 export default {
   name: "location",
   components: {
-    SubHeader,
     Para
   }
 };

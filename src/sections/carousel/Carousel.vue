@@ -50,15 +50,8 @@
 </template>
 
 <script>
-import SubHeader from "@/components/SubHeader.vue";
-import Para from "@/components/Para.vue";
-
 export default {
   name: "carousel",
-  components: {
-    SubHeader,
-    Para
-  },
   data() {
     return {
       content: [

@@ -262,15 +262,13 @@
 
 <script>
 import Para from "@/components/Para.vue";
-import ParaAnchor from "@/components/ParaAnchor.vue";
 import SectionHeader from "@/components/SectionHeader.vue";
 
 export default {
   name: "about",
   components: {
     SectionHeader,
-    Para,
-    ParaAnchor
+    Para
   }
 };
 </script>

@@ -369,7 +369,7 @@ export default Vue.extend({
   methods: {
     buttonOnClickScroll(loc) {
       var section = document.querySelector(`#${loc}`);
-      section?.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView({ behavior: "smooth" });
     },
     toggleTheme() {
       if (document.documentElement.getAttribute("theme") === "dark") {

@@ -24,7 +24,6 @@
 
 <script>
 import Modal from "@/components/Modal.vue";
-import Para from "@/components/Para.vue";
 
 import closeModalMixin from "@/mixins/closeModalMixin";
 import focusHandler from "@/mixins/focusHandler";
@@ -32,8 +31,7 @@ import focusHandler from "@/mixins/focusHandler";
 export default {
   name: "confirmation-modal",
   components: {
-    Modal,
-    Para
+    Modal
   },
   props: {
     id: String,

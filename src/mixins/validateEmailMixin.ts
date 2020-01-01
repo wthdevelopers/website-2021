@@ -6,7 +6,7 @@ export default {
       const email = subj.value;
       const [emailBeforeAt, emailAfterAt] = email.split("@");
       let validationConclusion = "";
-      const emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+      const emailRegex = /^[-!#$%&'*+0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
       if (email.length > 254) {
         validationConclusion = "This email address is not valid!";
       } else if (!emailRegex.test(email)) {
