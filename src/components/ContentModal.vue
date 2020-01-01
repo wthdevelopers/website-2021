@@ -39,14 +39,12 @@ export default {
   mixins: [closeModalMixin, focusHandler],
   methods: {
     scrollDown() {
-      console.log("KEYDOWN");
       document.querySelector(`#${this.id} .modal-content`).scrollBy({
         top: 100,
         behavior: "smooth"
       });
     },
     scrollUp() {
-      console.log("KEYDOWN");
       document.querySelector(`#${this.id} .modal-content`).scrollBy({
         top: -100,
         behavior: "smooth"
