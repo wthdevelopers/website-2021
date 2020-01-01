@@ -7,7 +7,10 @@
           <h3>{{tier.name}}</h3>
           <ul class="tier-sponsors">
             <li v-for="sponsor in tier.sponsors" :key="sponsor.name">
-              <a :href="sponsor.url" target="_blank" rel="noopener noreferrer">
+              <div
+                style="font-size: 24px; font-family: var(--font-primary), sans-serif; color: var(--color-title-text);"
+              >{{sponsor.name}}</div>
+              <!-- <a :href="sponsor.url" target="_blank" rel="noopener noreferrer">
                 <img
                   style="display: var(--displayed-during-light);"
                   :src="require(`../../../public/images/${sponsor.photoNormal}.png`)"
@@ -18,7 +21,7 @@
                   :src="require(`../../../public/images/${sponsor.photoWhite}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 >
-              </a>
+              </a>-->
             </li>
           </ul>
         </li>
@@ -52,41 +55,85 @@ export default {
           name: "Platinum",
           sponsors: [
             {
-              name: "Indeed",
-              url: "https://www.indeed.com.sg/",
-              photoNormal: "indeed",
-              photoWhite: "indeed-white"
-            },
-            {
-              name: "GovTech",
-              url: "https://www.tech.gov.sg/",
-              photoNormal: "govtech",
-              photoWhite: "govtech-white"
+              name: "TBC",
+              url: "",
+              photoNormal: "",
+              photoWhite: ""
             }
           ]
         },
         {
-          name: "Swag Sponsors",
+          name: "Gold",
           sponsors: [
             {
-              name: "Google",
-              url: "https://careers.google.com/locations/sing/",
-              photoNormal: "google",
-              photoWhite: "google-white"
+              name: "TBC",
+              url: "",
+              photoNormal: "",
+              photoWhite: ""
             }
           ]
         },
         {
-          name: "Equipment Sponsors",
+          name: "Silver",
           sponsors: [
             {
-              name: "Keysight",
-              url: "https://www.keysight.com/sg/en/home.html",
-              photoNormal: "keysight",
-              photoWhite: "keysight-white"
+              name: "TBC",
+              url: "",
+              photoNormal: "",
+              photoWhite: ""
+            }
+          ]
+        },
+        {
+          name: "Bronze",
+          sponsors: [
+            {
+              name: "TBC",
+              url: "",
+              photoNormal: "",
+              photoWhite: ""
             }
           ]
         }
+        // {
+        //   name: "Platinum",
+        //   sponsors: [
+        //     {
+        //       name: "Indeed",
+        //       url: "https://www.indeed.com.sg/",
+        //       photoNormal: "indeed",
+        //       photoWhite: "indeed-white"
+        //     },
+        //     {
+        //       name: "GovTech",
+        //       url: "https://www.tech.gov.sg/",
+        //       photoNormal: "govtech",
+        //       photoWhite: "govtech-white"
+        //     }
+        //   ]
+        // },
+        // {
+        //   name: "Swag Sponsors",
+        //   sponsors: [
+        //     {
+        //       name: "Google",
+        //       url: "https://careers.google.com/locations/sing/",
+        //       photoNormal: "google",
+        //       photoWhite: "google-white"
+        //     }
+        //   ]
+        // },
+        // {
+        //   name: "Equipment Sponsors",
+        //   sponsors: [
+        //     {
+        //       name: "Keysight",
+        //       url: "https://www.keysight.com/sg/en/home.html",
+        //       photoNormal: "keysight",
+        //       photoWhite: "keysight-white"
+        //     }
+        //   ]
+        // }
       ]
     };
   }

@@ -40,10 +40,6 @@ export default {
     return {
       categories: [
         {
-          name: "Best Overall Hack",
-          award: "Coming Soon"
-        },
-        {
           name: "Best Built Environment Hack",
           award: "Coming Soon"
         },

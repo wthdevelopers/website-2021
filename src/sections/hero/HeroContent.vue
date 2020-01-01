@@ -53,7 +53,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: 1px solid red; */
 }
 
 .hero-content > svg {
@@ -61,7 +60,6 @@ export default {
   width: calc(400px + 28vw);
   margin-left: 12vw;
   margin-bottom: 20px;
-  /* border: 1px solid blue; */
 }
 
 .hero-content h1 {
@@ -72,13 +70,11 @@ export default {
   margin-left: 30vw;
   margin-bottom: 8px;
   transition: color 0.6s ease-out;
-  /* border: 1px solid green; */
 }
 
 .hero-content-secondary {
   display: flex;
   margin-left: 30vw;
-  /* border: 1px solid green; */
 }
 
 .hero-content h2 {
@@ -87,7 +83,6 @@ export default {
   font-weight: 400;
   color: var(--color-title-text);
   transition: color 0.6s ease-out;
-  /* border: 1px solid green; */
 }
 
 .register-button {
