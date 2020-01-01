@@ -55,7 +55,7 @@ export default {
           name: "Platinum",
           sponsors: [
             {
-              name: "TBC",
+              name: "Coming Soon",
               url: "",
               photoNormal: "",
               photoWhite: ""
@@ -66,7 +66,7 @@ export default {
           name: "Gold",
           sponsors: [
             {
-              name: "TBC",
+              name: "Coming Soon",
               url: "",
               photoNormal: "",
               photoWhite: ""
@@ -77,7 +77,7 @@ export default {
           name: "Silver",
           sponsors: [
             {
-              name: "TBC",
+              name: "Coming Soon",
               url: "",
               photoNormal: "",
               photoWhite: ""
@@ -88,7 +88,7 @@ export default {
           name: "Bronze",
           sponsors: [
             {
-              name: "TBC",
+              name: "Coming Soon",
               url: "",
               photoNormal: "",
               photoWhite: ""
