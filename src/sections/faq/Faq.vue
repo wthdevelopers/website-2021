@@ -254,7 +254,7 @@
 import SectionHeader from "@/components/SectionHeader.vue";
 import Para from "@/components/Para.vue";
 import Accordion from "@/components/Accordion.vue";
-import Location from "@/sections/homepage/location/Location.vue";
+import Location from "@/components/Location.vue";
 
 export default {
   name: "faq",

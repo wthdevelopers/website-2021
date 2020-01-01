@@ -3,7 +3,14 @@
     <ul id="bar">
       <li>
         <a href="https://www.sutdwth.com">
-          <svg id="bar-logo" viewBox="0 0 150 38.65" xmlns="http://www.w3.org/2000/svg">
+          <span class="sr-only">Go to homepage</span>
+          <svg
+            id="bar-logo"
+            viewBox="0 0 150 38.65"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+          >
             <g fill="#2d3887">
               <path
                 d="m57.44 2.5a4.11 4.11 0 0 1 -.56 1.92l-7.07 13.67q-4.87 9.48-9.74 19a4.17 4.17 0 0 1 -.56.87 1.92 1.92 0 0 1 -2.71.23l-.18-.19a4.21 4.21 0 0 1 -.62-1l-15-29.28-2-3.83a2.84 2.84 0 0 1 -.2-2.33 2.09 2.09 0 0 1 1.53-1.44 4.6 4.6 0 0 1 .91-.12h18.08c2.83 0 5.68.1 8.48.1 2.2 0 4.39-.1 6.59-.1a4.64 4.64 0 0 1 1.29.14 2.33 2.33 0 0 1 1.76 2.36z"
@@ -51,7 +58,7 @@
           <svg
             v-if="theme === 'light'"
             width="25px"
-            style="transform: translateY(3.5px); cursor: pointer; margin-left: 10px;"
+            style="transform: translateY(3.5px); cursor: pointer"
             viewBox="0 0 222.57 218.09"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
@@ -107,7 +114,7 @@
             v-else
             class="moon"
             width="25px"
-            style="transform: translateY(3.5px); cursor: pointer; margin-left: 10px;"
+            style="transform: translateY(3.5px); cursor: pointer"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 223.95 225"
             aria-hidden="true"
@@ -128,7 +135,7 @@
           <svg
             v-if="theme === 'light'"
             width="25px"
-            style="transform: translateY(3.5px); cursor: pointer; margin-left: 10px;"
+            style="transform: translateY(3.5px); cursor: pointer"
             viewBox="0 0 222.57 218.09"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
@@ -184,7 +191,7 @@
             v-else
             class="moon"
             width="25px"
-            style="transform: translateY(3.5px); cursor: pointer; margin-left: 10px;"
+            style="transform: translateY(3.5px); cursor: pointer"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 223.95 225"
             aria-hidden="true"

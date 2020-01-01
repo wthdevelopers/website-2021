@@ -8,9 +8,9 @@
 
 <script>
 import vue100vh from "vue-100vh";
-import Navbar from "@/sections/homepage/hero/Navbar.vue";
-import HeroContent from "@/sections/homepage/hero/HeroContent.vue";
-import HeroImage from "@/sections/homepage/hero/HeroImage.vue";
+import Navbar from "@/sections/hero/Navbar.vue";
+import HeroContent from "@/sections/hero/HeroContent.vue";
+import HeroImage from "@/sections/hero/HeroImage.vue";
 
 export default {
   name: "hero",

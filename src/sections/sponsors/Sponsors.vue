@@ -10,12 +10,12 @@
               <a :href="sponsor.url" target="_blank" rel="noopener noreferrer">
                 <img
                   style="display: var(--displayed-during-light);"
-                  :src="require(`../../../../public/images/${sponsor.photoNormal}.png`)"
+                  :src="require(`../../../public/images/${sponsor.photoNormal}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 >
                 <img
                   style="display: var(--displayed-during-dark)"
-                  :src="require(`../../../../public/images/${sponsor.photoWhite}.png`)"
+                  :src="require(`../../../public/images/${sponsor.photoWhite}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 >
               </a>

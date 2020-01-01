@@ -1,49 +1,28 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Homepage/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import Homepage from "./views/Homepage.vue";
 
 declare global {
   interface Window {
-    formTouched: boolean;
-    isSubmittingForm: boolean;
     lastFocusedEl: string;
-    registeredInfo: {
-      format: String;
-      name: String;
-      emails: Array<String>;
-    };
   }
 }
 
 export default Vue.extend({
   name: "app",
-  created: function(): void {
-    this.initFormGlobalVars();
-    this.initLeaveFormWarning();
+  components: {
+    Homepage
   },
   mounted: function(): void {
     this.setInitialTheme();
   },
   methods: {
-    initFormGlobalVars(): void {
-      window.formTouched = false;
-      window.isSubmittingForm = false;
-    },
-    initLeaveFormWarning(): void {
-      window.addEventListener("beforeunload", function(e) {
-        if (window.formTouched && !window.isSubmittingForm) {
-          var nonNull = "nonNull";
-
-          (e || window.event).returnValue = nonNull; //Gecko + IE
-          return nonNull; //Gecko + Webkit, Safari, Chrome etc.
-        }
-      });
-    },
     setInitialTheme(): void {
       let setTheme = "light";
       let cachedTheme = localStorage.getItem("theme");
@@ -76,8 +55,6 @@ export default Vue.extend({
 }
 
 :root {
-  /* --font-primary: brandon-grotesque; */
-  /* --font-secondary: proxima-soft; */
   --font-primary: "Brandon Grotesque";
   --font-secondary: "Nunito";
 
