@@ -325,6 +325,12 @@ export default {
           content: `Please refer to the Terms and Conditions of the Competition with regards to IP.`
         },
         {
+          title: "When is the registration deadline?",
+          type: "text",
+          content: `We will close registration when we hit the maximum capacity allowable for the hackathon or by 1st February,
+          depending on whichever one is earlier. `
+        },
+        {
           title: "My question can't be found in the the FAQs!",
           type: "text",
           content: `For any further queries or clarifications, either drop us a message via the contact
