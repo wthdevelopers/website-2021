@@ -3,10 +3,13 @@
     <div class="prizes-body">
       <SectionHeader>Prizes</SectionHeader>
       <div class="prizes-content">
+        <Para
+          style="text-align: center; margin: 50px 0 70px 0;"
+        >The following prizes will be awarded to the best hacks in their respective categories:</Para>
         <ul>
           <li class="category" v-for="category in categories" :key="category.name">
             <SubHeader style="align-self: center;" class="prizes-subheader">{{category.name}}</SubHeader>
-            <Para style="margin-top: 30px;">{{category.award}}</Para>
+            <!-- <Para style="margin-top: 30px;">{{category.award}}</Para> -->
           </li>
         </ul>
       </div>
@@ -81,19 +84,17 @@ export default {
 .category {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+}
 
-  /* border: 1px solid red; */
+.category + .category {
+  margin-top: 100px;
 }
 
 .category h3 {
   font-size: 32px;
   font-family: var(--font-secondary), sans-serif;
   color: var(--color-regular-text);
-
   align-self: center;
-  /* border: 1px solid blue; */
-
   border-bottom: 10px solid var(--color-accent);
   line-height: 0.4;
   text-decoration: none;
@@ -114,6 +115,10 @@ export default {
 @media (--mobile-narrow) {
   .prizes-content {
     margin: 0 30px;
+  }
+
+  .category + .category {
+    margin-top: 50px;
   }
 }
 

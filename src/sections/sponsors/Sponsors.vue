@@ -3,14 +3,15 @@
     <div class="thankees-body">
       <SectionHeader>Sponsors</SectionHeader>
       <ul class="thankees-content">
-        <li class="tier" v-for="tier in tiers" :key="tier.name">
+        <Para style="text-align: center; margin-top: 50px;">Sponsors will be announced soon!</Para>
+        <!-- <li class="tier" v-for="tier in tiers" :key="tier.name">
           <h3>{{tier.name}}</h3>
           <ul class="tier-sponsors">
             <li v-for="sponsor in tier.sponsors" :key="sponsor.name">
               <div
                 style="font-size: 24px; font-family: var(--font-primary), sans-serif; color: var(--color-title-text);"
               >{{sponsor.name}}</div>
-              <!-- <a :href="sponsor.url" target="_blank" rel="noopener noreferrer">
+              <a :href="sponsor.url" target="_blank" rel="noopener noreferrer">
                 <img
                   style="display: var(--displayed-during-light);"
                   :src="require(`../../../public/images/${sponsor.photoNormal}.png`)"
@@ -21,10 +22,10 @@
                   :src="require(`../../../public/images/${sponsor.photoWhite}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 >
-              </a>-->
+              </a>
             </li>
           </ul>
-        </li>
+        </li>-->
       </ul>
     </div>
     <svg
@@ -42,59 +43,61 @@
 
 <script>
 import SectionHeader from "@/components/SectionHeader.vue";
+import Para from "@/components/Para.vue";
 
 export default {
   name: "thankees",
   components: {
-    SectionHeader
+    SectionHeader,
+    Para
   },
   data() {
     return {
       tiers: [
-        {
-          name: "Platinum",
-          sponsors: [
-            {
-              name: "Coming Soon",
-              url: "",
-              photoNormal: "",
-              photoWhite: ""
-            }
-          ]
-        },
-        {
-          name: "Gold",
-          sponsors: [
-            {
-              name: "Coming Soon",
-              url: "",
-              photoNormal: "",
-              photoWhite: ""
-            }
-          ]
-        },
-        {
-          name: "Silver",
-          sponsors: [
-            {
-              name: "Coming Soon",
-              url: "",
-              photoNormal: "",
-              photoWhite: ""
-            }
-          ]
-        },
-        {
-          name: "Bronze",
-          sponsors: [
-            {
-              name: "Coming Soon",
-              url: "",
-              photoNormal: "",
-              photoWhite: ""
-            }
-          ]
-        }
+        // {
+        //   name: "Platinum",
+        //   sponsors: [
+        //     {
+        //       name: "Coming Soon",
+        //       url: "",
+        //       photoNormal: "",
+        //       photoWhite: ""
+        //     }
+        //   ]
+        // },
+        // {
+        //   name: "Gold",
+        //   sponsors: [
+        //     {
+        //       name: "Coming Soon",
+        //       url: "",
+        //       photoNormal: "",
+        //       photoWhite: ""
+        //     }
+        //   ]
+        // },
+        // {
+        //   name: "Silver",
+        //   sponsors: [
+        //     {
+        //       name: "Coming Soon",
+        //       url: "",
+        //       photoNormal: "",
+        //       photoWhite: ""
+        //     }
+        //   ]
+        // },
+        // {
+        //   name: "Bronze",
+        //   sponsors: [
+        //     {
+        //       name: "Coming Soon",
+        //       url: "",
+        //       photoNormal: "",
+        //       photoWhite: ""
+        //     }
+        //   ]
+        // }
         // {
         //   name: "Platinum",
         //   sponsors: [

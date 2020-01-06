@@ -169,6 +169,7 @@ export default {
       clearInterval(this.carouselIntervalID);
     },
     resumeSlide() {
+      clearInterval(this.carouselIntervalID);
       this.carouselIntervalID = setInterval(() => {
         this.slideLeft();
       }, 5000);
