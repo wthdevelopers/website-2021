@@ -35,19 +35,19 @@
         </a>
       </li>
       <li>
-        <button @click="buttonOnClickScroll('about')">About</button>
+        <button @click="buttonOnClickScroll('about'); closeDrawer()">About</button>
       </li>
       <li>
-        <button @click="buttonOnClickScroll('prizes')">Prizes</button>
+        <button @click="buttonOnClickScroll('prizes'); closeDrawer()">Prizes</button>
       </li>
       <li>
-        <button @click="buttonOnClickScroll('schedule')">Schedule</button>
+        <button @click="buttonOnClickScroll('schedule'); closeDrawer()">Schedule</button>
       </li>
       <li>
-        <button @click="buttonOnClickScroll('thankees')">Sponsors</button>
+        <button @click="buttonOnClickScroll('thankees'); closeDrawer()">Sponsors</button>
       </li>
       <li>
-        <button @click="buttonOnClickScroll('faq')">FAQs</button>
+        <button @click="buttonOnClickScroll('faq'); closeDrawer()">FAQs</button>
       </li>
       <li class="bar-register-link">
         <a href="https://bit.ly/2tjIhvF">Register</a>
@@ -305,20 +305,20 @@
           <button
             id="drawer-first-focus"
             @keydown.tab.shift.prevent="focusHandler('cancel')"
-            @click="buttonOnClickScroll('about')"
+            @click="buttonOnClickScroll('about'); closeDrawer()"
           >About</button>
         </li>
         <li>
-          <button @click="buttonOnClickScroll('prizes')">Prizes</button>
+          <button @click="buttonOnClickScroll('prizes'); closeDrawer()">Prizes</button>
         </li>
         <li>
-          <button @click="buttonOnClickScroll('schedule')">Schedule</button>
+          <button @click="buttonOnClickScroll('schedule'); closeDrawer()">Schedule</button>
         </li>
         <li>
-          <button @click="buttonOnClickScroll('thankees')">Sponsors</button>
+          <button @click="buttonOnClickScroll('thankees'); closeDrawer()">Sponsors</button>
         </li>
         <li>
-          <button @click="buttonOnClickScroll('faq')">FAQs</button>
+          <button @click="buttonOnClickScroll('faq'); closeDrawer()">FAQs</button>
         </li>
         <li>
           <a href="https://bit.ly/2tjIhvF">Register</a>
