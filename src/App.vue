@@ -161,7 +161,7 @@ button {
   width: 1px;
 }
 
-.register-button:focus, .form-button:focus {
+*:focus {
   outline: 5px solid var(--color-accent);
 }
 
@@ -169,7 +169,7 @@ button {
   opacity: 0.4;
 }
 
-.turbine-one-base {
+.turbine-one-tower, .turbine-three-tower {
   opacity: 0.4;
 }
 

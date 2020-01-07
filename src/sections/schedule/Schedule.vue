@@ -203,9 +203,13 @@
         <path fill="#404fcf" d="M644 746l-51 23-115-300 18-7 148 284z"></path>
         <circle cx="624.6" cy="770.5" r="30.2" fill="#808adf"></circle>
       </g>
-      <g class="turbine-one-base">
-        <path data-v-068975b2="" fill="#d65c85" d="M381 1182l-17-19 18-302 7 4-8 317z"></path>
-        <path data-v-068975b2="" fill="#c36" d="M442 1181l-61 1 8-317 37-1 16 317z"></path>
+      <g class="turbine-one-tower">
+        <path fill="#d65c85" d="M381 1182l-17-19 18-302 7 4-8 317z"></path>
+        <path fill="#c36" d="M442 1181l-61 1 8-317 37-1 16 317z"></path>
+      </g>
+      <g class="turbine-three-tower">
+        <path fill="#c36" d="M854 1242h-47l7-244h28l12 244z"></path>
+        <path fill="#d65c85" d="M807 1242l-13-14 14-233 6 3-7 244z"></path>
       </g>
       <g id="windmillscape-turbine-one">
         <path fill="#d65c85" d="M388 862l41-21 108 246-14 7-135-232z"></path>
