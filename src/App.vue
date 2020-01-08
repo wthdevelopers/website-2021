@@ -169,6 +169,10 @@ button {
   opacity: 0.4;
 }
 
+.turbine-one-tower, .turbine-three-tower {
+  opacity: 0.4;
+}
+
 .cloud {
   opacity: 0.6;
 }

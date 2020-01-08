@@ -197,23 +197,31 @@
           d="M2882 1168v-20c0-2 0-4 2-4 3 0 3 2 3 3v41c0 2 0 5-3 6-2-2-2-5-2-9v-13-4z"
         ></path>
       </g>
-      <g id="windmillscape-turbine-three">
-        <path fill="#d65c85" d="M831 1005l3-36 205 29-1 12-207-5z"></path>
-        <path fill="#d65c85" d="M840 973l-33 15-76-193 12-5 97 183z"></path>
-        <path fill="#d65c85" d="M806 984l29 20-128 162-10-7 109-175z"></path>
-        <circle cx="826.2" cy="986.4" r="19.5" fill="#ebadc2"></circle>
-      </g>
       <g id="windmillscape-turbine-two">
         <path fill="#404fcf" d="M596 763l45 32-200 250-15-11 170-271z"></path>
         <path fill="#404fcf" d="M632 799l6-54 316 50-1 18-321-14z"></path>
         <path fill="#404fcf" d="M644 746l-51 23-115-300 18-7 148 284z"></path>
         <circle cx="624.6" cy="770.5" r="30.2" fill="#808adf"></circle>
       </g>
+      <g class="turbine-one-tower">
+        <path fill="#d65c85" d="M381 1182l-17-19 18-302 7 4-8 317z"></path>
+        <path fill="#c36" d="M442 1181l-61 1 8-317 37-1 16 317z"></path>
+      </g>
+      <g class="turbine-three-tower">
+        <path fill="#c36" d="M854 1242h-47l7-244h28l12 244z"></path>
+        <path fill="#d65c85" d="M807 1242l-13-14 14-233 6 3-7 244z"></path>
+      </g>
       <g id="windmillscape-turbine-one">
         <path fill="#d65c85" d="M388 862l41-21 108 246-14 7-135-232z"></path>
         <path fill="#d65c85" d="M428 850l-38-26 160-215 13 8-135 233z"></path>
         <path fill="#d65c85" d="M393 820l-2 46-267-30 1-16h268z"></path>
         <circle cx="404.1" cy="843.9" r="25.3" fill="#ebadc2"></circle>
+      </g>
+      <g id="windmillscape-turbine-three">
+        <path fill="#d65c85" d="M831 1005l3-36 205 29-1 12-207-5z"></path>
+        <path fill="#d65c85" d="M840 973l-33 15-76-193 12-5 97 183z"></path>
+        <path fill="#d65c85" d="M806 984l29 20-128 162-10-7 109-175z"></path>
+        <circle cx="826.2" cy="986.4" r="19.5" fill="#ebadc2"></circle>
       </g>
       <g class="lights-blue" fill="#2132c7">
         <rect width="16.6" height="13.2" x="1152.9" y="1097.1" rx="2.5"></rect>
