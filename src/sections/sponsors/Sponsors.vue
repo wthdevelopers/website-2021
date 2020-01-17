@@ -3,29 +3,42 @@
     <div class="thankees-body">
       <SectionHeader>Sponsors</SectionHeader>
       <ul class="thankees-content">
-        <Para style="text-align: center; margin-top: 50px;">Sponsors will be announced soon!</Para>
-        <!-- <li class="tier" v-for="tier in tiers" :key="tier.name">
+        <!-- <Para style="text-align: center; margin-top: 50px;">Sponsors will be announced soon!</Para> -->
+        <li class="tier" v-for="tier in tiers" :key="tier.name">
           <h3>{{tier.name}}</h3>
           <ul class="tier-sponsors">
             <li v-for="sponsor in tier.sponsors" :key="sponsor.name">
-              <div
-                style="font-size: 24px; font-family: var(--font-primary), sans-serif; color: var(--color-title-text);"
-              >{{sponsor.name}}</div>
-              <a :href="sponsor.url" target="_blank" rel="noopener noreferrer">
+              <a v-if="sponsor.url" :href="sponsor.url" target="_blank" rel="noopener noreferrer">
                 <img
+                  :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
                   style="display: var(--displayed-during-light);"
                   :src="require(`../../../public/images/${sponsor.photoNormal}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 >
                 <img
+                  :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
                   style="display: var(--displayed-during-dark)"
                   :src="require(`../../../public/images/${sponsor.photoWhite}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 >
               </a>
+              <div v-else>
+                <img
+                  :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
+                  style="display: var(--displayed-during-light);"
+                  :src="require(`../../../public/images/${sponsor.photoNormal}.png`)"
+                  :alt="`${sponsor.name} company logo`"
+                >
+                <img
+                  :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
+                  style="display: var(--displayed-during-dark)"
+                  :src="require(`../../../public/images/${sponsor.photoWhite}.png`)"
+                  :alt="`${sponsor.name} company logo`"
+                >
+              </div>
             </li>
           </ul>
-        </li>-->
+        </li>
       </ul>
     </div>
     <svg
@@ -43,13 +56,13 @@
 
 <script>
 import SectionHeader from "@/components/SectionHeader.vue";
-import Para from "@/components/Para.vue";
+// import Para from "@/components/Para.vue";
 
 export default {
   name: "thankees",
   components: {
-    SectionHeader,
-    Para
+    SectionHeader
+    // Para
   },
   data() {
     return {
@@ -98,23 +111,81 @@ export default {
         //     }
         //   ]
         // }
-        // {
-        //   name: "Platinum",
-        //   sponsors: [
-        //     {
-        //       name: "Indeed",
-        //       url: "https://www.indeed.com.sg/",
-        //       photoNormal: "indeed",
-        //       photoWhite: "indeed-white"
-        //     },
-        //     {
-        //       name: "GovTech",
-        //       url: "https://www.tech.gov.sg/",
-        //       photoNormal: "govtech",
-        //       photoWhite: "govtech-white"
-        //     }
-        //   ]
-        // },
+        {
+          name: "Platinum",
+          sponsors: [
+            // {
+            //   name: "Indeed",
+            //   url: "https://www.indeed.com.sg/",
+            //   photoNormal: "indeed",
+            //   photoWhite: "indeed-white"
+            // },
+            {
+              name: "GovTech",
+              url: "https://www.tech.gov.sg/",
+              photoNormal: "govtech",
+              photoWhite: "govtech-white"
+            }
+          ]
+        },
+        {
+          name: "Gold",
+          sponsors: [
+            {
+              name: "SUTD ISTD",
+              url: "https://istd.sutd.edu.sg/",
+              photoNormal: "istd",
+              photoWhite: "istd-white"
+            }
+          ]
+        },
+        {
+          name: "Fifth Row Partners",
+          sponsors: [
+            {
+              name: "Makerspace",
+              url: "",
+              photoNormal: "makerspace",
+              photoWhite: "makerspace-white"
+            },
+            {
+              name: "SUTD IEEE",
+              url: "https://ieee.opensutd.org/",
+              photoNormal: "ieee",
+              photoWhite: "ieee-white"
+            },
+            {
+              name: "Greenprint",
+              url: "https://greenprint.opensutd.org/",
+              photoNormal: "greenprint",
+              photoWhite: "greenprint-white"
+            },
+            {
+              name: "Energy Club",
+              url: "https://www.instagram.com/sutd_energyclub/",
+              photoNormal: "energy",
+              photoWhite: "energy-white"
+            },
+            {
+              name: "SUTD CD Lionhearter",
+              url: "https://www.facebook.com/CD-Lionhearter-Club-195125160147/",
+              photoNormal: "lionhearter",
+              photoWhite: "lionhearter-white"
+            },
+            {
+              name: "Photography Circle",
+              url: "https://www.instagram.com/sutd.photogcircle/",
+              photoNormal: "photog",
+              photoWhite: "photog-white"
+            },
+            {
+              name: "SUTD Bands",
+              url: "https://www.facebook.com/SUTDBands/",
+              photoNormal: "bands",
+              photoWhite: "bands-white"
+            }
+          ]
+        }
         // {
         //   name: "Swag Sponsors",
         //   sponsors: [
@@ -188,8 +259,16 @@ export default {
   margin-left: 30px;
 }
 
-.tier img {
-  width: 300px;
+.tier img.img-platinum {
+  width: 500px;
+}
+
+.tier img.img-gold {
+  width: 350px;
+}
+
+.tier img.img-others {
+  width: 150px;
 }
 
 @media (--desktop-narrow) {
@@ -222,8 +301,16 @@ export default {
     margin-top: 50px;
   }
 
-  .tier img {
+  .tier img.img-platinum {
+    width: 250px;
+  }
+
+  .tier img.img-gold {
     width: 200px;
+  }
+
+  .tier img.img-others {
+    width: 125px;
   }
 }
 </style>
