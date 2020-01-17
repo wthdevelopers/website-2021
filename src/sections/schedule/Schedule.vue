@@ -6,18 +6,90 @@
         <li>
           <SubHeader>Day One (Saturday)</SubHeader>
         </li>
-        <li v-for="(item, idx) in dayOneSchedule" :key="idx">
-          <Para>{{item.name}}</Para>
-          <Para>{{item.time}}</Para>
+        <li>
+          <Para>Registration</Para>
+          <Para>9:00AM</Para>
+        </li>
+        <li>
+          <Para>Briefing</Para>
+          <Para>10:00AM</Para>
+        </li>
+        <li>
+          <Para>Start Hacking!</Para>
+          <Para>11:00AM</Para>
+        </li>
+        <li>
+          <Para>Lunch</Para>
+          <Para>1:00PM</Para>
+        </li>
+        <li>
+          <Para>
+            Workshops:
+            <div
+              class="workshop-button"
+              id="workshop-one-modal-button"
+              @click="openModal('workshop-one-modal', 'workshop-one-modal-button')"
+            >Repurposing Scrap Materials for Prototype Design</div>&#32;OR
+            <div
+              class="workshop-button"
+              id="workshop-two-modal-button"
+              @click="openModal('workshop-two-modal', 'workshop-two-modal-button')"
+            >Utilising Alternate Energy Sources in Prototyping</div>
+          </Para>
+          <Para>2:00PM</Para>
+        </li>
+        <li>
+          <Para>
+            Workshops:
+            <div
+              class="workshop-button"
+              id="workshop-three-modal-button"
+              @click="openModal('workshop-three-modal', 'workshop-three-modal-button')"
+            >Fusion 360 Beginner</div>&#32;OR
+            <div
+              class="workshop-button"
+              id="workshop-four-modal-button"
+              @click="openModal('workshop-four-modal', 'workshop-four-modal-button')"
+            >ESP32 Web Server & BLE</div>
+          </Para>
+          <Para>4:00PM</Para>
+        </li>
+        <li>
+          <Para>Dinner</Para>
+          <Para>6:00PM</Para>
         </li>
       </ul>
       <ul class="timetable">
         <li>
           <SubHeader>Day Two (Sunday)</SubHeader>
         </li>
-        <li v-for="(item, idx) in dayTwoSchedule" :key="idx">
-          <Para>{{item.name}}</Para>
-          <Para>{{item.time}}</Para>
+        <li>
+          <Para>Submission Opens</Para>
+          <Para>12:00AM</Para>
+        </li>
+        <li>
+          <Para>Breakfast</Para>
+          <Para>9:00AM</Para>
+        </li>
+        <li>
+          <Para>Hacking Ends</Para>
+          <Para>11:00AM</Para>
+        </li>
+        <li>
+          <Para>Exhibition Setup</Para>
+          <Para>11:30AM</Para>
+        </li>
+        <li>
+          <Para>Lunch</Para>
+          <Para>12:00PM</Para>
+        </li>
+        <li>
+          <Para>Exhibition/Judging</Para>
+          <Para>1:00PM</Para>
+        </li>
+        <li>
+          <Para>Awards Ceremony</Para>
+          <Para>3:00PM</Para>
         </li>
       </ul>
     </div>
@@ -267,6 +339,10 @@
         ></path>
       </g>
     </svg>
+    <WorkshopOneModal id="workshop-one-modal"/>
+    <WorkshopTwoModal id="workshop-two-modal"/>
+    <WorkshopThreeModal id="workshop-three-modal"/>
+    <WorkshopFourModal id="workshop-four-modal"/>
   </section>
 </template>
 
@@ -274,78 +350,25 @@
 import SectionHeader from "@/components/SectionHeader.vue";
 import SubHeader from "@/components/SubHeader.vue";
 import Para from "@/components/Para.vue";
+import WorkshopOneModal from "@/components/WorkshopOneModal.vue";
+import WorkshopTwoModal from "@/components/WorkshopTwoModal.vue";
+import WorkshopThreeModal from "@/components/WorkshopThreeModal.vue";
+import WorkshopFourModal from "@/components/WorkshopFourModal.vue";
+
+import openModalMixin from "@/mixins/openModalMixin";
 
 export default {
   name: "schedule",
   components: {
     SectionHeader,
     SubHeader,
-    Para
+    Para,
+    WorkshopOneModal,
+    WorkshopTwoModal,
+    WorkshopThreeModal,
+    WorkshopFourModal
   },
-  data() {
-    return {
-      dayOneSchedule: [
-        {
-          name: "Registration",
-          time: "9:00 AM"
-        },
-        {
-          name: "Briefing",
-          time: "10:00 AM"
-        },
-        {
-          name: "Start Hacking!",
-          time: "11:00 AM"
-        },
-        {
-          name: "Lunch",
-          time: "1:00 PM"
-        },
-        {
-          name: "Workshops",
-          time: "TBC"
-        },
-        {
-          name: "Dinner",
-          time: "6:00 PM"
-        },
-        {
-          name: "Workshops",
-          time: "TBC"
-        }
-      ],
-      dayTwoSchedule: [
-        {
-          name: "Submission Opens",
-          time: "12:00 AM"
-        },
-        {
-          name: "Breakfast",
-          time: "9:00 AM"
-        },
-        {
-          name: "Hacking Ends",
-          time: "11:00 AM"
-        },
-        {
-          name: "Exhibition Setup",
-          time: "11:30 AM"
-        },
-        {
-          name: "Lunch",
-          time: "12:00 PM"
-        },
-        {
-          name: "Exhibition/Judging",
-          time: "1:00 PM"
-        },
-        {
-          name: "Awards Ceremony",
-          time: "3:00 PM"
-        }
-      ]
-    };
-  }
+  mixins: [openModalMixin]
 };
 </script>
 
@@ -378,9 +401,26 @@ export default {
   margin-bottom: 30px;
 }
 
+.timetable > li:not(:first-child) {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 4fr 1fr;
+}
+
 .timetable > li {
   display: flex;
   justify-content: space-between;
+}
+
+.timetable > li + li {
+  margin-top: 15px;
+}
+
+.workshop-button {
+  display: inline;
+  border-bottom: 2px solid var(--color-accent);
+  cursor: pointer;
 }
 
 #windmillscape-cloud-one {

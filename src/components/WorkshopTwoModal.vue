@@ -1,7 +1,16 @@
 <template>
   <ContentModal :id="id">
-    <h3>Terms & Conditions</h3>
-    <Para>This Section is to be confirmed... Stay tuned for future updates!</Para>
+    <h3>Utilising Alternate Energy Sources in Prototyping</h3>
+    <Para>
+      This workshop will consist of a basic electronics guide on how to connect an
+      energy source to your prototypes and how to estimate the amount required for your project.
+    </Para>
+    <br>
+    <br>
+    <Para>Duration: 1hr</Para>
+    <br>
+    <br>
+    <Para>Venue: TT19 & TT20</Para>
   </ContentModal>
 </template>
 
@@ -10,13 +19,14 @@ import ContentModal from "@/components/ContentModal.vue";
 import Para from "@/components/Para.vue";
 
 export default {
-  name: "tnc-modal",
+  name: "workshop-one-modal",
   components: {
     ContentModal,
     Para
   },
   props: {
-    id: String
+    id: String,
+    workshop: Number
   }
 };
 </script>
@@ -31,23 +41,9 @@ h3 {
   text-decoration: underline;
 }
 
-h4 {
-  font-size: 24px;
-  font-family: var(--font-primary), sans-serif;
-  color: var(--color-regular-text);
-  margin-bottom: 30px;
-  text-decoration: underline;
-}
-
 @media (--mobile-narrow) {
   h3 {
     font-size: 20px;
   }
-
-  h4 {
-    font-size: 20px;
-  }
 }
 </style>
-
-

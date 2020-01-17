@@ -1,9 +1,7 @@
 <template>
   <ContentModal :id="id">
     <h3>Participants' Rules</h3>
-    <Para>
-      This Section is to be confirmed... Stay tuned for future updates!
-    </Para>
+    <Para>This Section is to be confirmed... Stay tuned for future updates!</Para>
   </ContentModal>
 </template>
 
