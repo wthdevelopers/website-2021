@@ -1,17 +1,16 @@
 <template>
   <ContentModal :id="id">
-    <h3>Repurposing Scrap Materials for Prototype Design</h3>
+    <h3>Utilising Alternate Energy Sources in Prototyping</h3>
     <Para>
-      In this workshop by Makerspace, you will learn how to upcycle scrap material into something
-      usable for your prototype. Participants will be guided on how to operate the
-      fabrication tools in the fabrication lab.
+      This workshop will consist of a basic electronics guide on how to connect an
+      energy source to your prototypes and how to estimate the amount required for your project.
     </Para>
     <br>
     <br>
-    <Para>Duration: 1.5hrs</Para>
+    <Para>Conducted By: Energy Club</Para>
     <br>
     <br>
-    <Para>Venue: Fabberspace (TT13 & TT14)</Para>
+    <Para>Duration: 1hr</Para>
   </ContentModal>
 </template>
 

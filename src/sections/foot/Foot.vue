@@ -81,9 +81,9 @@ export default {
   name: "foot",
   components: {
     TNCModal: () =>
-      import(/* webpackPrefetch: true */ "@/components/TNCModal.vue"),
+      import(/* webpackPrefetch: true */ "@/content-modals/TNCModal.vue"),
     RulesModal: () =>
-      import(/* webpackPrefetch: true */ "@/components/RulesModal.vue")
+      import(/* webpackPrefetch: true */ "@/content-modals/RulesModal.vue")
   },
   mixins: [openModalMixin]
 };

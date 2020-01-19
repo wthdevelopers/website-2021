@@ -1,18 +1,17 @@
 <template>
   <ContentModal :id="id">
-    <h3>ESP32 Web Server & BLE</h3>
+    <h3>Repurposing Scrap Materials for Prototype Design</h3>
     <Para>
-      In this workshop by IEEE, we’ll teach you how to use the ESP32 platform with the
-      Arduino IDE to make your hardware project communicate over WiFi and Bluetooth. Using
-      Bluetooth, you can have multiple wireless nodes in your project, or use WiFi to control
-      your hardware project with your phone or PC, even over the internet!
+      In this workshop, you will learn how to upcycle scrap material into something
+      usable for your prototype. Participants will be guided on how to operate the
+      fabrication tools in the fabrication lab.
     </Para>
     <br>
     <br>
-    <Para>Duration: 2hrs</Para>
+    <Para>Conducted By: Makerspace</Para>
     <br>
     <br>
-    <Para>Venue: TT19 & TT20</Para>
+    <Para>Duration: 1.5hrs</Para>
   </ContentModal>
 </template>
 
@@ -21,7 +20,7 @@ import ContentModal from "@/components/ContentModal.vue";
 import Para from "@/components/Para.vue";
 
 export default {
-  name: "workshop-four-modal",
+  name: "workshop-one-modal",
   components: {
     ContentModal,
     Para

@@ -1,16 +1,16 @@
 <template>
   <ContentModal :id="id">
-    <h3>Utilising Alternate Energy Sources in Prototyping</h3>
+    <h3>Fusion 360 Beginner</h3>
     <Para>
-      This workshop will consist of a basic electronics guide on how to connect an
-      energy source to your prototypes and how to estimate the amount required for your project.
+      Ever wanted to 3D print something but couldn't find the right model? Ever needed to make a custom part for a project? Well now you can!
+      Come and learn the basics of CAD with Fusion 360 and get started with 3D modelling.
     </Para>
     <br>
     <br>
-    <Para>Duration: 1hr</Para>
+    <Para>Conducted By: MechD</Para>
     <br>
     <br>
-    <Para>Venue: TT19 & TT20</Para>
+    <Para>Duration: 2-3hrs</Para>
   </ContentModal>
 </template>
 

@@ -26,14 +26,20 @@
           <Para>
             Workshops:
             <div
+              role="button"
+              tabindex="0"
               class="workshop-button"
               id="workshop-one-modal-button"
               @click="openModal('workshop-one-modal', 'workshop-one-modal-button')"
+              @keydown.enter.prevent="openModal('workshop-one-modal', 'workshop-one-modal-button')"
             >Repurposing Scrap Materials for Prototype Design</div>&#32;OR
             <div
+              role="button"
+              tabindex="0"
               class="workshop-button"
               id="workshop-two-modal-button"
               @click="openModal('workshop-two-modal', 'workshop-two-modal-button')"
+              @keydown.enter.prevent="openModal('workshop-two-modal', 'workshop-two-modal-button')"
             >Utilising Alternate Energy Sources in Prototyping</div>
           </Para>
           <Para>2:00PM</Para>
@@ -42,14 +48,20 @@
           <Para>
             Workshops:
             <div
+              role="button"
+              tabindex="0"
               class="workshop-button"
               id="workshop-three-modal-button"
               @click="openModal('workshop-three-modal', 'workshop-three-modal-button')"
+              @keydown.enter.prevent="openModal('workshop-three-modal', 'workshop-three-modal-button')"
             >Fusion 360 Beginner</div>&#32;OR
             <div
+              role="button"
+              tabindex="0"
               class="workshop-button"
               id="workshop-four-modal-button"
               @click="openModal('workshop-four-modal', 'workshop-four-modal-button')"
+              @keydown.enter.prevent="openModal('workshop-four-modal', 'workshop-four-modal-button')"
             >ESP32 Web Server & BLE</div>
           </Para>
           <Para>4:00PM</Para>
@@ -350,10 +362,6 @@
 import SectionHeader from "@/components/SectionHeader.vue";
 import SubHeader from "@/components/SubHeader.vue";
 import Para from "@/components/Para.vue";
-import WorkshopOneModal from "@/components/WorkshopOneModal.vue";
-import WorkshopTwoModal from "@/components/WorkshopTwoModal.vue";
-import WorkshopThreeModal from "@/components/WorkshopThreeModal.vue";
-import WorkshopFourModal from "@/components/WorkshopFourModal.vue";
 
 import openModalMixin from "@/mixins/openModalMixin";
 
@@ -363,10 +371,22 @@ export default {
     SectionHeader,
     SubHeader,
     Para,
-    WorkshopOneModal,
-    WorkshopTwoModal,
-    WorkshopThreeModal,
-    WorkshopFourModal
+    WorkshopOneModal: () =>
+      import(
+        /* webpackPrefetch: true */ "@/content-modals/WorkshopOneModal.vue"
+      ),
+    WorkshopTwoModal: () =>
+      import(
+        /* webpackPrefetch: true */ "@/content-modals/WorkshopTwoModal.vue"
+      ),
+    WorkshopThreeModal: () =>
+      import(
+        /* webpackPrefetch: true */ "@/content-modals/WorkshopThreeModal.vue"
+      ),
+    WorkshopFourModal: () =>
+      import(
+        /* webpackPrefetch: true */ "@/content-modals/WorkshopFourModal.vue"
+      )
   },
   mixins: [openModalMixin]
 };

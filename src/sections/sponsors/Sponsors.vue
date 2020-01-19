@@ -56,61 +56,15 @@
 
 <script>
 import SectionHeader from "@/components/SectionHeader.vue";
-// import Para from "@/components/Para.vue";
 
 export default {
   name: "thankees",
   components: {
     SectionHeader
-    // Para
   },
   data() {
     return {
       tiers: [
-        // {
-        //   name: "Platinum",
-        //   sponsors: [
-        //     {
-        //       name: "Coming Soon",
-        //       url: "",
-        //       photoNormal: "",
-        //       photoWhite: ""
-        //     }
-        //   ]
-        // },
-        // {
-        //   name: "Gold",
-        //   sponsors: [
-        //     {
-        //       name: "Coming Soon",
-        //       url: "",
-        //       photoNormal: "",
-        //       photoWhite: ""
-        //     }
-        //   ]
-        // },
-        // {
-        //   name: "Silver",
-        //   sponsors: [
-        //     {
-        //       name: "Coming Soon",
-        //       url: "",
-        //       photoNormal: "",
-        //       photoWhite: ""
-        //     }
-        //   ]
-        // },
-        // {
-        //   name: "Bronze",
-        //   sponsors: [
-        //     {
-        //       name: "Coming Soon",
-        //       url: "",
-        //       photoNormal: "",
-        //       photoWhite: ""
-        //     }
-        //   ]
-        // }
         {
           name: "Platinum",
           sponsors: [

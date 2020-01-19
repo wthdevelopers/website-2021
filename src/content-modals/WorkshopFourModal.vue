@@ -1,16 +1,18 @@
 <template>
   <ContentModal :id="id">
-    <h3>Fusion 360 Beginner</h3>
+    <h3>ESP32 Web Server & BLE</h3>
     <Para>
-      Ever wanted to 3D print something but couldn't find the right model? Ever needed to make a custom part for a project? Well now you can!
-      Come and learn the basics of CAD with Fusion 360 and get started with 3D modelling.
+      In this workshop, we’ll teach you how to use the ESP32 platform with the
+      Arduino IDE to make your hardware project communicate over WiFi and Bluetooth. Using
+      Bluetooth, you can have multiple wireless nodes in your project, or use WiFi to control
+      your hardware project with your phone or PC, even over the internet!
     </Para>
     <br>
     <br>
+    <Para>Conducted By: SUTD IEEE</Para>
+    <br>
+    <br>
     <Para>Duration: 2hrs</Para>
-    <br>
-    <br>
-    <Para>Venue: TT19 & TT20</Para>
   </ContentModal>
 </template>
 
@@ -19,7 +21,7 @@ import ContentModal from "@/components/ContentModal.vue";
 import Para from "@/components/Para.vue";
 
 export default {
-  name: "workshop-one-modal",
+  name: "workshop-four-modal",
   components: {
     ContentModal,
     Para
