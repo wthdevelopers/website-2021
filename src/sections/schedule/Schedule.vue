@@ -32,6 +32,8 @@
               id="workshop-one-modal-button"
               @click="openModal('workshop-one-modal', 'workshop-one-modal-button')"
               @keydown.enter.prevent="openModal('workshop-one-modal', 'workshop-one-modal-button')"
+              @keyup.space="openModal('workshop-one-modal', 'workshop-one-modal-button')"
+              @keydown.space.prevent
             >Repurposing Scrap Materials for Prototype Design</div>&#32;OR
             <div
               role="button"
@@ -40,6 +42,8 @@
               id="workshop-two-modal-button"
               @click="openModal('workshop-two-modal', 'workshop-two-modal-button')"
               @keydown.enter.prevent="openModal('workshop-two-modal', 'workshop-two-modal-button')"
+              @keyup.space="openModal('workshop-two-modal', 'workshop-two-modal-button')"
+              @keydown.space.prevent
             >Utilising Alternate Energy Sources in Prototyping</div>
           </Para>
           <Para>2:00PM</Para>
@@ -54,6 +58,8 @@
               id="workshop-three-modal-button"
               @click="openModal('workshop-three-modal', 'workshop-three-modal-button')"
               @keydown.enter.prevent="openModal('workshop-three-modal', 'workshop-three-modal-button')"
+              @keyup.space="openModal('workshop-three-modal', 'workshop-three-modal-button')"
+              @keydown.space.prevent
             >Fusion 360 Beginner</div>&#32;OR
             <div
               role="button"
@@ -62,6 +68,8 @@
               id="workshop-four-modal-button"
               @click="openModal('workshop-four-modal', 'workshop-four-modal-button')"
               @keydown.enter.prevent="openModal('workshop-four-modal', 'workshop-four-modal-button')"
+              @keyup.space="openModal('workshop-four-modal', 'workshop-four-modal-button')"
+              @keydown.space.prevent
             >ESP32 Web Server & BLE</div>
           </Para>
           <Para>4:00PM</Para>
