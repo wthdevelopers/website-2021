@@ -2,7 +2,7 @@
   <ContentModal :id="id">
     <h3>Utilising Alternate Energy Sources in Prototyping</h3>
     <Para>
-      This workshop will consist of a basic electronics guide on how to connect an
+      This workshop will consist of a basic electronics guide on how to connect an alternative
       energy source to your prototypes and how to estimate the amount required for your project.
     </Para>
     <br>
