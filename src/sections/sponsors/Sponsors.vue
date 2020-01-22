@@ -103,12 +103,6 @@ export default {
               photoWhite: "makerspace-white"
             },
             {
-              name: "SUTD IEEE",
-              url: "https://ieee.opensutd.org/",
-              photoNormal: "ieee",
-              photoWhite: "ieee-white"
-            },
-            {
               name: "Greenprint",
               url: "https://greenprint.opensutd.org/",
               photoNormal: "greenprint",
@@ -127,6 +121,17 @@ export default {
               photoWhite: "lionhearter-white"
             },
             {
+              name: "MechD",
+              photoNormal: "MechD",
+              photoWhite: "MechD-white"
+            },
+            {
+              name: "SUTD IEEE",
+              url: "https://ieee.opensutd.org/",
+              photoNormal: "ieee",
+              photoWhite: "ieee-white"
+            },
+            {
               name: "Photography Circle",
               url: "https://www.instagram.com/sutd.photogcircle/",
               photoNormal: "photog",
@@ -137,6 +142,11 @@ export default {
               url: "https://www.facebook.com/SUTDBands/",
               photoNormal: "bands",
               photoWhite: "bands-white"
+            },
+            {
+              name: "SUTD Productions",
+              photoNormal: "SUTD-Productions-Logo",
+              photoWhite: "SUTD-Productions-Logo-white"
             }
           ]
         }
