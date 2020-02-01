@@ -67,6 +67,7 @@ export default Vue.extend({
   --color-regular-text: #5360c6;
   --color-accent: #e67fbe;
   --color-gray: #788ebf;
+  --color-caution-text:#f3f3fb;
 
   --slope-body-color: #bbe4d5;
 
@@ -91,6 +92,7 @@ export default Vue.extend({
   --color-regular-text: #f3f3fb;
   --color-accent: #dd55a9;
   --color-gray: #b6c3c8;
+  --color-caution-text:#f3f3fb;
 
   --slope-body-color: #3f636d;
 
