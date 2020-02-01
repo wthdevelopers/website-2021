@@ -224,11 +224,11 @@ export default {
 }
 
 .tier img.img-platinum {
-  width: 400px;
+  width: 350px;
 }
 
 .tier img.img-gold {
-  width: 350px;
+  width: 300px;
 }
 
 .tier img.img-others {

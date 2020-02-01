@@ -365,7 +365,7 @@ export default {
         {
           title: "When is the registration deadline?",
           type: "text",
-          content: `We will close registration when we hit the maximum capacity allowable for the hackathon or by 1st February,
+          content: `We will close registration when we hit the maximum capacity allowable for the hackathon or by 4th February 2359,
           depending on whichever one is earlier. `
         },
         {
