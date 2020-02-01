@@ -968,6 +968,7 @@ export default {
 #cityscape {
   position: absolute;
   bottom: 0;
+  z-index: -1;
 }
 
 #cityscape-cloud-one {

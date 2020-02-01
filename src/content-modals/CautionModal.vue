@@ -6,11 +6,11 @@
       something usable for your prototype. Participants will be guided on how to
       operate the fabrication tools in the fabrication lab.
     </Para>
-    <br />
-    <br />
+    <br>
+    <br>
     <Para>Conducted By: Makerspace</Para>
-    <br />
-    <br />
+    <br>
+    <br>
     <Para>Duration: 1.5hrs</Para>
   </ContentModal>
 </template>

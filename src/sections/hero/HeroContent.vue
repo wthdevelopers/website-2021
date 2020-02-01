@@ -35,22 +35,14 @@
         <h2>Singapore University of Technology and Design</h2>
       </div>
       <a href="https://bit.ly/2tjIhvF" class="register-button">Register Now</a>
-      <div
-        role="button"
-        tabindex="0"
+      <button
         class="caution-button"
         id="caution-modal-button"
+        type="button"
         @click="openModal('caution-modal', 'caution-modal-button')"
-        @keydown.enter.prevent="
-          openModal('caution-modal', 'caution-modal-button')
-        "
-        @keyup.space="openModal('caution-modal', 'caution-modal-button')"
-        @keydown.space.prevent
-      >
-        Read This!
-      </div>
+      >Read This!</button>
     </div>
-    <CautionModal id="caution-modal" />
+    <CautionModal id="caution-modal"/>
   </div>
 </template>
 
@@ -70,7 +62,6 @@ export default {
 <style scoped>
 .hero-content {
   position: relative;
-  z-index: 1;
   height: 87.5%;
   display: flex;
   flex-direction: column;
