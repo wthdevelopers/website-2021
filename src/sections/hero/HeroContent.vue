@@ -122,9 +122,9 @@ export default {
   font-size: 24px;
   font-family: var(--font-secondary), sans-serif;
   font-weight: 700;
-  background-color: red;
+  background-color: var(--color-accent);
   color: var(--color-caution-text);
-  padding: 32px 20px;
+  padding: 32px 31px;
   width: 205px;
   height: 0;
   transition: background-color 0.6s ease-out, color 0.6s ease-out;
@@ -174,7 +174,7 @@ export default {
 
   .caution-button {
     font-size: 22px;
-    padding: 28px 20px;
+    padding: 28px 35px;
     width: 185px;
   }
 }
@@ -205,7 +205,7 @@ export default {
 
   .register-button {
     font-size: 16px;
-    padding: 22px 20px;
+    padding: 22px 30px;
     width: 145px;
     margin-left: auto;
     margin-right: auto;
@@ -213,7 +213,7 @@ export default {
 
   .caution-button {
     font-size: 16px;
-    padding: 22px 20px;
+    padding: 22px 30px;
     width: 145px;
     margin-left: auto;
     margin-right: auto;

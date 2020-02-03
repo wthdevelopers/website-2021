@@ -86,6 +86,12 @@ export default {
           name: "Gold",
           sponsors: [
             {
+              name: "Keysight",
+              url: "https://www.keysight.com/sg/en/home.html",
+              photoNormal: "keysight",
+              photoWhite: "keysight-white"
+            },
+            {
               name: "SUTD ISTD",
               url: "https://istd.sutd.edu.sg/",
               photoNormal: "istd",
