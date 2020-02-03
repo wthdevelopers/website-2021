@@ -124,11 +124,17 @@ export default {
   font-weight: 700;
   background-color: var(--color-accent);
   color: var(--color-caution-text);
-  padding: 32px 31px;
+  padding: 32px 40px;
   width: 205px;
   height: 0;
   transition: background-color 0.6s ease-out, color 0.6s ease-out;
   line-height: 0px;
+}
+
+@media (max-width: 1180px) {
+  .caution-button {
+    padding: 32px 31px;
+  }
 }
 
 @media (--desktop-narrow) {

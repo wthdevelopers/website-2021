@@ -68,12 +68,12 @@ export default {
         {
           name: "Platinum",
           sponsors: [
-            // {
-            //   name: "Indeed",
-            //   url: "https://www.indeed.com.sg/",
-            //   photoNormal: "indeed",
-            //   photoWhite: "indeed-white"
-            // },
+            {
+              name: "Indeed",
+              url: "https://www.indeed.com.sg/",
+              photoNormal: "indeed",
+              photoWhite: "indeed-white"
+            },
             {
               name: "GovTech",
               url: "https://www.tech.gov.sg/",
