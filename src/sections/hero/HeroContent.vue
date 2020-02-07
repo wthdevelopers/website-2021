@@ -34,13 +34,13 @@
         <h2>8th - 9th February 2020</h2>
         <h2>Singapore University of Technology and Design</h2>
       </div>
-      <a href="https://bit.ly/2tjIhvF" class="register-button">Register Now</a>
+      <!-- <a href="https://bit.ly/2tjIhvF" class="register-button">Register Now</a> -->
       <button
         class="caution-button"
         id="caution-modal-button"
         type="button"
         @click="openModal('caution-modal', 'caution-modal-button')"
-      >Read This!</button>
+      >Event Cancelled</button>
     </div>
     <CautionModal id="caution-modal"/>
   </div>
@@ -55,7 +55,12 @@ export default {
     CautionModal: () =>
       import(/* webpackPrefetch: true */ "@/content-modals/CautionModal.vue")
   },
-  mixins: [openModalMixin]
+  mixins: [openModalMixin],
+  mounted() {
+    setTimeout(() => {
+      this.openModal("caution-modal", "caution-modal-button");
+    }, 100);
+  }
 };
 </script>
 
@@ -125,7 +130,7 @@ export default {
   background-color: var(--color-accent);
   color: var(--color-caution-text);
   padding: 32px 40px;
-  width: 205px;
+  width: 265px;
   height: 0;
   transition: background-color 0.6s ease-out, color 0.6s ease-out;
   line-height: 0px;
@@ -181,7 +186,7 @@ export default {
   .caution-button {
     font-size: 22px;
     padding: 28px 35px;
-    width: 185px;
+    width: 240px;
   }
 }
 
@@ -220,7 +225,7 @@ export default {
   .caution-button {
     font-size: 16px;
     padding: 22px 30px;
-    width: 145px;
+    width: 185px;
     margin-left: auto;
     margin-right: auto;
   }

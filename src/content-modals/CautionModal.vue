@@ -1,6 +1,16 @@
 <template>
   <ContentModal :id="id">
-    <h3>
+    <h3>Event cancelled due to recent developments in 2019-nCoV (2019 Novel Coronavirus) situation</h3>
+    <Para>
+      Due to the recent developments in the 2019-nCoV situation, in which Singapore has raised the DORSCON
+      level to orange, it is with a heavy heart that we have to call What The Hack 2020: Environment off.
+      Nonetheless, we thank you for your assistance and support thus far and we apologize for all the
+      inconvenience we have caused.
+    </Para>
+    <br>
+    <br>
+    <Para>What The Hack 2020 Organising Committee</Para>
+    <!-- <h3>
       Precautionary measures taken to safeguard our community against the novel
       Coronavirus (2019-nCoV)
     </h3>
@@ -47,7 +57,7 @@
       <a
         href="https://storage.googleapis.com/website-hosting-2020/WTH2020%20Consent%20Form%20(18%20and%20above).pdf"
       >3. WTH2020 Consent Form (Under 18)</a>
-    </Para>
+    </Para>-->
   </ContentModal>
 </template>
 
