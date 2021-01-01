@@ -353,7 +353,7 @@ export default {
           type: "text",
           content: `Please bring your computers.
           A limited quantity of consumable materials such as cardboard, wood and acrylic will be provided, and standard workshop tools will be available.
-          Prototyping materials such as Arduino Unos, some sensors etc will also be available for loan.
+          Prototyping materials such as Arduino Unos, some sensors, etc., will also be available for loan.
           However, should you expect to use a large amount of materials, do bring your own, or let us know before the event and we might be able to help.`,
           height: "450"
         },
