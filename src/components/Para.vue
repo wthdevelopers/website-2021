@@ -29,6 +29,11 @@ span {
   text-decoration: none;
 }
 
+a {
+  display: inline;
+  border-bottom: 2px solid var(--color-accent);
+}
+
 @media (--mobile-narrow) {
   p {
     font-size: 20px;

@@ -34,21 +34,39 @@
         <h2>8th - 9th February 2020</h2>
         <h2>Singapore University of Technology and Design</h2>
       </div>
-      <a href="https://bit.ly/2tjIhvF" class="register-button">Register Now</a>
+      <!-- <a href="https://bit.ly/2tjIhvF" class="register-button">Register Now</a> -->
+      <button
+        class="caution-button"
+        id="caution-modal-button"
+        type="button"
+        @click="openModal('caution-modal', 'caution-modal-button')"
+      >Event Cancelled</button>
     </div>
+    <CautionModal id="caution-modal"/>
   </div>
 </template>
 
 <script>
+import openModalMixin from "@/mixins/openModalMixin";
+
 export default {
-  name: "hero-content"
+  name: "hero-content",
+  components: {
+    CautionModal: () =>
+      import(/* webpackPrefetch: true */ "@/content-modals/CautionModal.vue")
+  },
+  mixins: [openModalMixin],
+  mounted() {
+    setTimeout(() => {
+      this.openModal("caution-modal", "caution-modal-button");
+    }, 100);
+  }
 };
 </script>
 
 <style scoped>
 .hero-content {
   position: relative;
-  z-index: 1;
   height: 87.5%;
   display: flex;
   flex-direction: column;
@@ -101,6 +119,29 @@ export default {
   transition: background-color 0.6s ease-out, color 0.6s ease-out;
 }
 
+.caution-button {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: var(--font-secondary), sans-serif;
+  font-weight: 700;
+  background-color: var(--color-accent);
+  color: var(--color-caution-text);
+  padding: 32px 40px;
+  width: 265px;
+  height: 0;
+  transition: background-color 0.6s ease-out, color 0.6s ease-out;
+  line-height: 0px;
+}
+
+@media (max-width: 1180px) {
+  .caution-button {
+    padding: 32px 31px;
+  }
+}
+
 @media (--desktop-narrow) {
   .hero-content-secondary {
     display: flex;
@@ -108,6 +149,11 @@ export default {
   }
 
   .register-button {
+    margin-top: 30px;
+    margin-left: 110px;
+  }
+
+  .caution-button {
     margin-top: 30px;
     margin-left: 110px;
   }
@@ -135,6 +181,12 @@ export default {
     font-size: 22px;
     padding: 28px 20px;
     width: 185px;
+  }
+
+  .caution-button {
+    font-size: 22px;
+    padding: 28px 35px;
+    width: 240px;
   }
 }
 
@@ -164,12 +216,18 @@ export default {
 
   .register-button {
     font-size: 16px;
-    padding: 22px 20px;
+    padding: 22px 30px;
     width: 145px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .caution-button {
+    font-size: 16px;
+    padding: 22px 30px;
+    width: 185px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 </style>
-
-

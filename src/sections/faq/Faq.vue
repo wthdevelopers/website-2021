@@ -10,12 +10,18 @@
         :accordionMaxIdx="faqArr.length - 1"
         :maxHeight="item.height ? item.height : '400'"
       >
-        <template v-slot:title>{{item.title}}</template>
-        <Para v-if="item.type === 'text'" style="margin: 30px 0 20px 0;">{{item.content}}</Para>
-        <Location v-if="item.type === 'location'"/>
+        <template v-slot:title>{{ item.title }}</template>
+        <Para v-if="item.type === 'text'" style="margin: 30px 0 20px 0;">{{
+          item.content
+        }}</Para>
+        <Location v-if="item.type === 'location'" />
       </Accordion>
     </div>
-    <svg id="solarscape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3093.3 1268.9">
+    <svg
+      id="solarscape"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 3093.3 1268.9"
+    >
       <g class="base">
         <path
           fill="#79c89f"
@@ -36,8 +42,17 @@
           stroke-width="25"
           d="M1992 1111v62"
         ></path>
-        <path fill="#1023c3" d="M1966 1191l-238-19 85-153 249-17-96 189z"></path>
-        <path fill="none" stroke="#c36" stroke-miterlimit="10" stroke-width="25" d="M2336 1075v69"></path>
+        <path
+          fill="#1023c3"
+          d="M1966 1191l-238-19 85-153 249-17-96 189z"
+        ></path>
+        <path
+          fill="none"
+          stroke="#c36"
+          stroke-miterlimit="10"
+          stroke-width="25"
+          d="M2336 1075v69"
+        ></path>
         <path fill="#c36" d="M2307 1163l-263-21 94-168 275-20-106 209z"></path>
         <path
           fill="#fff"
@@ -66,8 +81,22 @@
         <path fill="#d65c85" d="M668 997h206v150H668z"></path>
         <path fill="#c36" d="M873 997H668l-63-96 211-1 57 97z"></path>
         <path fill="#ebadc2" d="M542 1147V997l63-96 63 96 1 151-127-1z"></path>
-        <rect width="21.2" height="16.9" x="564.4" y="1042" fill="#d65c85" rx="3.2"></rect>
-        <rect width="21.2" height="16.9" x="620.6" y="1071.9" fill="#d65c85" rx="3.2"></rect>
+        <rect
+          width="21.2"
+          height="16.9"
+          x="564.4"
+          y="1042"
+          fill="#d65c85"
+          rx="3.2"
+        ></rect>
+        <rect
+          width="21.2"
+          height="16.9"
+          x="620.6"
+          y="1071.9"
+          fill="#d65c85"
+          rx="3.2"
+        ></rect>
         <path
           fill="#b8e2cc"
           d="M140 1154c-1-15 2-29 4-44 3-8 5-18 9-26a65 65 0 015-8c5-9 8-9 16-2a116 116 0 0114 40l2 2c3 3 2 7 1 12l1 19c0 13-5 18-18 19h-5c-4-4-3-9-3-13v-23c-2 10 3 23-3 36h-5c-9 0-15-4-18-12z"
@@ -104,7 +133,10 @@
           fill="#79c89f"
           d="M1011 1158l-10-1c-6-3-8-11-9-21-3-20-1-39 2-58v-5l5-15c7-18 19-19 27-2a51 51 0 014 12 18 18 0 001 2 271 271 0 014 60c-2 21-6 28-17 28h-3c-3-5-1-13-2-20-1 7 1 15-2 20z"
         ></path>
-        <path fill="#818fdb" d="M1011 1158v-24l1-5c2 0 2 3 2 5l1 24-1 32c0 3 0 7-2 6l-1-6v-32z"></path>
+        <path
+          fill="#818fdb"
+          d="M1011 1158v-24l1-5c2 0 2 3 2 5l1 24-1 32c0 3 0 7-2 6l-1-6v-32z"
+        ></path>
         <path
           fill="#fff"
           d="M996 1104c-4 15-5 16-15 16l-7 1c-5-10-2-21-3-30-2 9 2 20-3 29a75 75 0 01-9 0c-9 0-13-5-13-19a195 195 0 0115-76c7-13 13-13 20 0 7 16 10 34 13 52a171 171 0 012 27z"
@@ -176,13 +208,20 @@
           stroke-width="25"
           d="M2709 1142v62"
         ></path>
-        <path fill="#1023c3" d="M2683 1222l-239-20 86-152 249-18-96 190z"></path>
+        <path
+          fill="#1023c3"
+          d="M2683 1222l-239-20 86-152 249-18-96 190z"
+        ></path>
       </g>
       <g id="solarscape-panels-one" fill="#d65c85">
-        <path d="M2300 1154l-241-20 86-154 251-16-96 190zM864 991H673l-59-86 196-1 54 87z"></path>
+        <path
+          d="M2300 1154l-241-20 86-154 251-16-96 190zM864 991H673l-59-86 196-1 54 87z"
+        ></path>
       </g>
       <g id="solarscape-panels-two" fill="#404fcf">
-        <path d="M1960 1183l-219-18 78-140 228-15-87 173zM2677 1213l-219-18 78-140 228-14-87 172z"></path>
+        <path
+          d="M1960 1183l-219-18 78-140 228-15-87 173zM2677 1213l-219-18 78-140 228-14-87 172z"
+        ></path>
       </g>
       <g id="solarscape-panel-dividers" fill="none" stroke-miterlimit="10">
         <path
@@ -264,17 +303,16 @@ export default {
     Accordion,
     Location
   },
-  data() {
+  data: function() {
     return {
       faqArr: [
         {
           title: "Who is eligible to participate?",
           type: "text",
-          content: `You need to be at least 13 years of age at the time of event
-          to be eligible to participate. If you are over 13 but under 18 years of age,
-          you will be eligible to participate only if you have parental consent (Please
-          print out the consent and indemnity form for your parent’s signature and bring
-          it on the day of the hackathon).`,
+          content: `You need to be at least 13 years of age at the time of the event to be eligible to participate.
+          If you are over 13 but under 18 years of age, you will be eligible to participate only if you have parental consent (Please print out the consent and indemnity form for your parent’s signature and bring it on the day of the hackathon).
+          If you are 18 and older, you would need to present a printed and signed indemnity form upon registration.
+          The respective forms will be emailed to you upon confirmation of your registration.`,
           height: "450"
         },
         {
@@ -314,9 +352,9 @@ export default {
           title: "What should I bring to the event?",
           type: "text",
           content: `Please bring your computers.
-          Should you expect to use additional prototyping materials, such as Arduinos, electronics
-          and fabrication materials, do bring your own, or let us know before the event and we
-          might be able to help.`,
+          A limited quantity of consumable materials such as cardboard, wood and acrylic will be provided, and standard workshop tools will be available.
+          Prototyping materials such as Arduino Unos, some sensors etc will also be available for loan.
+          However, should you expect to use a large amount of materials, do bring your own, or let us know before the event and we might be able to help.`,
           height: "450"
         },
         {
@@ -327,8 +365,42 @@ export default {
         {
           title: "When is the registration deadline?",
           type: "text",
-          content: `We will close registration when we hit the maximum capacity allowable for the hackathon or by 1st February,
+          content: `We will close registration when we hit the maximum capacity allowable for the hackathon or by 4th February 2359,
           depending on whichever one is earlier. `
+        },
+        {
+          title: "How would I know if my registration is confirmed?",
+          type: "text",
+          content: `You would receive an email stating that your registration is confirmed along with a copy of the indemnity form for your completion.`
+        },
+        {
+          title:
+            "If I have opted to have my team formed for me, how will I meet my team?",
+          type: "text",
+          content: `Once we have matched participants requesting to be placed in a team with complementing skillsets and similar interests in category and technology, we will e-introduce all of you in an email and subsequent follow-up will be left to you.`
+        },
+        {
+          title:
+            "Do I need to have any background in Computer Science/Hacking?",
+          type: "text",
+          content: `You do not need a background in either, though knowing some basic coding can help a lot.
+          Just come with an open mind to learn and try new things!`
+        },
+        {
+          title: "Would we have to stay in the venue for the full duration?",
+          type: "text",
+          content: `No, you do not have to, but announcements may be made door-to-door within our hacking venue and it is advisable to have your team present.`
+        },
+        {
+          title: "Will I get a certificate of participation for taking part?",
+          type: "text",
+          content: `Apologies, but we currently do not have provisions for this.`
+        },
+        {
+          title: "Do I have to use a particular coding language?",
+          type: "text",
+          content: `You are free to use any programming language you desire or need to use based on your prototype.
+          There are no restrictions or requirements as to using specific programming languages.`
         },
         {
           title: "My question can't be found in the the FAQs!",
@@ -439,5 +511,3 @@ export default {
   }
 }
 </style>
-
-

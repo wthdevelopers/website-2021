@@ -3,25 +3,39 @@
     <div class="thankees-body">
       <SectionHeader>Sponsors</SectionHeader>
       <ul class="thankees-content">
+        <!-- <Para style="text-align: center; margin-top: 50px;">Sponsors will be announced soon!</Para> -->
         <li class="tier" v-for="tier in tiers" :key="tier.name">
           <h3>{{tier.name}}</h3>
           <ul class="tier-sponsors">
             <li v-for="sponsor in tier.sponsors" :key="sponsor.name">
-              <div
-                style="font-size: 24px; font-family: var(--font-primary), sans-serif; color: var(--color-title-text);"
-              >{{sponsor.name}}</div>
-              <!-- <a :href="sponsor.url" target="_blank" rel="noopener noreferrer">
+              <a v-if="sponsor.url" :href="sponsor.url" target="_blank" rel="noopener noreferrer">
                 <img
+                  :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
                   style="display: var(--displayed-during-light);"
                   :src="require(`../../../public/images/${sponsor.photoNormal}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 >
                 <img
+                  :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
                   style="display: var(--displayed-during-dark)"
                   :src="require(`../../../public/images/${sponsor.photoWhite}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 >
-              </a>-->
+              </a>
+              <div v-else>
+                <img
+                  :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
+                  style="display: var(--displayed-during-light);"
+                  :src="require(`../../../public/images/${sponsor.photoNormal}.png`)"
+                  :alt="`${sponsor.name} company logo`"
+                >
+                <img
+                  :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
+                  style="display: var(--displayed-during-dark)"
+                  :src="require(`../../../public/images/${sponsor.photoWhite}.png`)"
+                  :alt="`${sponsor.name} company logo`"
+                >
+              </div>
             </li>
           </ul>
         </li>
@@ -55,10 +69,16 @@ export default {
           name: "Platinum",
           sponsors: [
             {
-              name: "Coming Soon",
-              url: "",
-              photoNormal: "",
-              photoWhite: ""
+              name: "Indeed",
+              url: "https://www.indeed.com.sg/",
+              photoNormal: "indeed",
+              photoWhite: "indeed-white"
+            },
+            {
+              name: "GovTech",
+              url: "https://www.tech.gov.sg/",
+              photoNormal: "govtech",
+              photoWhite: "govtech-white"
             }
           ]
         },
@@ -66,52 +86,76 @@ export default {
           name: "Gold",
           sponsors: [
             {
-              name: "Coming Soon",
-              url: "",
-              photoNormal: "",
-              photoWhite: ""
+              name: "Keysight",
+              url: "https://www.keysight.com/sg/en/home.html",
+              photoNormal: "keysight",
+              photoWhite: "keysight-white"
+            },
+            {
+              name: "SUTD ISTD",
+              url: "https://istd.sutd.edu.sg/",
+              photoNormal: "istd",
+              photoWhite: "istd-white"
             }
           ]
         },
         {
-          name: "Silver",
+          name: "Fifth Row Partners",
           sponsors: [
             {
-              name: "Coming Soon",
+              name: "Makerspace",
               url: "",
-              photoNormal: "",
-              photoWhite: ""
-            }
-          ]
-        },
-        {
-          name: "Bronze",
-          sponsors: [
+              photoNormal: "makerspace",
+              photoWhite: "makerspace-white"
+            },
             {
-              name: "Coming Soon",
-              url: "",
-              photoNormal: "",
-              photoWhite: ""
+              name: "Greenprint",
+              url: "https://greenprint.opensutd.org/",
+              photoNormal: "greenprint",
+              photoWhite: "greenprint-white"
+            },
+            {
+              name: "Energy Club",
+              url: "https://www.instagram.com/sutd_energyclub/",
+              photoNormal: "energy",
+              photoWhite: "energy-white"
+            },
+            {
+              name: "SUTD CD Lionhearter",
+              url: "https://www.facebook.com/CD-Lionhearter-Club-195125160147/",
+              photoNormal: "lionhearter",
+              photoWhite: "lionhearter-white"
+            },
+            {
+              name: "MechD",
+              photoNormal: "MechD",
+              photoWhite: "MechD-white"
+            },
+            {
+              name: "SUTD IEEE",
+              url: "https://ieee.opensutd.org/",
+              photoNormal: "ieee",
+              photoWhite: "ieee-white"
+            },
+            {
+              name: "Photography Circle",
+              url: "https://www.instagram.com/sutd.photogcircle/",
+              photoNormal: "photog",
+              photoWhite: "photog-white"
+            },
+            {
+              name: "SUTD Bands",
+              url: "https://www.facebook.com/SUTDBands/",
+              photoNormal: "bands",
+              photoWhite: "bands-white"
+            },
+            {
+              name: "SUTD Productions",
+              photoNormal: "SUTD-Productions-Logo",
+              photoWhite: "SUTD-Productions-Logo-white"
             }
           ]
         }
-        // {
-        //   name: "Platinum",
-        //   sponsors: [
-        //     {
-        //       name: "Indeed",
-        //       url: "https://www.indeed.com.sg/",
-        //       photoNormal: "indeed",
-        //       photoWhite: "indeed-white"
-        //     },
-        //     {
-        //       name: "GovTech",
-        //       url: "https://www.tech.gov.sg/",
-        //       photoNormal: "govtech",
-        //       photoWhite: "govtech-white"
-        //     }
-        //   ]
-        // },
         // {
         //   name: "Swag Sponsors",
         //   sponsors: [
@@ -185,8 +229,16 @@ export default {
   margin-left: 30px;
 }
 
-.tier img {
+.tier img.img-platinum {
+  width: 350px;
+}
+
+.tier img.img-gold {
   width: 300px;
+}
+
+.tier img.img-others {
+  width: 150px;
 }
 
 @media (--desktop-narrow) {
@@ -219,8 +271,16 @@ export default {
     margin-top: 50px;
   }
 
-  .tier img {
+  .tier img.img-platinum {
+    width: 250px;
+  }
+
+  .tier img.img-gold {
     width: 200px;
+  }
+
+  .tier img.img-others {
+    width: 125px;
   }
 }
 </style>
