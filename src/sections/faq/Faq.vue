@@ -310,7 +310,7 @@ export default {
           title: "Who is eligible to participate?",
           type: "text",
           content: `You need to be at least 13 years of age at the time of the event to be eligible to participate.
-          If you are over 13 but under 18 years of age, you will be eligible to participate only if you have parental consent (Please print out the consent and indemnity form for your parent’s signature and bring it on the day of the hackathon).
+          If you are over 13 but under 18 years of age, you will be eligible to participate only if you have parental consent (please print out the consent and indemnity form for your parent’s signature and bring it on the day of the hackathon).
           If you are 18 and older, you would need to present a printed and signed indemnity form upon registration.
           The respective forms will be emailed to you upon confirmation of your registration.`,
           height: "450"
@@ -330,7 +330,7 @@ export default {
         {
           title: "Can I participate as an individual?",
           type: "text",
-          content: `Sure! You can sign up and particpate solely as an individual, or if
+          content: `Sure! You can sign up and participate solely as an individual, or if
           you would like to, you could sign up as an individual and request for a group
           during registration and we will help you find a group!`
         },
@@ -345,7 +345,7 @@ export default {
           title: "Can I start ideating before the competition?",
           type: "text",
           content: `Yes, you can begin conceptualizing your ideas or planning your
-          approach to the themes before the competition. However only work done on the
+          approach to the themes before the competition. However, only work done on the
           prototype during the competition itself will be judged.`
         },
         {
@@ -365,7 +365,7 @@ export default {
         {
           title: "When is the registration deadline?",
           type: "text",
-          content: `We will close registration when we hit the maximum capacity allowable for the hackathon or by 4th February 2359,
+          content: `We will close registration when we hit the maximum capacity allowable for the hackathon or by 4th February 2359hrs,
           depending on whichever one is earlier. `
         },
         {
@@ -383,7 +383,7 @@ export default {
           title:
             "Do I need to have any background in Computer Science/Hacking?",
           type: "text",
-          content: `You do not need a background in either, though knowing some basic coding can help a lot.
+          content: `You do not need a background in either, although knowing some basic coding can help a lot.
           Just come with an open mind to learn and try new things!`
         },
         {
