@@ -1,5 +1,5 @@
 <template>
-  <section id="about" title="About What The Hack 2020">
+  <section id="about" title="About What The Hack 2021">
     <SectionHeader>What The Hack?</SectionHeader>
     <div class="about-content">
       <div class="about-content-main">

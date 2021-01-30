@@ -31,7 +31,7 @@
     <h1>What The Hack: Environment</h1>
     <div class="hero-content-secondary">
       <div>
-        <h2>8th - 9th February 2020</h2>
+        <h2>18th - 19th September 2021</h2>
         <h2>Singapore University of Technology and Design</h2>
       </div>
       <!-- <a href="https://bit.ly/2tjIhvF" class="register-button">Register Now</a> -->
@@ -40,7 +40,7 @@
         id="caution-modal-button"
         type="button"
         @click="openModal('caution-modal', 'caution-modal-button')"
-      >Event Cancelled</button>
+      >Coming Soon!</button>
     </div>
     <CautionModal id="caution-modal"/>
   </div>

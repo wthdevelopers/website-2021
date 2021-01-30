@@ -33,7 +33,7 @@
         </div>
       </div>
       <div id="footer-bottom">
-        <div>Copyright © 2020 What The Hack. All rights reserved.</div>
+        <div>Copyright © 2021 What The Hack. All rights reserved.</div>
         <ul>
           <li>
             <a href="https://bit.ly/2tjIhvF">Register</a>
@@ -61,7 +61,7 @@
           <li class="li-dividers" aria-hidden="true">|</li>
           <li>
             <a
-              href="https://github.com/wthdevelopers/website-2020"
+              href="https://github.com/wthdevelopers/website-2021"
               target="_blank"
               rel="noopener noreferrer"
             >Source Code</a>
