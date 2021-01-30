@@ -38,8 +38,8 @@
       challenge them to solve imminent problems of the future via
       interdisciplinary collaborations.
       <br>
-      <br>b. The Competition will be held at SUTD from 8th February 2020 to
-      9th February 2020 (24 hours).
+      <br>b. The Competition will be held at SUTD from 18th September 2021 to
+      19th September 2021 (24 hours).
       <br>
       <br>
     </Para>
@@ -47,7 +47,7 @@
     <h4>3. Eligibility and Teams</h4>
     <Para>
       a. This Competition is open to Participants of all nationalities who are
-      at least 13 years old (as of 8th February 2020).
+      at least 13 years old (as of 18th September 2021).
       <br>
       <br>b. The Participants may compete as individuals or in teams of
       between 2 to 4 members.

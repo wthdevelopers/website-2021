@@ -1,15 +1,12 @@
 <template>
   <ContentModal :id="id">
-    <h3>Event cancelled due to recent developments in 2019-nCoV (2019 Novel Coronavirus) situation</h3>
+    <h3>Event coming soon!</h3>
     <Para>
-      Due to the recent developments in the 2019-nCoV situation, in which Singapore has raised the DORSCON
-      level to orange, it is with a heavy heart that we have to call What The Hack 2020: Environment off.
-      Nonetheless, we thank you for your assistance and support thus far and we apologize for all the
-      inconvenience we have caused.
+      We are still cooking up things behind the scenes! We will also ensure that our event complies within Singapore's 2019-nCoV/COVID-19 guidelines. Do keep a lookout for updates on this page!
     </Para>
     <br>
     <br>
-    <Para>What The Hack 2020 Organising Committee</Para>
+    <Para>What The Hack 2021 Organising Committee</Para>
     <!-- <h3>
       Precautionary measures taken to safeguard our community against the novel
       Coronavirus (2019-nCoV)
@@ -20,7 +17,7 @@
     <Para>
       Do note that visitors who have visited Mainland China within the last 14
       days will not be allowed to be physically present to participate in What
-      The Hack 2020: Environment.
+      The Hack 2021: Environment.
     </Para>
     <br>
     <br>
@@ -45,18 +42,18 @@
       <br>
       <br>
       <a
-        href="https://storage.googleapis.com/website-hosting-2020/Travel%20Declaration%20Form.pdf"
+        href="https://storage.googleapis.com/website-hosting-2021/Travel%20Declaration%20Form.pdf"
       >1. Travel Declaration Form</a>
       <br>
       <br>
       <a
-        href="https://storage.googleapis.com/website-hosting-2020/WTH2020%20Consent%20Form%20(18%20and%20above).pdf"
-      >2. WTH2020 Consent Form (18 and above)</a>
+        href="https://storage.googleapis.com/website-hosting-2021/WTH2021%20Consent%20Form%20(18%20and%20above).pdf"
+      >2. WTH2021 Consent Form (18 and above)</a>
       <br>
       <br>
       <a
-        href="https://storage.googleapis.com/website-hosting-2020/WTH2020%20Consent%20Form%20(18%20and%20above).pdf"
-      >3. WTH2020 Consent Form (Under 18)</a>
+        href="https://storage.googleapis.com/website-hosting-2021/WTH2021%20Consent%20Form%20(18%20and%20above).pdf"
+      >3. WTH2021 Consent Form (Under 18)</a>
     </Para>-->
   </ContentModal>
 </template>
