@@ -73,12 +73,6 @@ export default {
               url: "https://www.indeed.com.sg/",
               photoNormal: "indeed",
               photoWhite: "indeed-white"
-            },
-            {
-              name: "GovTech",
-              url: "https://www.tech.gov.sg/",
-              photoNormal: "govtech",
-              photoWhite: "govtech-white"
             }
           ]
         },
@@ -86,10 +80,10 @@ export default {
           name: "Gold",
           sponsors: [
             {
-              name: "Keysight",
-              url: "https://www.keysight.com/sg/en/home.html",
-              photoNormal: "keysight",
-              photoWhite: "keysight-white"
+              name: "GovTech",
+              url: "https://www.tech.gov.sg/",
+              photoNormal: "govtech",
+              photoWhite: "govtech-white"
             },
             {
               name: "SUTD ISTD",
