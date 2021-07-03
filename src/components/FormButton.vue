@@ -1,10 +1,5 @@
 <template>
-  <button
-    class="form-button"
-    v-if="linkAction === 'non-router'"
-    type="button"
-    @click="onClick.func(...onClick.args)"
-  >
+  <button class="form-button" v-if="linkAction === 'non-router'" type="button" @click="onClick.func(...onClick.args)">
     <slot></slot>
   </button>
   <router-link class="form-button" v-else :to="to">
@@ -14,12 +9,12 @@
 
 <script>
 export default {
-  name: "form-button",
+  name: 'form-button',
   props: {
     linkAction: String,
     onClick: { func: String, args: Array },
-    to: String
-  }
+    to: String,
+  },
 };
 </script>
 
@@ -46,5 +41,3 @@ export default {
   }
 }
 </style>
-
-

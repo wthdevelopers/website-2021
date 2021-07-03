@@ -26,10 +26,7 @@
         </svg>
         <div>
           Email:&nbsp;
-          <a
-            href="mailto:whatthehack@sutd.edu.sg"
-            style="color: var(--color-accent);"
-          >whatthehack@sutd.edu.sg</a>
+          <a href="mailto:whatthehack@sutd.edu.sg" style="color: var(--color-accent);">whatthehack@sutd.edu.sg</a>
         </div>
       </div>
       <div id="footer-bottom">
@@ -48,7 +45,9 @@
               id="footer-tnc-modal-button"
               type="button"
               @click="openModal('footer-tnc-modal', 'footer-tnc-modal-button')"
-            >Terms & Conditions</button>
+            >
+              Terms & Conditions
+            </button>
           </li>
           <li class="li-dividers" aria-hidden="true">|</li>
           <li>
@@ -56,36 +55,34 @@
               id="footer-rules-modal-button"
               type="button"
               @click="openModal('footer-rules-modal', 'footer-rules-modal-button')"
-            >Participants' Rules</button>
+            >
+              Participants' Rules
+            </button>
           </li>
           <li class="li-dividers" aria-hidden="true">|</li>
           <li>
-            <a
-              href="https://github.com/wthdevelopers/website-2021"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Source Code</a>
+            <a href="https://github.com/wthdevelopers/website-2021" target="_blank" rel="noopener noreferrer"
+              >Source Code</a
+            >
           </li>
         </ul>
       </div>
     </footer>
-    <TNCModal id="footer-tnc-modal"/>
-    <RulesModal id="footer-rules-modal"/>
+    <TNCModal id="footer-tnc-modal" />
+    <RulesModal id="footer-rules-modal" />
   </div>
 </template>
 
 <script>
-import openModalMixin from "@/mixins/openModalMixin";
+import openModalMixin from '@/mixins/openModalMixin';
 
 export default {
-  name: "foot",
+  name: 'foot',
   components: {
-    TNCModal: () =>
-      import(/* webpackPrefetch: true */ "@/content-modals/TNCModal.vue"),
-    RulesModal: () =>
-      import(/* webpackPrefetch: true */ "@/content-modals/RulesModal.vue")
+    TNCModal: () => import(/* webpackPrefetch: true */ '@/content-modals/TNCModal.vue'),
+    RulesModal: () => import(/* webpackPrefetch: true */ '@/content-modals/RulesModal.vue'),
   },
-  mixins: [openModalMixin]
+  mixins: [openModalMixin],
 };
 </script>
 
@@ -197,5 +194,3 @@ li + li {
   }
 }
 </style>
-
-

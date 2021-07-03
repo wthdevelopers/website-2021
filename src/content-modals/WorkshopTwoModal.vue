@@ -2,32 +2,32 @@
   <ContentModal :id="id">
     <h3>Utilising Alternate Energy Sources in Prototyping</h3>
     <Para>
-      This workshop will consist of a basic electronics guide on how to connect an alternative
-      energy source to your prototypes and how to estimate the amount required for your project.
+      This workshop will consist of a basic electronics guide on how to connect an alternative energy source to your
+      prototypes and how to estimate the amount required for your project.
     </Para>
-    <br>
-    <br>
+    <br />
+    <br />
     <Para>Conducted By: Energy Club</Para>
-    <br>
-    <br>
+    <br />
+    <br />
     <Para>Duration: 1hr</Para>
   </ContentModal>
 </template>
 
 <script>
-import ContentModal from "@/components/ContentModal.vue";
-import Para from "@/components/Para.vue";
+import ContentModal from '@/components/ContentModal.vue';
+import Para from '@/components/Para.vue';
 
 export default {
-  name: "workshop-one-modal",
+  name: 'workshop-one-modal',
   components: {
     ContentModal,
-    Para
+    Para,
   },
   props: {
     id: String,
-    workshop: Number
-  }
+    workshop: Number,
+  },
 };
 </script>
 

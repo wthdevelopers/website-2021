@@ -40,27 +40,28 @@
         id="caution-modal-button"
         type="button"
         @click="openModal('caution-modal', 'caution-modal-button')"
-      >Coming Soon!</button>
+      >
+        Coming Soon!
+      </button>
     </div>
-    <CautionModal id="caution-modal"/>
+    <CautionModal id="caution-modal" />
   </div>
 </template>
 
 <script>
-import openModalMixin from "@/mixins/openModalMixin";
+import openModalMixin from '@/mixins/openModalMixin';
 
 export default {
-  name: "hero-content",
+  name: 'hero-content',
   components: {
-    CautionModal: () =>
-      import(/* webpackPrefetch: true */ "@/content-modals/CautionModal.vue")
+    CautionModal: () => import(/* webpackPrefetch: true */ '@/content-modals/CautionModal.vue'),
   },
   mixins: [openModalMixin],
   mounted() {
     setTimeout(() => {
-      this.openModal("caution-modal", "caution-modal-button");
+      this.openModal('caution-modal', 'caution-modal-button');
     }, 100);
-  }
+  },
 };
 </script>
 

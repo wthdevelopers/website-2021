@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "section-header"
+  name: 'section-header',
 };
 </script>
 
@@ -33,5 +33,3 @@ h3 {
   }
 }
 </style>
-
-

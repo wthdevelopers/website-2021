@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <Homepage/>
+    <Homepage />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Homepage from "./views/Homepage.vue";
+import Vue from 'vue';
+import Homepage from './views/Homepage.vue';
 
 declare global {
   interface Window {
@@ -15,48 +15,46 @@ declare global {
 }
 
 export default Vue.extend({
-  name: "app",
+  name: 'app',
   components: {
-    Homepage
+    Homepage,
   },
   mounted: function(): void {
     this.setInitialTheme();
   },
   methods: {
     setInitialTheme(): void {
-      let setTheme = "light";
-      let cachedTheme = localStorage.getItem("theme");
+      let setTheme = 'light';
+      let cachedTheme = localStorage.getItem('theme');
       if (cachedTheme) {
         setTheme = cachedTheme;
-      } else if (matchMedia("(prefers-color-scheme: dark)").matches) {
-        setTheme = "dark";
+      } else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme = 'dark';
       }
-      document.documentElement.setAttribute("theme", setTheme);
-    }
-  }
+      document.documentElement.setAttribute('theme', setTheme);
+    },
+  },
 });
 </script>
 
 <style>
 @font-face {
-  font-family: "Nunito";
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 900;
-  src: local("Nunito Regular"), local("Nunito-Regular"),
-    url("../public/fonts/nunito-900.woff2") format("woff2");
+  src: local('Nunito Regular'), local('Nunito-Regular'), url('../public/fonts/nunito-900.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: "Brandon Grotesque";
+  font-family: 'Brandon Grotesque';
   font-style: normal;
   font-weight: 400;
-  src: local("brandon Grotesque"), local("Brandon-Grotesque"),
-    url("../public/fonts/brandon-400.woff2") format("woff2");
+  src: local('brandon Grotesque'), local('Brandon-Grotesque'), url('../public/fonts/brandon-400.woff2') format('woff2');
 }
 
 :root {
-  --font-primary: "Brandon Grotesque";
-  --font-secondary: "Nunito";
+  --font-primary: 'Brandon Grotesque';
+  --font-secondary: 'Nunito';
 
   --color-background: #e9f7fb;
   --color-title-text: #2d3887;
@@ -67,7 +65,7 @@ export default Vue.extend({
   --color-regular-text: #5360c6;
   --color-accent: #e67fbe;
   --color-gray: #788ebf;
-  --color-caution-text:#f3f3fb;
+  --color-caution-text: #f3f3fb;
 
   --slope-body-color: #bbe4d5;
 
@@ -83,7 +81,7 @@ export default Vue.extend({
   --displayed-during-dark: none;
 }
 
-[theme="dark"] {
+[theme='dark'] {
   --color-background: #191f4d;
   --color-title-text: #f3f3fb;
   --color-title-text-hover: #d9d9f2;
@@ -92,7 +90,7 @@ export default Vue.extend({
   --color-regular-text: #f3f3fb;
   --color-accent: #dd55a9;
   --color-gray: #b6c3c8;
-  --color-caution-text:#f3f3fb;
+  --color-caution-text: #f3f3fb;
 
   --slope-body-color: #3f636d;
 
@@ -171,7 +169,8 @@ button {
   opacity: 0.4;
 }
 
-.turbine-one-tower, .turbine-three-tower {
+.turbine-one-tower,
+.turbine-three-tower {
   opacity: 0.4;
 }
 

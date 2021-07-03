@@ -34,7 +34,10 @@
               @keydown.enter.prevent="openModal('workshop-one-modal', 'workshop-one-modal-button')"
               @keyup.space="openModal('workshop-one-modal', 'workshop-one-modal-button')"
               @keydown.space.prevent
-            >Repurposing Scrap Materials for Prototype Design</div>&#32;OR
+            >
+              Repurposing Scrap Materials for Prototype Design
+            </div>
+            &#32;OR
             <div
               role="button"
               tabindex="0"
@@ -44,7 +47,9 @@
               @keydown.enter.prevent="openModal('workshop-two-modal', 'workshop-two-modal-button')"
               @keyup.space="openModal('workshop-two-modal', 'workshop-two-modal-button')"
               @keydown.space.prevent
-            >Utilising Alternate Energy Sources in Prototyping</div>
+            >
+              Utilising Alternate Energy Sources in Prototyping
+            </div>
           </Para>
           <Para>2:00PM</Para>
         </li>
@@ -60,7 +65,10 @@
               @keydown.enter.prevent="openModal('workshop-three-modal', 'workshop-three-modal-button')"
               @keyup.space="openModal('workshop-three-modal', 'workshop-three-modal-button')"
               @keydown.space.prevent
-            >Fusion 360 Beginner</div>&#32;OR
+            >
+              Fusion 360 Beginner
+            </div>
+            &#32;OR
             <div
               role="button"
               tabindex="0"
@@ -70,7 +78,9 @@
               @keydown.enter.prevent="openModal('workshop-four-modal', 'workshop-four-modal-button')"
               @keyup.space="openModal('workshop-four-modal', 'workshop-four-modal-button')"
               @keydown.space.prevent
-            >ESP32 Web Server & BLE</div>
+            >
+              ESP32 Web Server & BLE
+            </div>
           </Para>
           <Para>4:00PM</Para>
         </li>
@@ -119,10 +129,7 @@
           fill="#79c89f"
           d="M0 1173l129-16c129-16 387-48 644-42 258 5 516 47 774 48 257-1 515-43 773-70s516-37 644-42l129-6v224H0zM156 1127l-20-1c-12-3-17-12-20-23-5-20-2-40 4-60l1-5 11-16c15-19 41-20 57-2a39 39 0 018 12 21 21 0 003 3c5 18 10 35 8 54a79 79 0 010 8c-4 22-14 30-36 30h-7c-6-6-3-14-5-21-1 7 3 15-4 21z"
         ></path>
-        <path
-          fill="#818fdb"
-          d="M156 1127l1-25c0-3 0-6 3-6s5 3 5 6v59c0 3 0 7-5 6-3 0-3-4-3-6l-1-34z"
-        ></path>
+        <path fill="#818fdb" d="M156 1127l1-25c0-3 0-6 3-6s5 3 5 6v59c0 3 0 7-5 6-3 0-3-4-3-6l-1-34z"></path>
         <path fill="#1023c3" d="M668 1157l-72 1 10-379h44l18 378z"></path>
         <path fill="#404fcf" d="M596 1158l-20-22 22-361 7 4-9 379z"></path>
         <path fill="#c36" d="M442 1181l-61 1 8-317 37-1 16 317z"></path>
@@ -143,26 +150,17 @@
           fill="#fff"
           d="M2961 1133c-3 9-4 10-14 10h-6c-5-5-2-12-3-17-1 5 3 11-3 17h-8c-9 0-12-3-12-11-1-11 3-21 7-31 1-4 4-9 7-13 6-8 13-8 18 0 7 9 10 20 13 30a63 63 0 011 15z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M2935 1143v-20c0-2 0-4 2-4 3-1 3 1 3 3l1 21v20c0 2 0 5-4 6-2-3-1-6-2-9v-13-4z"
-        ></path>
+        <path fill="#8490dd" d="M2935 1143v-20c0-2 0-4 2-4 3-1 3 1 3 3l1 21v20c0 2 0 5-4 6-2-3-1-6-2-9v-13-4z"></path>
         <path
           fill="#79c89f"
           d="M2096 1096l-20-1c-12-3-17-11-20-22-5-20-2-40 4-59l2-5 10-16c15-18 40-19 56-2a38 38 0 018 12 19 19 0 003 3c5 17 9 35 8 53a76 76 0 01-1 8c-4 22-13 29-35 29h-7c-6-6-2-14-4-20-2 6 2 14-4 20z"
         ></path>
-        <path
-          fill="#818fdb"
-          d="M2096 1096v-25c0-2 0-5 4-5 3 0 4 3 4 5v58c0 3 0 7-4 6-4 0-4-3-4-6v-33z"
-        ></path>
+        <path fill="#818fdb" d="M2096 1096v-25c0-2 0-5 4-5 3 0 4 3 4 5v58c0 3 0 7-4 6-4 0-4-3-4-6v-33z"></path>
         <path
           fill="#b6dbc5"
           d="M204 1152h-2c-14 1-18-7-18-18-1-8-1-15 1-23v-6c3-18 5-35 11-53 2-4 3-9 7-13 3-4 6-4 10 0a248 248 0 0115 50l1 9 2 23a50 50 0 01-3 23c-1 5-6 8-12 8h-6c-3-3-2-7-2-10l-1-29-1 29c0 3 1 7-2 10z"
         ></path>
-        <path
-          fill="#8192d9"
-          d="M204 1152v-38c0-3-1-7 3-7 3 0 2 4 2 7v77c0 3 1 6-3 6-3 0-2-4-2-6v-39z"
-        ></path>
+        <path fill="#8192d9" d="M204 1152v-38c0-3-1-7 3-7 3 0 2 4 2 7v77c0 3 1 6-3 6-3 0-2-4-2-6v-39z"></path>
         <path
           fill="#b8e2cc"
           d="M1450 1197c-1-12 2-25 4-37l7-23a57 57 0 014-7c5-8 8-8 15-1a99 99 0 0111 34l2 2c2 3 2 6 1 10v16c0 12-4 16-15 16h-4c-3-3-3-7-3-10v-21c-1 10 3 21-2 31h-4c-8 1-13-2-16-10z"
@@ -188,10 +186,7 @@
           fill="#fff"
           d="M296 1128c-4 8-5 9-14 9h-7c-4-5-1-12-3-17-1 5 3 12-3 17h-7c-9 0-13-3-13-11 0-11 3-21 7-30l7-14c6-7 13-7 19 0 7 9 9 20 12 30a63 63 0 012 16z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M269 1137l1-20c0-2-1-4 1-4 3 0 4 2 4 4v40c0 2 0 5-3 6-3-2-2-5-2-8l-1-13v-5z"
-        ></path>
+        <path fill="#8490dd" d="M269 1137l1-20c0-2-1-4 1-4 3 0 4 2 4 4v40c0 2 0 5-3 6-3-2-2-5-2-8l-1-13v-5z"></path>
         <path
           fill="#b8e2cc"
           d="M2712 1035c-2-21 2-40 5-60 5-12 7-25 12-37a91 91 0 017-11c8-12 12-12 23-2 9 17 16 35 19 54l2 4c4 4 4 10 2 15v27c0 19-7 25-24 26h-7c-5-5-4-12-4-17v-33c-2 15 5 33-4 50h-7c-12 0-20-5-24-16z"
@@ -204,18 +199,12 @@
           fill="#79c89f"
           d="M2635 1059l-13-1c-8-2-11-7-13-14-3-14-1-27 3-40l1-3 6-10c10-12 27-13 38-1a25 25 0 015 8 12 12 0 002 1c3 12 6 23 5 36a49 49 0 010 5c-3 14-9 19-24 19h-4c-4-4-2-9-3-14-1 5 2 10-3 14z"
         ></path>
-        <path
-          fill="#818fdb"
-          d="M2635 1059l1-16c0-2 0-4 2-4s3 2 3 4v38c0 2 0 4-3 4-2 0-2-2-2-4l-1-22z"
-        ></path>
+        <path fill="#818fdb" d="M2635 1059l1-16c0-2 0-4 2-4s3 2 3 4v38c0 2 0 4-3 4-2 0-2-2-2-4l-1-22z"></path>
         <path
           fill="#fff"
           d="M2636 1077c-5 12-7 13-20 14h-9c-6-8-2-17-4-24-2 7 4 16-4 23l-11 1c-12-1-17-5-17-16-1-15 4-29 9-42 3-7 6-14 10-19 9-11 18-11 26 0 10 13 14 27 17 42a87 87 0 013 21z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M2599 1090v-28c0-2 0-5 3-5 4 0 4 2 4 5l1 29v27c0 4-1 7-5 9-3-3-3-8-3-12v-18-7z"
-        ></path>
+        <path fill="#8490dd" d="M2599 1090v-28c0-2 0-5 3-5 4 0 4 2 4 5l1 29v27c0 4-1 7-5 9-3-3-3-8-3-12v-18-7z"></path>
         <path
           fill="#b8e2cc"
           d="M2151 1146c-1-12 2-25 3-37l8-23a56 56 0 014-7c5-7 8-8 15-1a99 99 0 0111 34l2 2c2 3 2 6 1 10v17c0 11-4 15-15 15h-4c-3-3-3-7-3-10v-21c-1 10 3 21-3 31h-4c-7 1-12-2-15-10z"
@@ -228,18 +217,12 @@
           fill="#fff"
           d="M2173 1182c-3 8-4 9-14 9l-7 1c-4-6-1-12-2-18-2 5 2 12-3 17h-8c-9 0-12-3-12-11-1-10 3-20 6-30 2-5 4-10 8-14 6-7 12-7 18 0 7 9 10 20 12 31a63 63 0 012 15z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M2147 1191v-20c0-1 0-3 2-4 3 0 3 2 3 4l1 21v19c0 3-1 5-4 7-2-3-2-6-2-9v-13-5z"
-        ></path>
+        <path fill="#8490dd" d="M2147 1191v-20c0-1 0-3 2-4 3 0 3 2 3 4l1 21v19c0 3-1 5-4 7-2-3-2-6-2-9v-13-5z"></path>
         <path
           fill="#fff"
           d="M2402 1154c-3 15-5 17-15 17h-7c-5-9-2-20-3-30-2 9 3 21-3 29a75 75 0 01-8 1c-10-1-13-6-14-20a195 195 0 0115-76c7-12 14-12 20 1 8 15 10 34 13 52a171 171 0 012 26z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M2374 1170v-34c0-3 0-6 2-7 3 0 4 3 4 6v70c0 4 0 9-4 11-2-4-2-10-2-15v-22-9z"
-        ></path>
+        <path fill="#8490dd" d="M2374 1170v-34c0-3 0-6 2-7 3 0 4 3 4 6v70c0 4 0 9-4 11-2-4-2-10-2-15v-22-9z"></path>
         <path
           fill="#b8e2cc"
           d="M2771 1085c-1-14 2-28 4-41l8-25a62 62 0 015-8c5-8 8-8 16-1 6 12 10 24 12 37l2 2c3 3 2 7 1 11l1 18c0 13-5 17-17 18h-5c-3-4-2-8-2-12l-1-22c-1 10 4 22-2 34h-5c-8 0-14-3-17-11z"
@@ -268,26 +251,17 @@
           fill="#fff"
           d="M2482 1115c-3 9-5 9-14 10h-7c-4-6-1-12-2-18-2 6 2 12-4 17l-7 1c-9-1-12-4-13-12 0-10 3-20 7-30l7-14c7-7 13-7 19 1 7 9 9 19 12 30a63 63 0 012 15z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M2456 1124v-20c0-1-1-3 2-4 2 0 3 2 3 4v40c0 3 0 5-3 7-2-3-2-6-2-9v-13l-1-5z"
-        ></path>
+        <path fill="#8490dd" d="M2456 1124v-20c0-1-1-3 2-4 2 0 3 2 3 4v40c0 3 0 5-3 7-2-3-2-6-2-9v-13l-1-5z"></path>
         <path
           fill="#79c89f"
           d="M2489 1097c-8-1-17 0-25-2-15-4-22-14-25-28-7-26-3-51 5-75l1-7 13-19c19-24 51-25 72-3a48 48 0 0110 15 25 25 0 003 4c7 22 12 44 10 67a98 98 0 010 10c-5 28-16 37-45 38h-8c-8-8-3-18-6-27-2 9 3 19-5 27z"
         ></path>
-        <path
-          fill="#818fdb"
-          d="M2489 1097v-32c0-3 0-7 5-7 4 0 5 3 5 7l1 32-1 41c0 4 0 9-5 8-5 0-5-4-5-8v-41z"
-        ></path>
+        <path fill="#818fdb" d="M2489 1097v-32c0-3 0-7 5-7 4 0 5 3 5 7l1 32-1 41c0 4 0 9-5 8-5 0-5-4-5-8v-41z"></path>
         <path
           fill="#fff"
           d="M2908 1159c-3 8-4 9-14 9h-7c-4-5-1-12-2-17-2 5 2 12-3 17h-8c-9 0-12-3-12-11-1-11 3-21 6-30 2-5 4-10 8-14 6-8 12-8 18 0 7 9 10 20 12 30a63 63 0 012 16z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M2882 1168v-20c0-2 0-4 2-4 3 0 3 2 3 3v41c0 2 0 5-3 6-2-2-2-5-2-9v-13-4z"
-        ></path>
+        <path fill="#8490dd" d="M2882 1168v-20c0-2 0-4 2-4 3 0 3 2 3 3v41c0 2 0 5-3 6-2-2-2-5-2-9v-13-4z"></path>
       </g>
       <g id="windmillscape-turbine-two">
         <path fill="#404fcf" d="M596 763l45 32-200 250-15-11 170-271z"></path>
@@ -359,44 +333,32 @@
         ></path>
       </g>
     </svg>
-    <WorkshopOneModal id="workshop-one-modal"/>
-    <WorkshopTwoModal id="workshop-two-modal"/>
-    <WorkshopThreeModal id="workshop-three-modal"/>
-    <WorkshopFourModal id="workshop-four-modal"/>
+    <WorkshopOneModal id="workshop-one-modal" />
+    <WorkshopTwoModal id="workshop-two-modal" />
+    <WorkshopThreeModal id="workshop-three-modal" />
+    <WorkshopFourModal id="workshop-four-modal" />
   </section>
 </template>
 
 <script>
-import SectionHeader from "@/components/SectionHeader.vue";
-import SubHeader from "@/components/SubHeader.vue";
-import Para from "@/components/Para.vue";
+import SectionHeader from '@/components/SectionHeader.vue';
+import SubHeader from '@/components/SubHeader.vue';
+import Para from '@/components/Para.vue';
 
-import openModalMixin from "@/mixins/openModalMixin";
+import openModalMixin from '@/mixins/openModalMixin';
 
 export default {
-  name: "schedule",
+  name: 'schedule',
   components: {
     SectionHeader,
     SubHeader,
     Para,
-    WorkshopOneModal: () =>
-      import(
-        /* webpackPrefetch: true */ "@/content-modals/WorkshopOneModal.vue"
-      ),
-    WorkshopTwoModal: () =>
-      import(
-        /* webpackPrefetch: true */ "@/content-modals/WorkshopTwoModal.vue"
-      ),
-    WorkshopThreeModal: () =>
-      import(
-        /* webpackPrefetch: true */ "@/content-modals/WorkshopThreeModal.vue"
-      ),
-    WorkshopFourModal: () =>
-      import(
-        /* webpackPrefetch: true */ "@/content-modals/WorkshopFourModal.vue"
-      )
+    WorkshopOneModal: () => import(/* webpackPrefetch: true */ '@/content-modals/WorkshopOneModal.vue'),
+    WorkshopTwoModal: () => import(/* webpackPrefetch: true */ '@/content-modals/WorkshopTwoModal.vue'),
+    WorkshopThreeModal: () => import(/* webpackPrefetch: true */ '@/content-modals/WorkshopThreeModal.vue'),
+    WorkshopFourModal: () => import(/* webpackPrefetch: true */ '@/content-modals/WorkshopFourModal.vue'),
   },
-  mixins: [openModalMixin]
+  mixins: [openModalMixin],
 };
 </script>
 
@@ -534,5 +496,3 @@ export default {
   }
 }
 </style>
-
-

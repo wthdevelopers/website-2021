@@ -187,11 +187,7 @@
           d="M2491 1833v-31c-4-7-3-14-2-21a5 5 0 015-5c3 0 4 3 5 5 2 7 1 14 1 22-1 10 2 20-3 30-2 3-4 2-6 0z"
           transform="translate(-1 -530)"
         ></path>
-        <path
-          fill="#c36"
-          d="M2709 1140c-2 4-6 2-9 2h-125c3-3 7-1 10-1h112l12-1z"
-          transform="translate(-1 -530)"
-        ></path>
+        <path fill="#c36" d="M2709 1140c-2 4-6 2-9 2h-125c3-3 7-1 10-1h112l12-1z" transform="translate(-1 -530)"></path>
         <path
           fill="#7ebcad"
           d="M2025 1832a17 17 0 010-2l5-2c21-1 42-2 64 1a2 2 0 011 3h-70z"
@@ -355,11 +351,7 @@
           d="M2871 1501h132c3 0 4 2 4 5s-1 4-4 4l-6 1h-126zM2871 1577h132c3 0 4 2 4 5s-1 4-4 4l-6 1h-126z"
           transform="translate(-1 -530)"
         ></path>
-        <path
-          fill="#93d1b3"
-          d="M2705 1664l-22-30h24v23c0 2 1 5-2 7z"
-          transform="translate(-1 -530)"
-        ></path>
+        <path fill="#93d1b3" d="M2705 1664l-22-30h24v23c0 2 1 5-2 7z" transform="translate(-1 -530)"></path>
         <path
           fill="#2132c7"
           d="M2751 1541h-3c-9-1-9-1-9-9 0-5 1-8 7-8h9c7 1 8 2 8 9s0 8-12 8zM2827 1505h-3c-8-1-11-6-8-13 1-2 1-3 3-3a55 55 0 0118 0c3 1 2 4 2 6 1 9 0 9-9 10z"
@@ -629,11 +621,7 @@
           transform="translate(-1 -530)"
         ></path>
         <path fill="#5b86bc" d="M2985 1742c3 2 2 4 2 6l-4-5z" transform="translate(-1 -530)"></path>
-        <path
-          fill="#5f7fc1"
-          d="M2993 1758h-2c-2-1-2-2-2-4a7 7 0 014 4z"
-          transform="translate(-1 -530)"
-        ></path>
+        <path fill="#5f7fc1" d="M2993 1758h-2c-2-1-2-2-2-4a7 7 0 014 4z" transform="translate(-1 -530)"></path>
         <path
           fill="#fff"
           d="M1869 1682h-12a5 5 0 01-2-3l-1-20v14c-1 4-1 8-5 9-5 1-10-1-16-2-8-7-6-16-5-24l1-11 2-4v-4c5-8 7-17 12-24 9-13 17-13 25 1l7 15 6 28a16 16 0 012 13 13 13 0 01-2 3c-3 5-7 7-12 9z"
@@ -680,11 +668,7 @@
           d="M2413 1756c5 2 7 5 6 10a16 16 0 002 10h-6c1-6-2-13-2-20z"
           transform="translate(-1 -530)"
         ></path>
-        <path
-          fill="#94d3b2"
-          d="M2473 1768c3 6 2 12 2 18-4-5-1-12-2-18z"
-          transform="translate(-1 -530)"
-        ></path>
+        <path fill="#94d3b2" d="M2473 1768c3 6 2 12 2 18-4-5-1-12-2-18z" transform="translate(-1 -530)"></path>
         <path
           fill="#808bde"
           d="M1531 1690v21c0 2-1 4-3 4s-3-2-3-4v-21-14c0-2 0-5 3-5 2 1 3 3 3 5v14z"
@@ -710,16 +694,8 @@
           d="M387 1789v-31a43 43 0 011-7 2 2 0 012-2l3 2a46 46 0 010 7v70c-3 2-6 1-6-3v-36z"
           transform="translate(-1 -530)"
         ></path>
-        <path
-          fill="#0014bf"
-          d="M293 1758l10 4 2 2c-2 3-4 3-6 1s-5-4-6-7z"
-          transform="translate(-1 -530)"
-        ></path>
-        <path
-          fill="#7e8add"
-          d="M3015 1828v-66-57c0-3 0-8 4-8s2 5 2 8v57l1 66z"
-          transform="translate(-1 -530)"
-        ></path>
+        <path fill="#0014bf" d="M293 1758l10 4 2 2c-2 3-4 3-6 1s-5-4-6-7z" transform="translate(-1 -530)"></path>
+        <path fill="#7e8add" d="M3015 1828v-66-57c0-3 0-8 4-8s2 5 2 8v57l1 66z" transform="translate(-1 -530)"></path>
         <path
           fill="#d65c85"
           d="M2499 1802c9 0 14-6 15-15 3-22 2-43-5-65a32 32 0 00-10-15v-26c0-3 0-7 2-10a4 4 0 012-1c3 4 7 2 11 2l103 1v159l-30 1-31-1c-7 0-7 0-7-7v-16c14-5 16-15 16-28-1-10-1-20-5-30-3-6-6-12-14-12s-12 5-14 12a90 90 0 00-6 36c0 11 6 17 15 22v16c1 5-1 8-6 8l-35-1-1-30z"
@@ -740,11 +716,7 @@
           d="M2094 1782h-44c-7 0-7 0-7-7v-6c0-4 2-6 6-6h91c5 0 7 2 7 6v2c0 11 0 11-11 11h-42z"
           transform="translate(-1 -530)"
         ></path>
-        <path
-          fill="#94d3b2"
-          d="M2025 1683v-5q3 2 0 5zM2023 1693l2-3v2z"
-          transform="translate(-1 -530)"
-        ></path>
+        <path fill="#94d3b2" d="M2025 1683v-5q3 2 0 5zM2023 1693l2-3v2z" transform="translate(-1 -530)"></path>
         <path
           fill="#8290dc"
           d="M1995 1702v-36c0-1 0-4 2-4 3-1 4 2 4 4v67a40 40 0 010 7 2 2 0 01-3 2l-2-2a46 46 0 01-1-7v-31z"
@@ -790,11 +762,7 @@
           d="M2939 1257h-62c-4 0-8 0-8-6 0-2 1-4 4-4l7-1h117l6 1c4 0 6 1 6 5s-3 4-6 4z"
           transform="translate(-1 -530)"
         ></path>
-        <path
-          fill="#1426c4"
-          d="M2841 1376c-5 0-8-4-12-6v-4c5 2 13 1 12 10z"
-          transform="translate(-1 -530)"
-        ></path>
+        <path fill="#1426c4" d="M2841 1376c-5 0-8-4-12-6v-4c5 2 13 1 12 10z" transform="translate(-1 -530)"></path>
         <path
           fill="#d65c85"
           d="M2666 1743h-2c-9-1-9-1-9-10 0-5 2-7 6-6h7c9 0 9 0 9 9 0 7 0 7-11 7zM588 1666h-4c-7 0-9-1-9-7s2-8 8-9h8c8 1 8 1 8 8s0 8-7 8h-4zM514 1636h-2c-8 0-11-4-9-12 1-2 2-3 4-3h15c2 0 3 1 3 4 2 9 0 11-11 11zM660 1666h-5c-4 1-6-1-6-5-1-9 0-11 10-11h5c3 1 6 0 7 3 1 4 1 8-1 12l-4 1h-6zM513 1666h-6c-2 0-3-1-4-4-1-9 0-11 9-12h4c9 1 9 1 9 8 0 8 0 8-8 8h-4z"
@@ -805,11 +773,7 @@
           d="M2458 1628a17 17 0 01-2 0c-3 0-7 2-8-2-2-3-1-7 0-11a3 3 0 013-2h15c2 0 3 2 3 4 2 9 0 11-11 11z"
           transform="translate(-1 -530)"
         ></path>
-        <path
-          fill="#94d3b2"
-          d="M2489 1709a2 2 0 01-2 1v-1a3 3 0 012 0z"
-          transform="translate(-1 -530)"
-        ></path>
+        <path fill="#94d3b2" d="M2489 1709a2 2 0 01-2 1v-1a3 3 0 012 0z" transform="translate(-1 -530)"></path>
         <path fill="#2032c7" d="M2451 1532a2 2 0 01-2 2z" transform="translate(-1 -530)"></path>
         <path
           fill="#8f97e3"
@@ -960,7 +924,7 @@
 
 <script>
 export default {
-  name: "hero-image"
+  name: 'hero-image',
 };
 </script>
 
@@ -1011,5 +975,3 @@ export default {
   }
 }
 </style>
-
-

@@ -10,33 +10,37 @@
           @click="positiveAction"
           @keydown.tab.shift.prevent="focusHandler(`${id}-last-focus`)"
           @keyup.esc="closeModal(id)"
-        >Yes</button>
+        >
+          Yes
+        </button>
         <button
           :id="`${id}-last-focus`"
           @click="closeModal(id)"
           @keydown.tab.exact.prevent="focusHandler(`${id}-first-focus`)"
           @keyup.esc="closeModal(id)"
-        >No</button>
+        >
+          No
+        </button>
       </div>
     </div>
   </Modal>
 </template>
 
 <script>
-import Modal from "@/components/Modal.vue";
+import Modal from '@/components/Modal.vue';
 
-import closeModalMixin from "@/mixins/closeModalMixin";
-import focusHandler from "@/mixins/focusHandler";
+import closeModalMixin from '@/mixins/closeModalMixin';
+import focusHandler from '@/mixins/focusHandler';
 
 export default {
-  name: "confirmation-modal",
+  name: 'confirmation-modal',
   components: {
-    Modal
+    Modal,
   },
   props: {
     id: String,
     positiveFunc: Function,
-    positiveFuncArgs: Array
+    positiveFuncArgs: Array,
   },
   mixins: [closeModalMixin, focusHandler],
   methods: {
@@ -48,8 +52,8 @@ export default {
         this.positiveFunc();
         this.closeModal(this.id);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -88,5 +92,3 @@ h3 {
   }
 }
 </style>
-
-

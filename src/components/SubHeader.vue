@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "sub-header"
+  name: 'sub-header',
 };
 </script>
 
@@ -27,5 +27,3 @@ h4 {
   }
 }
 </style>
-
-

@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lint-staged": "lint-staged",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -15,7 +17,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.0",
     "@vue/cli-plugin-eslint": "^3.12.0",
-    "@vue/cli-plugin-typescript": "^4.0.5",
+    "@vue/cli-plugin-typescript": "^4.5.13",
     "@vue/cli-service": "^4.1.2",
     "@vue/eslint-config-prettier": "^5.0.0",
     "@vue/eslint-config-typescript": "^4.0.0",
@@ -23,9 +25,15 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0",
     "postcss-custom-media": "^7.0.8",
     "prettier": "^1.18.2",
     "typescript": "^3.7.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "lint-staged": {
+    "src/**/*.+(vue|ts)": "vue-cli-service lint",
+    "*.js": "prettier --write"
   }
 }
