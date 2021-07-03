@@ -11,17 +11,11 @@
         :maxHeight="item.height ? item.height : '400'"
       >
         <template v-slot:title>{{ item.title }}</template>
-        <Para v-if="item.type === 'text'" style="margin: 30px 0 20px 0;">{{
-          item.content
-        }}</Para>
+        <Para v-if="item.type === 'text'" style="margin: 30px 0 20px 0;">{{ item.content }}</Para>
         <Location v-if="item.type === 'location'" />
       </Accordion>
     </div>
-    <svg
-      id="solarscape"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 3093.3 1268.9"
-    >
+    <svg id="solarscape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3093.3 1268.9">
       <g class="base">
         <path
           fill="#79c89f"
@@ -35,33 +29,15 @@
           fill="#818fdb"
           d="M2773 1074l1-27c0-3 0-7 4-6 3 0 4 3 4 6l1 27-1 37c0 3 0 7-5 6-3 0-3-4-3-6l-1-37z"
         ></path>
-        <path
-          fill="none"
-          stroke="#1023c3"
-          stroke-miterlimit="10"
-          stroke-width="25"
-          d="M1992 1111v62"
-        ></path>
-        <path
-          fill="#1023c3"
-          d="M1966 1191l-238-19 85-153 249-17-96 189z"
-        ></path>
-        <path
-          fill="none"
-          stroke="#c36"
-          stroke-miterlimit="10"
-          stroke-width="25"
-          d="M2336 1075v69"
-        ></path>
+        <path fill="none" stroke="#1023c3" stroke-miterlimit="10" stroke-width="25" d="M1992 1111v62"></path>
+        <path fill="#1023c3" d="M1966 1191l-238-19 85-153 249-17-96 189z"></path>
+        <path fill="none" stroke="#c36" stroke-miterlimit="10" stroke-width="25" d="M2336 1075v69"></path>
         <path fill="#c36" d="M2307 1163l-263-21 94-168 275-20-106 209z"></path>
         <path
           fill="#fff"
           d="M151 1172c-4 15-5 16-15 17h-8c-4-10-1-21-2-30-2 9 2 20-4 29a72 72 0 01-8 0c-9 0-13-5-13-19a195 195 0 0115-76c7-13 13-13 20 0 7 16 10 34 13 53a170 170 0 012 26z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M122 1188l1-35c0-2-1-6 2-6 3-1 3 3 3 6v69c0 5 0 9-3 12-3-5-2-10-2-15v-23l-1-8z"
-        ></path>
+        <path fill="#8490dd" d="M122 1188l1-35c0-2-1-6 2-6 3-1 3 3 3 6v69c0 5 0 9-3 12-3-5-2-10-2-15v-23l-1-8z"></path>
         <path
           fill="#b8e2cc"
           d="M2821 1099c-2-21 3-40 5-60 5-12 7-25 13-37a91 91 0 016-11c8-12 12-13 23-2 10 17 16 35 19 54l2 3c4 5 4 11 3 16v27c0 18-7 25-25 26h-6c-6-5-4-12-4-18l-1-32c-2 15 5 33-4 50h-6c-12 0-20-5-25-16z"
@@ -74,29 +50,12 @@
           fill="#fff"
           d="M295 1113c-4 11-5 12-17 12h-9c-5-7-1-15-3-22-2 7 3 15-4 21l-9 1c-11-1-15-4-16-14 0-13 4-26 9-38 2-6 5-12 9-17 8-9 15-9 23 0 9 11 12 25 15 38a78 78 0 012 19z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M262 1124l1-25c0-1-1-4 2-4 3-1 4 2 4 4v50c0 4 0 7-4 9-3-4-2-8-2-11v-17l-1-6z"
-        ></path>
+        <path fill="#8490dd" d="M262 1124l1-25c0-1-1-4 2-4 3-1 4 2 4 4v50c0 4 0 7-4 9-3-4-2-8-2-11v-17l-1-6z"></path>
         <path fill="#d65c85" d="M668 997h206v150H668z"></path>
         <path fill="#c36" d="M873 997H668l-63-96 211-1 57 97z"></path>
         <path fill="#ebadc2" d="M542 1147V997l63-96 63 96 1 151-127-1z"></path>
-        <rect
-          width="21.2"
-          height="16.9"
-          x="564.4"
-          y="1042"
-          fill="#d65c85"
-          rx="3.2"
-        ></rect>
-        <rect
-          width="21.2"
-          height="16.9"
-          x="620.6"
-          y="1071.9"
-          fill="#d65c85"
-          rx="3.2"
-        ></rect>
+        <rect width="21.2" height="16.9" x="564.4" y="1042" fill="#d65c85" rx="3.2"></rect>
+        <rect width="21.2" height="16.9" x="620.6" y="1071.9" fill="#d65c85" rx="3.2"></rect>
         <path
           fill="#b8e2cc"
           d="M140 1154c-1-15 2-29 4-44 3-8 5-18 9-26a65 65 0 015-8c5-9 8-9 16-2a116 116 0 0114 40l2 2c3 3 2 7 1 12l1 19c0 13-5 18-18 19h-5c-4-4-3-9-3-13v-23c-2 10 3 23-3 36h-5c-9 0-15-4-18-12z"
@@ -109,10 +68,7 @@
           fill="#79c89f"
           d="M1054 1121l-16-1c-9-3-14-11-16-22-4-19-2-38 3-57l1-5 9-15c12-18 33-19 46-2a38 38 0 016 12 18 18 0 003 2c4 17 7 34 6 52v8c-4 21-11 28-29 28h-6c-5-6-2-14-3-20-1 7 2 14-4 20z"
         ></path>
-        <path
-          fill="#818fdb"
-          d="M1054 1121l1-24c0-2 0-6 3-5 2 0 3 2 3 5v56c0 3 0 7-4 6-2 0-2-4-2-6l-1-32z"
-        ></path>
+        <path fill="#818fdb" d="M1054 1121l1-24c0-2 0-6 3-5 2 0 3 2 3 5v56c0 3 0 7-4 6-2 0-2-4-2-6l-1-32z"></path>
         <path
           fill="#b8e2cc"
           d="M166 1106c-1-22 3-44 6-66 5-14 8-28 14-41a101 101 0 017-12c9-14 13-14 26-3 10 19 17 39 20 61l3 3c4 5 4 11 2 18l1 30c0 20-8 27-28 28h-7c-6-6-4-13-4-19l-1-36c-2 16 6 36-4 55h-7c-14 0-23-5-27-18z"
@@ -133,50 +89,32 @@
           fill="#79c89f"
           d="M1011 1158l-10-1c-6-3-8-11-9-21-3-20-1-39 2-58v-5l5-15c7-18 19-19 27-2a51 51 0 014 12 18 18 0 001 2 271 271 0 014 60c-2 21-6 28-17 28h-3c-3-5-1-13-2-20-1 7 1 15-2 20z"
         ></path>
-        <path
-          fill="#818fdb"
-          d="M1011 1158v-24l1-5c2 0 2 3 2 5l1 24-1 32c0 3 0 7-2 6l-1-6v-32z"
-        ></path>
+        <path fill="#818fdb" d="M1011 1158v-24l1-5c2 0 2 3 2 5l1 24-1 32c0 3 0 7-2 6l-1-6v-32z"></path>
         <path
           fill="#fff"
           d="M996 1104c-4 15-5 16-15 16l-7 1c-5-10-2-21-3-30-2 9 2 20-3 29a75 75 0 01-9 0c-9 0-13-5-13-19a195 195 0 0115-76c7-13 13-13 20 0 7 16 10 34 13 52a171 171 0 012 27z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M968 1120v-35c0-2 0-6 2-6 3-1 3 3 3 6l1 36v33c0 5-1 9-4 12-2-5-2-10-2-15v-23-8z"
-        ></path>
+        <path fill="#8490dd" d="M968 1120v-35c0-2 0-6 2-6 3-1 3 3 3 6l1 36v33c0 5-1 9-4 12-2-5-2-10-2-15v-23-8z"></path>
         <path
           fill="#79c89f"
           d="M927 1140l-18-1c-11-3-16-10-18-20-5-19-2-37 3-55l2-5 9-14c14-17 37-18 52-2a35 35 0 017 11 18 18 0 003 3c5 16 9 32 7 49a73 73 0 010 7c-4 20-12 27-33 28h-6c-5-6-2-14-4-20-1 6 2 14-4 19z"
         ></path>
-        <path
-          fill="#818fdb"
-          d="M927 1140l1-22c0-3 0-6 3-6s4 3 4 6v53c0 3 0 6-4 6-4-1-3-4-3-6l-1-31z"
-        ></path>
+        <path fill="#818fdb" d="M927 1140l1-22c0-3 0-6 3-6s4 3 4 6v53c0 3 0 6-4 6-4-1-3-4-3-6l-1-31z"></path>
         <path
           fill="#79c89f"
           d="M453 1180l-14-1c-8-2-11-9-13-18-4-16-2-32 2-48l1-4 7-12c10-15 28-16 39-2a32 32 0 015 10 15 15 0 002 2 134 134 0 015 50c-3 17-9 23-24 23h-5c-4-5-1-11-3-17-1 6 2 12-3 17z"
         ></path>
-        <path
-          fill="#818fdb"
-          d="M453 1180v-20c0-2 0-5 2-4 2 0 3 2 3 4v47c0 2 0 5-3 5-2-1-2-3-2-5v-27z"
-        ></path>
+        <path fill="#818fdb" d="M453 1180v-20c0-2 0-5 2-4 2 0 3 2 3 4v47c0 2 0 5-3 5-2-1-2-3-2-5v-27z"></path>
         <path
           fill="#fff"
           d="M521 1134c-4 15-5 16-15 17h-8c-4-10-1-21-2-30-2 9 2 20-4 29a77 77 0 01-8 1c-9-1-13-6-13-20a195 195 0 0115-76c7-13 13-13 20 0 7 16 10 34 13 53a172 172 0 012 26z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M492 1150l1-35c0-2-1-6 2-6 3-1 3 3 3 6v70c0 4 0 9-3 11-2-5-2-10-2-15v-23l-1-8z"
-        ></path>
+        <path fill="#8490dd" d="M492 1150l1-35c0-2-1-6 2-6 3-1 3 3 3 6v70c0 4 0 9-3 11-2-5-2-10-2-15v-23l-1-8z"></path>
         <path
           fill="#fff"
           d="M344 1194c-5 10-6 11-18 12h-8c-6-7-2-15-3-22-2 7 3 15-4 21h-10c-11 0-15-4-16-14 0-13 4-25 9-37 2-6 5-12 9-17 8-10 16-10 23 0 9 11 12 24 15 38a78 78 0 013 19z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M311 1205v-25c0-2 0-4 2-5 4 0 4 2 4 5l1 26v24c0 3 0 7-4 8-3-3-3-7-3-11v-16-6z"
-        ></path>
+        <path fill="#8490dd" d="M311 1205v-25c0-2 0-4 2-5 4 0 4 2 4 5l1 26v24c0 3 0 7-4 8-3-3-3-7-3-11v-16-6z"></path>
         <path
           fill="#b8e2cc"
           d="M334 1217c-1-10 1-20 3-30l6-18a45 45 0 013-6c4-6 6-6 12-1a80 80 0 019 27l1 2c2 2 2 5 1 8v13c0 9-3 13-12 13h-3c-3-3-2-6-2-9v-16c-1 8 2 16-2 25h-4c-6 0-10-2-12-8z"
@@ -201,27 +139,14 @@
           fill="#828fdc"
           d="M865 1174v-29a59 59 0 011-6 3 3 0 012-2c2-1 3 1 3 2v63a37 37 0 010 7 2 2 0 01-3 1l-2-1a42 42 0 01-1-7v-28z"
         ></path>
-        <path
-          fill="none"
-          stroke="#1023c3"
-          stroke-miterlimit="10"
-          stroke-width="25"
-          d="M2709 1142v62"
-        ></path>
-        <path
-          fill="#1023c3"
-          d="M2683 1222l-239-20 86-152 249-18-96 190z"
-        ></path>
+        <path fill="none" stroke="#1023c3" stroke-miterlimit="10" stroke-width="25" d="M2709 1142v62"></path>
+        <path fill="#1023c3" d="M2683 1222l-239-20 86-152 249-18-96 190z"></path>
       </g>
       <g id="solarscape-panels-one" fill="#d65c85">
-        <path
-          d="M2300 1154l-241-20 86-154 251-16-96 190zM864 991H673l-59-86 196-1 54 87z"
-        ></path>
+        <path d="M2300 1154l-241-20 86-154 251-16-96 190zM864 991H673l-59-86 196-1 54 87z"></path>
       </g>
       <g id="solarscape-panels-two" fill="#404fcf">
-        <path
-          d="M1960 1183l-219-18 78-140 228-15-87 173zM2677 1213l-219-18 78-140 228-14-87 172z"
-        ></path>
+        <path d="M1960 1183l-219-18 78-140 228-15-87 173zM2677 1213l-219-18 78-140 228-14-87 172z"></path>
       </g>
       <g id="solarscape-panel-dividers" fill="none" stroke-miterlimit="10">
         <path
@@ -234,11 +159,7 @@
           stroke-width="10"
           d="M2218 972l-92 174M2315 965l-100 188M2114 1026l258-6M2081 1085l257 5"
         ></path>
-        <path
-          stroke="#c36"
-          stroke-width="5"
-          d="M627 930h203M648 962h203M740 993l-60-90M808 993l-61-90"
-        ></path>
+        <path stroke="#c36" stroke-width="5" d="M627 930h203M648 962h203M740 993l-60-90M808 993l-61-90"></path>
         <path
           stroke="#1023c3"
           stroke-width="10"
@@ -290,127 +211,125 @@
 </template>
 
 <script>
-import SectionHeader from "@/components/SectionHeader.vue";
-import Para from "@/components/Para.vue";
-import Accordion from "@/components/Accordion.vue";
-import Location from "@/components/Location.vue";
+import SectionHeader from '@/components/SectionHeader.vue';
+import Para from '@/components/Para.vue';
+import Accordion from '@/components/Accordion.vue';
+import Location from '@/components/Location.vue';
 
 export default {
-  name: "faq",
+  name: 'faq',
   components: {
     SectionHeader,
     Para,
     Accordion,
-    Location
+    Location,
   },
   data: function() {
     return {
       faqArr: [
         {
-          title: "Who is eligible to participate?",
-          type: "text",
+          title: 'Who is eligible to participate?',
+          type: 'text',
           content: `You need to be at least 13 years of age at the time of the event to be eligible to participate.
           If you are over 13 but under 18 years of age, you will be eligible to participate only if you have parental consent (please print out the consent and indemnity form for your parent’s signature and bring it on the day of the hackathon).
           If you are 18 and older, you would need to present a printed and signed indemnity form upon registration.
           The respective forms will be emailed to you upon confirmation of your registration.`,
-          height: "450"
+          height: '450',
         },
         {
-          title: "Is this hackathon free?",
-          type: "text",
+          title: 'Is this hackathon free?',
+          type: 'text',
           content: `Yes, this hackathon is completely free. Come down and have fun,
-          you never know what your ideas might turn into!`
+          you never know what your ideas might turn into!`,
         },
         {
-          title: "Where is the hackathon held and how can I get there?",
-          type: "location",
+          title: 'Where is the hackathon held and how can I get there?',
+          type: 'location',
           content: ``,
-          height: "1050"
+          height: '1050',
         },
         {
-          title: "Can I participate as an individual?",
-          type: "text",
+          title: 'Can I participate as an individual?',
+          type: 'text',
           content: `Sure! You can sign up and participate solely as an individual, or if
           you would like to, you could sign up as an individual and request for a group
-          during registration and we will help you find a group!`
+          during registration and we will help you find a group!`,
         },
         {
-          title: "Are the themes open to interpretation?",
-          type: "text",
+          title: 'Are the themes open to interpretation?',
+          type: 'text',
           content: `Yes, you can decide how you want to define your problem statement.
           If you are unsure of any ideas, you may approach the organizers for
-          clarification at the hackathon!`
+          clarification at the hackathon!`,
         },
         {
-          title: "Can I start ideating before the competition?",
-          type: "text",
+          title: 'Can I start ideating before the competition?',
+          type: 'text',
           content: `Yes, you can begin conceptualizing your ideas or planning your
           approach to the themes before the competition. However, only work done on the
-          prototype during the competition itself will be judged.`
+          prototype during the competition itself will be judged.`,
         },
         {
-          title: "What should I bring to the event?",
-          type: "text",
+          title: 'What should I bring to the event?',
+          type: 'text',
           content: `Please bring your computers.
           A limited quantity of consumable materials such as cardboard, wood and acrylic will be provided, and standard workshop tools will be available.
           Prototyping materials such as Arduino Unos, some sensors, etc., will also be available for loan.
           However, should you expect to use a large amount of materials, do bring your own, or let us know before the event and we might be able to help.`,
-          height: "450"
+          height: '450',
         },
         {
-          title: "How do we handle Intellectual Property (IP)?",
-          type: "text",
-          content: `Please refer to the Terms and Conditions of the Competition with regards to IP.`
+          title: 'How do we handle Intellectual Property (IP)?',
+          type: 'text',
+          content: `Please refer to the Terms and Conditions of the Competition with regards to IP.`,
         },
         {
-          title: "When is the registration deadline?",
-          type: "text",
+          title: 'When is the registration deadline?',
+          type: 'text',
           content: `We will close registration when we hit the maximum capacity allowable for the hackathon or by 14th September 2359hrs,
-          depending on whichever one is earlier. `
+          depending on whichever one is earlier. `,
         },
         {
-          title: "How would I know if my registration is confirmed?",
-          type: "text",
-          content: `You would receive an email stating that your registration is confirmed along with a copy of the indemnity form for your completion.`
+          title: 'How would I know if my registration is confirmed?',
+          type: 'text',
+          content: `You would receive an email stating that your registration is confirmed along with a copy of the indemnity form for your completion.`,
         },
         {
-          title:
-            "If I have opted to have my team formed for me, how will I meet my team?",
-          type: "text",
-          content: `Once we have matched participants requesting to be placed in a team with complementing skillsets and similar interests in category and technology, we will e-introduce all of you in an email and subsequent follow-up will be left to you.`
+          title: 'If I have opted to have my team formed for me, how will I meet my team?',
+          type: 'text',
+          content: `Once we have matched participants requesting to be placed in a team with complementing skillsets and similar interests in category and technology, we will e-introduce all of you in an email and subsequent follow-up will be left to you.`,
         },
         {
-          title:
-            "Do I need to have any background in Computer Science/Hacking?",
-          type: "text",
+          title: 'Do I need to have any background in Computer Science/Hacking?',
+          type: 'text',
           content: `You do not need a background in either, although knowing some basic coding can help a lot.
-          Just come with an open mind to learn and try new things!`
+          Just come with an open mind to learn and try new things!`,
         },
         {
-          title: "Would we have to stay in the venue for the full duration?",
-          type: "text",
-          content: `No, you do not have to, but announcements may be made door-to-door within our hacking venue and it is advisable to have your team present.`
+          title: 'Would we have to stay in the venue for the full duration?',
+          type: 'text',
+          content: `No, you do not have to, but announcements may be made door-to-door within our hacking venue and it is advisable to have your team present.`,
         },
         {
-          title: "Will I get a certificate of participation for taking part?",
-          type: "text",
-          content: `Apologies, but we currently do not have provisions for this.`
+          title: 'Will I get a certificate of participation for taking part?',
+          type: 'text',
+          content: `Apologies, but we currently do not have provisions for this.`,
         },
         {
-          title: "Do I have to use a particular coding language?",
-          type: "text",
+          title: 'Do I have to use a particular coding language?',
+          type: 'text',
           content: `You are free to use any programming language you desire or need to use based on your prototype.
-          There are no restrictions or requirements as to using specific programming languages.`
+          There are no restrictions or requirements as to using specific programming languages.`,
         },
         {
           title: "My question can't be found in the the FAQs!",
-          type: "text",
+          type: 'text',
           content: `For any further queries or clarifications, either drop us a message via the contact
-          form below or feel free to email us at whatthehack@sutd.edu.sg.`
-        }
-      ]
+          form below or feel free to email us at whatthehack@sutd.edu.sg.`,
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -437,11 +356,11 @@ export default {
   opacity: 0.4;
 }
 
-[theme="light"] #solarscape-panels-one {
+[theme='light'] #solarscape-panels-one {
   animation: panel-animation-one 3s linear infinite alternate;
 }
 
-[theme="light"] #solarscape-panels-two {
+[theme='light'] #solarscape-panels-two {
   animation: panel-animation-two 3s linear infinite alternate;
 }
 

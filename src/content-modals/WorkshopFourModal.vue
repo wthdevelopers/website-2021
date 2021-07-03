@@ -2,34 +2,33 @@
   <ContentModal :id="id">
     <h3>ESP32 Web Server & BLE</h3>
     <Para>
-      In this workshop, we’ll teach you how to use the ESP32 platform with the
-      Arduino IDE to make your hardware project communicate over WiFi and Bluetooth. Using
-      Bluetooth, you can have multiple wireless nodes in your project, or use WiFi to control
-      your hardware project with your phone or PC, even over the internet!
+      In this workshop, we’ll teach you how to use the ESP32 platform with the Arduino IDE to make your hardware project
+      communicate over WiFi and Bluetooth. Using Bluetooth, you can have multiple wireless nodes in your project, or use
+      WiFi to control your hardware project with your phone or PC, even over the internet!
     </Para>
-    <br>
-    <br>
+    <br />
+    <br />
     <Para>Conducted By: SUTD IEEE</Para>
-    <br>
-    <br>
+    <br />
+    <br />
     <Para>Duration: 2hrs</Para>
   </ContentModal>
 </template>
 
 <script>
-import ContentModal from "@/components/ContentModal.vue";
-import Para from "@/components/Para.vue";
+import ContentModal from '@/components/ContentModal.vue';
+import Para from '@/components/Para.vue';
 
 export default {
-  name: "workshop-four-modal",
+  name: 'workshop-four-modal',
   components: {
     ContentModal,
-    Para
+    Para,
   },
   props: {
     id: String,
-    workshop: Number
-  }
+    workshop: Number,
+  },
 };
 </script>
 

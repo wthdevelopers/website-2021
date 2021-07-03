@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: "form-label",
+  name: 'form-label',
   props: {
-    forValue: String
-  }
+    forValue: String,
+  },
 };
 </script>
 
@@ -33,5 +33,3 @@ label {
   }
 }
 </style>
-
-

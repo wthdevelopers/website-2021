@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "backdrop"
+  name: 'backdrop',
 };
 </script>
 
@@ -21,5 +21,3 @@ div {
   background-color: #000000;
 }
 </style>
-
-

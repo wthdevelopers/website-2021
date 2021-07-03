@@ -8,22 +8,26 @@
         :aria-expanded="expanded ? 'true' : 'false'"
         :aria-controls="`${accordionName}-content-${accordionIdx}`"
         @click="openAccordion"
-        @keydown.down.exact.prevent="() => {
-          if (accordionIdx === accordionMaxIdx) {
-            focusHandler(`${accordionName}-trigger-${0}`);
-          } else {
-            focusHandler(`${accordionName}-trigger-${accordionIdx + 1}`);
+        @keydown.down.exact.prevent="
+          () => {
+            if (accordionIdx === accordionMaxIdx) {
+              focusHandler(`${accordionName}-trigger-${0}`);
+            } else {
+              focusHandler(`${accordionName}-trigger-${accordionIdx + 1}`);
+            }
           }
-        }"
-        @keydown.up.exact.prevent="() => {
-          if (accordionIdx === 0) {
-            focusHandler(`${accordionName}-trigger-${accordionMaxIdx}`);
-          } else {
-            focusHandler(`${accordionName}-trigger-${accordionIdx - 1}`);
+        "
+        @keydown.up.exact.prevent="
+          () => {
+            if (accordionIdx === 0) {
+              focusHandler(`${accordionName}-trigger-${accordionMaxIdx}`);
+            } else {
+              focusHandler(`${accordionName}-trigger-${accordionIdx - 1}`);
+            }
           }
-        }"
-        @keydown.home.exact.prevent="focusHandler(`${accordionName}-trigger-${0}`);"
-        @keydown.end.exact.prevent="focusHandler(`${accordionName}-trigger-${accordionMaxIdx}`);"
+        "
+        @keydown.home.exact.prevent="focusHandler(`${accordionName}-trigger-${0}`)"
+        @keydown.end.exact.prevent="focusHandler(`${accordionName}-trigger-${accordionMaxIdx}`)"
       >
         <span class="accordion-title" :id="`${accordionName}-title-${accordionIdx}`">
           <slot name="title"></slot>
@@ -32,22 +36,26 @@
           v-if="removeFunc"
           type="button"
           @click.stop="removeAction"
-          @keydown.down.exact.prevent="() => {
-          if (accordionIdx === accordionMaxIdx) {
-            focusHandler(`${accordionName}-trigger-${0}`);
-          } else {
-            focusHandler(`${accordionName}-trigger-${accordionIdx + 1}`);
-          }
-        }"
-          @keydown.up.exact.prevent="() => {
-          if (accordionIdx === 0) {
-            focusHandler(`${accordionName}-trigger-${accordionMaxIdx}`);
-          } else {
-            focusHandler(`${accordionName}-trigger-${accordionIdx - 1}`);
-          }
-        }"
-          @keydown.home.exact.prevent="focusHandler(`${accordionName}-trigger-${0}`);"
-          @keydown.end.exact.prevent="focusHandler(`${accordionName}-trigger-${accordionMaxIdx}`);"
+          @keydown.down.exact.prevent="
+            () => {
+              if (accordionIdx === accordionMaxIdx) {
+                focusHandler(`${accordionName}-trigger-${0}`);
+              } else {
+                focusHandler(`${accordionName}-trigger-${accordionIdx + 1}`);
+              }
+            }
+          "
+          @keydown.up.exact.prevent="
+            () => {
+              if (accordionIdx === 0) {
+                focusHandler(`${accordionName}-trigger-${accordionMaxIdx}`);
+              } else {
+                focusHandler(`${accordionName}-trigger-${accordionIdx - 1}`);
+              }
+            }
+          "
+          @keydown.home.exact.prevent="focusHandler(`${accordionName}-trigger-${0}`)"
+          @keydown.end.exact.prevent="focusHandler(`${accordionName}-trigger-${accordionMaxIdx}`)"
         >
           <span class="sr-only">Delete</span>
           <svg
@@ -86,13 +94,13 @@
 </template>
 
 <script>
-import focusHandler from "@/mixins/focusHandler";
+import focusHandler from '@/mixins/focusHandler';
 
 export default {
-  name: "accordion",
+  name: 'accordion',
   data() {
     return {
-      expanded: false
+      expanded: false,
     };
   },
   props: {
@@ -101,54 +109,41 @@ export default {
     accordionMaxIdx: Number,
     removeFunc: Function,
     removeFuncArgs: Array,
-    maxHeight: String
+    maxHeight: String,
   },
   methods: {
     openAccordion() {
-      let accordion = document.querySelector(
-        `#${this.accordionName}-${this.accordionIdx}`
-      );
+      let accordion = document.querySelector(`#${this.accordionName}-${this.accordionIdx}`);
 
-      let accordionContent = document.querySelector(
-        `#${this.accordionName}-content-${this.accordionIdx}`
-      );
-      let accordionTitle = document.querySelector(
-        `#${this.accordionName}-title-${this.accordionIdx}`
-      );
-      let accordionCancel = document.querySelector(
-        `#${this.accordionName}-cancel-${this.accordionIdx}`
-      );
-      let accordionArrow = document.querySelector(
-        `#${this.accordionName}-arrow-${this.accordionIdx}`
-      );
+      let accordionContent = document.querySelector(`#${this.accordionName}-content-${this.accordionIdx}`);
+      let accordionTitle = document.querySelector(`#${this.accordionName}-title-${this.accordionIdx}`);
+      let accordionCancel = document.querySelector(`#${this.accordionName}-cancel-${this.accordionIdx}`);
+      let accordionArrow = document.querySelector(`#${this.accordionName}-arrow-${this.accordionIdx}`);
       let accordionCancelPath = accordionCancel && accordionCancel.firstChild;
       let accordionArrowPath = accordionArrow.firstChild;
 
-      if (
-        accordionContent.style.maxHeight === "0px" ||
-        !accordionContent.style.maxHeight
-      ) {
-        accordionContent.style.display = "block";
+      if (accordionContent.style.maxHeight === '0px' || !accordionContent.style.maxHeight) {
+        accordionContent.style.display = 'block';
         setTimeout(() => {
           accordionContent.style.maxHeight = `${this.maxHeight}px`;
         }, 100);
-        accordion.style.border = "2px solid var(--color-accent)";
-        accordionTitle.style.color = "var(--color-accent)";
+        accordion.style.border = '2px solid var(--color-accent)';
+        accordionTitle.style.color = 'var(--color-accent)';
         if (accordionCancelPath) {
-          accordionCancelPath.style.fill = "var(--color-accent)";
+          accordionCancelPath.style.fill = 'var(--color-accent)';
         }
-        accordionArrowPath.style.fill = "var(--color-accent)";
+        accordionArrowPath.style.fill = 'var(--color-accent)';
         this.expanded = !this.expanded;
       } else {
-        accordionContent.style.maxHeight = "0px";
+        accordionContent.style.maxHeight = '0px';
         setTimeout(() => {
-          accordion.style.border = "2px solid var(--color-regular-text)";
-          accordionTitle.style.color = "var(--color-regular-text)";
+          accordion.style.border = '2px solid var(--color-regular-text)';
+          accordionTitle.style.color = 'var(--color-regular-text)';
           if (accordionCancelPath) {
-            accordionCancelPath.style.fill = "var(--color-regular-text)";
+            accordionCancelPath.style.fill = 'var(--color-regular-text)';
           }
-          accordionArrowPath.style.fill = "var(--color-regular-text)";
-          accordionContent.style.display = "none";
+          accordionArrowPath.style.fill = 'var(--color-regular-text)';
+          accordionContent.style.display = 'none';
           this.expanded = !this.expanded;
         }, 600);
       }
@@ -159,9 +154,9 @@ export default {
       } else {
         this.removeFunc();
       }
-    }
+    },
   },
-  mixins: [focusHandler]
+  mixins: [focusHandler],
 };
 </script>
 
@@ -212,7 +207,7 @@ svg > path {
 
 .accordion-content {
   display: none;
-  max-height: 0px;
+  max-height: 0;
   overflow: hidden;
   transition: max-height 0.6s ease-out;
 
@@ -244,5 +239,3 @@ svg > path {
   }
 }
 </style>
-
-

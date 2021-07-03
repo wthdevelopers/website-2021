@@ -1,7 +1,7 @@
 <template>
   <FormBlock>
-    <FormLabel :forValue="name">{{label}}</FormLabel>
-    <FormLabelSub>{{additionalInfo}}</FormLabelSub>
+    <FormLabel :forValue="name">{{ label }}</FormLabel>
+    <FormLabelSub>{{ additionalInfo }}</FormLabelSub>
     <input
       maxlength="254"
       :type="type"
@@ -11,19 +11,19 @@
       v-model="model.value"
       @blur="onBlur ? onBlur(model) : null"
       :style="model.error ? 'border-bottom: 2px solid transparent; outline: 2px solid #cc6675;' : null"
-    >
-    <FormError>{{model.error}}</FormError>
+    />
+    <FormError>{{ model.error }}</FormError>
   </FormBlock>
 </template>
 
 <script>
-import FormBlock from "@/components/FormBlock.vue";
-import FormLabel from "@/components/FormLabel.vue";
-import FormLabelSub from "@/components/FormLabelSub.vue";
-import FormError from "@/components/FormError.vue";
+import FormBlock from '@/components/FormBlock.vue';
+import FormLabel from '@/components/FormLabel.vue';
+import FormLabelSub from '@/components/FormLabelSub.vue';
+import FormError from '@/components/FormError.vue';
 
 export default {
-  name: "form-input",
+  name: 'form-input',
   props: {
     additionalInfo: String,
     type: String,
@@ -31,20 +31,20 @@ export default {
     name: String,
     placeholder: String,
     model: Object,
-    onBlur: Function
+    onBlur: Function,
   },
   components: {
     FormBlock,
     FormLabel,
     FormLabelSub,
-    FormError
-  }
+    FormError,
+  },
 };
 </script>
 
 <style scoped>
-input[type="text"],
-input[type="date"] {
+input[type='text'],
+input[type='date'] {
   display: flex;
   align-items: center;
   margin-top: 40px;
@@ -79,20 +79,18 @@ input:invalid {
 }
 
 @media (--desktop-narrow) {
-  input[type="text"],
-  input[type="date"] {
+  input[type='text'],
+  input[type='date'] {
     font-size: 34px;
     height: 7vw;
   }
 }
 
 @media (--mobile-narrow) {
-  input[type="text"],
-  input[type="date"] {
+  input[type='text'],
+  input[type='date'] {
     font-size: 24px;
     height: 9vw;
   }
 }
 </style>
-
-

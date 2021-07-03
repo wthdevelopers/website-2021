@@ -35,19 +35,54 @@
         </a>
       </li>
       <li>
-        <button @click="buttonOnClickScroll('about'); closeDrawer()">About</button>
+        <button
+          @click="
+            buttonOnClickScroll('about');
+            closeDrawer();
+          "
+        >
+          About
+        </button>
       </li>
       <li>
-        <button @click="buttonOnClickScroll('prizes'); closeDrawer()">Prizes</button>
+        <button
+          @click="
+            buttonOnClickScroll('prizes');
+            closeDrawer();
+          "
+        >
+          Prizes
+        </button>
       </li>
       <li>
-        <button @click="buttonOnClickScroll('schedule'); closeDrawer()">Schedule</button>
+        <button
+          @click="
+            buttonOnClickScroll('schedule');
+            closeDrawer();
+          "
+        >
+          Schedule
+        </button>
       </li>
       <li>
-        <button @click="buttonOnClickScroll('thankees'); closeDrawer()">Sponsors</button>
+        <button
+          @click="
+            buttonOnClickScroll('thankees');
+            closeDrawer();
+          "
+        >
+          Sponsors
+        </button>
       </li>
       <li>
-        <button @click="buttonOnClickScroll('faq'); closeDrawer()">FAQs</button>
+        <button
+          @click="
+            buttonOnClickScroll('faq');
+            closeDrawer();
+          "
+        >
+          FAQs
+        </button>
       </li>
       <li class="bar-register-link">
         <a href="https://bit.ly/2tjIhvF">Register</a>
@@ -70,30 +105,15 @@
                 fill="#f4c425"
               ></path>
               <path d="m41 31.39c1.74 3.87.42 8 .82 11.91-.32.47-.64.45-1 0z" fill="#f3c001"></path>
-              <path
-                d="m180.8 43.26c.41-4-.92-8 .82-11.91q.06 6 .14 11.91c-.36.51-.68.49-1 0z"
-                fill="#f3c001"
-              ></path>
-              <path
-                d="m40.88 43.26h1v8h-.71c-.13-1.39-.27-2.79-.41-4.18 0-1.27 0-2.52.12-3.82z"
-                fill="#f4c214"
-              ></path>
-              <path
-                d="m180.8 43.26h1c0 1.26.11 2.51.16 3.76-.14 1.39-.28 2.79-.41 4.18h-.75z"
-                fill="#f4c214"
-              ></path>
-              <path
-                d="m41.8 174.26c-.41 4 .92 8-.82 11.91q-.06-6-.14-11.91c.36-.49.68-.51.96 0z"
-                fill="#f3c001"
-              ></path>
+              <path d="m180.8 43.26c.41-4-.92-8 .82-11.91q.06 6 .14 11.91c-.36.51-.68.49-1 0z" fill="#f3c001"></path>
+              <path d="m40.88 43.26h1v8h-.71c-.13-1.39-.27-2.79-.41-4.18 0-1.27 0-2.52.12-3.82z" fill="#f4c214"></path>
+              <path d="m180.8 43.26h1c0 1.26.11 2.51.16 3.76-.14 1.39-.28 2.79-.41 4.18h-.75z" fill="#f4c214"></path>
+              <path d="m41.8 174.26c-.41 4 .92 8-.82 11.91q-.06-6-.14-11.91c.36-.49.68-.51.96 0z" fill="#f3c001"></path>
               <path
                 d="m181.58 186.13c-1.78-3.87-.42-7.95-.78-11.87.32-.45.64-.47 1 0q-.15 5.93-.22 11.87z"
                 fill="#f3c001"
               ></path>
-              <path
-                d="m41.8 174.26h-1c0-1.26-.11-2.51-.16-3.76.14-1.39.28-2.79.41-4.18h.75z"
-                fill="#f4c214"
-              ></path>
+              <path d="m41.8 174.26h-1c0-1.26-.11-2.51-.16-3.76.14-1.39.28-2.79.41-4.18h.75z" fill="#f4c214"></path>
               <path
                 d="m181.72 174.26h-1v-8h.71c.13 1.39.27 2.79.41 4.18-.04 1.27-.04 2.56-.12 3.82z"
                 fill="#f4c214"
@@ -147,30 +167,15 @@
                 fill="#f4c425"
               ></path>
               <path d="m41 31.39c1.74 3.87.42 8 .82 11.91-.32.47-.64.45-1 0z" fill="#f3c001"></path>
-              <path
-                d="m180.8 43.26c.41-4-.92-8 .82-11.91q.06 6 .14 11.91c-.36.51-.68.49-1 0z"
-                fill="#f3c001"
-              ></path>
-              <path
-                d="m40.88 43.26h1v8h-.71c-.13-1.39-.27-2.79-.41-4.18 0-1.27 0-2.52.12-3.82z"
-                fill="#f4c214"
-              ></path>
-              <path
-                d="m180.8 43.26h1c0 1.26.11 2.51.16 3.76-.14 1.39-.28 2.79-.41 4.18h-.75z"
-                fill="#f4c214"
-              ></path>
-              <path
-                d="m41.8 174.26c-.41 4 .92 8-.82 11.91q-.06-6-.14-11.91c.36-.49.68-.51.96 0z"
-                fill="#f3c001"
-              ></path>
+              <path d="m180.8 43.26c.41-4-.92-8 .82-11.91q.06 6 .14 11.91c-.36.51-.68.49-1 0z" fill="#f3c001"></path>
+              <path d="m40.88 43.26h1v8h-.71c-.13-1.39-.27-2.79-.41-4.18 0-1.27 0-2.52.12-3.82z" fill="#f4c214"></path>
+              <path d="m180.8 43.26h1c0 1.26.11 2.51.16 3.76-.14 1.39-.28 2.79-.41 4.18h-.75z" fill="#f4c214"></path>
+              <path d="m41.8 174.26c-.41 4 .92 8-.82 11.91q-.06-6-.14-11.91c.36-.49.68-.51.96 0z" fill="#f3c001"></path>
               <path
                 d="m181.58 186.13c-1.78-3.87-.42-7.95-.78-11.87.32-.45.64-.47 1 0q-.15 5.93-.22 11.87z"
                 fill="#f3c001"
               ></path>
-              <path
-                d="m41.8 174.26h-1c0-1.26-.11-2.51-.16-3.76.14-1.39.28-2.79.41-4.18h.75z"
-                fill="#f4c214"
-              ></path>
+              <path d="m41.8 174.26h-1c0-1.26-.11-2.51-.16-3.76.14-1.39.28-2.79.41-4.18h.75z" fill="#f4c214"></path>
               <path
                 d="m181.72 174.26h-1v-8h.71c.13 1.39.27 2.79.41 4.18-.04 1.27-.04 2.56-.12 3.82z"
                 fill="#f4c214"
@@ -305,37 +310,61 @@
           <button
             id="drawer-first-focus"
             @keydown.tab.shift.prevent="focusHandler('cancel')"
-            @click="buttonOnClickScroll('about'); closeDrawer()"
-          >About</button>
+            @click="
+              buttonOnClickScroll('about');
+              closeDrawer();
+            "
+          >
+            About
+          </button>
         </li>
         <li>
-          <button @click="buttonOnClickScroll('prizes'); closeDrawer()">Prizes</button>
+          <button
+            @click="
+              buttonOnClickScroll('prizes');
+              closeDrawer();
+            "
+          >
+            Prizes
+          </button>
         </li>
         <li>
-          <button @click="buttonOnClickScroll('schedule'); closeDrawer()">Schedule</button>
+          <button
+            @click="
+              buttonOnClickScroll('schedule');
+              closeDrawer();
+            "
+          >
+            Schedule
+          </button>
         </li>
         <li>
-          <button @click="buttonOnClickScroll('thankees'); closeDrawer()">Sponsors</button>
+          <button
+            @click="
+              buttonOnClickScroll('thankees');
+              closeDrawer();
+            "
+          >
+            Sponsors
+          </button>
         </li>
         <li>
-          <button @click="buttonOnClickScroll('faq'); closeDrawer()">FAQs</button>
+          <button
+            @click="
+              buttonOnClickScroll('faq');
+              closeDrawer();
+            "
+          >
+            FAQs
+          </button>
         </li>
         <li>
           <a href="https://bit.ly/2tjIhvF">Register</a>
         </li>
       </ul>
-      <button
-        id="cancel"
-        @click="closeDrawer"
-        @keydown.tab.exact.prevent="focusHandler('drawer-first-focus')"
-      >
+      <button id="cancel" @click="closeDrawer" @keydown.tab.exact.prevent="focusHandler('drawer-first-focus')">
         <span class="sr-only">Close navigation menu</span>
-        <svg
-          viewBox="0 0 30 30"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          focusable="false"
-        >
+        <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
           <path
             d="m15 0a15 15 0 1 0 15 15 15 15 0 0 0 -15-15zm-7 6.4a1.62 1.62 0 0 1 1.18.49l5.82 5.79 5.79-5.79a1.65 1.65 0 0 1 1.13-.49 1.63 1.63 0 0 1 1.68 1.6 1.6 1.6 0 0 1 -.49 1.22l-5.79 5.78 5.79 5.79a1.64 1.64 0 0 1 -2.29 2.35l-5.82-5.82-5.79 5.79a1.64 1.64 0 1 1 -2.35-2.29l5.82-5.82-5.79-5.79a1.64 1.64 0 0 1 0-2.32 1.62 1.62 0 0 1 1.11-.49z"
           ></path>
@@ -346,20 +375,20 @@
 </template>
 
 <script>
-import Vue from "vue";
+import Vue from 'vue';
 
-import focusHandler from "@/mixins/focusHandler";
+import focusHandler from '@/mixins/focusHandler';
 
 export default Vue.extend({
-  name: "navbar",
+  name: 'navbar',
   data() {
     return {
-      theme: "light"
+      theme: 'light',
     };
   },
   mounted: function() {
     Vue.nextTick(() => {
-      let setTheme = document.documentElement.getAttribute("theme");
+      let setTheme = document.documentElement.getAttribute('theme');
       if (setTheme) {
         this.theme = setTheme;
       }
@@ -369,44 +398,44 @@ export default Vue.extend({
   methods: {
     buttonOnClickScroll(loc) {
       var section = document.querySelector(`#${loc}`);
-      section.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView({ behavior: 'smooth' });
     },
     toggleTheme() {
-      if (document.documentElement.getAttribute("theme") === "dark") {
-        document.documentElement.setAttribute("theme", "light");
-        localStorage.setItem("theme", "light");
-        this.theme = "light";
+      if (document.documentElement.getAttribute('theme') === 'dark') {
+        document.documentElement.setAttribute('theme', 'light');
+        localStorage.setItem('theme', 'light');
+        this.theme = 'light';
       } else {
-        document.documentElement.setAttribute("theme", "dark");
-        localStorage.setItem("theme", "dark");
-        this.theme = "dark";
+        document.documentElement.setAttribute('theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        this.theme = 'dark';
       }
     },
     openDrawer() {
-      let backdrop = document.querySelector("#backdrop");
-      let drawer = document.querySelector("#drawer");
-      backdrop.style.display = "block";
-      backdrop.style.transition = "opacity 0.5s ease-out";
-      drawer.style.display = "block";
+      let backdrop = document.querySelector('#backdrop');
+      let drawer = document.querySelector('#drawer');
+      backdrop.style.display = 'block';
+      backdrop.style.transition = 'opacity 0.5s ease-out';
+      drawer.style.display = 'block';
       setTimeout(() => {
-        backdrop.style.opacity = "0.5";
-        drawer.style.opacity = "1";
-        drawer.style.transform = "translate3d(0, 0, 0)";
+        backdrop.style.opacity = '0.5';
+        drawer.style.opacity = '1';
+        drawer.style.transform = 'translate3d(0, 0, 0)';
       }, 100);
     },
     closeDrawer() {
-      let backdrop = document.querySelector("#backdrop");
-      let drawer = document.querySelector("#drawer");
-      backdrop.style.opacity = "0";
-      drawer.style.opacity = "0";
-      drawer.style.transform = "translate3d(80vw, 0, 0)";
+      let backdrop = document.querySelector('#backdrop');
+      let drawer = document.querySelector('#drawer');
+      backdrop.style.opacity = '0';
+      drawer.style.opacity = '0';
+      drawer.style.transform = 'translate3d(80vw, 0, 0)';
       setTimeout(() => {
-        backdrop.style.display = "none";
-        backdrop.style.transition = "none";
-        drawer.style.display = "none";
+        backdrop.style.display = 'none';
+        backdrop.style.transition = 'none';
+        drawer.style.display = 'none';
       }, 500);
-    }
-  }
+    },
+  },
 });
 </script>
 
@@ -519,8 +548,7 @@ nav li:hover {
   background-color: var(--slope-body-color);
   padding: 80px 50px 80px 30px;
   text-align: center;
-  transition: transform 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53),
-    opacity 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53),
+  transition: transform 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53), opacity 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53),
     background-color 0.6s ease-out;
 }
 

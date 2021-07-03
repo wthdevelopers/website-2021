@@ -5,26 +5,16 @@
       <div class="about-content-main">
         <Para>
           What The Hack is SUTD's annual hackathon held at our campus
-          {{" "}}that aims to bring together
-          people of various disciplines and provide them with a platform to find innovative
-          solutions to meaningful real-world problems.
+          {{ ' ' }}that aims to bring together people of various disciplines and provide them with a platform to find
+          innovative solutions to meaningful real-world problems.
         </Para>
         <Para>
           This year’s theme is
-          <span>Environment</span>, of which there will be four problem domains
-          related to this overarching theme -
-          <span>Built Environment</span>,
-          <span>Waste Management</span>,
-          <span>Waste Reduction</span> and
-          <span>Transportation</span>. Participants will have to tackle an issue
-          from within one of these problem domains using solutions that fall under at
-          least one of these four technological categories -
-          <span>Software Platforms</span>,
-          <span>
-            Internet
-            of Things
-          </span>,
-          <span>Artificial Intelligence</span> and
+          <span>Environment</span>, of which there will be four problem domains related to this overarching theme -
+          <span>Built Environment</span>, <span>Waste Management</span>, <span>Waste Reduction</span> and
+          <span>Transportation</span>. Participants will have to tackle an issue from within one of these problem
+          domains using solutions that fall under at least one of these four technological categories -
+          <span>Software Platforms</span>, <span> Internet of Things </span>, <span>Artificial Intelligence</span> and
           <span>Computational Fabrication</span>.
         </Para>
       </div>
@@ -70,18 +60,12 @@
           fill="#79c89f"
           d="M117 949a27 27 0 00-3 0c-19 2-24-9-25-25-1-10-2-21 1-31v-8c4-25 8-50 16-74 2-7 4-13 9-19s8-6 14 0c4 6 7 13 9 20 5 16 8 33 11 50l2 13 3 31a70 70 0 01-3 32c-3 8-9 11-17 11h-10c-3-4-2-9-2-14l-1-40c-2 14-1 27-1 40-1 5 0 10-3 14z"
         ></path>
-        <path
-          fill="#8192d9"
-          d="M117 949v-53c0-3-1-9 4-9 5 1 3 6 3 9v108c0 3 2 9-4 8-4 0-3-5-3-8v-55z"
-        ></path>
+        <path fill="#8192d9" d="M117 949v-53c0-3-1-9 4-9 5 1 3 6 3 9v108c0 3 2 9-4 8-4 0-3-5-3-8v-55z"></path>
         <path
           fill="#f4c6a6"
           d="M2407 1146l-13-1c-8-2-11-7-13-14-4-14-1-27 3-40v-3l7-10c10-12 27-13 38-1a25 25 0 015 8 14 14 0 002 1c3 12 6 23 5 36a49 49 0 01-1 5c-2 14-8 19-23 19h-4c-4-4-2-9-3-14-1 5 1 10-3 14z"
         ></path>
-        <path
-          fill="#818fdb"
-          d="M2407 1146v-16c0-2 0-4 3-4 2 0 2 2 3 4v38c0 2 0 4-3 4s-3-2-3-4v-22z"
-        ></path>
+        <path fill="#818fdb" d="M2407 1146v-16c0-2 0-4 3-4 2 0 2 2 3 4v38c0 2 0 4-3 4s-3-2-3-4v-22z"></path>
         <path
           fill="#f4d3bd"
           d="M1977 1058c-1-16 2-33 4-49 4-10 6-20 11-30a75 75 0 015-9c6-10 10-10 19-2 7 14 13 29 15 45l2 2c3 4 3 9 2 13v22c0 15-6 21-20 21h-6c-4-4-3-9-3-14v-26c-2 12 4 26-4 40h-5c-10 1-16-3-20-13z"
@@ -102,10 +86,7 @@
           fill="#fff"
           d="M221 1003c-5 12-7 13-20 14h-10c-6-8-2-17-3-25-2 8 3 17-5 24h-10c-13 0-18-4-18-16-1-14 4-28 9-42 3-7 6-14 11-20 9-10 18-10 26 1 10 12 14 27 17 42a89 89 0 013 22z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M183 1016l1-28c0-2-1-5 3-6 3 0 4 3 4 5v57c0 4 0 8-4 10-3-4-3-9-3-13v-18l-1-7z"
-        ></path>
+        <path fill="#8490dd" d="M183 1016l1-28c0-2-1-5 3-6 3 0 4 3 4 5v57c0 4 0 8-4 10-3-4-3-9-3-13v-18l-1-7z"></path>
         <path
           fill="#79c89f"
           d="M305 991l-16-1c-9-2-13-9-16-17-4-17-1-32 4-48l1-4 8-12c12-15 32-16 45-2a31 31 0 016 10 16 16 0 003 2c4 14 7 28 6 43a62 62 0 010 6c-4 17-11 23-29 24h-5c-5-5-2-12-3-17-2 5 1 12-4 16z"
@@ -120,10 +101,7 @@
           fill="#79c89f"
           d="M520 970h-3c-17 2-22-9-23-23 0-9-1-18 1-28l1-7c3-23 6-45 14-67 2-6 4-12 8-17 5-5 8-5 12 0 5 5 7 12 9 18 5 15 7 30 10 46l2 11 3 28a63 63 0 01-4 29c-2 7-7 10-15 10h-8c-4-4-3-8-3-12l-1-36-1 36c0 4 1 8-2 12z"
         ></path>
-        <path
-          fill="#8192d9"
-          d="M520 970v-48c0-3-1-8 4-8 4 0 2 5 2 8l1 48-1 50c0 3 2 8-3 8-4-1-3-5-3-8v-50z"
-        ></path>
+        <path fill="#8192d9" d="M520 970v-48c0-3-1-8 4-8 4 0 2 5 2 8l1 48-1 50c0 3 2 8-3 8-4-1-3-5-3-8v-50z"></path>
         <path
           fill="#b8e2cc"
           d="M570 962c-1-17 2-33 5-49 3-9 5-20 10-29a73 73 0 015-9c6-10 9-10 18-2 8 14 13 28 15 44l2 3c3 3 3 8 2 12v22c0 15-5 20-20 21h-5c-4-4-3-9-3-14v-26c-2 12 4 26-4 40h-5c-10 0-16-4-20-13z"
@@ -136,18 +114,12 @@
           fill="#fff"
           d="M599 989c-7 17-9 19-28 20h-14c-8-11-2-24-5-35-3 10 5 24-6 34h-15c-18 0-25-6-25-22-1-21 5-41 13-61 4-9 8-19 15-27 12-15 25-15 37 0 14 18 19 40 24 61a126 126 0 014 30z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M546 1008l1-40c0-3-1-7 3-8 6-1 7 3 7 7v81c0 5 0 10-6 13-5-5-4-12-4-18l-1-26v-9z"
-        ></path>
+        <path fill="#8490dd" d="M546 1008l1-40c0-3-1-7 3-8 6-1 7 3 7 7v81c0 5 0 10-6 13-5-5-4-12-4-18l-1-26v-9z"></path>
         <path
           fill="#fff"
           d="M825 990c-5 12-6 13-19 13l-10 1c-6-8-2-17-3-25-3 8 3 17-5 24h-10c-13 0-17-4-18-15 0-15 4-29 9-42 3-7 6-14 11-19 8-11 17-11 25 0 10 12 14 27 17 42a88 88 0 013 21z"
         ></path>
-        <path
-          fill="#8490dd"
-          d="M788 1003l1-28c0-2-1-5 2-5 4-1 5 2 5 5v56c0 3 0 7-4 9-4-4-3-8-3-12l-1-18v-7z"
-        ></path>
+        <path fill="#8490dd" d="M788 1003l1-28c0-2-1-5 2-5 4-1 5 2 5 5v56c0 3 0 7-4 9-4-4-3-8-3-12l-1-18v-7z"></path>
         <path
           fill="#fff"
           d="M1021 1082a15 15 0 00-2 0c-11 1-14-5-14-14-1-6-1-12 1-18v-5c2-14 4-28 9-42 1-4 2-8 5-11s5-3 8 0a199 199 0 0112 40l1 8 2 18a40 40 0 01-2 18c-2 4-5 7-10 6h-6c-2-2-1-5-1-7l-1-23v23c0 2 0 5-2 7z"
@@ -173,18 +145,12 @@
           fill="#bee5ce"
           d="M319 1106c-7-1-14 0-21-2-13-3-19-12-22-23-6-22-2-43 4-64l2-5 11-17c16-20 43-21 60-2a41 41 0 019 13 22 22 0 003 3c5 18 10 37 8 57a85 85 0 010 8c-5 24-14 32-38 32h-7c-7-7-3-15-5-22-2 7 2 15-5 22z"
         ></path>
-        <path
-          fill="#818fdb"
-          d="M319 1106v-27c0-3 0-6 4-6 3 0 4 3 4 6l1 27-1 35c0 3 0 7-4 7-4-1-4-4-4-7v-35z"
-        ></path>
+        <path fill="#818fdb" d="M319 1106v-27c0-3 0-6 4-6 3 0 4 3 4 6l1 27-1 35c0 3 0 7-4 7-4-1-4-4-4-7v-35z"></path>
         <path
           fill="#f2aa79"
           d="M2930 1111a25 25 0 00-3 0c-18 2-23-9-24-24-1-10-2-20 1-30l1-8c3-23 6-47 14-70 2-6 4-13 9-18 5-6 8-6 13 0s7 12 9 19c5 16 8 32 11 48l2 12 3 30a67 67 0 01-4 30c-2 8-8 11-16 11h-9c-3-4-2-8-2-13l-1-38c-2 13-1 25-1 38 0 5 0 9-3 13z"
         ></path>
-        <path
-          fill="#818fdb"
-          d="M2930 1111v-51c0-3-1-8 4-8 4 0 3 5 3 8v103c0 4 1 9-4 9-4-1-3-6-3-9v-52z"
-        ></path>
+        <path fill="#818fdb" d="M2930 1111v-51c0-3-1-8 4-8 4 0 3 5 3 8v103c0 4 1 9-4 9-4-1-3-6-3-9v-52z"></path>
       </g>
       <path
         class="cloud"
@@ -261,15 +227,15 @@
 </template>
 
 <script>
-import Para from "@/components/Para.vue";
-import SectionHeader from "@/components/SectionHeader.vue";
+import Para from '@/components/Para.vue';
+import SectionHeader from '@/components/SectionHeader.vue';
 
 export default {
-  name: "about",
+  name: 'about',
   components: {
     SectionHeader,
-    Para
-  }
+    Para,
+  },
 };
 </script>
 
@@ -497,5 +463,3 @@ p + p {
   }
 }
 </style>
-
-
