@@ -10,7 +10,6 @@ export const faqData = [
           If you are over 13 but under 18 years of age, you will be eligible to participate only if you have parental consent (please print out the consent and indemnity form for your parent’s signature and bring it on the day of the hackathon).
           If you are 18 and older, you would need to present a printed and signed indemnity form upon registration.
           The respective forms will be emailed to you upon confirmation of your registration.`,
-        height: '450',
       },
       {
         id: 2,
@@ -60,7 +59,6 @@ export const faqData = [
         title: 'Where is the hackathon held and how can I get there?',
         type: 'location',
         content: '',
-        height: '1050',
       },
       {
         id: 7,
@@ -78,7 +76,6 @@ export const faqData = [
           A limited quantity of consumable materials such as cardboard, wood and acrylic will be provided, and standard workshop tools will be available.
           Prototyping materials such as Arduino Unos, some sensors, etc., will also be available for loan.
           However, should you expect to use a large amount of materials, do bring your own, or let us know before the event and we might be able to help.`,
-        height: '450',
       },
       {
         id: 9,
