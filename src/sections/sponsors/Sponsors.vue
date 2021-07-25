@@ -147,6 +147,11 @@ export default {
               name: "SUTD Productions",
               photoNormal: "SUTD-Productions-Logo",
               photoWhite: "SUTD-Productions-Logo-white"
+            },
+            {
+              name: "3DC",
+              photoNormal: "3dc",
+              photoWhite: "3dc-white"
             }
           ]
         }
