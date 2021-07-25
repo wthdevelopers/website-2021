@@ -60,7 +60,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.openModal('caution-modal', 'caution-modal-button');
-    }, 100);
+    }, 300);
   },
 };
 </script>
