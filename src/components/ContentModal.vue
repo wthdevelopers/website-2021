@@ -23,34 +23,34 @@
 </template>
 
 <script>
-import Modal from "@/components/Modal.vue";
+import Modal from '@/components/Modal.vue';
 
-import closeModalMixin from "@/mixins/closeModalMixin";
-import focusHandler from "@/mixins/focusHandler";
+import closeModalMixin from '@/mixins/closeModalMixin';
+import focusHandler from '@/mixins/focusHandler';
 
 export default {
-  name: "content-modal",
+  name: 'content-modal',
   components: {
-    Modal
+    Modal,
   },
   props: {
-    id: String
+    id: String,
   },
   mixins: [closeModalMixin, focusHandler],
   methods: {
     scrollDown() {
       document.querySelector(`#${this.id} .modal-content`).scrollBy({
         top: 100,
-        behavior: "smooth"
+        behavior: 'smooth',
       });
     },
     scrollUp() {
       document.querySelector(`#${this.id} .modal-content`).scrollBy({
         top: -100,
-        behavior: "smooth"
+        behavior: 'smooth',
       });
-    }
-  }
+    },
+  },
 };
 </script>
 

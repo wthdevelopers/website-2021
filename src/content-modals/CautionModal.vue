@@ -2,10 +2,11 @@
   <ContentModal :id="id">
     <h3>Event coming soon!</h3>
     <Para>
-      We are still cooking up things behind the scenes! We will also ensure that our event complies within Singapore's 2019-nCoV/COVID-19 guidelines. Do keep a lookout for updates on this page!
+      We are still cooking up things behind the scenes! We will also ensure that our event complies within Singapore's
+      2019-nCoV/COVID-19 guidelines. Do keep a lookout for updates on this page!
     </Para>
-    <br>
-    <br>
+    <br />
+    <br />
     <Para>What The Hack 2021 Organising Committee</Para>
     <!-- <h3>
       Precautionary measures taken to safeguard our community against the novel
@@ -59,18 +60,18 @@
 </template>
 
 <script>
-import ContentModal from "@/components/ContentModal.vue";
-import Para from "@/components/Para.vue";
+import ContentModal from '@/components/ContentModal.vue';
+import Para from '@/components/Para.vue';
 
 export default {
-  name: "caution-modal",
+  name: 'caution-modal',
   components: {
     ContentModal,
-    Para
+    Para,
   },
   props: {
-    id: String
-  }
+    id: String,
+  },
 };
 </script>
 

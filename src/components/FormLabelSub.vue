@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "form-label-sub"
+  name: 'form-label-sub',
 };
 </script>
 

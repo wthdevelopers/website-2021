@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "para"
+  name: 'para',
 };
 </script>
 
@@ -40,5 +40,3 @@ a {
   }
 }
 </style>
-
-

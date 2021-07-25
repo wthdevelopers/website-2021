@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "form-block"
+  name: 'form-block',
 };
 </script>
 
@@ -26,5 +26,3 @@ div + div {
   }
 }
 </style>
-
-

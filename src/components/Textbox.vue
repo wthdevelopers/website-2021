@@ -1,6 +1,6 @@
 <template>
   <FormBlock>
-    <FormLabel :forValue="name">{{label}}</FormLabel>
+    <FormLabel :forValue="name">{{ label }}</FormLabel>
     <textarea
       :name="name"
       :id="name"
@@ -10,29 +10,29 @@
       @blur="onBlur ? onBlur(model) : null"
       :style="model.error ? 'border: 2px solid transparent; outline: 2px solid #cc6675;' : null"
     />
-    <FormError>{{model.error}}</FormError>
+    <FormError>{{ model.error }}</FormError>
   </FormBlock>
 </template>
 
 <script>
-import FormBlock from "@/components/FormBlock.vue";
-import FormLabel from "@/components/FormLabel.vue";
-import FormError from "@/components/FormError.vue";
+import FormBlock from '@/components/FormBlock.vue';
+import FormLabel from '@/components/FormLabel.vue';
+import FormError from '@/components/FormError.vue';
 
 export default {
-  name: "textbox",
+  name: 'textbox',
   components: {
     FormBlock,
     FormLabel,
-    FormError
+    FormError,
   },
   props: {
     label: String,
     name: String,
     model: Object,
     onBlur: Function,
-    placeholder: String
-  }
+    placeholder: String,
+  },
 };
 </script>
 
@@ -74,5 +74,3 @@ textarea:focus {
   }
 }
 </style>
-
-

@@ -2,33 +2,32 @@
   <ContentModal :id="id">
     <h3>Repurposing Scrap Materials for Prototype Design</h3>
     <Para>
-      In this workshop, you will learn how to upcycle scrap material into something
-      usable for your prototype. Participants will be guided on how to operate the
-      fabrication tools in the fabrication lab.
+      In this workshop, you will learn how to upcycle scrap material into something usable for your prototype.
+      Participants will be guided on how to operate the fabrication tools in the fabrication lab.
     </Para>
-    <br>
-    <br>
+    <br />
+    <br />
     <Para>Conducted By: Makerspace</Para>
-    <br>
-    <br>
+    <br />
+    <br />
     <Para>Duration: 1.5hrs</Para>
   </ContentModal>
 </template>
 
 <script>
-import ContentModal from "@/components/ContentModal.vue";
-import Para from "@/components/Para.vue";
+import ContentModal from '@/components/ContentModal.vue';
+import Para from '@/components/Para.vue';
 
 export default {
-  name: "workshop-one-modal",
+  name: 'workshop-one-modal',
   components: {
     ContentModal,
-    Para
+    Para,
   },
   props: {
     id: String,
-    workshop: Number
-  }
+    workshop: Number,
+  },
 };
 </script>
 

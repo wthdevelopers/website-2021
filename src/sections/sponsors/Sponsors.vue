@@ -5,7 +5,7 @@
       <ul class="thankees-content">
         <!-- <Para style="text-align: center; margin-top: 50px;">Sponsors will be announced soon!</Para> -->
         <li class="tier" v-for="tier in tiers" :key="tier.name">
-          <h3>{{tier.name}}</h3>
+          <h3>{{ tier.name }}</h3>
           <ul class="tier-sponsors">
             <li v-for="sponsor in tier.sponsors" :key="sponsor.name">
               <a v-if="sponsor.url" :href="sponsor.url" target="_blank" rel="noopener noreferrer">
@@ -14,13 +14,13 @@
                   style="display: var(--displayed-during-light);"
                   :src="require(`../../../public/images/${sponsor.photoNormal}.png`)"
                   :alt="`${sponsor.name} company logo`"
-                >
+                />
                 <img
                   :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
                   style="display: var(--displayed-during-dark)"
                   :src="require(`../../../public/images/${sponsor.photoWhite}.png`)"
                   :alt="`${sponsor.name} company logo`"
-                >
+                />
               </a>
               <div v-else>
                 <img
@@ -28,24 +28,20 @@
                   style="display: var(--displayed-during-light);"
                   :src="require(`../../../public/images/${sponsor.photoNormal}.png`)"
                   :alt="`${sponsor.name} company logo`"
-                >
+                />
                 <img
                   :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
                   style="display: var(--displayed-during-dark)"
                   :src="require(`../../../public/images/${sponsor.photoWhite}.png`)"
                   :alt="`${sponsor.name} company logo`"
-                >
+                />
               </div>
             </li>
           </ul>
         </li>
       </ul>
     </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 215.4"
-      style="transform: translateY(-7px);"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 215.4" style="transform: translateY(-7px);">
       <path
         class="slope"
         d="M0 160h60c60 0 180 0 300 16s240 48 360 37c120-10 240-64 360-85s240-11 300-5l60 5V0H0z"
@@ -55,106 +51,106 @@
 </template>
 
 <script>
-import SectionHeader from "@/components/SectionHeader.vue";
+import SectionHeader from '@/components/SectionHeader.vue';
 
 export default {
-  name: "thankees",
+  name: 'thankees',
   components: {
-    SectionHeader
+    SectionHeader,
   },
   data() {
     return {
       tiers: [
         {
-          name: "Platinum",
+          name: 'Platinum',
           sponsors: [
             {
-              name: "Indeed",
-              url: "https://www.indeed.com.sg/",
-              photoNormal: "indeed",
-              photoWhite: "indeed-white"
-            }
-          ]
+              name: 'Indeed',
+              url: 'https://www.indeed.com.sg/',
+              photoNormal: 'indeed',
+              photoWhite: 'indeed-white',
+            },
+          ],
         },
         {
-          name: "Gold",
+          name: 'Gold',
           sponsors: [
             {
-              name: "GovTech",
-              url: "https://www.tech.gov.sg/",
-              photoNormal: "govtech",
-              photoWhite: "govtech-white"
+              name: 'GovTech',
+              url: 'https://www.tech.gov.sg/',
+              photoNormal: 'govtech',
+              photoWhite: 'govtech-white',
             },
             {
-              name: "SUTD ISTD",
-              url: "https://istd.sutd.edu.sg/",
-              photoNormal: "istd",
-              photoWhite: "istd-white"
-            }
-          ]
+              name: 'SUTD ISTD',
+              url: 'https://istd.sutd.edu.sg/',
+              photoNormal: 'istd',
+              photoWhite: 'istd-white',
+            },
+          ],
         },
         {
-          name: "Fifth Row Partners",
+          name: 'Fifth Row Partners',
           sponsors: [
             {
-              name: "Makerspace",
-              url: "",
-              photoNormal: "makerspace",
-              photoWhite: "makerspace-white"
+              name: 'Makerspace',
+              url: '',
+              photoNormal: 'makerspace',
+              photoWhite: 'makerspace-white',
             },
             {
-              name: "Greenprint",
-              url: "https://greenprint.opensutd.org/",
-              photoNormal: "greenprint",
-              photoWhite: "greenprint-white"
+              name: 'Greenprint',
+              url: 'https://greenprint.opensutd.org/',
+              photoNormal: 'greenprint',
+              photoWhite: 'greenprint-white',
             },
             {
-              name: "Energy Club",
-              url: "https://www.instagram.com/sutd_energyclub/",
-              photoNormal: "energy",
-              photoWhite: "energy-white"
+              name: 'Energy Club',
+              url: 'https://www.instagram.com/sutd_energyclub/',
+              photoNormal: 'energy',
+              photoWhite: 'energy-white',
             },
             {
-              name: "SUTD CD Lionhearter",
-              url: "https://www.facebook.com/CD-Lionhearter-Club-195125160147/",
-              photoNormal: "lionhearter",
-              photoWhite: "lionhearter-white"
+              name: 'SUTD CD Lionhearter',
+              url: 'https://www.facebook.com/CD-Lionhearter-Club-195125160147/',
+              photoNormal: 'lionhearter',
+              photoWhite: 'lionhearter-white',
             },
             {
-              name: "MechD",
-              photoNormal: "MechD",
-              photoWhite: "MechD-white"
+              name: 'MechD',
+              photoNormal: 'MechD',
+              photoWhite: 'MechD-white',
             },
             {
-              name: "SUTD IEEE",
-              url: "https://ieee.opensutd.org/",
-              photoNormal: "ieee",
-              photoWhite: "ieee-white"
+              name: 'SUTD IEEE',
+              url: 'https://ieee.opensutd.org/',
+              photoNormal: 'ieee',
+              photoWhite: 'ieee-white',
             },
             {
-              name: "Photography Circle",
-              url: "https://www.instagram.com/sutd.photogcircle/",
-              photoNormal: "photog",
-              photoWhite: "photog-white"
+              name: 'Photography Circle',
+              url: 'https://www.instagram.com/sutd.photogcircle/',
+              photoNormal: 'photog',
+              photoWhite: 'photog-white',
             },
             {
-              name: "SUTD Bands",
-              url: "https://www.facebook.com/SUTDBands/",
-              photoNormal: "bands",
-              photoWhite: "bands-white"
+              name: 'SUTD Bands',
+              url: 'https://www.facebook.com/SUTDBands/',
+              photoNormal: 'bands',
+              photoWhite: 'bands-white',
             },
             {
-              name: "SUTD Productions",
-              photoNormal: "SUTD-Productions-Logo",
-              photoWhite: "SUTD-Productions-Logo-white"
+              name: 'SUTD Productions',
+              photoNormal: 'SUTD-Productions-Logo',
+              photoWhite: 'SUTD-Productions-Logo-white',
             },
             {
-              name: "3DC",
-              photoNormal: "3dc",
-              photoWhite: "3dc-white"
-            }
-          ]
-        }
+              name: '3DC',
+              photoNormal: '3dc',
+              photoWhite: '3dc-white',
+            },
+          ],
+        },
         // {
         //   name: "Swag Sponsors",
         //   sponsors: [
@@ -177,9 +173,9 @@ export default {
         //     }
         //   ]
         // }
-      ]
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -283,4 +279,3 @@ export default {
   }
 }
 </style>
-

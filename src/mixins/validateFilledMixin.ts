@@ -1,14 +1,14 @@
-import { FormField } from "@/interfaces";
+import { FormField } from '@/interfaces';
 
 export default {
   methods: {
     validateFilled(subj: FormField): number {
-      let validationConclusion = "";
+      let validationConclusion = '';
       if (!subj.value) {
-        validationConclusion = "This field is required!";
+        validationConclusion = 'This field is required!';
       }
       subj.error = validationConclusion;
       return validationConclusion ? 1 : 0;
-    }
-  }
+    },
+  },
 };

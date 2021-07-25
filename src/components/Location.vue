@@ -12,28 +12,26 @@
       <Para>The hackathon will be held at SUTD and the address is 8 Somapah Road, Singapore 487372.</Para>
       <Para>
         <span>Train:</span>
-        <br>Alight at
-        Upper Changi MRT Station (DT34) and take
-        Exit B – our campus will be on your left when you exit the station
+        <br />Alight at Upper Changi MRT Station (DT34) and take Exit B – our campus will be on your left when you exit
+        the station
       </Para>
       <Para>
         <span>Bus:</span>
-        <br>Alight at one of the bus stops along Somapah Road and walk to our
-        Campus.
-        <br>Buses available: 2, 5, 20, 24
+        <br />Alight at one of the bus stops along Somapah Road and walk to our Campus. <br />Buses available: 2, 5, 20,
+        24
       </Para>
     </div>
   </section>
 </template>
 
 <script>
-import Para from "@/components/Para";
+import Para from '@/components/Para';
 
 export default {
-  name: "location",
+  name: 'location',
   components: {
-    Para
-  }
+    Para,
+  },
 };
 </script>
 

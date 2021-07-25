@@ -1,10 +1,6 @@
 <template>
   <div :id="id" :class="`modal modal-${type}`" role="dialog" aria-modal="true">
-    <svg
-      :class="`modal-slope-top modal-slope-${type}`"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 231.4"
-    >
+    <svg :class="`modal-slope-top modal-slope-${type}`" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 231.4">
       <path
         class="slope"
         d="M0 135l48-21c48-22 144-64 240-75s192 11 288 48 192 91 288 80 192-85 288-90c96-6 192 58 240 90l48 32v32H0z"
@@ -28,10 +24,7 @@
         fill="#b8e2cc"
         d="M1041 106h-4c-6 0-9-3-9-10a93 93 0 014-28l3-10a14 14 0 012-2c3-6 7-6 11 0l5 13c3 9 4 18 4 28 0 7-2 9-10 9h-3c-3-3-1-7-2-10a46 46 0 010-6c-1 5 2 11-1 16z"
       ></path>
-      <path
-        fill="#8290dc"
-        d="M1041 106V91v-4l1-2c2-1 2 1 2 2v19a22 22 0 000 6v14l-1 2c-2 0-2-1-2-2v-15z"
-      ></path>
+      <path fill="#8290dc" d="M1041 106V91v-4l1-2c2-1 2 1 2 2v19a22 22 0 000 6v14l-1 2c-2 0-2-1-2-2v-15z"></path>
       <path
         fill="#79c89f"
         d="M1017 117h-8c-5-1-7-5-9-9-2-9-1-17 2-25v-2l5-6c6-8 16-8 23-1a16 16 0 013 5 8 8 0 001 1c2 7 4 15 4 22a30 30 0 01-1 3c-1 9-5 12-14 13h-3c-2-3-1-6-2-9 0 3 1 6-1 9z"
@@ -51,10 +44,7 @@
         fill="#b8e2cc"
         d="M1144 117h-4c-7 0-11-3-11-10 0-11 2-22 5-33l4-11a16 16 0 012-3c4-6 8-6 12 0 3 5 5 10 6 16 3 10 5 20 5 31-1 8-3 10-11 10h-4c-3-3-2-7-2-11a52 52 0 010-7c-1 6 2 12-2 18z"
       ></path>
-      <path
-        fill="#8290dc"
-        d="M1144 117v-17-4l2-3c2 0 2 2 2 3v21a25 25 0 000 8v15c0 1 0 2-2 2l-2-2v-17z"
-      ></path>
+      <path fill="#8290dc" d="M1144 117v-17-4l2-3c2 0 2 2 2 3v21a25 25 0 000 8v15c0 1 0 2-2 2l-2-2v-17z"></path>
       <path
         fill="#79c89f"
         d="M293 54h-8c-5-1-7-5-8-9-2-9-1-17 2-25v-2l4-6c6-8 17-8 24-1a16 16 0 013 5 7 7 0 001 1 59 59 0 013 25c-2 9-5 12-15 13h-2c-3-3-1-6-2-9-1 3 1 6-2 9z"
@@ -74,11 +64,7 @@
     <div class="modal-content">
       <slot></slot>
     </div>
-    <svg
-      :class="`modal-slope-bottom modal-slope-${type}`"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 203.7"
-    >
+    <svg :class="`modal-slope-bottom modal-slope-${type}`" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 203.7">
       <path
         class="slope"
         d="M0 64l48 27c48 26 144 80 240 69s192-85 288-75c96 11 192 107 288 118 96 10 192-64 288-107s192-53 240-59l48-5V0H0z"
@@ -89,11 +75,11 @@
 
 <script>
 export default {
-  name: "modal",
+  name: 'modal',
   props: {
     id: String,
-    type: String
-  }
+    type: String,
+  },
 };
 </script>
 
@@ -185,5 +171,3 @@ export default {
   }
 }
 </style>
-
-
