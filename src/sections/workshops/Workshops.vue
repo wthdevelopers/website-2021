@@ -5,14 +5,22 @@
 
       <div class="workshops-content" id="workshops-content">
         <div class="highlight-content">
-          <div class="highlight-video">
+          <div class="highlight-content-media">
             <iframe
+              class="hightlight-video"
+              v-if="selectedWorkshop.videoURL"
               width="100%"
               height="100%"
               :src="selectedWorkshop.videoURL"
               :title="selectedWorkshop.title"
               frameborder="0"
               allowfullscreen
+            />
+            <img
+              class="highlight-image"
+              v-else
+              :src="require(`${selectedWorkshop.thumbnailURL}`)"
+              :alt="selectedWorkshop.title"
             />
           </div>
 
@@ -103,7 +111,7 @@ export default {
   gap: 45px;
 }
 
-.highlight-video {
+.highlight-content-media {
   border-radius: 30px;
   border: 10px solid var(--color-accent);
   min-height: 400px;
@@ -111,6 +119,19 @@ export default {
   max-width: 700px;
   overflow: hidden;
   flex: 1 1 60%;
+}
+
+.highlight-video {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.highlight-image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .highlight-details-content {
@@ -185,9 +206,12 @@ export default {
     flex-direction: column;
   }
 
-  .highlight-video {
+  .highlight-content-media {
+    flex-basis: auto;
+    height: 400px;
+    min-height: unset;
     width: 100%;
-    height: 450px;
+    max-width: unset;
   }
 
   .other-workshops-card-container {
@@ -200,6 +224,10 @@ export default {
     width: 80%;
   }
 
+  .highlight-content-media {
+    height: 350px;
+  }
+
   .other-workshop-card-image {
     height: 200px;
   }
@@ -208,6 +236,10 @@ export default {
 @media (--mobile-narrow) {
   .workshops-content {
     padding: 50px 30px 0 30px;
+  }
+
+  .highlight-content-media {
+    height: 250px;
   }
 }
 </style>
