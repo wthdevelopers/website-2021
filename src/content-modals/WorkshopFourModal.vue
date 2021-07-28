@@ -3,8 +3,8 @@
     <h3>ESP32 Web Server & BLE</h3>
     <Para>
       In this workshop, we’ll teach you how to use the ESP32 platform with the Arduino IDE to make your hardware project
-      communicate over WiFi and Bluetooth. Using Bluetooth, you can have multiple wireless nodes in your project, or use
-      WiFi to control your hardware project with your phone or PC, even over the internet!
+      communicate over Wi-Fi and Bluetooth. Using Bluetooth, you can have multiple wireless nodes in your project, or use
+      Wi-Fi to control your hardware project with your phone or PC, even over the internet!
     </Para>
     <br />
     <br />
