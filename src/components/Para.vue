@@ -25,10 +25,10 @@ p {
 }
 
 span {
-  border-bottom: 10px solid var(--color-accent);
   display: inline-block;
   line-height: 0.4;
-  color: inherit;
+  color: var(--color-accent);
+  font-weight: bold;
   text-decoration: none;
 }
 

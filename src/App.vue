@@ -64,6 +64,7 @@ export default Vue.extend({
   --color-section-title-text: #e67fbe;
   --color-regular-text: #5360c6;
   --color-accent: #e67fbe;
+  --color-subheader-text: rgba(230, 127, 190, 0.75);
   --color-gray: #788ebf;
   --color-caution-text: #f3f3fb;
 
@@ -89,6 +90,7 @@ export default Vue.extend({
   --color-section-title-text: #dd55a9;
   --color-regular-text: #f3f3fb;
   --color-accent: #dd55a9;
+  --color-subheader-text: rgba(221, 85, 169, 0.75);
   --color-gray: #b6c3c8;
   --color-caution-text: #f3f3fb;
 
