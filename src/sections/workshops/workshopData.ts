@@ -14,7 +14,7 @@ export const workshopData = [
     description:
       'In this workshop, participants will learn how to use the ESP32 platform with the Arduino IDE to make hardware projects communicate over WiFi and Bluetooth.',
     info: 'Conducted by IEEE',
-    videoURL: 'https://www.youtube.com/embed/O8174TdqENc',
+    videoURL: '',
     thumbnailURL: './ieee.jpg',
   },
   {
@@ -23,7 +23,7 @@ export const workshopData = [
     description:
       'React is one of the most popular front-end frameworks available. This workshop will give you a brief refresher on javascript, html, and css followed by an introduction to how React works and a demo. This will equip you with the basic understanding needed to start with your own react application.',
     info: 'Conducted by 3DC',
-    videoURL: 'https://www.youtube.com/embed/By7rLend4W0',
+    videoURL: '',
     thumbnailURL: './react.jpg',
   },
   {
@@ -32,7 +32,7 @@ export const workshopData = [
     description:
       'Telegram is a free and open source, cross-platform, cloud-based instant messaging software. Amongst one of the features of telegram is their many functional and fun-to-use bots! This workshop will give you an introduction and a step-by-step guide on how to build your very own telegram bot.',
     info: 'Conducted by 3DC',
-    videoURL: 'https://www.youtube.com/embed/TcOmMyEjLEc',
+    videoURL: '',
     thumbnailURL: './telebot.jpg',
   },
   {
@@ -41,7 +41,7 @@ export const workshopData = [
     description:
       'FastAPI allows you to build a Python backend server super fast- complete with type checking, hot reload and also automatically generated Swagger documentation to quickly test your APIs. Learn how to hook one up with Firebase to spin up a backend in no time!',
     info: 'Conducted by 3DC',
-    videoURL: 'https://www.youtube.com/embed/TcOmMyEjLEc',
+    videoURL: '',
     thumbnailURL: './python.jpg',
   },
   {
@@ -49,7 +49,7 @@ export const workshopData = [
     title: 'Alternative Energy',
     description: 'Introduce alternative energy (Photovoltaic) and design concepts to participants.',
     info: 'Conducted by Energy Club',
-    videoURL: 'https://www.youtube.com/embed/TcOmMyEjLEc',
+    videoURL: '',
     thumbnailURL: './energyclub.jpg',
   },
 ];
