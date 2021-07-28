@@ -114,11 +114,11 @@ export default {
 .highlight-content-media {
   border-radius: 30px;
   border: 10px solid var(--color-accent);
-  min-height: 400px;
+  height: fit-content;
+  margin: auto 0;
   width: 60%;
   max-width: 700px;
   overflow: hidden;
-  flex: 1 1 60%;
 }
 
 .highlight-video {
@@ -130,7 +130,7 @@ export default {
 .highlight-image {
   display: block;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
 }
 
@@ -201,21 +201,27 @@ export default {
   .workshops-content {
     padding: 50px 100px 0 100px;
   }
+}
 
+@media (max-width: 1024px) {
   .highlight-content {
     flex-direction: column;
+    align-items: center;
   }
 
   .highlight-content-media {
     flex-basis: auto;
-    height: 400px;
     min-height: unset;
-    width: 100%;
+    width: fit-content;
     max-width: unset;
   }
 
   .other-workshops-card-container {
     width: calc(50% - 16px);
+  }
+
+  .other-workshop-card-image {
+    height: 220px;
   }
 }
 
@@ -224,22 +230,15 @@ export default {
     width: 80%;
   }
 
-  .highlight-content-media {
-    height: 350px;
-  }
-
   .other-workshop-card-image {
-    height: 200px;
+    height: 30vw;
+    min-height: 170px;
   }
 }
 
 @media (--mobile-narrow) {
   .workshops-content {
     padding: 50px 30px 0 30px;
-  }
-
-  .highlight-content-media {
-    height: 250px;
   }
 }
 </style>
