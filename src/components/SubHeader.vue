@@ -17,7 +17,7 @@ export default {
 h4 {
   font-size: 32px;
   font-family: var(--font-secondary), sans-serif;
-  color: var(--color-regular-text);
+  color: var(--color-subheader-text);
 
   border-bottom: 10px solid var(--color-accent);
   display: inline-block;
