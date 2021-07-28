@@ -1,5 +1,5 @@
 <template>
-  <h4>
+  <h4 :class="className">
     <slot></slot>
   </h4>
 </template>
@@ -7,6 +7,9 @@
 <script>
 export default {
   name: 'sub-header',
+  props: {
+    className: [String, Array],
+  },
 };
 </script>
 

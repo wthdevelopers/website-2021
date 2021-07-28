@@ -1,5 +1,5 @@
 <template>
-  <p>
+  <p :class="className">
     <slot></slot>
   </p>
 </template>
@@ -7,6 +7,9 @@
 <script>
 export default {
   name: 'para',
+  props: {
+    className: [String, Array],
+  },
 };
 </script>
 
