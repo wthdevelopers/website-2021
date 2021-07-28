@@ -1,9 +1,9 @@
 export const workshopData = [
   {
     id: 1,
-    title: 'Basic Fusion360 Cad & 3D Printing Workshop',
+    title: 'Basic Fusion 360 CAD & 3D Printing Workshop',
     description:
-      'Want to prototype and 3d-print but dont know where to start? This workshop will cover all the basics of CADDING using Fusion360 as well as preparing your models to be 3d printed by CURA software.',
+      'Want to prototype and 3D-print but don\'t know where to start? This workshop will cover all the basics of CAD-ing using Fusion 360 as well as preparing your models to be 3D-printed by CURA software.',
     info: 'Conducted by Mech D',
     videoURL: '',
     thumbnailURL: './mechd.png',
@@ -12,34 +12,34 @@ export const workshopData = [
     id: 2,
     title: 'Introduction to ESP32',
     description:
-      'In this workshop, participants will learn how to use the ESP32 platform with the Arduino IDE to make hardware projects communicate over WiFi and Bluetooth.',
+      'In this workshop, participants will learn how to use the ESP32 platform with the Arduino IDE to make hardware projects communicate over Wi-Fi and Bluetooth.',
     info: 'Conducted by IEEE',
     videoURL: '',
     thumbnailURL: './ieee.jpg',
   },
   {
     id: 3,
-    title: 'React, the whys and the hows',
+    title: 'React, The Whys and The Hows',
     description:
-      'React is one of the most popular front-end frameworks available. This workshop will give you a brief refresher on javascript, html, and css followed by an introduction to how React works and a demo. This will equip you with the basic understanding needed to start with your own react application.',
+      'React is one of the most popular front-end frameworks available. This workshop will give you a brief refresher on JavaScript, HTML, and CSS followed by an introduction to how React works and a demo. This will equip you with the basic understanding needed to start with your own React application.',
     info: 'Conducted by 3DC',
     videoURL: '',
     thumbnailURL: './react.jpg',
   },
   {
     id: 4,
-    title: 'How to make your own functional telegram bot!',
+    title: 'How to Make Your Own Functional Telegram Bot!',
     description:
-      'Telegram is a free and open source, cross-platform, cloud-based instant messaging software. Amongst one of the features of telegram is their many functional and fun-to-use bots! This workshop will give you an introduction and a step-by-step guide on how to build your very own telegram bot.',
+      'Telegram is a free and open source, cross-platform, cloud-based instant messaging software. Amongst one of the features of Telegram is their many functional and fun-to-use bots! This workshop will give you an introduction and a step-by-step guide on how to build your very own Telegram bot.',
     info: 'Conducted by 3DC',
     videoURL: '',
     thumbnailURL: './telebot.jpg',
   },
   {
     id: 5,
-    title: 'Deploy a Python backend with docs FAST',
+    title: 'Deploy a Python Backend with Docs FAST',
     description:
-      'FastAPI allows you to build a Python backend server super fast- complete with type checking, hot reload and also automatically generated Swagger documentation to quickly test your APIs. Learn how to hook one up with Firebase to spin up a backend in no time!',
+      'FastAPI allows you to build a Python backend server super fast - complete with type checking, hot reload and also automatically generated Swagger documentation to quickly test your APIs. Learn how to hook one up with Firebase to spin up a backend in no time!',
     info: 'Conducted by 3DC',
     videoURL: '',
     thumbnailURL: './python.jpg',
@@ -47,7 +47,7 @@ export const workshopData = [
   {
     id: 6,
     title: 'Alternative Energy',
-    description: 'Introduce alternative energy (Photovoltaic) and design concepts to participants.',
+    description: 'Introduce alternative energy (photovoltaic) and design concepts to participants.',
     info: 'Conducted by Energy Club',
     videoURL: '',
     thumbnailURL: './energyclub.jpg',
