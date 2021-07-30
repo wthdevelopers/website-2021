@@ -68,7 +68,9 @@
         </button>
       </li>
       <li class="bar-register-link">
-        <a href="https://bit.ly/2tjIhvF">Register</a>
+        <button id="register-button-desktop" @click="openModal('registration-guide-modal', 'register-button-desktop')">
+          Register
+        </button>
       </li>
       <li>
         <button @click="toggleTheme">
@@ -281,7 +283,17 @@
           </button>
         </li>
         <li>
-          <a href="https://bit.ly/2tjIhvF">Register</a>
+          <button
+            id="register-button-mobile"
+            @click="
+              () => {
+                closeDrawer(false);
+                openModal('registration-guide-modal', 'register-button-mobile');
+              }
+            "
+          >
+            Register
+          </button>
         </li>
       </ul>
       <button id="cancel" @click="closeDrawer" @keydown.tab.exact.prevent="focusHandler('drawer-first-focus')">
@@ -293,6 +305,7 @@
         </svg>
       </button>
     </div>
+    <RegistrationGuideModal />
   </nav>
 </template>
 
@@ -300,12 +313,14 @@
 import Vue from 'vue';
 import DrawerFlair from '@/sections/hero/DrawerFlair.vue';
 import WTHLogo from '@/sections/hero/WTHLogo.vue';
+import openModalMixin from '@/mixins/openModalMixin';
 
 import focusHandler from '@/mixins/focusHandler';
 
 export default Vue.extend({
   name: 'navbar',
   components: {
+    RegistrationGuideModal: () => import(/* webpackPrefetch: true */ '@/content-modals/RegistrationGuideModal'),
     DrawerFlair,
     WTHLogo,
   },
@@ -322,7 +337,7 @@ export default Vue.extend({
       }
     });
   },
-  mixins: [focusHandler],
+  mixins: [focusHandler, openModalMixin],
   methods: {
     buttonOnClickScroll(loc) {
       var section = document.querySelector(`#${loc}`);
@@ -351,17 +366,20 @@ export default Vue.extend({
         drawer.style.transform = 'translate3d(0, 0, 0)';
       }, 100);
     },
-    closeDrawer() {
+    closeDrawer(closeBackdrop) {
       let backdrop = document.querySelector('#backdrop');
       let drawer = document.querySelector('#drawer');
       backdrop.style.opacity = '0';
       drawer.style.opacity = '0';
       drawer.style.transform = 'translate3d(80vw, 0, 0)';
-      setTimeout(() => {
-        backdrop.style.display = 'none';
-        backdrop.style.transition = 'none';
-        drawer.style.display = 'none';
-      }, 500);
+
+      if (closeBackdrop === undefined || closeBackdrop === true) {
+        setTimeout(() => {
+          backdrop.style.display = 'none';
+          backdrop.style.transition = 'none';
+          drawer.style.display = 'none';
+        }, 500);
+      }
     },
   },
 });
