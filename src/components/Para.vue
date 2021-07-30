@@ -1,5 +1,5 @@
 <template>
-  <p :class="className">
+  <p :class="className" @click="onClick">
     <slot></slot>
   </p>
 </template>
@@ -9,6 +9,10 @@ export default {
   name: 'para',
   props: {
     className: [String, Array],
+    onClick: {
+      type: Function,
+      default: () => {},
+    },
   },
 };
 </script>
