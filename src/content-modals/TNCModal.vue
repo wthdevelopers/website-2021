@@ -1,6 +1,6 @@
 <template>
   <ContentModal :id="id">
-    <h3>Terms & Conditions</h3>
+    <h3>Terms and Conditions</h3>
     <h4>1. Definitions</h4>
     <Para>
       <b>“Competition”</b> refers to the What The Hack @ SUTD Hackathon.
@@ -17,8 +17,8 @@
       exchange for sponsorship benefits.
       <br />
       <br />
-      <b>“Problem Themes”</b> refers to the problem statements of Built Environment, Waste Reduction, Waste Management,
-      and Transportation, set out in Clause 4.b. below.
+      <b>“Problem Themes”</b> refers to the problem statements of Built Environment, Natural Environment, Waste
+      Management, and Transportation, set out in Clause 4.b. below.
       <br />
       <br />
       <b>“Technology Categories”</b> refers to the types of technologies set out in Clause 4.b. below.
@@ -28,9 +28,9 @@
 
     <h4>2. Introduction</h4>
     <Para>
-      a. “What The Hack @ SUTD”, is a 24-hour hackathon organised and sponsored by SUTD and co-sponsored by SUTD ISTD,
-      GovTech and other sponsors. The Competition aims to bring together people of multiple disciplines to challenge
-      them to solve imminent problems of the future via interdisciplinary collaborations.
+      a. “What The Hack @ SUTD”, is a 24-hour hackathon organised by SUTD and co-sponsored by Indeed, GovTech and other
+      sponsors. The Competition aims to bring together people of multiple disciplines to challenge them to solve
+      imminent problems of the future via interdisciplinary collaborations.
       <br />
       <br />b. The Competition will be held at SUTD from 18th September 2021 to 19th September 2021 (24 hours).
       <br />
@@ -42,7 +42,7 @@
       a. This Competition is open to Participants of all nationalities who are at least 13 years old (as of 18th
       September 2021).
       <br />
-      <br />b. The Participants may compete as individuals or in teams of between 2 to 4 members.
+      <br />b. The Participants may compete in teams of 3 to 5 members.
       <br />
       <br />c. Participants who are below 18 years old as at the date of the Competition must have proper
       parental/guardian’s consent to participate in the Competition. The parental/guardian consent form is provided
@@ -52,17 +52,17 @@
       <br />
     </Para>
 
-    <h4>Submissions and Demonstration</h4>
+    <h4>4. Submissions and Demonstration</h4>
     <Para>
       a. "Submission" refers to the prototype of the product or service created by participants and any related
       materials that is presented to the judges.
       <br />
       <br />b. The Participants, whether individually or as a team, will be required to work on building solutions to
-      problems broadly categorised according to the themes of Built Environment, Waste Reduction, Waste Management, and
-      Transportation. The Participants are to create solutions for their Submission for the Competition using at least
-      one of the technologies in the following broad technology categories: Platforms and Applications, Internet of
-      Things, Data Science / Artificial Intelligence, and Mechanical Design / Digital Fabrication / Robotics, which are
-      to be submitted for judging by a panel of judges.
+      problems broadly categorised according to the themes of Built Environment, Natural Environment, Waste Management,
+      and Transportation. The Participants are to create solutions for their Submission for the Competition using at
+      least one of the technologies in the following broad technology categories: Platforms and Applications, Internet
+      of Things, Data Science / Artificial Intelligence, and Mechanical Design / Digital Fabrication / Robotics, which
+      are to be submitted for judging by a panel of judges.
       <br />
       <br />c. The Participants may only begin working (coding, building, analysing) on their Submissions at the
       official commencement time fixed by the Organiser and must complete their Submission by the end of the 24 hours
@@ -95,10 +95,11 @@
 
     <h4>5. Judging</h4>
     <Para>
-      a. At the end of the 24-hour hacking period, the Participants will be given at least 30 minutes, (any request for
-      additional time may be granted at the sole discretion of the Organiser) to set up their presentation booths. Each
-      Participant or team with a Submission will be given up to two (2) minutes to present his/her/their Submission to a
-      panel of judges. The order of the Participants’ or teams’ presentations will be determined by the Organiser.
+      a. At the end of the 24-hour hacking period, the Participants will present their Submissions through a platform
+      that is to be determined by the Organisers and will be given at least 30 minutes (any request for additional time
+      may be granted at the sole discretion of the Organiser) to set up their presentation booths. Each Participant or
+      team with a Submission will be given up to four (4) minutes to present his/her/their Submission to a panel of
+      judges. The order of the Participants’ or teams’ presentations will be determined by the Organiser.
       <br />
       <br />b. Participants are to explain and/or demonstrate how well their Submissions fulfil the following equally
       weighted judging criteria:
@@ -107,7 +108,7 @@
       <br />
       <br />ii. Execution – How well the idea has been pitched and displayed at the booth;
       <br />
-      <br />iii. Scalability – How economically sustainable the idea is (in an economic sense); and
+      <br />iii. Scalability – How economically sustainable the idea is; and
       <br />
       <br />iv. Environmental Impact - How the idea impacts the environment.
       <br />
@@ -116,7 +117,7 @@
       <br />
     </Para>
 
-    <h4>Disqualification</h4>
+    <h4>6. Disqualification</h4>
     <Para>
       a. A Participant or Team’s Submission may be disqualified if the Organiser, in its sole discretion, reasonably
       finds or believes that the Submission:
@@ -162,24 +163,33 @@
     <Para>
       a. The winner of each Problem Theme will be awarded the respective titles:
       <br />
-      <br />i. Best Built Environment
+      <br />i. Best Built Environment Hack
       <br />
-      <br />ii. Best Waste Reduction
+      <br />ii. Best Natural Environment Hack
       <br />
-      <br />iii. Best Waste Management
+      <br />iii. Best Waste Management Hack
       <br />
-      <br />iv. Best Transportation
+      <br />iv. Best Transportation Hack
       <br />
-      <br />b. The Organiser and Sponsors reserve the right to withhold the Prize from a Participant or team even after
+      <br />b. In addition to the Problem Theme winners, Prizes will also be awarded to winners of the following
+      categories:
+      <br />
+      <br />i. Best Hardware Hack
+      <br />
+      <br />ii. Best Design Hack
+      <br />
+      <br />iii. Most Green Hack
+      <br />
+      <br />c. The Organiser and Sponsors reserve the right to withhold the Prize from a Participant or team even after
       he/she/it has been announced as a winner or to require a Participant or team to return the Prize after it has been
       awarded if the Participant or team is found to have breached any of these Terms and Conditions in the course of
       the Competition.
       <br />
-      <br />c. Participants acknowledge that the prizes and judging procedures stated in these Terms and Conditions or
+      <br />d. Participants acknowledge that the prizes and judging procedures stated in these Terms and Conditions or
       on the Competition website or in any announcements or notifications to the Participants are subject to change at
       the Organiser’s sole discretion.
       <br />
-      <br />d. Prizes must be collected in person by the winning Participant or team or a member of the winning Team.
+      <br />e. Prizes must be collected in person by the winning Participant or team or a member of the winning Team.
       All taxes and other expenses, costs or fees associated with the acceptance and/or use of any Prize are the sole
       responsibility of the winning Participant or team members. If a Prize is unclaimed within 10 business days after
       notification, the Organiser may at its sole discretion forfeit the Prize and choose an alternate winner to be
@@ -255,7 +265,7 @@
       <br />
     </Para>
 
-    <h4>Disclaimers</h4>
+    <h4>11. Disclaimers</h4>
     <Para>
       a. The Participant agrees that the Organiser and the Sponsors shall not be liable for any death or personal injury
       suffered by the Participant as a result of or in connection with the Participant’s participation in the
@@ -282,12 +292,12 @@
       <br />
     </Para>
 
-    <h4>Governing Law</h4>
+    <h4>12. Governing Law</h4>
     <Para>
       a. These terms and conditions shall be subject to, governed by and interpreted in accordance with the Laws of the
       Republic of Singapore for every purpose and the Participant agrees that the Courts of Singapore shall have
-      exclusive jurisdiction to determine any dispute or claim arising from or in connection with these terms and
-      conditions and/or the Competition.
+      exclusive jurisdiction to determine any dispute or claim arising from or in connection with these Terms and
+      Conditions and/or the Competition.
     </Para>
   </ContentModal>
 </template>

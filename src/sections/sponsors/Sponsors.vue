@@ -81,40 +81,16 @@ export default {
               photoNormal: 'govtech',
               photoWhite: 'govtech-white',
             },
-            {
-              name: 'SUTD ISTD',
-              url: 'https://istd.sutd.edu.sg/',
-              photoNormal: 'istd',
-              photoWhite: 'istd-white',
-            },
           ],
         },
         {
           name: 'Fifth Row Partners',
           sponsors: [
             {
-              name: 'Makerspace',
-              url: '',
-              photoNormal: 'makerspace',
-              photoWhite: 'makerspace-white',
-            },
-            {
-              name: 'Greenprint',
-              url: 'https://greenprint.opensutd.org/',
-              photoNormal: 'greenprint',
-              photoWhite: 'greenprint-white',
-            },
-            {
               name: 'Energy Club',
               url: 'https://www.instagram.com/sutd_energyclub/',
               photoNormal: 'energy',
               photoWhite: 'energy-white',
-            },
-            {
-              name: 'SUTD CD Lionhearter',
-              url: 'https://www.facebook.com/CD-Lionhearter-Club-195125160147/',
-              photoNormal: 'lionhearter',
-              photoWhite: 'lionhearter-white',
             },
             {
               name: 'MechD',
@@ -126,23 +102,6 @@ export default {
               url: 'https://ieee.opensutd.org/',
               photoNormal: 'ieee',
               photoWhite: 'ieee-white',
-            },
-            {
-              name: 'Photography Circle',
-              url: 'https://www.instagram.com/sutd.photogcircle/',
-              photoNormal: 'photog',
-              photoWhite: 'photog-white',
-            },
-            {
-              name: 'SUTD Bands',
-              url: 'https://www.facebook.com/SUTDBands/',
-              photoNormal: 'bands',
-              photoWhite: 'bands-white',
-            },
-            {
-              name: 'SUTD Productions',
-              photoNormal: 'SUTD-Productions-Logo',
-              photoWhite: 'SUTD-Productions-Logo-white',
             },
             {
               name: '3DC',

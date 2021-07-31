@@ -26,7 +26,7 @@
         </svg>
         <div>
           Email:&nbsp;
-          <a href="mailto:whatthehack@sutd.edu.sg" style="color: var(--color-accent);">whatthehack@sutd.edu.sg</a>
+          <a href="mailto:whatthehack2021@sutdapac.onmicrosoft.com" style="color: var(--color-accent);">whatthehack2021@sutdapac.onmicrosoft.com</a>
         </div>
       </div>
       <div id="footer-bottom">

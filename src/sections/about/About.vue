@@ -4,23 +4,23 @@
     <div class="about-content">
       <div class="about-content-main">
         <Para>
-          What The Hack is SUTD's annual hackathon held at our campus
-          {{ ' ' }}that aims to bring together people of various disciplines and provide them with a platform to find
-          innovative solutions to meaningful real-world problems.
+          What The Hack is SUTD's annual hackathon that aims to bring together people of various disciplines and provide
+          them with a platform to find innovative solutions to meaningful real-world problems.
         </Para>
         <Para>
           This year’s theme is
-          <span>Environment</span>, of which there will be four problem domains related to this overarching theme -
-          <span>Built Environment</span>, <span>Waste Management</span>, <span>Waste Reduction</span> and
+          <span>Environment</span>, of which there will be four problem themes related to this overarching theme -
+          <span>Built Environment</span>, <span>Waste Management</span>, <span>Natural Environment</span> and
           <span>Transportation</span>. Participants will have to tackle an issue from within one of these problem
           domains using solutions that fall under at least one of these four technological categories -
           <span>Software Platforms</span>, <span> Internet of Things </span>, <span>Artificial Intelligence</span> and
-          <span>Computational Fabrication</span>.
+          <span>Computational Fabrication</span>. Due to the current COVID-19 situation, What The Hack 2021 will be held
+          virtually!
         </Para>
       </div>
       <div class="about-content-aside">
         <div class="aside-block">
-          <div class="aside-number">4</div>
+          <div class="aside-number">3 - 5</div>
           <div class="aside-refer">Pax / Group</div>
         </div>
         <div class="aside-block">
@@ -158,7 +158,7 @@
         fill="#fff"
         d="M649 766l7 4c7 3 9 8 8 14 0 2-3 4-5 4H367c-7 0-12-1-15-7-13-21 0-42 27-47 12-2 12-2 13-12s2-21 11-29c14-11 30-11 46-5 4 1 8 4 10-2 6-19 24-27 42-34 21-9 60 1 74 23a128 128 0 0110 18c2 6 6 7 12 5 12-2 23 2 26 10 1 1 2 4 1 5-3 6-1 7 6 8 26 2 37 27 22 40-2 1-2 3-3 5z"
         opacity=".8"
-        style="isolation:isolate"
+        style="isolation: isolate"
       ></path>
       <path
         class="cloud"
@@ -166,7 +166,7 @@
         fill="#fff"
         d="M1780 912h-106c-8 0-8 2-7-6 0-5 3-7 8-8s6-1 7-6c1-6 0-11 3-16 4-7 9-11 17-11 4-1 7 0 11 1 6 1 6 1 6-4 0-9 5-18 12-25s15-13 26-15c12-2 23 1 32 7 10 8 16 17 20 28 2 5 2 5 7 2 8-4 16-4 24-3 15 3 24 11 29 23a21 21 0 012 5c0 2 1 3 4 3a47 47 0 018 2c8 1 11 6 12 12v9c1 2 0 2-2 2l-6 1h-107z"
         opacity=".8"
-        style="isolation:isolate"
+        style="isolation: isolate"
       ></path>
       <g class="stars-one" fill="#f9f458">
         <path
