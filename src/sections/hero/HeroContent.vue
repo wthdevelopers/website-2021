@@ -12,7 +12,11 @@
         <h2>18th - 19th September 2021</h2>
         <h2>Singapore University of Technology and Design</h2>
       </div>
-      <button class="register-button" id="register-button-hero" @click="openModal('registration-guide-modal', 'register-button-hero')">
+      <button
+        class="register-button"
+        id="register-button-hero"
+        @click="openModal('registration-guide-modal', 'register-button-hero')"
+      >
         Register Now!
       </button>
     </div>
@@ -101,8 +105,8 @@ export default {
   font-weight: 700;
   background-color: var(--color-title-text);
   color: var(--color-cta-text);
-  padding: 32px 20px;
-  width: 205px;
+  padding: 32px 47px;
+  width: 265px;
   height: 0;
   transition: background-color 0.6s ease-out, color 0.6s ease-out;
 }
@@ -127,6 +131,9 @@ export default {
 @media (max-width: 1180px) {
   .caution-button {
     padding: 32px 31px;
+  }
+  .register-button {
+    padding: 32px 47px;
   }
 }
 
@@ -171,8 +178,8 @@ export default {
 
   .register-button {
     font-size: 22px;
-    padding: 28px 20px;
-    width: 185px;
+    padding: 28px 42px;
+    width: 240px;
   }
 
   .caution-button {
@@ -208,8 +215,8 @@ export default {
 
   .register-button {
     font-size: 16px;
-    padding: 22px 30px;
-    width: 145px;
+    padding: 22px 37px;
+    width: 185px;
     margin-left: auto;
     margin-right: auto;
   }

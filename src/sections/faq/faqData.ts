@@ -119,38 +119,38 @@ export const faqData = [
     title: 'Others',
     content: [
       {
-        id: 12,
+        id: 14,
         title: 'Can I build my prototype beforehand?',
         type: 'text',
         content: `No, you may only begin working (coding, building, analysing) on your prototype after we announce the start of the hacking period.`,
       },
       {
-        id: 13,
+        id: 15,
         title: 'Do we get to pitch our idea?',
         type: 'text',
         content: `Yes! There will be an exhibition segment where you get to pitch your prototypes to the judges and others!`,
       },
       {
-        id: 14,
+        id: 16,
         title: 'How do we handle Intellectual Property (IP)?',
         type: 'text',
         content: `Please refer to the Terms and Conditions at the bottom of the page.`,
       },
       {
-        id: 15,
+        id: 17,
         title: 'Will I get a certificate of participation for taking part?',
         type: 'text',
         content: `Apologies, but we currently do not have provisions for this.`,
       },
       {
-        id: 16,
+        id: 18,
         title: 'Do I have to use a particular coding language?',
         type: 'text',
         content: `You are free to use any programming language you desire or need to use based on your prototype. 
           There are no restrictions or requirements as to using specific programming languages.`,
       },
       {
-        id: 17,
+        id: 19,
         title: 'My question can’t be found in the FAQs!',
         type: 'text',
         content: `For any further queries or clarifications, feel free to drop us a message via the contact form below, or email us at whatthehack2021@sutdapac.onmicrosoft.com`,
