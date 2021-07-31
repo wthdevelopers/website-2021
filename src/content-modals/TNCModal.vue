@@ -57,12 +57,12 @@
       a. "Submission" refers to the prototype of the product or service created by participants and any related
       materials that is presented to the judges.
       <br />
-      <br />b. The Participants, whether individually or as a team, will be required to work on building solutions to
-      problems broadly categorised according to the themes of Built Environment, Natural Environment, Waste Management,
-      and Transportation. The Participants are to create solutions for their Submission for the Competition using at
-      least one of the technologies in the following broad technology categories: Platforms and Applications, Internet
-      of Things, Data Science / Artificial Intelligence, and Mechanical Design / Digital Fabrication / Robotics, which
-      are to be submitted for judging by a panel of judges.
+      <br />b. The Participants, as a team, will be required to work on building solutions to problems broadly
+      categorised according to the themes of Built Environment, Natural Environment, Waste Management, and
+      Transportation. The Participants are to create solutions for their Submission for the Competition using at least
+      one of the technologies in the following broad technology categories: Platforms and Applications, Internet of
+      Things, Data Science / Artificial Intelligence, and Mechanical Design / Digital Fabrication / Robotics, which are
+      to be submitted for judging by a panel of judges.
       <br />
       <br />c. The Participants may only begin working (coding, building, analysing) on their Submissions at the
       official commencement time fixed by the Organiser and must complete their Submission by the end of the 24 hours
@@ -96,10 +96,10 @@
     <h4>5. Judging</h4>
     <Para>
       a. At the end of the 24-hour hacking period, the Participants will present their Submissions through a platform
-      that is to be determined by the Organisers and will be given at least 30 minutes (any request for additional time
-      may be granted at the sole discretion of the Organiser) to set up their presentation booths. Each Participant or
-      team with a Submission will be given up to four (4) minutes to present his/her/their Submission to a panel of
-      judges. The order of the Participants’ or teams’ presentations will be determined by the Organiser.
+      that is to be determined by the Organisers. Each Participant or Team with a Submission will be given up to 20
+      minutes (any request for additional time may be granted at the sole discretion of the Organiser) to set up their
+      virtual presentation booths , and up to four (4) minutes to present his/her/their Submission to a panel of judges.
+      The order of the Participants’ or teams’ presentations will be determined by the Organiser.
       <br />
       <br />b. Participants are to explain and/or demonstrate how well their Submissions fulfil the following equally
       weighted judging criteria:
@@ -145,9 +145,9 @@
       <br />iii. any breach of the safety rules or directives issued by the Organiser and/or its employees in relation
       to SUTD’s Fabrication Laboratory or other premises or facilities; or
       <br />
-      <br />iv. any or any attempt to compromise the integrity or the legitimate operation of the Competition,
-      including, without limitation, by cheating, hacking, creating a malicious bot or any other automated program, or
-      by committing fraud in any way.
+      <br />iv. any attempt to compromise the integrity or the legitimate operation of the Competition, including,
+      without limitation, by cheating, hacking, creating a malicious bot or any other automated program, or by
+      committing fraud in any way.
       <br />
       <br />c. If, during the Competition, any of the Organiser’s representatives, agents or employees reasonably
       believes that a Participant’s health is in danger, the Participant may be required to discontinue his/her
@@ -294,7 +294,7 @@
 
     <h4>12. Governing Law</h4>
     <Para>
-      a. These terms and conditions shall be subject to, governed by and interpreted in accordance with the Laws of the
+      a. These Terms and Conditions shall be subject to, governed by and interpreted in accordance with the Laws of the
       Republic of Singapore for every purpose and the Participant agrees that the Courts of Singapore shall have
       exclusive jurisdiction to determine any dispute or claim arising from or in connection with these Terms and
       Conditions and/or the Competition.
