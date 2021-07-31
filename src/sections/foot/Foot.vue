@@ -33,7 +33,9 @@
         <div>Copyright © 2021 What The Hack. All rights reserved.</div>
         <ul>
           <li>
-            <a href="https://bit.ly/2tjIhvF">Register</a>
+            <button id="register-button-footer" @click="openModal('registration-guide-modal', 'register-button-footer')">
+              Register
+            </button>
           </li>
           <li class="li-dividers" aria-hidden="true">|</li>
           <li>
@@ -46,7 +48,7 @@
               type="button"
               @click="openModal('footer-tnc-modal', 'footer-tnc-modal-button')"
             >
-              Terms & Conditions
+              Terms and Conditions
             </button>
           </li>
           <li class="li-dividers" aria-hidden="true">|</li>
@@ -58,6 +60,7 @@
         </ul>
       </div>
     </footer>
+    <RegistrationGuideModal />
     <TNCModal id="footer-tnc-modal" />
   </div>
 </template>
@@ -68,6 +71,7 @@ import openModalMixin from '@/mixins/openModalMixin';
 export default {
   name: 'foot',
   components: {
+    RegistrationGuideModal: () => import(/* webpackPrefetch: true */ '@/content-modals/RegistrationGuideModal'),
     TNCModal: () => import(/* webpackPrefetch: true */ '@/content-modals/TNCModal.vue'),
   },
   mixins: [openModalMixin],

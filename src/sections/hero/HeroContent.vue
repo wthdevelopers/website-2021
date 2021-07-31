@@ -12,17 +12,12 @@
         <h2>18th - 19th September 2021</h2>
         <h2>Singapore University of Technology and Design</h2>
       </div>
-      <!-- <a href="https://bit.ly/2tjIhvF" class="register-button">Register Now</a> -->
-      <button
-        class="caution-button"
-        id="caution-modal-button"
-        type="button"
-        @click="openModal('caution-modal', 'caution-modal-button')"
-      >
-        Coming Soon!
+      <button class="register-button" id="register-button-hero" @click="openModal('registration-guide-modal', 'register-button-hero')">
+        Register Now!
       </button>
     </div>
     <CautionModal id="caution-modal" />
+    <RegistrationGuideModal />
   </div>
 </template>
 
@@ -35,6 +30,7 @@ export default {
   name: 'hero-content',
   components: {
     CautionModal: () => import(/* webpackPrefetch: true */ '@/content-modals/CautionModal.vue'),
+    RegistrationGuideModal: () => import(/* webpackPrefetch: true */ '@/content-modals/RegistrationGuideModal'),
     WTHIcon,
     CloudIcon,
   },
