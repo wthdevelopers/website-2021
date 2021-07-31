@@ -41,11 +41,23 @@ export default {
           award: 'Coming Soon',
         },
         {
-          name: 'Best Waste Reduction Hack',
+          name: 'Best Natural Environment Hack',
           award: 'Coming Soon',
         },
         {
           name: 'Best Transportation Hack',
+          award: 'Coming Soon',
+        },
+        {
+          name: 'Best Hardware Hack',
+          award: 'Coming Soon',
+        },
+        {
+          name: 'Best Design Hack',
+          award: 'Coming Soon',
+        },
+        {
+          name: 'Most Green Hack',
           award: 'Coming Soon',
         },
       ],

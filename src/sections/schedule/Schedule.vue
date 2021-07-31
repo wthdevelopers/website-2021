@@ -12,81 +12,15 @@
         </li>
         <li>
           <Para>Briefing</Para>
-          <Para>10:00AM</Para>
+          <Para>9:30AM</Para>
         </li>
         <li>
           <Para>Start Hacking!</Para>
-          <Para>11:00AM</Para>
+          <Para>10:30AM</Para>
         </li>
         <li>
-          <Para>Lunch</Para>
-          <Para>1:00PM</Para>
-        </li>
-        <li>
-          <Para>
-            Workshops:
-            <div
-              role="button"
-              tabindex="0"
-              class="workshop-button"
-              id="workshop-one-modal-button"
-              @click="openModal('workshop-one-modal', 'workshop-one-modal-button')"
-              @keydown.enter.prevent="openModal('workshop-one-modal', 'workshop-one-modal-button')"
-              @keyup.space="openModal('workshop-one-modal', 'workshop-one-modal-button')"
-              @keydown.space.prevent
-            >
-              Repurposing Scrap Materials for Prototype Design
-            </div>
-            &#32;OR
-            <div
-              role="button"
-              tabindex="0"
-              class="workshop-button"
-              id="workshop-two-modal-button"
-              @click="openModal('workshop-two-modal', 'workshop-two-modal-button')"
-              @keydown.enter.prevent="openModal('workshop-two-modal', 'workshop-two-modal-button')"
-              @keyup.space="openModal('workshop-two-modal', 'workshop-two-modal-button')"
-              @keydown.space.prevent
-            >
-              Utilising Alternate Energy Sources in Prototyping
-            </div>
-          </Para>
-          <Para>2:00PM</Para>
-        </li>
-        <li>
-          <Para>
-            Workshops:
-            <div
-              role="button"
-              tabindex="0"
-              class="workshop-button"
-              id="workshop-three-modal-button"
-              @click="openModal('workshop-three-modal', 'workshop-three-modal-button')"
-              @keydown.enter.prevent="openModal('workshop-three-modal', 'workshop-three-modal-button')"
-              @keyup.space="openModal('workshop-three-modal', 'workshop-three-modal-button')"
-              @keydown.space.prevent
-            >
-              Fusion 360 Beginner
-            </div>
-            &#32;OR
-            <div
-              role="button"
-              tabindex="0"
-              class="workshop-button"
-              id="workshop-four-modal-button"
-              @click="openModal('workshop-four-modal', 'workshop-four-modal-button')"
-              @keydown.enter.prevent="openModal('workshop-four-modal', 'workshop-four-modal-button')"
-              @keyup.space="openModal('workshop-four-modal', 'workshop-four-modal-button')"
-              @keydown.space.prevent
-            >
-              ESP32 Web Server & BLE
-            </div>
-          </Para>
-          <Para>4:00PM</Para>
-        </li>
-        <li>
-          <Para>Dinner</Para>
-          <Para>6:00PM</Para>
+          <Para>Sponsor Talk by Indeed</Para>
+          <Para>TBC</Para>
         </li>
       </ul>
       <ul class="timetable">
@@ -94,32 +28,32 @@
           <SubHeader>Day Two (Sunday)</SubHeader>
         </li>
         <li>
-          <Para>Submission Opens</Para>
+          <Para>DevPost Submission Opens</Para>
           <Para>12:00AM</Para>
         </li>
         <li>
-          <Para>Breakfast</Para>
+          <Para>Day 2 Check-In</Para>
           <Para>9:00AM</Para>
         </li>
         <li>
+          <Para>Continue Hacking!</Para>
+          <Para>9:30AM</Para>
+        </li>
+        <li>
           <Para>Hacking Ends</Para>
-          <Para>11:00AM</Para>
+          <Para>2:00PM</Para>
         </li>
         <li>
-          <Para>Exhibition Setup</Para>
-          <Para>11:30AM</Para>
-        </li>
-        <li>
-          <Para>Lunch</Para>
-          <Para>12:00PM</Para>
+          <Para>Sponsor Talk by GovTech</Para>
+          <Para>2:00PM</Para>
         </li>
         <li>
           <Para>Exhibition/Judging</Para>
-          <Para>1:00PM</Para>
+          <Para>3:00PM</Para>
         </li>
         <li>
-          <Para>Awards Ceremony</Para>
-          <Para>3:00PM</Para>
+          <Para>Prize Presentation Ceremony</Para>
+          <Para>5:30PM</Para>
         </li>
       </ul>
     </div>

@@ -26,7 +26,7 @@
         </svg>
         <div>
           Email:&nbsp;
-          <a href="mailto:whatthehack@sutd.edu.sg" style="color: var(--color-accent);">whatthehack@sutd.edu.sg</a>
+          <a href="mailto:whatthehack2021@sutdapac.onmicrosoft.com" style="color: var(--color-accent);">whatthehack2021@sutdapac.onmicrosoft.com</a>
         </div>
       </div>
       <div id="footer-bottom">
@@ -51,16 +51,6 @@
           </li>
           <li class="li-dividers" aria-hidden="true">|</li>
           <li>
-            <button
-              id="footer-rules-modal-button"
-              type="button"
-              @click="openModal('footer-rules-modal', 'footer-rules-modal-button')"
-            >
-              Participants' Rules
-            </button>
-          </li>
-          <li class="li-dividers" aria-hidden="true">|</li>
-          <li>
             <a href="https://github.com/wthdevelopers/website-2021" target="_blank" rel="noopener noreferrer"
               >Source Code</a
             >
@@ -69,7 +59,6 @@
       </div>
     </footer>
     <TNCModal id="footer-tnc-modal" />
-    <RulesModal id="footer-rules-modal" />
   </div>
 </template>
 
@@ -80,7 +69,6 @@ export default {
   name: 'foot',
   components: {
     TNCModal: () => import(/* webpackPrefetch: true */ '@/content-modals/TNCModal.vue'),
-    RulesModal: () => import(/* webpackPrefetch: true */ '@/content-modals/RulesModal.vue'),
   },
   mixins: [openModalMixin],
 };
