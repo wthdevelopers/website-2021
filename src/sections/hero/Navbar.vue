@@ -329,7 +329,7 @@ export default Vue.extend({
       theme: 'light',
     };
   },
-  mounted: function() {
+  mounted: function () {
     Vue.nextTick(() => {
       let setTheme = document.documentElement.getAttribute('theme');
       if (setTheme) {
@@ -389,7 +389,6 @@ export default Vue.extend({
 nav {
   height: 12.5%;
   padding: 25px 40px;
-  /* border: 2px solid red; */
 }
 
 nav li {

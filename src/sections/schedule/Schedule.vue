@@ -267,10 +267,6 @@
         ></path>
       </g>
     </svg>
-    <WorkshopOneModal id="workshop-one-modal" />
-    <WorkshopTwoModal id="workshop-two-modal" />
-    <WorkshopThreeModal id="workshop-three-modal" />
-    <WorkshopFourModal id="workshop-four-modal" />
   </section>
 </template>
 
@@ -287,10 +283,6 @@ export default {
     SectionHeader,
     SubHeader,
     Para,
-    WorkshopOneModal: () => import(/* webpackPrefetch: true */ '@/content-modals/WorkshopOneModal.vue'),
-    WorkshopTwoModal: () => import(/* webpackPrefetch: true */ '@/content-modals/WorkshopTwoModal.vue'),
-    WorkshopThreeModal: () => import(/* webpackPrefetch: true */ '@/content-modals/WorkshopThreeModal.vue'),
-    WorkshopFourModal: () => import(/* webpackPrefetch: true */ '@/content-modals/WorkshopFourModal.vue'),
   },
   mixins: [openModalMixin],
 };

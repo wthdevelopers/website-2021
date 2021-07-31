@@ -35,7 +35,7 @@
           >
             here
           </Para>
-          to join the slack channel to find a team!
+          to join the Slack channel to find a team!
         </Para>
         <Para :className="['guide-text', 'guide-text-description', 'reminder-text']">
           After forming a team, remember to come back to register
