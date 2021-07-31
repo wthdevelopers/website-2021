@@ -11,7 +11,7 @@
               <a v-if="sponsor.url" :href="sponsor.url" target="_blank" rel="noopener noreferrer">
                 <img
                   :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
-                  style="display: var(--displayed-during-light);"
+                  style="display: var(--displayed-during-light)"
                   :src="require(`../../../public/images/${sponsor.photoNormal}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 />
@@ -25,7 +25,7 @@
               <div v-else>
                 <img
                   :class="tier.name === 'Platinum' ? 'img-platinum' : tier.name === 'Gold' ? 'img-gold' : 'img-others'"
-                  style="display: var(--displayed-during-light);"
+                  style="display: var(--displayed-during-light)"
                   :src="require(`../../../public/images/${sponsor.photoNormal}.png`)"
                   :alt="`${sponsor.name} company logo`"
                 />
@@ -41,7 +41,7 @@
         </li>
       </ul>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 215.4" style="transform: translateY(-7px);">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 215.4" style="transform: translateY(-7px)">
       <path
         class="slope"
         d="M0 160h60c60 0 180 0 300 16s240 48 360 37c120-10 240-64 360-85s240-11 300-5l60 5V0H0z"
@@ -94,6 +94,7 @@ export default {
             },
             {
               name: 'MechD',
+              url: 'https://mechd.opensutd.org/',
               photoNormal: 'MechD',
               photoWhite: 'MechD-white',
             },
@@ -105,6 +106,7 @@ export default {
             },
             {
               name: '3DC',
+              url: 'https://3dc.opensutd.org/',
               photoNormal: '3dc',
               photoWhite: '3dc-white',
             },
