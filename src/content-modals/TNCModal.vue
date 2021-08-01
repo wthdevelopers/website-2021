@@ -98,7 +98,7 @@
       a. At the end of the 24-hour hacking period, the Participants will present their Submissions through a platform
       that is to be determined by the Organisers. Each Participant or Team with a Submission will be given up to 20
       minutes (any request for additional time may be granted at the sole discretion of the Organiser) to set up their
-      virtual presentation booths , and up to four (4) minutes to present his/her/their Submission to a panel of judges.
+      virtual presentation booths, and up to four (4) minutes to present his/her/their Submission to a panel of judges.
       The order of the Participants’ or teams’ presentations will be determined by the Organiser.
       <br />
       <br />b. Participants are to explain and/or demonstrate how well their Submissions fulfil the following equally
