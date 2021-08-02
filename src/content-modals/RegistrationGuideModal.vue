@@ -136,6 +136,7 @@ export default {
   border-bottom: 3px solid var(--color-subheader-text);
   line-height: 1;
   cursor: pointer;
+  font-size: inherit;
 }
 
 .guide-text-highlight:hover {
@@ -235,6 +236,26 @@ export default {
 
   .guide-content-container {
     height: 300px;
+  }
+}
+
+@media (--mobile-narrow) {
+  #registration-guide-modal {
+    padding: 50px 16px;
+  }
+
+  .guide-text-title {
+    font-size: 20px;
+  }
+
+  .has-team-text,
+  .join-slack-text {
+    top: 25%;
+    width: 110px;
+  }
+
+  .guide-text-description {
+    font-size: 18px;
   }
 }
 </style>
