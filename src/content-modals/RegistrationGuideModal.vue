@@ -181,6 +181,13 @@ export default {
   width: 60%;
 }
 
+@media (max-width: 1600px) {
+  .has-team-text,
+  .join-slack-text {
+    width: 300px;
+  }
+}
+
 @media (max-width: 1440px) {
   #registration-guide-modal {
     width: 80vw;
@@ -188,6 +195,11 @@ export default {
 
   >>> .modal-slope-clausal {
     width: 80vw;
+  }
+
+  .has-team-text,
+  .join-slack-text {
+    width: 250px;
   }
 }
 
@@ -216,7 +228,7 @@ export default {
 @media (--mobile-wide) {
   #registration-guide-modal {
     padding: 50px 8vw;
-    height: 70vh;
+    height: 60vh;
     width: 90vw;
   }
 
@@ -231,7 +243,8 @@ export default {
 
   .has-team-text,
   .join-slack-text {
-    top: 35%;
+    top: 25%;
+    width: 110px;
   }
 
   .guide-content-container {
