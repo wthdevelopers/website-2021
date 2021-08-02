@@ -20,7 +20,6 @@
         Register Now!
       </button>
     </div>
-    <CautionModal id="caution-modal" />
     <RegistrationGuideModal />
   </div>
 </template>
@@ -33,17 +32,11 @@ import CloudIcon from '@/sections/hero/CloudIcon';
 export default {
   name: 'hero-content',
   components: {
-    CautionModal: () => import(/* webpackPrefetch: true */ '@/content-modals/CautionModal.vue'),
     RegistrationGuideModal: () => import(/* webpackPrefetch: true */ '@/content-modals/RegistrationGuideModal'),
     WTHIcon,
     CloudIcon,
   },
   mixins: [openModalMixin],
-  mounted() {
-    setTimeout(() => {
-      this.openModal('caution-modal', 'caution-modal-button');
-    }, 300);
-  },
 };
 </script>
 
