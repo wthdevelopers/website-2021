@@ -102,6 +102,7 @@ export default {
   width: 265px;
   height: 0;
   transition: background-color 0.6s ease-out, color 0.6s ease-out;
+  line-height: 0px;
 }
 
 .caution-button {
