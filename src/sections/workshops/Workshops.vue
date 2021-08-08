@@ -5,7 +5,7 @@
 
       <div class="workshops-content" id="workshops-content">
         <div class="highlight-content">
-          <div class="highlight-content-media">
+          <div :class="['highlight-content-media', { 'highlight-content-media__video': !!selectedWorkshop.videoURL }]">
             <iframe
               class="hightlight-video"
               v-if="selectedWorkshop.videoURL"
@@ -121,10 +121,8 @@ export default {
   overflow: hidden;
 }
 
-.highlight-video {
-  display: block;
-  height: 100%;
-  width: 100%;
+.highlight-content-media.highlight-content-media__video {
+  height: 360px;
 }
 
 .highlight-image {
@@ -216,6 +214,10 @@ export default {
     max-width: unset;
   }
 
+  .highlight-content-media.highlight-content-media__video {
+    width: 100%;
+  }
+
   .other-workshops-card-container {
     width: calc(50% - 16px);
   }
@@ -226,6 +228,10 @@ export default {
 }
 
 @media (--mobile-wide) {
+  .highlight-content-media.highlight-content-media__video {
+    height: 300px;
+  }
+
   .other-workshops-card-container {
     width: 80%;
   }
@@ -239,6 +245,10 @@ export default {
 @media (--mobile-narrow) {
   .workshops-content {
     padding: 50px 30px 0 30px;
+  }
+
+  .highlight-content-media.highlight-content-media__video {
+    height: 280px;
   }
 }
 </style>
