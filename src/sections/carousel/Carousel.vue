@@ -13,12 +13,14 @@
           :id="`carousel-textgroup-${idx + 1}`"
           :aria-hidden="idx === 0 ? 'false' : 'true'"
           role="group"
-          :aria-label="`${idx + 1} of 5`"
+          :aria-label="`${idx + 1} of ${content.length}`"
         >
           <div class="carousel-maintext">{{ item.desc }}</div>
           <div class="carousel-subtext">
             -
-            <span>{{ item.team }}</span>
+            <span :class="{ 'team-link': item.teamURL !== '' }" @click="() => openNewTab(item.teamURL)">
+              {{ item.team }}
+            </span>
             , {{ item.teamDesc }}
           </div>
         </div>
@@ -46,48 +48,13 @@
 </template>
 
 <script>
+import { carouselData } from '@/sections/carousel/carouselData';
+
 export default {
   name: 'carousel',
   data() {
     return {
-      content: [
-        {
-          desc: `A magical wand powered by AR that unlocks the barriers
-            of your phone's screen so that you can create,
-            collaborate and transform the world by drawing.`,
-          team: 'Team AR Wand',
-          teamDesc: 'Best Overall Hack, WTH2018',
-        },
-        {
-          desc: `A seriously-cool plasma ion rocket thruster that
-            uses high currents and pressures to create thrust
-            via the dissociation of argon electrons.`,
-          team: 'Team Duct Tape Hax',
-          teamDesc: 'Best Space Hack, WTH2017',
-        },
-        {
-          desc: `An entertaining VR tower defense game that teaches
-            you the fundamental concepts of circuit physics
-            as you defend against hordes of feisty zombies.`,
-          team: 'Team Circuit Defense',
-          teamDesc: 'Best VR Hack, WTH2018',
-        },
-        {
-          desc: `A smart bin that classifies waste into different
-            material categories for recycling purposes, and
-            then credits you with EZ-Link credits for the job
-            well done!`,
-          team: 'Team Sentinel',
-          teamDesc: 'WTH2017',
-        },
-        {
-          desc: `An immersive and educational VR simulation of a
-            fire incident in an office where you have to use
-            the right tools and find the right path to escape.`,
-          team: 'Team Fire Escape',
-          teamDesc: 'WTH2018',
-        },
-      ],
+      content: carouselData,
       slide: 1,
       carouselIntervalID: null,
     };
@@ -140,6 +107,11 @@ export default {
       this.carouselIntervalID = setInterval(() => {
         this.slideLeft();
       }, 5000);
+    },
+    openNewTab: function(url) {
+      if (url) {
+        window.open(url, '_blank');
+      }
     },
   },
   mounted() {
@@ -202,13 +174,8 @@ span {
   line-height: 0.4;
 }
 
-.carousel-maintext::before {
-  content: '"';
-  position: absolute;
-  top: -100px;
-  left: 0;
-  font-family: var(--font-secondary), sans-serif;
-  font-size: 90px;
+.team-link {
+  cursor: pointer;
 }
 
 .carousel-dots {
