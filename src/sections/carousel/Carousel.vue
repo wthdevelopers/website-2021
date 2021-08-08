@@ -13,12 +13,25 @@
           :id="`carousel-textgroup-${idx + 1}`"
           :aria-hidden="idx === 0 ? 'false' : 'true'"
           role="group"
-          :aria-label="`${idx + 1} of 5`"
+          :aria-label="`${idx + 1} of ${content.length}`"
         >
+          <div v-if="item.teamVideoURL && slide === idx + 1" class="carousel-content-media">
+            <iframe
+              width="100%"
+              height="100%"
+              :src="item.teamVideoURL"
+              :title="item.team"
+              frameborder="0"
+              allowfullscreen
+            />
+          </div>
+          <p class="carousel-quote">"</p>
           <div class="carousel-maintext">{{ item.desc }}</div>
           <div class="carousel-subtext">
             -
-            <span>{{ item.team }}</span>
+            <span :class="{ 'team-link': item.teamURL !== '' }" @click="() => openNewTab(item.teamURL)">
+              {{ item.team }}
+            </span>
             , {{ item.teamDesc }}
           </div>
         </div>
@@ -46,48 +59,13 @@
 </template>
 
 <script>
+import { carouselData } from '@/sections/carousel/carouselData';
+
 export default {
   name: 'carousel',
   data() {
     return {
-      content: [
-        {
-          desc: `A magical wand powered by AR that unlocks the barriers
-            of your phone's screen so that you can create,
-            collaborate and transform the world by drawing.`,
-          team: 'Team AR Wand',
-          teamDesc: 'Best Overall Hack, WTH2018',
-        },
-        {
-          desc: `A seriously-cool plasma ion rocket thruster that
-            uses high currents and pressures to create thrust
-            via the dissociation of argon electrons.`,
-          team: 'Team Duct Tape Hax',
-          teamDesc: 'Best Space Hack, WTH2017',
-        },
-        {
-          desc: `An entertaining VR tower defense game that teaches
-            you the fundamental concepts of circuit physics
-            as you defend against hordes of feisty zombies.`,
-          team: 'Team Circuit Defense',
-          teamDesc: 'Best VR Hack, WTH2018',
-        },
-        {
-          desc: `A smart bin that classifies waste into different
-            material categories for recycling purposes, and
-            then credits you with EZ-Link credits for the job
-            well done!`,
-          team: 'Team Sentinel',
-          teamDesc: 'WTH2017',
-        },
-        {
-          desc: `An immersive and educational VR simulation of a
-            fire incident in an office where you have to use
-            the right tools and find the right path to escape.`,
-          team: 'Team Fire Escape',
-          teamDesc: 'WTH2018',
-        },
-      ],
+      content: carouselData,
       slide: 1,
       carouselIntervalID: null,
     };
@@ -141,6 +119,11 @@ export default {
         this.slideLeft();
       }, 5000);
     },
+    openNewTab: function(url) {
+      if (url) {
+        window.open(url, '_blank');
+      }
+    },
   },
   mounted() {
     this.carouselIntervalID = setInterval(() => {
@@ -164,7 +147,7 @@ export default {
 <style scoped>
 .carousel-body {
   background-color: var(--slope-body-color);
-  padding: 200px 150px 0 150px;
+  padding: 140px 150px 0 150px;
   transform: translateY(-1px);
   transition: background-color 0.6s ease-out;
 }
@@ -185,6 +168,21 @@ export default {
   flex-shrink: 0;
 }
 
+.carousel-content-media {
+  border-radius: 30px;
+  border: 10px solid var(--color-accent);
+  height: 450px;
+  margin: 0 auto 36px;
+  width: 70%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.carousel-quote {
+  font-family: var(--font-secondary), sans-serif;
+  font-size: 90px;
+  line-height: 60px;
+}
 .carousel-maintext {
   position: relative;
   font-size: 52px;
@@ -202,21 +200,16 @@ span {
   line-height: 0.4;
 }
 
-.carousel-maintext::before {
-  content: '"';
-  position: absolute;
-  top: -100px;
-  left: 0;
-  font-family: var(--font-secondary), sans-serif;
-  font-size: 90px;
+.team-link {
+  cursor: pointer;
 }
 
 .carousel-dots {
-  transform: translateY(-6px);
-  width: 150px;
   display: flex;
-  justify-content: space-between;
-  margin: 40px auto 0 auto;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 6px;
 }
 
 .carousel-dots > button:first-of-type {
@@ -226,18 +219,30 @@ span {
 .carousel-dots > button {
   width: 15px;
   height: 15px;
-  border-radius: 50px;
+  border-radius: 50%;
   border: 1px solid var(--color-regular-text);
   cursor: pointer;
 }
 
+.carousel-dot__active {
+  background-color: var(--color-regular-text);
+}
+
+@media (max-width: 1200px) {
+  .carousel-content-media {
+    width: 80%;
+    max-width: unset;
+  }
+}
+
 @media (--desktop-narrow) {
   .carousel-body {
-    padding: 150px 100px 0 100px;
+    padding: 88px 100px 0 100px;
   }
 
-  .carousel-textgroup + .carousel-textgroup {
-    margin-left: 200px;
+  .carousel-content-media {
+    height: 420px;
+    width: 100%;
   }
 
   .carousel-maintext {
@@ -245,13 +250,19 @@ span {
   }
 }
 
+@media (--mobile-wide) {
+  .carousel-content-media {
+    height: 360px;
+  }
+}
+
 @media (--mobile-narrow) {
   .carousel-body {
-    padding: 150px 30px 0 30px;
+    padding: 88px 30px 0 30px;
   }
 
-  .carousel-textgroup + .carousel-textgroup {
-    margin-left: 60px;
+  .carousel-content-media {
+    height: 280px;
   }
 
   .carousel-maintext {
