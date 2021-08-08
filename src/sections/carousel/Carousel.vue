@@ -15,6 +15,17 @@
           role="group"
           :aria-label="`${idx + 1} of ${content.length}`"
         >
+          <div v-if="item.teamVideoURL && slide === idx + 1" class="carousel-content-media">
+            <iframe
+              width="100%"
+              height="100%"
+              :src="item.teamVideoURL"
+              :title="item.team"
+              frameborder="0"
+              allowfullscreen
+            />
+          </div>
+          <p class="carousel-quote">"</p>
           <div class="carousel-maintext">{{ item.desc }}</div>
           <div class="carousel-subtext">
             -
@@ -136,7 +147,7 @@ export default {
 <style scoped>
 .carousel-body {
   background-color: var(--slope-body-color);
-  padding: 200px 150px 0 150px;
+  padding: 140px 150px 0 150px;
   transform: translateY(-1px);
   transition: background-color 0.6s ease-out;
 }
@@ -157,6 +168,21 @@ export default {
   flex-shrink: 0;
 }
 
+.carousel-content-media {
+  border-radius: 30px;
+  border: 10px solid var(--color-accent);
+  height: 450px;
+  margin: 0 auto 36px;
+  width: 70%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.carousel-quote {
+  font-family: var(--font-secondary), sans-serif;
+  font-size: 90px;
+  line-height: 60px;
+}
 .carousel-maintext {
   position: relative;
   font-size: 52px;
@@ -179,11 +205,11 @@ span {
 }
 
 .carousel-dots {
-  transform: translateY(-6px);
-  width: 150px;
   display: flex;
-  justify-content: space-between;
-  margin: 40px auto 0 auto;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 6px;
 }
 
 .carousel-dots > button:first-of-type {
@@ -193,18 +219,30 @@ span {
 .carousel-dots > button {
   width: 15px;
   height: 15px;
-  border-radius: 50px;
+  border-radius: 50%;
   border: 1px solid var(--color-regular-text);
   cursor: pointer;
 }
 
+.carousel-dot__active {
+  background-color: var(--color-regular-text);
+}
+
+@media (max-width: 1200px) {
+  .carousel-content-media {
+    width: 80%;
+    max-width: unset;
+  }
+}
+
 @media (--desktop-narrow) {
   .carousel-body {
-    padding: 150px 100px 0 100px;
+    padding: 88px 100px 0 100px;
   }
 
-  .carousel-textgroup + .carousel-textgroup {
-    margin-left: 200px;
+  .carousel-content-media {
+    height: 420px;
+    width: 100%;
   }
 
   .carousel-maintext {
@@ -212,13 +250,19 @@ span {
   }
 }
 
+@media (--mobile-wide) {
+  .carousel-content-media {
+    height: 360px;
+  }
+}
+
 @media (--mobile-narrow) {
   .carousel-body {
-    padding: 150px 30px 0 30px;
+    padding: 88px 30px 0 30px;
   }
 
-  .carousel-textgroup + .carousel-textgroup {
-    margin-left: 60px;
+  .carousel-content-media {
+    height: 280px;
   }
 
   .carousel-maintext {
