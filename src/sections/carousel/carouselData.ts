@@ -16,7 +16,7 @@ export const carouselData = [
             via the dissociation of argon electrons.`,
     team: 'Team Duct Tape Hax',
     teamDesc: 'Best Space Hack, WTH2017',
-    teamURL: 'https://www.youtube.com/embed/WypR6zu1Oqk',
+    teamURL: '',
     teamVideoURL: '',
   },
   {
