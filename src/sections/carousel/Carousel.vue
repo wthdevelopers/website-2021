@@ -248,11 +248,19 @@ span {
   .carousel-maintext {
     font-size: 42px;
   }
+
+  .carousel-textgroup + .carousel-textgroup {
+    margin-left: 200px;
+  }
 }
 
 @media (--mobile-wide) {
   .carousel-content-media {
     height: 360px;
+  }
+
+  .carousel-textgroup + .carousel-textgroup {
+    margin-left: 200px;
   }
 }
 
@@ -271,6 +279,10 @@ span {
 
   .carousel-subtext {
     font-size: 20px;
+  }
+
+  .carousel-textgroup + .carousel-textgroup {
+    margin-left: 60px;
   }
 }
 </style>
