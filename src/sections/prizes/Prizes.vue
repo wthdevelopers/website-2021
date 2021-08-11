@@ -9,7 +9,7 @@
         <ul>
           <li class="category" v-for="category in categories" :key="category.name">
             <SubHeader style="align-self: center;" class="prizes-subheader">{{ category.name }}</SubHeader>
-            <!-- <Para style="margin-top: 30px;">{{category.award}}</Para> -->
+            <Para style="margin-top: 30px;">{{ category.award }}</Para>
           </li>
         </ul>
       </div>
@@ -34,31 +34,31 @@ export default {
       categories: [
         {
           name: 'Best Built Environment Hack',
-          award: 'Coming Soon',
+          award: '$1,250 Cash Prize',
         },
         {
           name: 'Best Waste Management Hack',
-          award: 'Coming Soon',
+          award: '$1,250 Cash Prize',
         },
         {
           name: 'Best Natural Environment Hack',
-          award: 'Coming Soon',
+          award: '$1,250 Cash Prize',
         },
         {
           name: 'Best Transportation Hack',
-          award: 'Coming Soon',
+          award: '$1,250 Cash Prize',
         },
         {
           name: 'Best Hardware Hack',
-          award: 'Coming Soon',
+          award: 'Raspberry Pi 4 B',
         },
         {
           name: 'Best Design Hack',
-          award: 'Coming Soon',
+          award: 'One by Wacom Small Drawing Tablet',
         },
         {
           name: 'Most Green Hack',
-          award: 'Coming Soon',
+          award: 'Amazon Echo Dot',
         },
       ],
     };
