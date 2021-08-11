@@ -3,7 +3,7 @@ export const workshopData = [
     id: 1,
     title: 'Basic Fusion 360 CAD & 3D Printing Workshop',
     description:
-      'Want to prototype and 3D-print but don\'t know where to start? This workshop will cover all the basics of CAD-ing using Fusion 360 as well as preparing your models to be 3D-printed by CURA software.',
+      "Want to prototype and 3D-print but don't know where to start? This workshop will cover all the basics of CAD-ing using Fusion 360 as well as preparing your models to be 3D-printed by CURA software.",
     info: 'Conducted by Mech D',
     videoURL: '',
     thumbnailURL: './mechd.png',

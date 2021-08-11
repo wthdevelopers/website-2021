@@ -329,7 +329,7 @@ export default Vue.extend({
       theme: 'light',
     };
   },
-  mounted: function () {
+  mounted: function() {
     Vue.nextTick(() => {
       let setTheme = document.documentElement.getAttribute('theme');
       if (setTheme) {

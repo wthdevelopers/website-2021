@@ -26,14 +26,19 @@
         </svg>
         <div>
           Email:&nbsp;
-          <a href="mailto:whatthehack2021@sutdapac.onmicrosoft.com" style="color: var(--color-accent);">whatthehack2021@sutdapac.onmicrosoft.com</a>
+          <a href="mailto:whatthehack2021@sutdapac.onmicrosoft.com" style="color: var(--color-accent);"
+            >whatthehack2021@sutdapac.onmicrosoft.com</a
+          >
         </div>
       </div>
       <div id="footer-bottom">
         <div>Copyright © 2021 What The Hack. All rights reserved.</div>
         <ul>
           <li>
-            <button id="register-button-footer" @click="openModal('registration-guide-modal', 'register-button-footer')">
+            <button
+              id="register-button-footer"
+              @click="openModal('registration-guide-modal', 'register-button-footer')"
+            >
               Register
             </button>
           </li>
