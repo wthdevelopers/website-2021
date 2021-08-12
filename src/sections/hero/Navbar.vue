@@ -2,7 +2,7 @@
   <nav>
     <ul id="bar">
       <li>
-        <a href="https://www.sutdwth.com">
+        <a :class="{ hidden_sticky: scrollPosition > scrollThreshold }" href="https://www.sutdwth.com">
           <span class="sr-only">Go to homepage</span>
           <WTHLogo />
         </a>
@@ -327,9 +327,12 @@ export default Vue.extend({
   data() {
     return {
       theme: 'light',
+      scrollPosition: null,
+      scrollThreshold: 100,
     };
   },
   mounted: function() {
+    window.addEventListener('scroll', this.updateScroll);
     Vue.nextTick(() => {
       let setTheme = document.documentElement.getAttribute('theme');
       if (setTheme) {
@@ -381,6 +384,9 @@ export default Vue.extend({
         }, 500);
       }
     },
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    },
   },
 });
 </script>
@@ -389,6 +395,11 @@ export default Vue.extend({
 nav {
   height: 12.5%;
   padding: 25px 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
 }
 
 nav li {
@@ -428,6 +439,11 @@ nav li:hover {
 
 .moon > path {
   fill: #f3f3fb;
+}
+
+.hidden_sticky {
+  opacity: 0;
+  visibility: hidden;
 }
 
 #cutout {
