@@ -111,7 +111,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(calc(-100% + 1px));
+  transform: translateY(calc(-100% + 2px));
 }
 
 .modal-slope-bottom {
