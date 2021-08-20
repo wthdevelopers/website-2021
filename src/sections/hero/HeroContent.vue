@@ -102,6 +102,7 @@ export default {
 .tooltip__text {
   font-size: 16px;
   color: var(--color-cta-text);
+  text-align: center;
 }
 
 .register-button-wrapper {
