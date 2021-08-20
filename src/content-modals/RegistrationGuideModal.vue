@@ -2,7 +2,7 @@
   <ContentModal id="registration-guide-modal">
     <div class="registration-guide-content">
       <Para :className="['registration-guide-note', 'guide-text-description']"
-        >*All participants need to submit a registration form</Para
+        >Note that all participants would need to submit a registration form.</Para
       >
       <div class="registration-guide-title-container">
         <SubHeader :className="['registration-guide-title', 'guide-text-title']">Do you have a team already?</SubHeader>

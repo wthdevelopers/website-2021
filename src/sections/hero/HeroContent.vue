@@ -23,7 +23,7 @@
           </button>
         </template>
         <template v-slot:content>
-          <Para className="tooltip__text">*All participants need to submit a registration form</Para>
+          <Para className="tooltip__text">Note that all participants would need to submit a registration form.</Para>
         </template>
       </Tooltip>
     </div>
@@ -101,7 +101,7 @@ export default {
 
 .tooltip__text {
   font-size: 16px;
-  color: white;
+  color: var(--color-cta-text);
 }
 
 .register-button-wrapper {

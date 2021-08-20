@@ -42,7 +42,7 @@ export default {
 .trigger {
   cursor: pointer;
   display: flex;
-  color: #647283;
+  color: var(--color-cta-text);
   height: fit-content;
   width: fit-content;
   position: relative;
@@ -71,7 +71,7 @@ export default {
   border-radius: 5px;
   border: none;
   max-width: 360px;
-  color: white;
+  color: var(--color-cta-text);
   padding: 12px 16px;
   font-size: 12px;
   line-height: 1.25;
