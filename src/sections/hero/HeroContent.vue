@@ -101,7 +101,7 @@ export default {
 
 .tooltip__text {
   font-size: 16px;
-  color: white;
+  color: var(--color-cta-text);
 }
 
 .register-button-wrapper {
