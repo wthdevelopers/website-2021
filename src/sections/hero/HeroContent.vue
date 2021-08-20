@@ -12,13 +12,20 @@
         <h2>18th - 19th September 2021</h2>
         <h2>Singapore University of Technology and Design</h2>
       </div>
-      <button
-        class="register-button"
-        id="register-button-hero"
-        @click="openModal('registration-guide-modal', 'register-button-hero')"
-      >
-        Register Now!
-      </button>
+      <Tooltip className="register-button-wrapper">
+        <template v-slot:trigger>
+          <button
+            class="register-button"
+            id="register-button-hero"
+            @click="openModal('registration-guide-modal', 'register-button-hero')"
+          >
+            Register Now!
+          </button>
+        </template>
+        <template v-slot:content>
+          <Para className="tooltip__text">*All participants need to submit a registration form</Para>
+        </template>
+      </Tooltip>
     </div>
     <RegistrationGuideModal />
   </div>
@@ -28,6 +35,8 @@
 import openModalMixin from '@/mixins/openModalMixin';
 import WTHIcon from '@/sections/hero/WTHIcon';
 import CloudIcon from '@/sections/hero/CloudIcon';
+import Tooltip from '@/components/Tooltip';
+import Para from '@/components/Para';
 
 export default {
   name: 'hero-content',
@@ -35,6 +44,8 @@ export default {
     RegistrationGuideModal: () => import(/* webpackPrefetch: true */ '@/content-modals/RegistrationGuideModal'),
     WTHIcon,
     CloudIcon,
+    Tooltip,
+    Para,
   },
   mixins: [openModalMixin],
 };
@@ -88,10 +99,18 @@ export default {
   transition: color 0.6s ease-out;
 }
 
+.tooltip__text {
+  font-size: 16px;
+  color: white;
+}
+
+.register-button-wrapper {
+  margin-left: 20px;
+}
+
 .register-button {
   display: inline-flex;
   align-items: center;
-  margin-left: 20px;
   text-decoration: none;
   font-size: 24px;
   font-family: var(--font-secondary), sans-serif;
@@ -137,7 +156,7 @@ export default {
     flex-direction: column;
   }
 
-  .register-button {
+  .register-button-wrapper {
     margin-top: 30px;
     margin-left: 110px;
   }
@@ -207,12 +226,15 @@ export default {
     font-size: 16px;
   }
 
+  .register-button-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .register-button {
     font-size: 16px;
     padding: 22px 37px;
     width: 185px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .caution-button {
