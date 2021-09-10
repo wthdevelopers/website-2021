@@ -12,20 +12,14 @@
         <h2>18th - 19th September 2021</h2>
         <h2>Singapore University of Technology and Design</h2>
       </div>
-      <Tooltip className="register-button-wrapper">
-        <template v-slot:trigger>
-          <button
-            class="register-button"
-            id="register-button-hero"
-            @click="openModal('registration-guide-modal', 'register-button-hero')"
-          >
-            Register Now!
-          </button>
-        </template>
-        <template v-slot:content>
-          <Para className="tooltip__text">Note that all participants would need to submit a registration form.</Para>
-        </template>
-      </Tooltip>
+      <button
+        :class="['register-button', 'register-button-disabled']"
+        id="register-button-hero"
+        :disabled="true"
+        @click="openModal('registration-guide-modal', 'register-button-hero')"
+      >
+        Registration Closed
+      </button>
     </div>
     <RegistrationGuideModal />
   </div>
@@ -35,8 +29,6 @@
 import openModalMixin from '@/mixins/openModalMixin';
 import WTHIcon from '@/sections/hero/WTHIcon';
 import CloudIcon from '@/sections/hero/CloudIcon';
-import Tooltip from '@/components/Tooltip';
-import Para from '@/components/Para';
 
 export default {
   name: 'hero-content',
@@ -44,8 +36,6 @@ export default {
     RegistrationGuideModal: () => import(/* webpackPrefetch: true */ '@/content-modals/RegistrationGuideModal'),
     WTHIcon,
     CloudIcon,
-    Tooltip,
-    Para,
   },
   mixins: [openModalMixin],
 };
@@ -99,30 +89,25 @@ export default {
   transition: color 0.6s ease-out;
 }
 
-.tooltip__text {
-  font-size: 16px;
-  color: var(--color-cta-text);
-  text-align: center;
-}
-
-.register-button-wrapper {
-  margin-left: 20px;
-}
-
 .register-button {
-  display: inline-flex;
+  display: block;
   align-items: center;
+  margin-left: 20px;
   text-decoration: none;
   font-size: 24px;
   font-family: var(--font-secondary), sans-serif;
   font-weight: 700;
   background-color: var(--color-title-text);
   color: var(--color-cta-text);
-  padding: 32px 47px;
-  width: 265px;
-  height: 0;
+  padding: 20px 36px;
+  height: fit-content;
   transition: background-color 0.6s ease-out, color 0.6s ease-out;
-  line-height: 0px;
+  line-height: 1;
+}
+
+.register-button.register-button-disabled {
+  cursor: not-allowed;
+  background-color: var(--color-gray);
 }
 
 .caution-button {
@@ -146,9 +131,6 @@ export default {
   .caution-button {
     padding: 32px 31px;
   }
-  .register-button {
-    padding: 32px 47px;
-  }
 }
 
 @media (--desktop-narrow) {
@@ -157,7 +139,8 @@ export default {
     flex-direction: column;
   }
 
-  .register-button-wrapper {
+  .register-button {
+    width: fit-content;
     margin-top: 30px;
     margin-left: 110px;
   }
@@ -192,8 +175,7 @@ export default {
 
   .register-button {
     font-size: 22px;
-    padding: 28px 42px;
-    width: 240px;
+    padding: 18px 36px;
   }
 
   .caution-button {
@@ -227,15 +209,11 @@ export default {
     font-size: 16px;
   }
 
-  .register-button-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .register-button {
     font-size: 16px;
-    padding: 22px 37px;
-    width: 185px;
+    padding: 14px 28px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .caution-button {

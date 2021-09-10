@@ -34,6 +34,9 @@
       <br />
       <br />b. The Competition will be held at SUTD from 18th September 2021 to 19th September 2021 (24 hours).
       <br />
+      <br />c. Participants who are students at SUTD will be allowed to go to SUTD campus for the Competition, with
+      proper safety measures in place.
+      <br />
       <br />
     </Para>
 
@@ -98,15 +101,15 @@
       a. At the end of the 24-hour hacking period, the Participants will present their Submissions through a platform
       that is to be determined by the Organisers. Each Participant or Team with a Submission will be given up to 20
       minutes (any request for additional time may be granted at the sole discretion of the Organiser) to set up their
-      virtual presentation booths, and up to four (4) minutes to present his/her/their Submission to a panel of judges.
-      The order of the Participants’ or teams’ presentations will be determined by the Organiser.
+      virtual presentation booths , and four (4) minutes to present his/her/their Submission to a panel of judges. The
+      order of the Participants’ or teams’ presentations will be determined by the Organiser.
       <br />
       <br />b. Participants are to explain and/or demonstrate how well their Submissions fulfil the following equally
       weighted judging criteria:
       <br />
       <br />i. Creativity – How unique or interesting the idea is;
       <br />
-      <br />ii. Execution – How well the idea has been pitched and displayed at the booth;
+      <br />ii. Execution – How well the idea has been pitched and displayed at the virtual booth;
       <br />
       <br />iii. Scalability – How economically sustainable the idea is; and
       <br />
@@ -143,7 +146,8 @@
       Organiser’s or the corporate Sponsors’ representatives agents or employees;
       <br />
       <br />iii. any breach of the safety rules or directives issued by the Organiser and/or its employees in relation
-      to SUTD’s Fabrication Laboratory or other premises or facilities; or
+      to SUTD’s Fabrication Laboratory or other premises or facilities (only applicable to SUTD Participants who are
+      attending the hackathon physically); or
       <br />
       <br />iv. any attempt to compromise the integrity or the legitimate operation of the Competition, including,
       without limitation, by cheating, hacking, creating a malicious bot or any other automated program, or by
@@ -180,9 +184,9 @@
       <br />
       <br />iii. Most Green Hack
       <br />
-      <br />c. The Organiser and Sponsors reserve the right to withhold the Prize from a Participant or team even after
-      he/she/it has been announced as a winner or to require a Participant or team to return the Prize after it has been
-      awarded if the Participant or team is found to have breached any of these Terms and Conditions in the course of
+      <br />c. The Organiser and Sponsors reserve the right to withhold the Prize from a Participant or Team even after
+      he/she/it has been announced as a winner or to require a Participant or Team to return the Prize after it has been
+      awarded if the Participant or Team is found to have breached any of these Terms and Conditions in the course of
       the Competition.
       <br />
       <br />d. Participants acknowledge that the prizes and judging procedures stated in these Terms and Conditions or
@@ -209,7 +213,7 @@
       <br />
       <br />c. The Organiser reserves the right to amend these Terms and Conditions at any time without prior notice.
       <br />
-      <br />d. The Organiser reserves the right to reject any of the Participants’ submissions for the Competition or to
+      <br />d. The Organiser reserves the right to reject any of the Participants’submissions for the Competition or to
       disallow any Participant’s or Team’s continued participation in the Competition if the Participant and/or Team
       is/are found to have breached any of these Terms and Conditions or any rules or regulations set out by the
       Organiser for the Competition.
