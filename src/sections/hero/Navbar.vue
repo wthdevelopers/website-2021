@@ -67,8 +67,13 @@
           FAQs
         </button>
       </li>
-      <li class="bar-register-link">
-        <button id="register-button-desktop" @click="openModal('registration-guide-modal', 'register-button-desktop')">
+      <li :class="['bar-register-link', 'bar-register-link-disabled']">
+        <button
+          id="register-button-desktop"
+          class="register-button-disabled"
+          :disabled="true"
+          @click="openModal('registration-guide-modal', 'register-button-desktop')"
+        >
           Register
         </button>
       </li>
@@ -285,6 +290,8 @@
         <li>
           <button
             id="register-button-mobile"
+            class="register-button-disabled"
+            :disabled="true"
             @click="
               () => {
                 closeDrawer(false);
@@ -435,6 +442,20 @@ nav li:hover {
 
 .bar-register-link:hover {
   border-bottom: 5px solid var(--color-accent);
+}
+
+.bar-register-link.bar-register-link-disabled:hover {
+  border-bottom: 5px solid var(--color-gray);
+}
+
+.bar-register-link.bar-register-link-disabled {
+  color: var(--color-gray);
+  border-bottom: 5px solid var(--color-gray);
+}
+
+.register-button-disabled {
+  color: var(--color-gray);
+  cursor: not-allowed;
 }
 
 .moon > path {
