@@ -37,6 +37,8 @@
           <li>
             <button
               id="register-button-footer"
+              class="register-button-disabled"
+              :disabled="true"
               @click="openModal('registration-guide-modal', 'register-button-footer')"
             >
               Register
@@ -129,6 +131,10 @@ ul {
 
 li + li {
   margin-left: 0.5vw;
+}
+
+.register-button-disabled {
+  cursor: not-allowed;
 }
 
 @media (--desktop-narrow) {
