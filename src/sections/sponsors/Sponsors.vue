@@ -112,6 +112,23 @@ export default {
             },
           ],
         },
+        {
+          name: 'Partner Organizations',
+          sponsors: [
+            {
+              name: 'Bamboo Builders',
+              url: 'https://www.bamboobuilders.org',
+              photoNormal: 'bamboo-builders',
+              photoWhite: 'bamboo-builders-white',
+            },
+            {
+              name: 'ClimateScience',
+              url: 'https://climatescience.org',
+              photoNormal: 'climatescience',
+              photoWhite: 'climatescience-white',
+            },
+          ],
+        },
         // {
         //   name: "Swag Sponsors",
         //   sponsors: [
