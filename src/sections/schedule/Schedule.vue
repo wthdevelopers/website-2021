@@ -11,16 +11,16 @@
           <Para>9:00AM</Para>
         </li>
         <li>
-          <Para>Briefing</Para>
+          <Para>Opening Briefing</Para>
           <Para>9:30AM</Para>
+        </li>
+        <li>
+          <Para>Sponsor Talk by Indeed</Para>
+          <Para>9:45AM</Para>
         </li>
         <li>
           <Para>Start Hacking!</Para>
           <Para>10:30AM</Para>
-        </li>
-        <li>
-          <Para>Sponsor Talk by Indeed</Para>
-          <Para>TBC</Para>
         </li>
       </ul>
       <ul class="timetable">
@@ -28,7 +28,7 @@
           <SubHeader>Day Two (Sunday)</SubHeader>
         </li>
         <li>
-          <Para>DevPost Submission Opens</Para>
+          <Para>DevPost Submission Check</Para>
           <Para>12:00AM</Para>
         </li>
         <li>
