@@ -14,7 +14,7 @@ export const workshopData = [
     description:
       'In this workshop, participants will learn how to use the ESP32 platform with the Arduino IDE to make hardware projects communicate over Wi-Fi and Bluetooth.',
     info: 'Conducted by IEEE',
-    videoURL: '',
+    videoURL: 'https://www.youtube.com/embed/_-FczU8n6JI',
     thumbnailURL: './ieee.jpg',
   },
   {
@@ -32,7 +32,7 @@ export const workshopData = [
     description:
       'Telegram is a free and open source, cross-platform, cloud-based instant messaging software. Amongst one of the features of Telegram is their many functional and fun-to-use bots! This workshop will give you an introduction and a step-by-step guide on how to build your very own Telegram bot.',
     info: 'Conducted by 3DC',
-    videoURL: '',
+    videoURL: 'https://www.youtube.com/embed/XB2pjRB8HX4',
     thumbnailURL: './telebot.jpg',
   },
   {
