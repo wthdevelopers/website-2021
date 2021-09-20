@@ -213,7 +213,7 @@
       <br />
       <br />c. The Organiser reserves the right to amend these Terms and Conditions at any time without prior notice.
       <br />
-      <br />d. The Organiser reserves the right to reject any of the Participants’submissions for the Competition or to
+      <br />d. The Organiser reserves the right to reject any of the Participants' submissions for the Competition or to
       disallow any Participant’s or Team’s continued participation in the Competition if the Participant and/or Team
       is/are found to have breached any of these Terms and Conditions or any rules or regulations set out by the
       Organiser for the Competition.
