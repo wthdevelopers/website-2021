@@ -12,14 +12,7 @@
         <h2>18th - 19th September 2021</h2>
         <h2>Singapore University of Technology and Design</h2>
       </div>
-      <button
-        :class="['register-button', 'register-button-disabled']"
-        id="register-button-hero"
-        :disabled="true"
-        @click="openModal('registration-guide-modal', 'register-button-hero')"
-      >
-        Registration Closed
-      </button>
+      <a href="https://sutdwth21.devpost.com/project-gallery" class="register-button">View Submissions</a>
     </div>
     <RegistrationGuideModal />
   </div>
