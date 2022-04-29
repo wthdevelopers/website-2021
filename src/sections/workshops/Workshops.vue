@@ -26,7 +26,9 @@
 
           <div class="highlight-details-content">
             <SubHeader className="highlight-title">{{ selectedWorkshop.title }}</SubHeader>
+            <br />
             <Para className="highlight-info">{{ selectedWorkshop.description }}</Para>
+            <br />
             <Para className="highlight-info">{{ selectedWorkshop.info }}</Para>
           </div>
         </div>
